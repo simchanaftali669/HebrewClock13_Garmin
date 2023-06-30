@@ -1,0 +1,88 @@
+import Toybox.Lang;
+using Toybox.WatchUi;
+using Toybox.WatchUi as Ui;
+using Toybox.Graphics;
+using Toybox.Graphics as Gfx;
+
+module Rez {
+    module Drawables {
+        (:initialized) var LauncherIcon as Symbol;
+    } // Drawables
+
+    module Fonts {
+    } // Fonts
+
+    module JsonData {
+    } // JsonData
+
+    module Layouts {
+        function MainLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+            var rez_cmp_local_text_ChristianClock = new WatchUi.Text({:identifier=>"ChristianClock", :color=>Graphics.COLOR_LT_GRAY, :locX=>(240 * 0.5), :locY=>50, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_LARGE});
+
+            var rez_cmp_local_text_HebrewClock = new WatchUi.Text({:identifier=>"HebrewClock", :color=>Graphics.COLOR_BLUE, :locX=>(240 * 0.5), :locY=>100, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_LARGE});
+
+            var rez_cmp_local_text_MazalLabel = new WatchUi.Text({:identifier=>"MazalLabel", :color=>Graphics.COLOR_LT_GRAY, :locX=>(240 * 0.5), :locY=>150, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_LARGE});
+
+            return [rez_cmp_local_text_ChristianClock, rez_cmp_local_text_HebrewClock, rez_cmp_local_text_MazalLabel] as Array<WatchUi.Drawable>;
+        }
+    } // Layouts
+
+    module Menus {
+        class AuxMenu extends WatchUi.Menu {
+            function initialize() {
+                Menu.initialize();
+                Menu.setTitle((WatchUi.loadResource($.Rez.Strings.AuxMenuTitle) as String));
+                addItem((WatchUi.loadResource($.Rez.Strings.AuxMenuLabel1) as String), :AuxItem1);
+                addItem((WatchUi.loadResource($.Rez.Strings.AuxMenuLabel2) as String), :AuxItem2);
+            }
+        }
+
+        class MainMenuEng extends WatchUi.Menu {
+            function initialize() {
+                Menu.initialize();
+                Menu.setTitle((WatchUi.loadResource($.Rez.Strings.MainMenuTitle) as String));
+                addItem((WatchUi.loadResource($.Rez.Strings.menuEng_label_1) as String), :item_1);
+                addItem((WatchUi.loadResource($.Rez.Strings.menuEng_label_2) as String), :item_2);
+            }
+        }
+
+        class MainMenuHeb extends WatchUi.Menu {
+            function initialize() {
+                Menu.initialize();
+                Menu.setTitle((WatchUi.loadResource($.Rez.Strings.MainMenuTitle) as String));
+                addItem((WatchUi.loadResource($.Rez.Strings.menuHeb_label_1) as String), :item_1);
+                addItem((WatchUi.loadResource($.Rez.Strings.menuHeb_label_2) as String), :item_2);
+            }
+        }
+    } // Menus
+
+    module Strings {
+        (:initialized) var mazal_heb_1 as Symbol;
+        (:initialized) var mazal_eng_2 as Symbol;
+        (:initialized) var mazal_eng_1 as Symbol;
+        (:initialized) var mazal_heb_3 as Symbol;
+        (:initialized) var mazal_heb_2 as Symbol;
+        (:initialized) var mazal_heb_5 as Symbol;
+        (:initialized) var mazal_eng_6 as Symbol;
+        (:initialized) var mazal_heb_4 as Symbol;
+        (:initialized) var mazal_eng_5 as Symbol;
+        (:initialized) var MainMenuTitle as Symbol;
+        (:initialized) var mazal_heb_7 as Symbol;
+        (:initialized) var mazal_eng_4 as Symbol;
+        (:initialized) var mazal_heb_6 as Symbol;
+        (:initialized) var mazal_eng_3 as Symbol;
+        (:initialized) var HomeTitle as Symbol;
+        (:initialized) var mazal_eng_7 as Symbol;
+        (:initialized) var AppName as Symbol;
+        (:initialized) var menuEng_label_1 as Symbol;
+        (:initialized) var menuEng_label_2 as Symbol;
+        (:initialized) var MenuLabel1 as Symbol;
+        (:initialized) var MenuLabel2 as Symbol;
+        (:initialized) var AuxMenuTitle as Symbol;
+        (:initialized) var AuxMenuLabel2 as Symbol;
+        (:initialized) var AuxMenuLabel1 as Symbol;
+        (:initialized) var prompt as Symbol;
+        (:initialized) var menuHeb_label_2 as Symbol;
+        (:initialized) var menuHeb_label_1 as Symbol;
+    } // Strings
+} // Rez

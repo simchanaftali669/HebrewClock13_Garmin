@@ -1,0 +1,38 @@
+<strings>
+    <string id="HomeTitle">Home</string>
+
+    <string id="MainMenuTitle">Main Menu</string>
+    <string id="MenuLabel1">Go To Aux Menu</string>
+    <string id="MenuLabel2">Go Home </string>
+
+    <string id="AuxMenuTitle">Aux Menu</string>
+    <string id="AuxMenuLabel1">Go to Main Menu</string>
+    <string id="AuxMenuLabel2">Go Home</string>
+
+    <string id="AppName">שעון עברי</string>
+
+    <string id="prompt">Click the menu button</string>
+
+    <string id="menuHeb_label_1">מיקום נוכחי</string>
+    <string id="menuHeb_label_2">ניו-יורק</string>
+
+    <string id="menuEng_label_1">Current Location</string>
+    <string id="menuEng_label_2">New-York</string>
+
+    <string id="mazal_heb_1">שבתאי</string>
+    <string id="mazal_heb_2">צדק</string>
+    <string id="mazal_heb_3">מאדים</string>
+    <string id="mazal_heb_4">חמה</string>
+    <string id="mazal_heb_5">נוגה</string>
+    <string id="mazal_heb_6">כוכב</string>
+    <string id="mazal_heb_7">לבנה</string>
+    <string id="mazal_eng_1">Saturn</string>
+    <string id="mazal_eng_2">Jupiter</string>
+    <string id="mazal_eng_3">Mars</string>
+    <string id="mazal_eng_4">Sun</string>
+    <string id="mazal_eng_5">Venus</string>
+    <string id="mazal_eng_6">Mercory</string>
+    <string id="mazal_eng_7">Moon</string>
+    
+</strings>
+

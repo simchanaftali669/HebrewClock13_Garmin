@@ -1,0 +1,4 @@
+<menu id="MainMenuEng" title="@Strings.MainMenuTitle">
+    <menu-item id="item_1" label="@Strings.menuEng_label_1" />
+    <menu-item id="item_2" label="@Strings.menuEng_label_2" />
+</menu>

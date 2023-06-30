@@ -1,0 +1,410 @@
+[ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 2; ]
+using Toybox.WatchUi;
+[ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 3; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 4; ]
+using Toybox.Graphics;
+[ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 5; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 7; ]
+module Rez {
+    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 8; ]
+    module Drawables {
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 9; @position = 27; initialized = true; ]
+        var LauncherIcon as Symbol;
+    }
+    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 12; ]
+    module Fonts {
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 12; ]
+        <init> {
+        }
+    }
+    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 15; ]
+    module JsonData {
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 15; ]
+        <init> {
+        }
+    }
+    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 18; ]
+    module Layouts {
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 18; ]
+        <init> {
+        }
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 19; ]
+        function MainLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+C_Users_User_Desktop_apps_garmin_hebrewClock_bin_gen_006_B2691_00_source_Rez_mcgen_19_74_start:
+[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen" 20 12 ]
+            [ "C_Users_User_Desktop_apps_garmin_hebrewClock_bin_gen_006_B2691_00_source_Rez_mcgen_19_74_start" "C_Users_User_Desktop_apps_garmin_hebrewClock_bin_gen_006_B2691_00_source_Rez_mcgen_19_74_stop" ]
+            %rez_cmp_local_text_ChristianClock.1 = local;
+            %tmp.3 = getm $.Toybox.WatchUi;
+            %tmp.4 = getv function ? %tmp.3 :Text;
+            %tmp.5 = newd 6;
+            %tmp.7 = const :identifier;
+            %tmp.8 = "ChristianClock";
+            %tmp.9 = dup %tmp.5;
+            %tmp.10 = aputv %tmp.9 %tmp.7 %tmp.8;
+            %tmp.12 = const :color;
+            %tmp.13 = getm $.Toybox.Graphics;
+            %tmp.14 = getv %tmp.13 :COLOR_LT_GRAY;
+            %tmp.15 = dup %tmp.10;
+            %tmp.16 = aputv %tmp.15 %tmp.12 %tmp.14;
+            %tmp.18 = const :locX;
+            %tmp.19 = 240;
+            %tmp.20 = 0.5;
+            %tmp.21 = mul %tmp.19 %tmp.20;
+            %tmp.22 = dup %tmp.16;
+            %tmp.23 = aputv %tmp.22 %tmp.18 %tmp.21;
+            %tmp.25 = const :locY;
+            %tmp.26 = 50;
+            %tmp.27 = dup %tmp.23;
+            %tmp.28 = aputv %tmp.27 %tmp.25 %tmp.26;
+            %tmp.30 = const :justification;
+            %tmp.31 = getm $.Toybox.Graphics;
+            %tmp.32 = getv %tmp.31 :TEXT_JUSTIFY_CENTER;
+            %tmp.33 = dup %tmp.28;
+            %tmp.34 = aputv %tmp.33 %tmp.30 %tmp.32;
+            %tmp.36 = const :font;
+            %tmp.37 = getm $.Toybox.Graphics;
+            %tmp.38 = getv %tmp.37 :FONT_LARGE;
+            %tmp.39 = dup %tmp.34;
+            %tmp.40 = aputv %tmp.39 %tmp.36 %tmp.38;
+            %tmp.1 = newc %tmp.4 (%tmp.40);
+            lputv %rez_cmp_local_text_ChristianClock.1 %tmp.1;
+[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen" 22 12 ]
+            [ "C_Users_User_Desktop_apps_garmin_hebrewClock_bin_gen_006_B2691_00_source_Rez_mcgen_19_74_start" "C_Users_User_Desktop_apps_garmin_hebrewClock_bin_gen_006_B2691_00_source_Rez_mcgen_19_74_stop" ]
+            %rez_cmp_local_text_HebrewClock.2 = local;
+            %tmp.43 = getm $.Toybox.WatchUi;
+            %tmp.44 = getv function ? %tmp.43 :Text;
+            %tmp.45 = newd 6;
+            %tmp.47 = const :identifier;
+            %tmp.48 = "HebrewClock";
+            %tmp.49 = dup %tmp.45;
+            %tmp.50 = aputv %tmp.49 %tmp.47 %tmp.48;
+            %tmp.52 = const :color;
+            %tmp.53 = getm $.Toybox.Graphics;
+            %tmp.54 = getv %tmp.53 :COLOR_BLUE;
+            %tmp.55 = dup %tmp.50;
+            %tmp.56 = aputv %tmp.55 %tmp.52 %tmp.54;
+            %tmp.58 = const :locX;
+            %tmp.59 = 240;
+            %tmp.60 = 0.5;
+            %tmp.61 = mul %tmp.59 %tmp.60;
+            %tmp.62 = dup %tmp.56;
+            %tmp.63 = aputv %tmp.62 %tmp.58 %tmp.61;
+            %tmp.65 = const :locY;
+            %tmp.66 = 100;
+            %tmp.67 = dup %tmp.63;
+            %tmp.68 = aputv %tmp.67 %tmp.65 %tmp.66;
+            %tmp.70 = const :justification;
+            %tmp.71 = getm $.Toybox.Graphics;
+            %tmp.72 = getv %tmp.71 :TEXT_JUSTIFY_CENTER;
+            %tmp.73 = dup %tmp.68;
+            %tmp.74 = aputv %tmp.73 %tmp.70 %tmp.72;
+            %tmp.76 = const :font;
+            %tmp.77 = getm $.Toybox.Graphics;
+            %tmp.78 = getv %tmp.77 :FONT_LARGE;
+            %tmp.79 = dup %tmp.74;
+            %tmp.80 = aputv %tmp.79 %tmp.76 %tmp.78;
+            %tmp.41 = newc %tmp.44 (%tmp.80);
+            lputv %rez_cmp_local_text_HebrewClock.2 %tmp.41;
+[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen" 24 12 ]
+            [ "C_Users_User_Desktop_apps_garmin_hebrewClock_bin_gen_006_B2691_00_source_Rez_mcgen_19_74_start" "C_Users_User_Desktop_apps_garmin_hebrewClock_bin_gen_006_B2691_00_source_Rez_mcgen_19_74_stop" ]
+            %rez_cmp_local_text_MazalLabel.3 = local;
+            %tmp.83 = getm $.Toybox.WatchUi;
+            %tmp.84 = getv function ? %tmp.83 :Text;
+            %tmp.85 = newd 6;
+            %tmp.87 = const :identifier;
+            %tmp.88 = "MazalLabel";
+            %tmp.89 = dup %tmp.85;
+            %tmp.90 = aputv %tmp.89 %tmp.87 %tmp.88;
+            %tmp.92 = const :color;
+            %tmp.93 = getm $.Toybox.Graphics;
+            %tmp.94 = getv %tmp.93 :COLOR_LT_GRAY;
+            %tmp.95 = dup %tmp.90;
+            %tmp.96 = aputv %tmp.95 %tmp.92 %tmp.94;
+            %tmp.98 = const :locX;
+            %tmp.99 = 240;
+            %tmp.100 = 0.5;
+            %tmp.101 = mul %tmp.99 %tmp.100;
+            %tmp.102 = dup %tmp.96;
+            %tmp.103 = aputv %tmp.102 %tmp.98 %tmp.101;
+            %tmp.105 = const :locY;
+            %tmp.106 = 150;
+            %tmp.107 = dup %tmp.103;
+            %tmp.108 = aputv %tmp.107 %tmp.105 %tmp.106;
+            %tmp.110 = const :justification;
+            %tmp.111 = getm $.Toybox.Graphics;
+            %tmp.112 = getv %tmp.111 :TEXT_JUSTIFY_CENTER;
+            %tmp.113 = dup %tmp.108;
+            %tmp.114 = aputv %tmp.113 %tmp.110 %tmp.112;
+            %tmp.116 = const :font;
+            %tmp.117 = getm $.Toybox.Graphics;
+            %tmp.118 = getv %tmp.117 :FONT_LARGE;
+            %tmp.119 = dup %tmp.114;
+            %tmp.120 = aputv %tmp.119 %tmp.116 %tmp.118;
+            %tmp.81 = newc %tmp.84 (%tmp.120);
+            lputv %rez_cmp_local_text_MazalLabel.3 %tmp.81;
+[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen" 26 12 ]
+            %tmp.121 = newa Array<WatchUi.Drawable> 3;
+            %tmp.123 = lgetv %rez_cmp_local_text_ChristianClock.1;
+            %tmp.124 = dup %tmp.121;
+            %tmp.125 = aputv %tmp.124 0 %tmp.123;
+            %tmp.127 = lgetv %rez_cmp_local_text_HebrewClock.2;
+            %tmp.128 = dup %tmp.125;
+            %tmp.129 = aputv %tmp.128 1 %tmp.127;
+            %tmp.131 = lgetv %rez_cmp_local_text_MazalLabel.3;
+            %tmp.132 = dup %tmp.129;
+            %tmp.133 = aputv %tmp.132 2 %tmp.131;
+            ret %tmp.133;
+C_Users_User_Desktop_apps_garmin_hebrewClock_bin_gen_006_B2691_00_source_Rez_mcgen_19_74_stop:
+        }
+    }
+    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 30; ]
+    module Menus {
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 30; ]
+        <init> {
+        }
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 31; ]
+        class AuxMenu extends WatchUi.Menu{
+            [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 31; ]
+            <init> {
+            }
+            [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 31; ]
+            static
+            <init> {
+            }
+            [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 32; ]
+            function initialize() as Void {
+C_Users_User_Desktop_apps_garmin_hebrewClock_bin_gen_006_B2691_00_source_Rez_mcgen_32_34_start:
+[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen" 33 16 ]
+                %tmp.2 = getv ? :Menu;
+                %tmp.3 = getv function %tmp.2 :initialize;
+                invoke %tmp.2 %tmp.3();
+[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen" 34 16 ]
+                %tmp.5 = getv ? :Menu;
+                %tmp.6 = getv function %tmp.5 :setTitle;
+                %tmp.7 = getm $.Toybox.WatchUi;
+                %tmp.8 = getv function %tmp.7 :loadResource;
+                %tmp.9 = getm $;
+                %tmp.10 = getv %tmp.9 :Rez;
+                %tmp.11 = getv %tmp.10 :Strings;
+                %tmp.12 = getv %tmp.11 :AuxMenuTitle;
+                %tmp.13 = invoke %tmp.7 %tmp.8(%tmp.12);
+                %tmp.14 = as %tmp.13 String;
+                invoke %tmp.5 %tmp.6(%tmp.14);
+[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen" 35 16 ]
+                %tmp.15 = self;
+                %tmp.16 = getv function %tmp.15 :addItem;
+                %tmp.17 = getm $.Toybox.WatchUi;
+                %tmp.18 = getv function %tmp.17 :loadResource;
+                %tmp.19 = getm $;
+                %tmp.20 = getv %tmp.19 :Rez;
+                %tmp.21 = getv %tmp.20 :Strings;
+                %tmp.22 = getv %tmp.21 :AuxMenuLabel1;
+                %tmp.23 = invoke %tmp.17 %tmp.18(%tmp.22);
+                %tmp.24 = as %tmp.23 String;
+                %tmp.26 = const :AuxItem1;
+                invoke %tmp.15 %tmp.16(%tmp.24, %tmp.26);
+[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen" 36 16 ]
+                %tmp.27 = self;
+                %tmp.28 = getv function %tmp.27 :addItem;
+                %tmp.29 = getm $.Toybox.WatchUi;
+                %tmp.30 = getv function %tmp.29 :loadResource;
+                %tmp.31 = getm $;
+                %tmp.32 = getv %tmp.31 :Rez;
+                %tmp.33 = getv %tmp.32 :Strings;
+                %tmp.34 = getv %tmp.33 :AuxMenuLabel2;
+                %tmp.35 = invoke %tmp.29 %tmp.30(%tmp.34);
+                %tmp.36 = as %tmp.35 String;
+                %tmp.38 = const :AuxItem2;
+                invoke %tmp.27 %tmp.28(%tmp.36, %tmp.38);
+C_Users_User_Desktop_apps_garmin_hebrewClock_bin_gen_006_B2691_00_source_Rez_mcgen_32_34_stop:
+            }
+        }
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 40; ]
+        class MainMenuEng extends WatchUi.Menu{
+            [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 40; ]
+            <init> {
+            }
+            [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 40; ]
+            static
+            <init> {
+            }
+            [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 41; ]
+            function initialize() as Void {
+C_Users_User_Desktop_apps_garmin_hebrewClock_bin_gen_006_B2691_00_source_Rez_mcgen_41_34_start:
+[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen" 42 16 ]
+                %tmp.2 = getv ? :Menu;
+                %tmp.3 = getv function %tmp.2 :initialize;
+                invoke %tmp.2 %tmp.3();
+[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen" 43 16 ]
+                %tmp.5 = getv ? :Menu;
+                %tmp.6 = getv function %tmp.5 :setTitle;
+                %tmp.7 = getm $.Toybox.WatchUi;
+                %tmp.8 = getv function %tmp.7 :loadResource;
+                %tmp.9 = getm $;
+                %tmp.10 = getv %tmp.9 :Rez;
+                %tmp.11 = getv %tmp.10 :Strings;
+                %tmp.12 = getv %tmp.11 :MainMenuTitle;
+                %tmp.13 = invoke %tmp.7 %tmp.8(%tmp.12);
+                %tmp.14 = as %tmp.13 String;
+                invoke %tmp.5 %tmp.6(%tmp.14);
+[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen" 44 16 ]
+                %tmp.15 = self;
+                %tmp.16 = getv function %tmp.15 :addItem;
+                %tmp.17 = getm $.Toybox.WatchUi;
+                %tmp.18 = getv function %tmp.17 :loadResource;
+                %tmp.19 = getm $;
+                %tmp.20 = getv %tmp.19 :Rez;
+                %tmp.21 = getv %tmp.20 :Strings;
+                %tmp.22 = getv %tmp.21 :menuEng_label_1;
+                %tmp.23 = invoke %tmp.17 %tmp.18(%tmp.22);
+                %tmp.24 = as %tmp.23 String;
+                %tmp.26 = const :item_1;
+                invoke %tmp.15 %tmp.16(%tmp.24, %tmp.26);
+[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen" 45 16 ]
+                %tmp.27 = self;
+                %tmp.28 = getv function %tmp.27 :addItem;
+                %tmp.29 = getm $.Toybox.WatchUi;
+                %tmp.30 = getv function %tmp.29 :loadResource;
+                %tmp.31 = getm $;
+                %tmp.32 = getv %tmp.31 :Rez;
+                %tmp.33 = getv %tmp.32 :Strings;
+                %tmp.34 = getv %tmp.33 :menuEng_label_2;
+                %tmp.35 = invoke %tmp.29 %tmp.30(%tmp.34);
+                %tmp.36 = as %tmp.35 String;
+                %tmp.38 = const :item_2;
+                invoke %tmp.27 %tmp.28(%tmp.36, %tmp.38);
+C_Users_User_Desktop_apps_garmin_hebrewClock_bin_gen_006_B2691_00_source_Rez_mcgen_41_34_stop:
+            }
+        }
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 49; ]
+        class MainMenuHeb extends WatchUi.Menu{
+            [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 49; ]
+            <init> {
+            }
+            [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 49; ]
+            static
+            <init> {
+            }
+            [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 50; ]
+            function initialize() as Void {
+C_Users_User_Desktop_apps_garmin_hebrewClock_bin_gen_006_B2691_00_source_Rez_mcgen_50_34_start:
+[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen" 51 16 ]
+                %tmp.2 = getv ? :Menu;
+                %tmp.3 = getv function %tmp.2 :initialize;
+                invoke %tmp.2 %tmp.3();
+[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen" 52 16 ]
+                %tmp.5 = getv ? :Menu;
+                %tmp.6 = getv function %tmp.5 :setTitle;
+                %tmp.7 = getm $.Toybox.WatchUi;
+                %tmp.8 = getv function %tmp.7 :loadResource;
+                %tmp.9 = getm $;
+                %tmp.10 = getv %tmp.9 :Rez;
+                %tmp.11 = getv %tmp.10 :Strings;
+                %tmp.12 = getv %tmp.11 :MainMenuTitle;
+                %tmp.13 = invoke %tmp.7 %tmp.8(%tmp.12);
+                %tmp.14 = as %tmp.13 String;
+                invoke %tmp.5 %tmp.6(%tmp.14);
+[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen" 53 16 ]
+                %tmp.15 = self;
+                %tmp.16 = getv function %tmp.15 :addItem;
+                %tmp.17 = getm $.Toybox.WatchUi;
+                %tmp.18 = getv function %tmp.17 :loadResource;
+                %tmp.19 = getm $;
+                %tmp.20 = getv %tmp.19 :Rez;
+                %tmp.21 = getv %tmp.20 :Strings;
+                %tmp.22 = getv %tmp.21 :menuHeb_label_1;
+                %tmp.23 = invoke %tmp.17 %tmp.18(%tmp.22);
+                %tmp.24 = as %tmp.23 String;
+                %tmp.26 = const :item_1;
+                invoke %tmp.15 %tmp.16(%tmp.24, %tmp.26);
+[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen" 54 16 ]
+                %tmp.27 = self;
+                %tmp.28 = getv function %tmp.27 :addItem;
+                %tmp.29 = getm $.Toybox.WatchUi;
+                %tmp.30 = getv function %tmp.29 :loadResource;
+                %tmp.31 = getm $;
+                %tmp.32 = getv %tmp.31 :Rez;
+                %tmp.33 = getv %tmp.32 :Strings;
+                %tmp.34 = getv %tmp.33 :menuHeb_label_2;
+                %tmp.35 = invoke %tmp.29 %tmp.30(%tmp.34);
+                %tmp.36 = as %tmp.35 String;
+                %tmp.38 = const :item_2;
+                invoke %tmp.27 %tmp.28(%tmp.36, %tmp.38);
+C_Users_User_Desktop_apps_garmin_hebrewClock_bin_gen_006_B2691_00_source_Rez_mcgen_50_34_stop:
+            }
+        }
+    }
+    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 59; ]
+    module Strings {
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 59; ]
+        <init> {
+        }
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 60; @position = 27; initialized = true; ]
+        var mazal_heb_1 as Symbol;
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 61; @position = 27; initialized = true; ]
+        var mazal_eng_2 as Symbol;
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 62; @position = 27; initialized = true; ]
+        var mazal_eng_1 as Symbol;
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 63; @position = 27; initialized = true; ]
+        var mazal_heb_3 as Symbol;
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 64; @position = 27; initialized = true; ]
+        var mazal_heb_2 as Symbol;
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 65; @position = 27; initialized = true; ]
+        var mazal_heb_5 as Symbol;
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 66; @position = 27; initialized = true; ]
+        var mazal_eng_6 as Symbol;
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 67; @position = 27; initialized = true; ]
+        var mazal_heb_4 as Symbol;
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 68; @position = 27; initialized = true; ]
+        var mazal_eng_5 as Symbol;
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 69; @position = 27; initialized = true; ]
+        var MainMenuTitle as Symbol;
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 70; @position = 27; initialized = true; ]
+        var mazal_heb_7 as Symbol;
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 71; @position = 27; initialized = true; ]
+        var mazal_eng_4 as Symbol;
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 72; @position = 27; initialized = true; ]
+        var mazal_heb_6 as Symbol;
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 73; @position = 27; initialized = true; ]
+        var mazal_eng_3 as Symbol;
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 74; @position = 27; initialized = true; ]
+        var HomeTitle as Symbol;
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 75; @position = 27; initialized = true; ]
+        var mazal_eng_7 as Symbol;
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 76; @position = 27; initialized = true; ]
+        var AppName as Symbol;
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 77; @position = 27; initialized = true; ]
+        var menuEng_label_1 as Symbol;
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 78; @position = 27; initialized = true; ]
+        var menuEng_label_2 as Symbol;
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 79; @position = 27; initialized = true; ]
+        var MenuLabel1 as Symbol;
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 80; @position = 27; initialized = true; ]
+        var MenuLabel2 as Symbol;
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 81; @position = 27; initialized = true; ]
+        var AuxMenuTitle as Symbol;
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 82; @position = 27; initialized = true; ]
+        var AuxMenuLabel2 as Symbol;
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 83; @position = 27; initialized = true; ]
+        var AuxMenuLabel1 as Symbol;
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 84; @position = 27; initialized = true; ]
+        var prompt as Symbol;
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 85; @position = 27; initialized = true; ]
+        var menuHeb_label_2 as Symbol;
+        [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 86; @position = 27; initialized = true; ]
+        var menuHeb_label_1 as Symbol;
+    }
+}
+[ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\bin\gen\006-B2691-00\source\Rez.mcgen"; @line = 1; ]
+<init> {
+}
