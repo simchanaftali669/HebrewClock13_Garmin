@@ -120,97 +120,95 @@ C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDele
         %tmp.38 = "longitude";
         %tmp.40 = getv ? :longitude;
         invoke %tmp.36 %tmp.37(%tmp.38, %tmp.40);
-[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc" 38 8 ]
-        %tmp.41 = getv self :System;
-        %tmp.42 = lgetv %info;
-        %tmp.43 = getv %tmp.42 :when;
-        putv %tmp.41 :ClockTime %tmp.43;
-[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc" 40 8 ]
-        %tmp.45 = getv ? :_callback;
-        %tmp.46 = getv function %tmp.45 :invoke;
-        %tmp.48 = lgetv %info;
-        invoke %tmp.45 %tmp.46(%tmp.48);
+[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc" 37 8 ]
+        %tmp.41 = true;
+        putv self :isJustOpened %tmp.41;
+[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc" 41 8 ]
+        %tmp.43 = getv ? :_callback;
+        %tmp.44 = getv function %tmp.43 :invoke;
+        %tmp.46 = lgetv %info;
+        invoke %tmp.43 %tmp.44(%tmp.46);
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_22_4_stop:
     }
-    [ @file = "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 43; ]
+    [ @file = "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 44; ]
     function onBack() {
-C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_43_22_start:
-[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc" 44 8 ]
+C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_44_22_start:
+[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc" 45 8 ]
         %tmp.1 = false;
         ret %tmp.1;
-C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_43_22_stop:
+C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_44_22_stop:
     }
 }
-[ @file = "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 48; ]
+[ @file = "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 49; ]
 class MyViewDelegate extends Ui.BehaviorDelegate{
-    [ @file = "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 48; ]
+    [ @file = "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 49; ]
     <init> {
     }
-    [ @file = "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 48; ]
+    [ @file = "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 49; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 50; ]
+    [ @file = "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 51; ]
     function initialize() as Void {
-C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_51_4_start:
-[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc" 52 8 ]
+C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_52_4_start:
+[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc" 53 8 ]
         %tmp.2 = getv ? :BehaviorDelegate;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_51_4_stop:
+C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_52_4_stop:
     }
-    [ @file = "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 55; ]
+    [ @file = "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 56; ]
     function onPosition(info) {
-C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_56_4_start:
-[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc" 57 8 ]
+C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_57_4_start:
+[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc" 58 8 ]
         %tmp.1 = getm $.Toybox.WatchUi;
         %tmp.2 = getv function %tmp.1 :popView;
         %tmp.3 = getm $.Toybox.WatchUi;
         %tmp.4 = getv %tmp.3 :SLIDE_IMMEDIATE;
         invoke %tmp.1 %tmp.2(%tmp.4);
-[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc" 59 8 ]
-C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_59_8_if_stmt:
+[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc" 60 8 ]
+C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_60_8_if_stmt:
         %tmp.6 = lgetv %info;
         %tmp.7 = null;
         %tmp.8 = ne %tmp.6 %tmp.7;
-        bf %tmp.8 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_59_8_if_end;
-C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_59_8_if_true:
-C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_60_8_start:
-[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc" 62 12 ]
+        bf %tmp.8 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_60_8_if_end;
+C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_60_8_if_true:
+C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_61_8_start:
+[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc" 63 12 ]
         %tmp.10 = getv ? :System;
         %tmp.11 = getv function %tmp.10 :println;
         %tmp.12 = "submit request";
         invoke %tmp.10 %tmp.11(%tmp.12);
-C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_60_8_stop:
-        goto @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_59_8_if_end;
-C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_59_8_if_end:
-C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_56_4_stop:
+C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_61_8_stop:
+        goto @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_60_8_if_end;
+C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_60_8_if_end:
+C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_57_4_stop:
     }
-    [ @file = "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 71; ]
+    [ @file = "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 72; ]
     function onJsonResponse(code, data) {
-C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_72_4_start:
-[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc" 73 8 ]
+C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_73_4_start:
+[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc" 74 8 ]
         %tmp.1 = getm $.Toybox.WatchUi;
         %tmp.2 = getv function %tmp.1 :popView;
         %tmp.3 = getm $.Toybox.WatchUi;
         %tmp.4 = getv %tmp.3 :SLIDE_IMMEDIATE;
         invoke %tmp.1 %tmp.2(%tmp.4);
-[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc" 75 8 ]
-C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_75_8_if_stmt:
+[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc" 76 8 ]
+C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_76_8_if_stmt:
         %tmp.6 = lgetv %code;
         %tmp.7 = 200;
         %tmp.8 = eq %tmp.6 %tmp.7;
-        bf %tmp.8 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_75_8_if_end;
-C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_75_8_if_true:
-        goto @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_75_8_if_end;
-C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_75_8_if_end:
-C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_72_4_stop:
+        bf %tmp.8 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_76_8_if_end;
+C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_76_8_if_true:
+        goto @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_76_8_if_end;
+C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_76_8_if_end:
+C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_73_4_stop:
     }
-    [ @file = "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 80; ]
+    [ @file = "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 81; ]
     function onSelect() {
-C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_81_4_start:
-[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc" 82 8 ]
-        [ "C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_81_4_start" "C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_81_4_stop" ]
+C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_82_4_start:
+[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc" 83 8 ]
+        [ "C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_82_4_start" "C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_82_4_stop" ]
         %view.1 = local;
         %tmp.3 = getm $.Toybox.WatchUi;
         %tmp.4 = getv function ? %tmp.3 :ProgressBar;
@@ -218,8 +216,8 @@ C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDele
         %tmp.6 = null;
         %tmp.1 = newc %tmp.4 (%tmp.5, %tmp.6);
         lputv %view.1 %tmp.1;
-[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc" 83 8 ]
-        [ "C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_81_4_start" "C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_81_4_stop" ]
+[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc" 84 8 ]
+        [ "C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_82_4_start" "C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_82_4_stop" ]
         %delegate.2 = local;
         %tmp.10 = getv ? :MyAcquirePositionDelegate;
         %tmp.12 = lgetv %view.1;
@@ -229,7 +227,7 @@ C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDele
         %tmp.17 = invoke %tmp.13 %tmp.14(%tmp.16);
         %tmp.7 = newc %tmp.10 (%tmp.12, %tmp.17);
         lputv %delegate.2 %tmp.7;
-[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc" 85 8 ]
+[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc" 86 8 ]
         %tmp.18 = getm $.Toybox.WatchUi;
         %tmp.19 = getv function %tmp.18 :pushView;
         %tmp.21 = lgetv %view.1;
@@ -237,10 +235,10 @@ C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDele
         %tmp.24 = getm $.Toybox.WatchUi;
         %tmp.25 = getv %tmp.24 :SLIDE_IMMEDIATE;
         invoke %tmp.18 %tmp.19(%tmp.21, %tmp.23, %tmp.25);
-[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc" 87 8 ]
+[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc" 88 8 ]
         %tmp.26 = true;
         ret %tmp.26;
-C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_81_4_stop:
+C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MyAcquirePositionDelegate_mc_82_4_stop:
     }
 }
 [ @file = "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 1; ]

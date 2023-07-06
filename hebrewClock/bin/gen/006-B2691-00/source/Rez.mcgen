@@ -17,11 +17,11 @@ module Rez {
 
     module Layouts {
         function MainLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
-            var rez_cmp_local_text_ChristianClock = new WatchUi.Text({:identifier=>"ChristianClock", :color=>Graphics.COLOR_LT_GRAY, :locX=>(240 * 0.5), :locY=>50, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_SYSTEM_NUMBER_HOT});
+            var rez_cmp_local_text_ChristianClock = new WatchUi.Text({:identifier=>"ChristianClock", :color=>Graphics.COLOR_LT_GRAY, :locX=>(240 * 0.5), :locY=>50, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_LARGE});
 
-            var rez_cmp_local_text_HebrewClock = new WatchUi.Text({:identifier=>"HebrewClock", :color=>Graphics.COLOR_BLUE, :locX=>(240 * 0.5), :locY=>100, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_SYSTEM_NUMBER_HOT});
+            var rez_cmp_local_text_HebrewClock = new WatchUi.Text({:identifier=>"HebrewClock", :color=>Graphics.COLOR_BLUE, :locX=>(240 * 0.5), :locY=>100, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_LARGE});
 
-            var rez_cmp_local_text_MazalLabel = new WatchUi.Text({:identifier=>"MazalLabel", :color=>Graphics.COLOR_LT_GRAY, :locX=>(240 * 0.5), :locY=>150, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_SYSTEM_NUMBER_HOT});
+            var rez_cmp_local_text_MazalLabel = new WatchUi.Text({:identifier=>"MazalLabel", :color=>Graphics.COLOR_LT_GRAY, :locX=>(240 * 0.5), :locY=>150, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_LARGE});
 
             return [rez_cmp_local_text_ChristianClock, rez_cmp_local_text_HebrewClock, rez_cmp_local_text_MazalLabel] as Array<WatchUi.Drawable>;
         }

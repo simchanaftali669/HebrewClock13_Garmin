@@ -93,7 +93,7 @@ C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_
         bf %tmp.5 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_mc_52_8_if_false;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_mc_52_8_if_true:
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_mc_52_29_start:
-[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestMenuDelegate.mc" 54 12 ]
+[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestMenuDelegate.mc" 53 12 ]
         [ "C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_mc_52_29_start" "C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_mc_52_29_stop" ]
         %view.1 = local;
         %tmp.8 = getm $.Toybox.WatchUi;
@@ -102,7 +102,7 @@ C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_
         %tmp.11 = null;
         %tmp.6 = newc %tmp.9 (%tmp.10, %tmp.11);
         lputv %view.1 %tmp.6;
-[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestMenuDelegate.mc" 55 12 ]
+[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestMenuDelegate.mc" 54 12 ]
         [ "C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_mc_52_29_start" "C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_mc_52_29_stop" ]
         %delegate.2 = local;
         %tmp.15 = getv ? :MyAcquirePositionDelegate;
@@ -113,7 +113,7 @@ C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_
         %tmp.22 = invoke %tmp.18 %tmp.19(%tmp.21);
         %tmp.12 = newc %tmp.15 (%tmp.17, %tmp.22);
         lputv %delegate.2 %tmp.12;
-[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestMenuDelegate.mc" 56 12 ]
+[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestMenuDelegate.mc" 55 12 ]
         %tmp.23 = getm $.Toybox.WatchUi;
         %tmp.24 = getv function %tmp.23 :pushView;
         %tmp.26 = lgetv %view.1;
@@ -124,36 +124,39 @@ C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_mc_52_29_stop:
         goto @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_mc_52_8_if_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_mc_52_8_if_false:
-[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestMenuDelegate.mc" 58 14 ]
-C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_mc_58_14_if_stmt:
+[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestMenuDelegate.mc" 57 14 ]
+C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_mc_57_14_if_stmt:
         %tmp.32 = lgetv %item;
         %tmp.34 = const :item_2;
         %tmp.35 = eq %tmp.32 %tmp.34;
-        bf %tmp.35 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_mc_58_14_if_end;
-C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_mc_58_14_if_true:
-C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_mc_58_35_start:
-[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestMenuDelegate.mc" 59 10 ]
+        bf %tmp.35 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_mc_57_14_if_end;
+C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_mc_57_14_if_true:
+C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_mc_57_35_start:
+[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestMenuDelegate.mc" 58 12 ]
         %tmp.36 = 40.6971494;
         putv self :latitude %tmp.36;
-[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestMenuDelegate.mc" 60 10 ]
+[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestMenuDelegate.mc" 59 10 ]
         %tmp.37 = 73.6994959;
         %tmp.38 = sub 0 %tmp.37;
         putv self :longitude %tmp.38;
-[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestMenuDelegate.mc" 61 7 ]
+[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestMenuDelegate.mc" 60 7 ]
         %tmp.39 = getm $.Toybox.Application.Storage;
         %tmp.40 = getv function %tmp.39 :setValue;
         %tmp.41 = "latitude";
         %tmp.43 = getv ? :latitude;
         invoke %tmp.39 %tmp.40(%tmp.41, %tmp.43);
-[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestMenuDelegate.mc" 62 6 ]
+[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestMenuDelegate.mc" 61 6 ]
         %tmp.44 = getm $.Toybox.Application.Storage;
         %tmp.45 = getv function %tmp.44 :setValue;
         %tmp.46 = "longitude";
         %tmp.48 = getv ? :longitude;
         invoke %tmp.44 %tmp.45(%tmp.46, %tmp.48);
-C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_mc_58_35_stop:
-        goto @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_mc_58_14_if_end;
-C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_mc_58_14_if_end:
+[ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestMenuDelegate.mc" 62 12 ]
+        %tmp.49 = true;
+        putv self :isJustOpened %tmp.49;
+C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_mc_57_35_stop:
+        goto @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_mc_57_14_if_end;
+C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_mc_57_14_if_end:
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_mc_52_8_if_end:
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestMenuDelegate_mc_45_55_stop:
     }

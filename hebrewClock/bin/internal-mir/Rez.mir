@@ -73,7 +73,7 @@ C_Users_User_Desktop_apps_garmin_github_hebrewClock_bin_gen_006_B2691_00_source_
             %tmp.34 = aputv %tmp.33 %tmp.30 %tmp.32;
             %tmp.36 = const :font;
             %tmp.37 = getm $.Toybox.Graphics;
-            %tmp.38 = getv %tmp.37 :FONT_SYSTEM_NUMBER_HOT;
+            %tmp.38 = getv %tmp.37 :FONT_LARGE;
             %tmp.39 = dup %tmp.34;
             %tmp.40 = aputv %tmp.39 %tmp.36 %tmp.38;
             %tmp.1 = newc %tmp.4 (%tmp.40);
@@ -110,7 +110,7 @@ C_Users_User_Desktop_apps_garmin_github_hebrewClock_bin_gen_006_B2691_00_source_
             %tmp.74 = aputv %tmp.73 %tmp.70 %tmp.72;
             %tmp.76 = const :font;
             %tmp.77 = getm $.Toybox.Graphics;
-            %tmp.78 = getv %tmp.77 :FONT_SYSTEM_NUMBER_HOT;
+            %tmp.78 = getv %tmp.77 :FONT_LARGE;
             %tmp.79 = dup %tmp.74;
             %tmp.80 = aputv %tmp.79 %tmp.76 %tmp.78;
             %tmp.41 = newc %tmp.44 (%tmp.80);
@@ -147,7 +147,7 @@ C_Users_User_Desktop_apps_garmin_github_hebrewClock_bin_gen_006_B2691_00_source_
             %tmp.114 = aputv %tmp.113 %tmp.110 %tmp.112;
             %tmp.116 = const :font;
             %tmp.117 = getm $.Toybox.Graphics;
-            %tmp.118 = getv %tmp.117 :FONT_SYSTEM_NUMBER_HOT;
+            %tmp.118 = getv %tmp.117 :FONT_LARGE;
             %tmp.119 = dup %tmp.114;
             %tmp.120 = aputv %tmp.119 %tmp.116 %tmp.118;
             %tmp.81 = newc %tmp.84 (%tmp.120);

@@ -50,16 +50,16 @@ class MenuTestMenuDelegate extends WatchUi.MenuInputDelegate {
 //            System.println("Item 2");
 //        }
         if (item == :item_1) {
-            //MenuTestView.callback2();
             var view = new WatchUi.ProgressBar("Waiting for GPS", null);
             var delegate = new MyAcquirePositionDelegate(view, self.method(:onPosition));
-            WatchUi.pushView(view, delegate, WatchUi.SLIDE_IMMEDIATE);
+            WatchUi.pushView(view, delegate, WatchUi.SLIDE_IMMEDIATE);            
         }
          else if (item == :item_2) {
-         	latitude = 40.6971494;
+            latitude = 40.6971494;
          	longitude = -73.6994959;
  		    Storage.setValue("latitude", latitude);
-	    	Storage.setValue("longitude", longitude);  
+	    	Storage.setValue("longitude", longitude);
+            isJustOpened = true; 
         }
 
     }

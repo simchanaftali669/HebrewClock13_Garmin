@@ -34,8 +34,9 @@ class MyAcquirePositionDelegate extends Ui.BehaviorDelegate
  
         Storage.setValue("latitude", latitude);
         Storage.setValue("longitude", longitude);  
+        isJustOpened = true; 
 
-        System.ClockTime = info.when;
+        //System.ClockTime = info.when;
 
         _callback.invoke(info);
     }

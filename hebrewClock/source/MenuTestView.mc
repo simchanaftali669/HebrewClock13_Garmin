@@ -24,6 +24,7 @@ public var count3 = 0;
 //tekoa location
 public var latitude = 31.656466;
 public var longitude = 35.228143;
+public var isJustOpened = true;
 
 public function setPosition(info as Toybox.Position.Info) as Void
 {
@@ -51,29 +52,21 @@ class MenuTestView extends WatchUi.View {
         WatchUi.requestUpdate();   
     }
    
-
-	//position in Tekoa
-  //	var latitude = 31.6622381;
-  //    var longitude = 35.217081;
-	
 	public var londeg = 35;
 	public var lonmin = 0;
 	public var latdeg = 32;
 	public var latmin = 0; 
  
     //public variables
-	//default is Tekoa
     var latd = -1, latm = 0;  // lat on earth
     var lngd = -1, lngm = 0;  // long on earth
     var lat = 0, lng = 0;     // sun's location
 
     var ns, ew; 	// hemisphere
     var nsi, ewi;             
- 	//var londeg = -1, lonmin = 0;
-	//var latdeg = -1, latmin = 0; 
 	public var timezone;
  
-    var dst = 0; 	            // daylight saving time
+    var dst = 0; 	        // daylight saving time
     var ampm = false; 	    // am/pm or 24 hour display
 
     var monCount = [13, 1, 32, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335, 366];
@@ -100,8 +93,12 @@ class MenuTestView extends WatchUi.View {
 	public var sunset_hour;
 	public var sunrise_hour;
 
-	public var mazalColor;
+	public var sunset_yasterdate;
+	public var sunrise;
+	public var sunset;
+	public var sunrise_tommorow;
 
+	public var mazalColor;
 
     //! Constructor
     public function initialize() {
@@ -168,7 +165,7 @@ class MenuTestView extends WatchUi.View {
    		drawChristianClock();	
    		
    		//set the latitude and longtiude minutes and time zone for calculations
-   		list_pos();
+   		//list_pos();
    		
    		//activate the clock
    		oTimerclock();
@@ -948,13 +945,16 @@ class MenuTestView extends WatchUi.View {
 		//view.setColor(Application.getApp().getProperty("ForegroundColor"));
 		//view.setText("23:1079:75");
 		
-	    var zmanit_hour = doit();       //get the 24 shaaotzmaniot
-	    
-		var sunset_yasterdate = zmanit_hour[0];
-		var sunrise = zmanit_hour[1];
-		var sunset = zmanit_hour[2];
-		var sunrise_tommorow = zmanit_hour[3];
-		
+		if(isJustOpened || lbMinute == 0)
+		{
+			var zmanit_hour = doit();       //get the 24 shaaotzmaniot
+			
+			sunset_yasterdate = zmanit_hour[0];
+			sunrise = zmanit_hour[1];
+			sunset = zmanit_hour[2];
+			sunrise_tommorow = zmanit_hour[3];
+		}
+
 		var shaa_zmanit_night, shaa_zmanit_day;
 	    
 	    var date = Gregorian.info(Time.now(), Time.FORMAT_LONG);
@@ -1026,18 +1026,57 @@ class MenuTestView extends WatchUi.View {
 		}
 		
 		display_time();
-		setmazal();
+		
+		if(isJustOpened)
+		{
+			setmazal();
+			isJustOpened = false;
+		}
 		
 		if(lbMinute == 0)
 	    {
-			doit();
 			setmazal();	
 		}
 		
+		MarkTime();
 	    //if(lbMinute == 0 || lbMinute == 360 || lbMinute == 720)
 	    //    tick_sound();
 	}
-	
+
+	public function MarkTime()
+	{
+		var view = View.findDrawableById("HebrewClock") as Text;
+
+ 		System.println("curr_hour: " + curr_hour.toDouble()/(1000 * 3600));
+ 		System.println("tzeit: " + tzeit);
+ 		System.println("alot: " + alot);
+
+
+
+		if(curr_hour.toDouble()/(1000 * 3600) > tzeit  || 
+		   curr_hour.toDouble()/(1000 * 3600) < alot)
+		{
+			view.setColor(Graphics.COLOR_LT_GRAY);
+			//viewMazal.setText("Marriv");
+			//viewMazal.setText("ערבית - " + text);
+		}
+		else if(curr_hour.toDouble() < sunset_hour.toDouble() && 
+		        curr_hour.toDouble()/(1000 * 3600) > alot/*curr_hour.toDouble() > sunrise_hour.toDouble()*/ )
+		{
+			view.setColor(Graphics.COLOR_BLUE);
+
+			if(curr_hour.toDouble() < sunrise_hour.toDouble() || lbHour.toNumber() < 6)
+			{ 
+				//viewMazal.setText("Shacharit");			
+				//viewMazal.setText("שחרית - " + text);
+			}
+			else if(lbHour.toNumber() > 6 || (lbHour.toNumber() == 6 && lbMinute.toNumber() >= 540)) 
+			{
+				//viewMazal.setText("Mincha");
+				//viewMazal.setText("מנחה - " + text);
+			}			
+		}
+	}	
 	
 	//---clock timer---
 	public function oTimerclock() 
@@ -1052,7 +1091,7 @@ class MenuTestView extends WatchUi.View {
 	public function display_time()
 	{
 	
-		setmazal();
+		//setmazal();
 		//---displaying the clock---
 		//second
 	    if (lbSecond < 10)
@@ -1316,36 +1355,11 @@ class MenuTestView extends WatchUi.View {
 			default:
 				break;
 		}
-		
-		
-				
+						
 		//viewMazal.setText("");
 //		System.println("curr_hour: " + curr_hour.toDouble()/(1000 * 3600));
 //		System.println("tzeit: " + tzeit  );
 //		System.println("alot: " + alot);
-		if(curr_hour.toDouble()/(1000 * 3600) > tzeit  || 
-		   curr_hour.toDouble()/(1000 * 3600) < alot)
-		{
-			view.setColor(Graphics.COLOR_LT_GRAY);
-			//viewMazal.setText("Marriv");
-			//viewMazal.setText("ערבית - " + text);
-		}
-		else if(curr_hour.toDouble() < sunset_hour.toDouble() && 
-		        curr_hour.toDouble()/(1000 * 3600) > alot/*curr_hour.toDouble() > sunrise_hour.toDouble()*/ )
-		{
-			view.setColor(Graphics.COLOR_BLUE);
-
-			if(curr_hour.toDouble() < sunrise_hour.toDouble() || lbHour.toNumber() < 6)
-			{ 
-				//viewMazal.setText("Shacharit");			
-				//viewMazal.setText("שחרית - " + text);
-			}
-			else if(lbHour.toNumber() > 6 || (lbHour.toNumber() == 6 && lbMinute.toNumber() >= 540)) 
-			{
-				//viewMazal.setText("Mincha");
-				//viewMazal.setText("מנחה - " + text);
-			}			
-		}
 		//view.setColor(mazalColor);
 		//viewMazal.setText(date.day_of_week);
 	}
