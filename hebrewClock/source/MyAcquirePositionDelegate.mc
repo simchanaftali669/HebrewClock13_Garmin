@@ -14,8 +14,7 @@ class MyAcquirePositionDelegate extends Ui.BehaviorDelegate
         _view = view;
         _callback = callback;
 
-        Position.enableLocationEvents(
-        Position.LOCATION_ONE_SHOT, self.method(:onPosition));
+        Position.enableLocationEvents(Position.LOCATION_ONE_SHOT, self.method(:onPosition));
     }
 
     function onPosition(info as Toybox.Position.Info) as Void
@@ -35,8 +34,6 @@ class MyAcquirePositionDelegate extends Ui.BehaviorDelegate
         Storage.setValue("latitude", latitude);
         Storage.setValue("longitude", longitude);  
         isJustOpened = true; 
-
-        //System.ClockTime = info.when;
 
         _callback.invoke(info);
     }
@@ -74,7 +71,7 @@ class MyViewDelegate extends Ui.BehaviorDelegate
         Ui.popView(Ui.SLIDE_IMMEDIATE);
 
         if (code == 200) {
-        // everything went well
+            // everything went well
         }
     }
 

@@ -44,20 +44,20 @@
         <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\AuxMenuDelegate.mc" id="11" lineNum="16" parent="globals/AuxMenuDelegate" pc="268436217" symbol="initialize"/>
         <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="12" lineNum="7" parent="globals/Rez" pc="268436236" symbol="&lt;init&gt;"/>
         <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="13" lineNum="6" parent="globals/MyAcquirePositionDelegate" pc="268436260" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="14" lineNum="44" parent="globals/MyAcquirePositionDelegate" pc="268436279" symbol="onBack"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="14" lineNum="45" parent="globals/MyAcquirePositionDelegate" pc="268436281" symbol="onBack"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="15" lineNum="21" parent="globals/MyAcquirePositionDelegate" pc="268436284" symbol="onPosition"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="15" lineNum="23" parent="globals/MyAcquirePositionDelegate" pc="268436288" symbol="onPosition"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="15" lineNum="24" parent="globals/MyAcquirePositionDelegate" pc="268436311" symbol="onPosition"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="15" lineNum="27" parent="globals/MyAcquirePositionDelegate" pc="268436315" symbol="onPosition"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="15" lineNum="28" parent="globals/MyAcquirePositionDelegate" pc="268436332" symbol="onPosition"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="15" lineNum="31" parent="globals/MyAcquirePositionDelegate" pc="268436336" symbol="onPosition"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="15" lineNum="32" parent="globals/MyAcquirePositionDelegate" pc="268436355" symbol="onPosition"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="15" lineNum="33" parent="globals/MyAcquirePositionDelegate" pc="268436371" symbol="onPosition"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="15" lineNum="35" parent="globals/MyAcquirePositionDelegate" pc="268436387" symbol="onPosition"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="15" lineNum="36" parent="globals/MyAcquirePositionDelegate" pc="268436416" symbol="onPosition"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="15" lineNum="37" parent="globals/MyAcquirePositionDelegate" pc="268436445" symbol="onPosition"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="15" lineNum="41" parent="globals/MyAcquirePositionDelegate" pc="268436455" symbol="onPosition"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="14" lineNum="41" parent="globals/MyAcquirePositionDelegate" pc="268436279" symbol="onBack"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="14" lineNum="42" parent="globals/MyAcquirePositionDelegate" pc="268436281" symbol="onBack"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="15" lineNum="20" parent="globals/MyAcquirePositionDelegate" pc="268436284" symbol="onPosition"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="15" lineNum="22" parent="globals/MyAcquirePositionDelegate" pc="268436288" symbol="onPosition"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="15" lineNum="23" parent="globals/MyAcquirePositionDelegate" pc="268436311" symbol="onPosition"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="15" lineNum="26" parent="globals/MyAcquirePositionDelegate" pc="268436315" symbol="onPosition"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="15" lineNum="27" parent="globals/MyAcquirePositionDelegate" pc="268436332" symbol="onPosition"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="15" lineNum="30" parent="globals/MyAcquirePositionDelegate" pc="268436336" symbol="onPosition"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="15" lineNum="31" parent="globals/MyAcquirePositionDelegate" pc="268436355" symbol="onPosition"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="15" lineNum="32" parent="globals/MyAcquirePositionDelegate" pc="268436371" symbol="onPosition"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="15" lineNum="34" parent="globals/MyAcquirePositionDelegate" pc="268436387" symbol="onPosition"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="15" lineNum="35" parent="globals/MyAcquirePositionDelegate" pc="268436416" symbol="onPosition"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="15" lineNum="36" parent="globals/MyAcquirePositionDelegate" pc="268436445" symbol="onPosition"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="15" lineNum="38" parent="globals/MyAcquirePositionDelegate" pc="268436455" symbol="onPosition"/>
         <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="16" lineNum="11" parent="globals/MyAcquirePositionDelegate" pc="268436476" symbol="initialize"/>
         <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="16" lineNum="13" parent="globals/MyAcquirePositionDelegate" pc="268436478" symbol="initialize"/>
         <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="16" lineNum="14" parent="globals/MyAcquirePositionDelegate" pc="268436496" symbol="initialize"/>
@@ -128,17 +128,17 @@
         <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="20" lineNum="1036" parent="globals/MenuTestView" pc="268437967" symbol="hebrewclock"/>
         <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="20" lineNum="1038" parent="globals/MenuTestView" pc="268437984" symbol="hebrewclock"/>
         <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="20" lineNum="1041" parent="globals/MenuTestView" pc="268437999" symbol="hebrewclock"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="21" lineNum="1377" parent="globals/MenuTestView" pc="268438012" symbol="list_pos"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="21" lineNum="1379" parent="globals/MenuTestView" pc="268438014" symbol="list_pos"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="21" lineNum="1381" parent="globals/MenuTestView" pc="268438031" symbol="list_pos"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="21" lineNum="1385" parent="globals/MenuTestView" pc="268438047" symbol="list_pos"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="21" lineNum="1387" parent="globals/MenuTestView" pc="268438060" symbol="list_pos"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="21" lineNum="1388" parent="globals/MenuTestView" pc="268438091" symbol="list_pos"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="21" lineNum="1389" parent="globals/MenuTestView" pc="268438122" symbol="list_pos"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="21" lineNum="1391" parent="globals/MenuTestView" pc="268438139" symbol="list_pos"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="21" lineNum="1395" parent="globals/MenuTestView" pc="268438155" symbol="list_pos"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="21" lineNum="1397" parent="globals/MenuTestView" pc="268438168" symbol="list_pos"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="21" lineNum="1398" parent="globals/MenuTestView" pc="268438199" symbol="list_pos"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="21" lineNum="1384" parent="globals/MenuTestView" pc="268438012" symbol="list_pos"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="21" lineNum="1386" parent="globals/MenuTestView" pc="268438014" symbol="list_pos"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="21" lineNum="1388" parent="globals/MenuTestView" pc="268438031" symbol="list_pos"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="21" lineNum="1392" parent="globals/MenuTestView" pc="268438047" symbol="list_pos"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="21" lineNum="1394" parent="globals/MenuTestView" pc="268438060" symbol="list_pos"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="21" lineNum="1395" parent="globals/MenuTestView" pc="268438091" symbol="list_pos"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="21" lineNum="1396" parent="globals/MenuTestView" pc="268438122" symbol="list_pos"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="21" lineNum="1398" parent="globals/MenuTestView" pc="268438139" symbol="list_pos"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="21" lineNum="1402" parent="globals/MenuTestView" pc="268438155" symbol="list_pos"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="21" lineNum="1404" parent="globals/MenuTestView" pc="268438168" symbol="list_pos"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="21" lineNum="1405" parent="globals/MenuTestView" pc="268438199" symbol="list_pos"/>
         <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="22" lineNum="44" parent="globals/MenuTestView" pc="268438231" symbol="setPosition"/>
         <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="22" lineNum="46" parent="globals/MenuTestView" pc="268438235" symbol="setPosition"/>
         <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="22" lineNum="47" parent="globals/MenuTestView" pc="268438256" symbol="setPosition"/>
@@ -355,261 +355,302 @@
         <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="37" lineNum="899" parent="globals/MenuTestView" pc="268442517" symbol="doit"/>
         <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="38" lineNum="620" parent="globals/MenuTestView" pc="268442520" symbol="leap"/>
         <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="38" lineNum="622" parent="globals/MenuTestView" pc="268442522" symbol="leap"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="39" lineNum="1367" parent="globals/MenuTestView" pc="268442577" symbol="paintText"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="39" lineNum="1374" parent="globals/MenuTestView" pc="268442577" symbol="paintText"/>
         <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1143" parent="globals/MenuTestView" pc="268442580" symbol="getDayOfWeekInNumber"/>
         <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1146" parent="globals/MenuTestView" pc="268442584" symbol="getDayOfWeekInNumber"/>
         <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1147" parent="globals/MenuTestView" pc="268442591" symbol="getDayOfWeekInNumber"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1151" parent="globals/MenuTestView" pc="268442876" symbol="getDayOfWeekInNumber"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1152" parent="globals/MenuTestView" pc="268442883" symbol="getDayOfWeekInNumber"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1155" parent="globals/MenuTestView" pc="268442886" symbol="getDayOfWeekInNumber"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1156" parent="globals/MenuTestView" pc="268442893" symbol="getDayOfWeekInNumber"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1159" parent="globals/MenuTestView" pc="268442896" symbol="getDayOfWeekInNumber"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1160" parent="globals/MenuTestView" pc="268442903" symbol="getDayOfWeekInNumber"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1163" parent="globals/MenuTestView" pc="268442906" symbol="getDayOfWeekInNumber"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1164" parent="globals/MenuTestView" pc="268442913" symbol="getDayOfWeekInNumber"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1167" parent="globals/MenuTestView" pc="268442916" symbol="getDayOfWeekInNumber"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1168" parent="globals/MenuTestView" pc="268442923" symbol="getDayOfWeekInNumber"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1171" parent="globals/MenuTestView" pc="268442926" symbol="getDayOfWeekInNumber"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1172" parent="globals/MenuTestView" pc="268442933" symbol="getDayOfWeekInNumber"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1175" parent="globals/MenuTestView" pc="268442936" symbol="getDayOfWeekInNumber"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1176" parent="globals/MenuTestView" pc="268442943" symbol="getDayOfWeekInNumber"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1179" parent="globals/MenuTestView" pc="268442947" symbol="getDayOfWeekInNumber"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="44" lineNum="415" parent="globals/MenuTestView" pc="268442950" symbol="civMonthLength"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="44" lineNum="417" parent="globals/MenuTestView" pc="268442952" symbol="civMonthLength"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="44" lineNum="419" parent="globals/MenuTestView" pc="268442963" symbol="civMonthLength"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="44" lineNum="421" parent="globals/MenuTestView" pc="268442975" symbol="civMonthLength"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="44" lineNum="423" parent="globals/MenuTestView" pc="268443028" symbol="civMonthLength"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="44" lineNum="427" parent="globals/MenuTestView" pc="268443037" symbol="civMonthLength"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="45" lineNum="178" parent="globals/MenuTestView" pc="268443044" symbol="getYasterday"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="45" lineNum="180" parent="globals/MenuTestView" pc="268443048" symbol="getYasterday"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="45" lineNum="181" parent="globals/MenuTestView" pc="268443058" symbol="getYasterday"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="45" lineNum="182" parent="globals/MenuTestView" pc="268443068" symbol="getYasterday"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="45" lineNum="185" parent="globals/MenuTestView" pc="268443078" symbol="getYasterday"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="45" lineNum="194" parent="globals/MenuTestView" pc="268443147" symbol="getYasterday"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="45" lineNum="196" parent="globals/MenuTestView" pc="268443158" symbol="getYasterday"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="45" lineNum="206" parent="globals/MenuTestView" pc="268443236" symbol="getYasterday"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="45" lineNum="208" parent="globals/MenuTestView" pc="268443247" symbol="getYasterday"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="45" lineNum="218" parent="globals/MenuTestView" pc="268443350" symbol="getYasterday"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="45" lineNum="229" parent="globals/MenuTestView" pc="268443444" symbol="getYasterday"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="45" lineNum="230" parent="globals/MenuTestView" pc="268443463" symbol="getYasterday"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="45" lineNum="232" parent="globals/MenuTestView" pc="268443487" symbol="getYasterday"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1091" parent="globals/MenuTestView" pc="268443490" symbol="display_time"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1097" parent="globals/MenuTestView" pc="268443494" symbol="display_time"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1099" parent="globals/MenuTestView" pc="268443511" symbol="display_time"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1103" parent="globals/MenuTestView" pc="268443545" symbol="display_time"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1106" parent="globals/MenuTestView" pc="268443570" symbol="display_time"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1108" parent="globals/MenuTestView" pc="268443587" symbol="display_time"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1110" parent="globals/MenuTestView" pc="268443621" symbol="display_time"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1112" parent="globals/MenuTestView" pc="268443638" symbol="display_time"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1114" parent="globals/MenuTestView" pc="268443672" symbol="display_time"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1116" parent="globals/MenuTestView" pc="268443689" symbol="display_time"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1120" parent="globals/MenuTestView" pc="268443723" symbol="display_time"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1123" parent="globals/MenuTestView" pc="268443748" symbol="display_time"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1124" parent="globals/MenuTestView" pc="268443758" symbol="display_time"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1127" parent="globals/MenuTestView" pc="268443789" symbol="display_time"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1129" parent="globals/MenuTestView" pc="268443806" symbol="display_time"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1133" parent="globals/MenuTestView" pc="268443840" symbol="display_time"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1136" parent="globals/MenuTestView" pc="268443865" symbol="display_time"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1138" parent="globals/MenuTestView" pc="268443875" symbol="display_time"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1139" parent="globals/MenuTestView" pc="268443899" symbol="display_time"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="47" lineNum="236" parent="globals/MenuTestView" pc="268443950" symbol="getTomorrow"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="47" lineNum="238" parent="globals/MenuTestView" pc="268443954" symbol="getTomorrow"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="47" lineNum="239" parent="globals/MenuTestView" pc="268443964" symbol="getTomorrow"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="47" lineNum="240" parent="globals/MenuTestView" pc="268443974" symbol="getTomorrow"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="47" lineNum="243" parent="globals/MenuTestView" pc="268443984" symbol="getTomorrow"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="47" lineNum="253" parent="globals/MenuTestView" pc="268444053" symbol="getTomorrow"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="47" lineNum="255" parent="globals/MenuTestView" pc="268444092" symbol="getTomorrow"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="47" lineNum="265" parent="globals/MenuTestView" pc="268444170" symbol="getTomorrow"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="47" lineNum="267" parent="globals/MenuTestView" pc="268444181" symbol="getTomorrow"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="47" lineNum="277" parent="globals/MenuTestView" pc="268444256" symbol="getTomorrow"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="47" lineNum="288" parent="globals/MenuTestView" pc="268444325" symbol="getTomorrow"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="47" lineNum="289" parent="globals/MenuTestView" pc="268444344" symbol="getTomorrow"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="47" lineNum="291" parent="globals/MenuTestView" pc="268444368" symbol="getTomorrow"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1185" parent="globals/MenuTestView" pc="268444371" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1186" parent="globals/MenuTestView" pc="268444375" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1188" parent="globals/MenuTestView" pc="268444412" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1189" parent="globals/MenuTestView" pc="268444422" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1190" parent="globals/MenuTestView" pc="268444432" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1192" parent="globals/MenuTestView" pc="268444442" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1193" parent="globals/MenuTestView" pc="268444463" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1194" parent="globals/MenuTestView" pc="268444473" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1196" parent="globals/MenuTestView" pc="268444484" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1199" parent="globals/MenuTestView" pc="268444494" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1204" parent="globals/MenuTestView" pc="268444701" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1209" parent="globals/MenuTestView" pc="268444836" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1216" parent="globals/MenuTestView" pc="268444852" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1218" parent="globals/MenuTestView" pc="268444863" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1224" parent="globals/MenuTestView" pc="268444873" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1227" parent="globals/MenuTestView" pc="268444883" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1226" parent="globals/MenuTestView" pc="268444883" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1229" parent="globals/MenuTestView" pc="268444900" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1231" parent="globals/MenuTestView" pc="268444917" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1235" parent="globals/MenuTestView" pc="268445019" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1238" parent="globals/MenuTestView" pc="268445118" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1239" parent="globals/MenuTestView" pc="268445125" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1241" parent="globals/MenuTestView" pc="268445142" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1243" parent="globals/MenuTestView" pc="268445170" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1245" parent="globals/MenuTestView" pc="268445187" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1247" parent="globals/MenuTestView" pc="268445215" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1249" parent="globals/MenuTestView" pc="268445232" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1251" parent="globals/MenuTestView" pc="268445260" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1253" parent="globals/MenuTestView" pc="268445277" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1255" parent="globals/MenuTestView" pc="268445305" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1257" parent="globals/MenuTestView" pc="268445322" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1259" parent="globals/MenuTestView" pc="268445350" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1261" parent="globals/MenuTestView" pc="268445367" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1263" parent="globals/MenuTestView" pc="268445395" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1265" parent="globals/MenuTestView" pc="268445412" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1267" parent="globals/MenuTestView" pc="268445440" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1268" parent="globals/MenuTestView" pc="268445464" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1275" parent="globals/MenuTestView" pc="268445488" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1276" parent="globals/MenuTestView" pc="268445495" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1284" parent="globals/MenuTestView" pc="268445640" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1285" parent="globals/MenuTestView" pc="268445660" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1288" parent="globals/MenuTestView" pc="268445670" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1295" parent="globals/MenuTestView" pc="268445673" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1296" parent="globals/MenuTestView" pc="268445693" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1299" parent="globals/MenuTestView" pc="268445703" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1308" parent="globals/MenuTestView" pc="268445706" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1309" parent="globals/MenuTestView" pc="268445726" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1310" parent="globals/MenuTestView" pc="268445736" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1319" parent="globals/MenuTestView" pc="268445739" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1320" parent="globals/MenuTestView" pc="268445759" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1321" parent="globals/MenuTestView" pc="268445769" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1330" parent="globals/MenuTestView" pc="268445772" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1331" parent="globals/MenuTestView" pc="268445792" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1332" parent="globals/MenuTestView" pc="268445802" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1341" parent="globals/MenuTestView" pc="268445805" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1342" parent="globals/MenuTestView" pc="268445825" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1343" parent="globals/MenuTestView" pc="268445835" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1352" parent="globals/MenuTestView" pc="268445838" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1353" parent="globals/MenuTestView" pc="268445858" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1354" parent="globals/MenuTestView" pc="268445868" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1356" parent="globals/MenuTestView" pc="268445871" symbol="setmazal"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="49" lineNum="104" parent="globals/MenuTestView" pc="268445876" symbol="initialize"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="49" lineNum="105" parent="globals/MenuTestView" pc="268445878" symbol="initialize"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="50" lineNum="152" parent="globals/MenuTestView" pc="268445897" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="50" lineNum="155" parent="globals/MenuTestView" pc="268445899" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="50" lineNum="157" parent="globals/MenuTestView" pc="268445924" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="50" lineNum="159" parent="globals/MenuTestView" pc="268445960" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="50" lineNum="165" parent="globals/MenuTestView" pc="268445999" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="50" lineNum="171" parent="globals/MenuTestView" pc="268446011" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="50" lineNum="174" parent="globals/MenuTestView" pc="268446023" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="679" parent="globals/MenuTestView" pc="268446044" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="681" parent="globals/MenuTestView" pc="268446048" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="684" parent="globals/MenuTestView" pc="268446048" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="683" parent="globals/MenuTestView" pc="268446048" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="682" parent="globals/MenuTestView" pc="268446048" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="686" parent="globals/MenuTestView" pc="268446048" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="688" parent="globals/MenuTestView" pc="268446052" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="689" parent="globals/MenuTestView" pc="268446071" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="690" parent="globals/MenuTestView" pc="268446099" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="691" parent="globals/MenuTestView" pc="268446136" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="694" parent="globals/MenuTestView" pc="268446182" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="696" parent="globals/MenuTestView" pc="268446193" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="697" parent="globals/MenuTestView" pc="268446203" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="700" parent="globals/MenuTestView" pc="268446216" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="701" parent="globals/MenuTestView" pc="268446227" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="702" parent="globals/MenuTestView" pc="268446237" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="705" parent="globals/MenuTestView" pc="268446250" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="706" parent="globals/MenuTestView" pc="268446261" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="707" parent="globals/MenuTestView" pc="268446271" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="710" parent="globals/MenuTestView" pc="268446284" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="712" parent="globals/MenuTestView" pc="268446295" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="715" parent="globals/MenuTestView" pc="268446308" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="716" parent="globals/MenuTestView" pc="268446308" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="717" parent="globals/MenuTestView" pc="268446313" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="718" parent="globals/MenuTestView" pc="268446339" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="719" parent="globals/MenuTestView" pc="268446349" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="723" parent="globals/MenuTestView" pc="268446375" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="726" parent="globals/MenuTestView" pc="268446382" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="728" parent="globals/MenuTestView" pc="268446393" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="731" parent="globals/MenuTestView" pc="268446406" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="732" parent="globals/MenuTestView" pc="268446460" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="733" parent="globals/MenuTestView" pc="268446541" symbol="timeadj1_real"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="299" parent="globals/MenuTestView" pc="268446544" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="301" parent="globals/MenuTestView" pc="268446548" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="302" parent="globals/MenuTestView" pc="268446555" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="305" parent="globals/MenuTestView" pc="268446800" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="306" parent="globals/MenuTestView" pc="268446807" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="308" parent="globals/MenuTestView" pc="268446810" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="310" parent="globals/MenuTestView" pc="268446826" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="314" parent="globals/MenuTestView" pc="268446836" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="316" parent="globals/MenuTestView" pc="268446843" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="318" parent="globals/MenuTestView" pc="268446846" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="319" parent="globals/MenuTestView" pc="268446853" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="321" parent="globals/MenuTestView" pc="268446856" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="322" parent="globals/MenuTestView" pc="268446863" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="324" parent="globals/MenuTestView" pc="268446866" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="325" parent="globals/MenuTestView" pc="268446873" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="327" parent="globals/MenuTestView" pc="268446876" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="328" parent="globals/MenuTestView" pc="268446883" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="330" parent="globals/MenuTestView" pc="268446886" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="331" parent="globals/MenuTestView" pc="268446893" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="333" parent="globals/MenuTestView" pc="268446896" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="334" parent="globals/MenuTestView" pc="268446903" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="336" parent="globals/MenuTestView" pc="268446906" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="337" parent="globals/MenuTestView" pc="268446913" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="339" parent="globals/MenuTestView" pc="268446916" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="340" parent="globals/MenuTestView" pc="268446923" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="342" parent="globals/MenuTestView" pc="268446926" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="343" parent="globals/MenuTestView" pc="268446933" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="345" parent="globals/MenuTestView" pc="268446936" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="346" parent="globals/MenuTestView" pc="268446943" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="349" parent="globals/MenuTestView" pc="268446947" symbol="getLastDayOfMonth"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="53" lineNum="29" parent="globals" pc="268446950" symbol="setPosition"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="53" lineNum="31" parent="globals" pc="268446962" symbol="setPosition"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="53" lineNum="32" parent="globals" pc="268446983" symbol="setPosition"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="53" lineNum="33" parent="globals" pc="268447002" symbol="setPosition"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="53" lineNum="34" parent="globals" pc="268447018" symbol="setPosition"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="53" lineNum="35" parent="globals" pc="268447034" symbol="setPosition"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="53" lineNum="36" parent="globals" pc="268447063" symbol="setPosition"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="53" lineNum="37" parent="globals" pc="268447092" symbol="setPosition"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="54" lineNum="49" parent="globals/MyViewDelegate" pc="268447109" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="55" lineNum="56" parent="globals/MyViewDelegate" pc="268447128" symbol="onPosition"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="55" lineNum="58" parent="globals/MyViewDelegate" pc="268447130" symbol="onPosition"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="55" lineNum="60" parent="globals/MyViewDelegate" pc="268447151" symbol="onPosition"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="55" lineNum="63" parent="globals/MyViewDelegate" pc="268447158" symbol="onPosition"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="56" lineNum="72" parent="globals/MyViewDelegate" pc="268447185" symbol="onJsonResponse"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="56" lineNum="74" parent="globals/MyViewDelegate" pc="268447187" symbol="onJsonResponse"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="56" lineNum="76" parent="globals/MyViewDelegate" pc="268447208" symbol="onJsonResponse"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="57" lineNum="51" parent="globals/MyViewDelegate" pc="268447223" symbol="initialize"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="57" lineNum="53" parent="globals/MyViewDelegate" pc="268447225" symbol="initialize"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="58" lineNum="81" parent="globals/MyViewDelegate" pc="268447244" symbol="onSelect"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="58" lineNum="83" parent="globals/MyViewDelegate" pc="268447248" symbol="onSelect"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="58" lineNum="84" parent="globals/MyViewDelegate" pc="268447282" symbol="onSelect"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="58" lineNum="86" parent="globals/MyViewDelegate" pc="268447328" symbol="onSelect"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="58" lineNum="88" parent="globals/MyViewDelegate" pc="268447353" symbol="onSelect"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestApp.mc" id="59" lineNum="14" parent="globals/MenuTestApp" pc="268447356" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestApp.mc" id="60" lineNum="23" parent="globals/MenuTestApp" pc="268447375" symbol="onStart"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestApp.mc" id="61" lineNum="33" parent="globals/MenuTestApp" pc="268447378" symbol="getInitialView"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestApp.mc" id="61" lineNum="34" parent="globals/MenuTestApp" pc="268447380" symbol="getInitialView"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestApp.mc" id="62" lineNum="17" parent="globals/MenuTestApp" pc="268447455" symbol="initialize"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestApp.mc" id="62" lineNum="18" parent="globals/MenuTestApp" pc="268447457" symbol="initialize"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestApp.mc" id="63" lineNum="28" parent="globals/MenuTestApp" pc="268447476" symbol="onStop"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="64" lineNum="19" parent="globals/Rez/Layouts" pc="268447479" symbol="MainLayout"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="64" lineNum="20" parent="globals/Rez/Layouts" pc="268447491" symbol="MainLayout"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="64" lineNum="22" parent="globals/Rez/Layouts" pc="268447603" symbol="MainLayout"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="64" lineNum="24" parent="globals/Rez/Layouts" pc="268447715" symbol="MainLayout"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="64" lineNum="26" parent="globals/Rez/Layouts" pc="268447827" symbol="MainLayout"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="65" lineNum="49" parent="globals/Rez/Menus/MainMenuHeb" pc="268447864" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="66" lineNum="50" parent="globals/Rez/Menus/MainMenuHeb" pc="268447883" symbol="initialize"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="66" lineNum="51" parent="globals/Rez/Menus/MainMenuHeb" pc="268447885" symbol="initialize"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="66" lineNum="52" parent="globals/Rez/Menus/MainMenuHeb" pc="268447903" symbol="initialize"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="66" lineNum="53" parent="globals/Rez/Menus/MainMenuHeb" pc="268447960" symbol="initialize"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="66" lineNum="54" parent="globals/Rez/Menus/MainMenuHeb" pc="268448016" symbol="initialize"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="67" lineNum="31" parent="globals/Rez/Menus/AuxMenu" pc="268448073" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="68" lineNum="32" parent="globals/Rez/Menus/AuxMenu" pc="268448092" symbol="initialize"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="68" lineNum="33" parent="globals/Rez/Menus/AuxMenu" pc="268448094" symbol="initialize"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="68" lineNum="34" parent="globals/Rez/Menus/AuxMenu" pc="268448112" symbol="initialize"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="68" lineNum="35" parent="globals/Rez/Menus/AuxMenu" pc="268448169" symbol="initialize"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="68" lineNum="36" parent="globals/Rez/Menus/AuxMenu" pc="268448225" symbol="initialize"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="69" lineNum="40" parent="globals/Rez/Menus/MainMenuEng" pc="268448282" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="70" lineNum="41" parent="globals/Rez/Menus/MainMenuEng" pc="268448301" symbol="initialize"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="70" lineNum="42" parent="globals/Rez/Menus/MainMenuEng" pc="268448303" symbol="initialize"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="70" lineNum="43" parent="globals/Rez/Menus/MainMenuEng" pc="268448321" symbol="initialize"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="70" lineNum="44" parent="globals/Rez/Menus/MainMenuEng" pc="268448378" symbol="initialize"/>
-        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="70" lineNum="45" parent="globals/Rez/Menus/MainMenuEng" pc="268448434" symbol="initialize"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1149" parent="globals/MenuTestView" pc="268442593" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1150" parent="globals/MenuTestView" pc="268442613" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1151" parent="globals/MenuTestView" pc="268442633" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1154" parent="globals/MenuTestView" pc="268442653" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1155" parent="globals/MenuTestView" pc="268442673" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1156" parent="globals/MenuTestView" pc="268442693" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1159" parent="globals/MenuTestView" pc="268442713" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1160" parent="globals/MenuTestView" pc="268442733" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1161" parent="globals/MenuTestView" pc="268442753" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1164" parent="globals/MenuTestView" pc="268442773" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1165" parent="globals/MenuTestView" pc="268442793" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1166" parent="globals/MenuTestView" pc="268442813" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1169" parent="globals/MenuTestView" pc="268442833" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1170" parent="globals/MenuTestView" pc="268442853" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1171" parent="globals/MenuTestView" pc="268442873" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1174" parent="globals/MenuTestView" pc="268442893" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1175" parent="globals/MenuTestView" pc="268442913" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1176" parent="globals/MenuTestView" pc="268442933" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1179" parent="globals/MenuTestView" pc="268442953" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1180" parent="globals/MenuTestView" pc="268442973" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1181" parent="globals/MenuTestView" pc="268442993" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1152" parent="globals/MenuTestView" pc="268443016" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1153" parent="globals/MenuTestView" pc="268443023" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1157" parent="globals/MenuTestView" pc="268443026" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1158" parent="globals/MenuTestView" pc="268443033" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1162" parent="globals/MenuTestView" pc="268443036" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1163" parent="globals/MenuTestView" pc="268443043" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1167" parent="globals/MenuTestView" pc="268443046" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1168" parent="globals/MenuTestView" pc="268443053" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1172" parent="globals/MenuTestView" pc="268443056" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1173" parent="globals/MenuTestView" pc="268443063" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1177" parent="globals/MenuTestView" pc="268443066" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1178" parent="globals/MenuTestView" pc="268443073" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1182" parent="globals/MenuTestView" pc="268443076" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1183" parent="globals/MenuTestView" pc="268443083" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="41" lineNum="1186" parent="globals/MenuTestView" pc="268443087" symbol="getDayOfWeekInNumber"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="44" lineNum="415" parent="globals/MenuTestView" pc="268443090" symbol="civMonthLength"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="44" lineNum="417" parent="globals/MenuTestView" pc="268443092" symbol="civMonthLength"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="44" lineNum="419" parent="globals/MenuTestView" pc="268443103" symbol="civMonthLength"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="44" lineNum="421" parent="globals/MenuTestView" pc="268443115" symbol="civMonthLength"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="44" lineNum="423" parent="globals/MenuTestView" pc="268443168" symbol="civMonthLength"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="44" lineNum="427" parent="globals/MenuTestView" pc="268443177" symbol="civMonthLength"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="45" lineNum="178" parent="globals/MenuTestView" pc="268443184" symbol="getYasterday"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="45" lineNum="180" parent="globals/MenuTestView" pc="268443188" symbol="getYasterday"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="45" lineNum="181" parent="globals/MenuTestView" pc="268443198" symbol="getYasterday"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="45" lineNum="182" parent="globals/MenuTestView" pc="268443208" symbol="getYasterday"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="45" lineNum="185" parent="globals/MenuTestView" pc="268443218" symbol="getYasterday"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="45" lineNum="194" parent="globals/MenuTestView" pc="268443287" symbol="getYasterday"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="45" lineNum="196" parent="globals/MenuTestView" pc="268443298" symbol="getYasterday"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="45" lineNum="206" parent="globals/MenuTestView" pc="268443376" symbol="getYasterday"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="45" lineNum="208" parent="globals/MenuTestView" pc="268443387" symbol="getYasterday"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="45" lineNum="218" parent="globals/MenuTestView" pc="268443490" symbol="getYasterday"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="45" lineNum="229" parent="globals/MenuTestView" pc="268443584" symbol="getYasterday"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="45" lineNum="230" parent="globals/MenuTestView" pc="268443603" symbol="getYasterday"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="45" lineNum="232" parent="globals/MenuTestView" pc="268443627" symbol="getYasterday"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1091" parent="globals/MenuTestView" pc="268443630" symbol="display_time"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1097" parent="globals/MenuTestView" pc="268443634" symbol="display_time"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1099" parent="globals/MenuTestView" pc="268443651" symbol="display_time"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1103" parent="globals/MenuTestView" pc="268443685" symbol="display_time"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1106" parent="globals/MenuTestView" pc="268443710" symbol="display_time"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1108" parent="globals/MenuTestView" pc="268443727" symbol="display_time"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1110" parent="globals/MenuTestView" pc="268443761" symbol="display_time"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1112" parent="globals/MenuTestView" pc="268443778" symbol="display_time"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1114" parent="globals/MenuTestView" pc="268443812" symbol="display_time"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1116" parent="globals/MenuTestView" pc="268443829" symbol="display_time"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1120" parent="globals/MenuTestView" pc="268443863" symbol="display_time"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1123" parent="globals/MenuTestView" pc="268443888" symbol="display_time"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1124" parent="globals/MenuTestView" pc="268443898" symbol="display_time"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1127" parent="globals/MenuTestView" pc="268443929" symbol="display_time"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1129" parent="globals/MenuTestView" pc="268443946" symbol="display_time"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1133" parent="globals/MenuTestView" pc="268443980" symbol="display_time"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1136" parent="globals/MenuTestView" pc="268444005" symbol="display_time"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1138" parent="globals/MenuTestView" pc="268444015" symbol="display_time"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="46" lineNum="1139" parent="globals/MenuTestView" pc="268444039" symbol="display_time"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="47" lineNum="236" parent="globals/MenuTestView" pc="268444090" symbol="getTomorrow"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="47" lineNum="238" parent="globals/MenuTestView" pc="268444094" symbol="getTomorrow"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="47" lineNum="239" parent="globals/MenuTestView" pc="268444104" symbol="getTomorrow"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="47" lineNum="240" parent="globals/MenuTestView" pc="268444114" symbol="getTomorrow"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="47" lineNum="243" parent="globals/MenuTestView" pc="268444124" symbol="getTomorrow"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="47" lineNum="253" parent="globals/MenuTestView" pc="268444193" symbol="getTomorrow"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="47" lineNum="255" parent="globals/MenuTestView" pc="268444232" symbol="getTomorrow"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="47" lineNum="265" parent="globals/MenuTestView" pc="268444310" symbol="getTomorrow"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="47" lineNum="267" parent="globals/MenuTestView" pc="268444321" symbol="getTomorrow"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="47" lineNum="277" parent="globals/MenuTestView" pc="268444396" symbol="getTomorrow"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="47" lineNum="288" parent="globals/MenuTestView" pc="268444465" symbol="getTomorrow"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="47" lineNum="289" parent="globals/MenuTestView" pc="268444484" symbol="getTomorrow"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="47" lineNum="291" parent="globals/MenuTestView" pc="268444508" symbol="getTomorrow"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1192" parent="globals/MenuTestView" pc="268444511" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1193" parent="globals/MenuTestView" pc="268444515" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1195" parent="globals/MenuTestView" pc="268444552" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1196" parent="globals/MenuTestView" pc="268444562" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1197" parent="globals/MenuTestView" pc="268444572" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1199" parent="globals/MenuTestView" pc="268444582" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1200" parent="globals/MenuTestView" pc="268444598" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1201" parent="globals/MenuTestView" pc="268444608" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1203" parent="globals/MenuTestView" pc="268444619" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1206" parent="globals/MenuTestView" pc="268444629" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1211" parent="globals/MenuTestView" pc="268444836" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1216" parent="globals/MenuTestView" pc="268444971" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1223" parent="globals/MenuTestView" pc="268444987" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1225" parent="globals/MenuTestView" pc="268444998" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1231" parent="globals/MenuTestView" pc="268445008" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1233" parent="globals/MenuTestView" pc="268445018" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1234" parent="globals/MenuTestView" pc="268445018" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1236" parent="globals/MenuTestView" pc="268445035" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1238" parent="globals/MenuTestView" pc="268445052" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1242" parent="globals/MenuTestView" pc="268445154" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1245" parent="globals/MenuTestView" pc="268445253" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1246" parent="globals/MenuTestView" pc="268445260" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1248" parent="globals/MenuTestView" pc="268445277" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1250" parent="globals/MenuTestView" pc="268445305" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1252" parent="globals/MenuTestView" pc="268445322" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1254" parent="globals/MenuTestView" pc="268445350" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1256" parent="globals/MenuTestView" pc="268445367" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1258" parent="globals/MenuTestView" pc="268445395" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1260" parent="globals/MenuTestView" pc="268445412" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1262" parent="globals/MenuTestView" pc="268445440" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1264" parent="globals/MenuTestView" pc="268445457" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1266" parent="globals/MenuTestView" pc="268445485" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1268" parent="globals/MenuTestView" pc="268445502" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1270" parent="globals/MenuTestView" pc="268445530" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1272" parent="globals/MenuTestView" pc="268445547" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1274" parent="globals/MenuTestView" pc="268445575" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1275" parent="globals/MenuTestView" pc="268445599" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1282" parent="globals/MenuTestView" pc="268445623" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1283" parent="globals/MenuTestView" pc="268445630" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1285" parent="globals/MenuTestView" pc="268445632" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1296" parent="globals/MenuTestView" pc="268445652" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1307" parent="globals/MenuTestView" pc="268445672" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1318" parent="globals/MenuTestView" pc="268445692" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1329" parent="globals/MenuTestView" pc="268445712" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1340" parent="globals/MenuTestView" pc="268445732" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1351" parent="globals/MenuTestView" pc="268445752" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1362" parent="globals/MenuTestView" pc="268445772" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1291" parent="globals/MenuTestView" pc="268445775" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1292" parent="globals/MenuTestView" pc="268445795" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1295" parent="globals/MenuTestView" pc="268445805" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1302" parent="globals/MenuTestView" pc="268445808" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1303" parent="globals/MenuTestView" pc="268445828" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1306" parent="globals/MenuTestView" pc="268445838" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1315" parent="globals/MenuTestView" pc="268445841" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1316" parent="globals/MenuTestView" pc="268445861" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1317" parent="globals/MenuTestView" pc="268445871" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1326" parent="globals/MenuTestView" pc="268445874" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1327" parent="globals/MenuTestView" pc="268445894" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1328" parent="globals/MenuTestView" pc="268445904" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1337" parent="globals/MenuTestView" pc="268445907" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1338" parent="globals/MenuTestView" pc="268445927" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1339" parent="globals/MenuTestView" pc="268445937" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1348" parent="globals/MenuTestView" pc="268445940" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1349" parent="globals/MenuTestView" pc="268445960" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1350" parent="globals/MenuTestView" pc="268445970" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1359" parent="globals/MenuTestView" pc="268445973" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1360" parent="globals/MenuTestView" pc="268445993" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1361" parent="globals/MenuTestView" pc="268446003" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="48" lineNum="1363" parent="globals/MenuTestView" pc="268446006" symbol="setmazal"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="49" lineNum="104" parent="globals/MenuTestView" pc="268446011" symbol="initialize"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="49" lineNum="105" parent="globals/MenuTestView" pc="268446013" symbol="initialize"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="50" lineNum="152" parent="globals/MenuTestView" pc="268446032" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="50" lineNum="155" parent="globals/MenuTestView" pc="268446034" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="50" lineNum="157" parent="globals/MenuTestView" pc="268446059" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="50" lineNum="159" parent="globals/MenuTestView" pc="268446095" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="50" lineNum="165" parent="globals/MenuTestView" pc="268446134" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="50" lineNum="171" parent="globals/MenuTestView" pc="268446146" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="50" lineNum="174" parent="globals/MenuTestView" pc="268446158" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="679" parent="globals/MenuTestView" pc="268446179" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="681" parent="globals/MenuTestView" pc="268446183" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="684" parent="globals/MenuTestView" pc="268446183" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="683" parent="globals/MenuTestView" pc="268446183" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="682" parent="globals/MenuTestView" pc="268446183" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="686" parent="globals/MenuTestView" pc="268446183" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="688" parent="globals/MenuTestView" pc="268446187" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="689" parent="globals/MenuTestView" pc="268446206" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="690" parent="globals/MenuTestView" pc="268446234" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="691" parent="globals/MenuTestView" pc="268446271" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="694" parent="globals/MenuTestView" pc="268446317" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="696" parent="globals/MenuTestView" pc="268446328" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="697" parent="globals/MenuTestView" pc="268446338" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="700" parent="globals/MenuTestView" pc="268446351" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="701" parent="globals/MenuTestView" pc="268446362" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="702" parent="globals/MenuTestView" pc="268446372" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="705" parent="globals/MenuTestView" pc="268446385" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="706" parent="globals/MenuTestView" pc="268446396" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="707" parent="globals/MenuTestView" pc="268446406" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="710" parent="globals/MenuTestView" pc="268446419" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="712" parent="globals/MenuTestView" pc="268446430" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="715" parent="globals/MenuTestView" pc="268446443" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="716" parent="globals/MenuTestView" pc="268446443" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="717" parent="globals/MenuTestView" pc="268446448" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="718" parent="globals/MenuTestView" pc="268446474" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="719" parent="globals/MenuTestView" pc="268446484" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="723" parent="globals/MenuTestView" pc="268446510" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="726" parent="globals/MenuTestView" pc="268446517" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="728" parent="globals/MenuTestView" pc="268446528" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="731" parent="globals/MenuTestView" pc="268446541" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="732" parent="globals/MenuTestView" pc="268446595" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="51" lineNum="733" parent="globals/MenuTestView" pc="268446676" symbol="timeadj1_real"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="299" parent="globals/MenuTestView" pc="268446679" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="301" parent="globals/MenuTestView" pc="268446683" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="302" parent="globals/MenuTestView" pc="268446690" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="304" parent="globals/MenuTestView" pc="268446692" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="307" parent="globals/MenuTestView" pc="268446712" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="317" parent="globals/MenuTestView" pc="268446732" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="320" parent="globals/MenuTestView" pc="268446752" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="323" parent="globals/MenuTestView" pc="268446772" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="326" parent="globals/MenuTestView" pc="268446792" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="329" parent="globals/MenuTestView" pc="268446812" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="332" parent="globals/MenuTestView" pc="268446832" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="335" parent="globals/MenuTestView" pc="268446852" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="338" parent="globals/MenuTestView" pc="268446872" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="341" parent="globals/MenuTestView" pc="268446892" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="344" parent="globals/MenuTestView" pc="268446912" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="305" parent="globals/MenuTestView" pc="268446935" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="306" parent="globals/MenuTestView" pc="268446942" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="308" parent="globals/MenuTestView" pc="268446945" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="310" parent="globals/MenuTestView" pc="268446961" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="314" parent="globals/MenuTestView" pc="268446971" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="316" parent="globals/MenuTestView" pc="268446978" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="318" parent="globals/MenuTestView" pc="268446981" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="319" parent="globals/MenuTestView" pc="268446988" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="321" parent="globals/MenuTestView" pc="268446991" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="322" parent="globals/MenuTestView" pc="268446998" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="324" parent="globals/MenuTestView" pc="268447001" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="325" parent="globals/MenuTestView" pc="268447008" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="327" parent="globals/MenuTestView" pc="268447011" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="328" parent="globals/MenuTestView" pc="268447018" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="330" parent="globals/MenuTestView" pc="268447021" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="331" parent="globals/MenuTestView" pc="268447028" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="333" parent="globals/MenuTestView" pc="268447031" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="334" parent="globals/MenuTestView" pc="268447038" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="336" parent="globals/MenuTestView" pc="268447041" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="337" parent="globals/MenuTestView" pc="268447048" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="339" parent="globals/MenuTestView" pc="268447051" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="340" parent="globals/MenuTestView" pc="268447058" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="342" parent="globals/MenuTestView" pc="268447061" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="343" parent="globals/MenuTestView" pc="268447068" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="345" parent="globals/MenuTestView" pc="268447071" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="346" parent="globals/MenuTestView" pc="268447078" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="52" lineNum="349" parent="globals/MenuTestView" pc="268447082" symbol="getLastDayOfMonth"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="53" lineNum="29" parent="globals" pc="268447085" symbol="setPosition"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="53" lineNum="31" parent="globals" pc="268447097" symbol="setPosition"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="53" lineNum="32" parent="globals" pc="268447118" symbol="setPosition"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="53" lineNum="33" parent="globals" pc="268447137" symbol="setPosition"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="53" lineNum="34" parent="globals" pc="268447153" symbol="setPosition"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="53" lineNum="35" parent="globals" pc="268447169" symbol="setPosition"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="53" lineNum="36" parent="globals" pc="268447198" symbol="setPosition"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestView.mc" id="53" lineNum="37" parent="globals" pc="268447227" symbol="setPosition"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="54" lineNum="46" parent="globals/MyViewDelegate" pc="268447244" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="55" lineNum="53" parent="globals/MyViewDelegate" pc="268447263" symbol="onPosition"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="55" lineNum="55" parent="globals/MyViewDelegate" pc="268447265" symbol="onPosition"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="55" lineNum="57" parent="globals/MyViewDelegate" pc="268447286" symbol="onPosition"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="55" lineNum="60" parent="globals/MyViewDelegate" pc="268447293" symbol="onPosition"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="56" lineNum="69" parent="globals/MyViewDelegate" pc="268447320" symbol="onJsonResponse"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="56" lineNum="71" parent="globals/MyViewDelegate" pc="268447322" symbol="onJsonResponse"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="56" lineNum="73" parent="globals/MyViewDelegate" pc="268447343" symbol="onJsonResponse"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="57" lineNum="48" parent="globals/MyViewDelegate" pc="268447358" symbol="initialize"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="57" lineNum="50" parent="globals/MyViewDelegate" pc="268447360" symbol="initialize"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="58" lineNum="78" parent="globals/MyViewDelegate" pc="268447379" symbol="onSelect"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="58" lineNum="80" parent="globals/MyViewDelegate" pc="268447383" symbol="onSelect"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="58" lineNum="81" parent="globals/MyViewDelegate" pc="268447417" symbol="onSelect"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="58" lineNum="83" parent="globals/MyViewDelegate" pc="268447463" symbol="onSelect"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MyAcquirePositionDelegate.mc" id="58" lineNum="85" parent="globals/MyViewDelegate" pc="268447488" symbol="onSelect"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestApp.mc" id="59" lineNum="14" parent="globals/MenuTestApp" pc="268447491" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestApp.mc" id="60" lineNum="23" parent="globals/MenuTestApp" pc="268447510" symbol="onStart"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestApp.mc" id="61" lineNum="33" parent="globals/MenuTestApp" pc="268447513" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestApp.mc" id="61" lineNum="34" parent="globals/MenuTestApp" pc="268447515" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestApp.mc" id="62" lineNum="17" parent="globals/MenuTestApp" pc="268447590" symbol="initialize"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestApp.mc" id="62" lineNum="18" parent="globals/MenuTestApp" pc="268447592" symbol="initialize"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\source\\MenuTestApp.mc" id="63" lineNum="28" parent="globals/MenuTestApp" pc="268447611" symbol="onStop"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="64" lineNum="19" parent="globals/Rez/Layouts" pc="268447614" symbol="MainLayout"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="64" lineNum="20" parent="globals/Rez/Layouts" pc="268447626" symbol="MainLayout"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="64" lineNum="22" parent="globals/Rez/Layouts" pc="268447738" symbol="MainLayout"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="64" lineNum="24" parent="globals/Rez/Layouts" pc="268447850" symbol="MainLayout"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="64" lineNum="26" parent="globals/Rez/Layouts" pc="268447962" symbol="MainLayout"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="65" lineNum="49" parent="globals/Rez/Menus/MainMenuHeb" pc="268447999" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="66" lineNum="50" parent="globals/Rez/Menus/MainMenuHeb" pc="268448018" symbol="initialize"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="66" lineNum="51" parent="globals/Rez/Menus/MainMenuHeb" pc="268448020" symbol="initialize"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="66" lineNum="52" parent="globals/Rez/Menus/MainMenuHeb" pc="268448038" symbol="initialize"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="66" lineNum="53" parent="globals/Rez/Menus/MainMenuHeb" pc="268448095" symbol="initialize"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="66" lineNum="54" parent="globals/Rez/Menus/MainMenuHeb" pc="268448151" symbol="initialize"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="67" lineNum="31" parent="globals/Rez/Menus/AuxMenu" pc="268448208" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="68" lineNum="32" parent="globals/Rez/Menus/AuxMenu" pc="268448227" symbol="initialize"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="68" lineNum="33" parent="globals/Rez/Menus/AuxMenu" pc="268448229" symbol="initialize"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="68" lineNum="34" parent="globals/Rez/Menus/AuxMenu" pc="268448247" symbol="initialize"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="68" lineNum="35" parent="globals/Rez/Menus/AuxMenu" pc="268448304" symbol="initialize"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="68" lineNum="36" parent="globals/Rez/Menus/AuxMenu" pc="268448360" symbol="initialize"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="69" lineNum="40" parent="globals/Rez/Menus/MainMenuEng" pc="268448417" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="70" lineNum="41" parent="globals/Rez/Menus/MainMenuEng" pc="268448436" symbol="initialize"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="70" lineNum="42" parent="globals/Rez/Menus/MainMenuEng" pc="268448438" symbol="initialize"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="70" lineNum="43" parent="globals/Rez/Menus/MainMenuEng" pc="268448456" symbol="initialize"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="70" lineNum="44" parent="globals/Rez/Menus/MainMenuEng" pc="268448513" symbol="initialize"/>
+        <entry filename="C:\\Users\\User\\Desktop\\apps\\garmin\\github\\hebrewClock\\bin\\gen\\006-B2691-00\\source\\Rez.mcgen" id="70" lineNum="45" parent="globals/Rez/Menus/MainMenuEng" pc="268448569" symbol="initialize"/>
     </pcToLineNum>
     <symbolTable>
         <entry id="8388639" module="true" symbol="Graphics"/>
@@ -921,63 +962,63 @@
         <entry endPc="268442513" name="time_alot" stackId="24" startPc="268441542"/>
         <entry endPc="268442513" name="time_tzeit" stackId="25" startPc="268441542"/>
         <entry arg="true" endPc="268442576" name="y" stackId="1" startPc="268442520"/>
-        <entry arg="true" endPc="268442949" name="day" stackId="1" startPc="268442580"/>
-        <entry endPc="268442949" name="returnValue" stackId="2" startPc="268442584"/>
-        <entry arg="true" endPc="268443043" name="_month" stackId="1" startPc="268442950"/>
-        <entry arg="true" endPc="268443043" name="_year" stackId="2" startPc="268442950"/>
-        <entry arg="true" endPc="268443489" name="today" stackId="1" startPc="268443044"/>
-        <entry endPc="268443489" name="currentYear" stackId="2" startPc="268443048"/>
-        <entry endPc="268443489" name="currentMonth" stackId="3" startPc="268443048"/>
-        <entry endPc="268443489" name="currentDay" stackId="4" startPc="268443048"/>
-        <entry endPc="268443489" name="options" stackId="5" startPc="268443048"/>
-        <entry endPc="268443489" name="date" stackId="6" startPc="268443048"/>
-        <entry endPc="268443489" name="yasterday" stackId="7" startPc="268443048"/>
-        <entry endPc="268443948" name="templbHour" stackId="1" startPc="268443494"/>
-        <entry endPc="268443948" name="view" stackId="2" startPc="268443494"/>
-        <entry arg="true" endPc="268444370" name="today" stackId="1" startPc="268443950"/>
-        <entry endPc="268444370" name="currentYear" stackId="2" startPc="268443954"/>
-        <entry endPc="268444370" name="currentMonth" stackId="3" startPc="268443954"/>
-        <entry endPc="268444370" name="currentDay" stackId="4" startPc="268443954"/>
-        <entry endPc="268444370" name="options" stackId="5" startPc="268443954"/>
-        <entry endPc="268444370" name="date" stackId="6" startPc="268443954"/>
-        <entry endPc="268444370" name="tomorrow" stackId="7" startPc="268443954"/>
-        <entry endPc="268445874" name="date" stackId="1" startPc="268444375"/>
-        <entry endPc="268445874" name="h" stackId="2" startPc="268444375"/>
-        <entry endPc="268445874" name="m" stackId="3" startPc="268444375"/>
-        <entry endPc="268445874" name="s" stackId="4" startPc="268444375"/>
-        <entry endPc="268445874" name="day" stackId="5" startPc="268444375"/>
-        <entry endPc="268445874" name="clockHour" stackId="6" startPc="268444375"/>
-        <entry endPc="268445874" name="mida" stackId="7" startPc="268444375"/>
-        <entry endPc="268445874" name="deviceSettings" stackId="8" startPc="268444375"/>
-        <entry endPc="268445874" name="x" stackId="9" startPc="268444375"/>
-        <entry endPc="268445874" name="view" stackId="10" startPc="268444375"/>
-        <entry endPc="268445874" name="viewMazal" stackId="11" startPc="268444375"/>
-        <entry endPc="268445874" name="text" stackId="12" startPc="268444375"/>
-        <entry arg="true" endPc="268446043" name="dc" stackId="1" startPc="268445897"/>
-        <entry arg="true" endPc="268446543" name="t" stackId="1" startPc="268446044"/>
-        <entry arg="true" endPc="268446543" name="ampm" stackId="2" startPc="268446044"/>
-        <entry endPc="268446543" name="hour" stackId="3" startPc="268446048"/>
-        <entry endPc="268446543" name="min" stackId="4" startPc="268446048"/>
-        <entry endPc="268446543" name="sec" stackId="5" startPc="268446048"/>
-        <entry endPc="268446543" name="milisec" stackId="6" startPc="268446048"/>
-        <entry endPc="268446543" name="time" stackId="7" startPc="268446048"/>
-        <entry endPc="268446543" name="ampm_str" stackId="8" startPc="268446048"/>
-        <entry endPc="268446543" name="milisec_str" stackId="9" startPc="268446048"/>
-        <entry endPc="268446543" name="str" stackId="10" startPc="268446048"/>
-        <entry arg="true" endPc="268446949" name="year" stackId="1" startPc="268446544"/>
-        <entry arg="true" endPc="268446949" name="month" stackId="2" startPc="268446544"/>
-        <entry endPc="268446949" name="returnValue" stackId="3" startPc="268446548"/>
-        <entry arg="true" endPc="268447108" name="info" stackId="1" startPc="268446950"/>
-        <entry endPc="268447107" name="myLocation" stackId="2" startPc="268446962"/>
-        <entry arg="true" endPc="268447184" name="info" stackId="1" startPc="268447128"/>
-        <entry arg="true" endPc="268447222" name="code" stackId="1" startPc="268447185"/>
-        <entry arg="true" endPc="268447222" name="data" stackId="2" startPc="268447185"/>
-        <entry endPc="268447355" name="view" stackId="1" startPc="268447248"/>
-        <entry endPc="268447355" name="delegate" stackId="2" startPc="268447248"/>
-        <entry arg="true" endPc="268447863" name="dc" stackId="1" startPc="268447479"/>
-        <entry endPc="268447863" name="rez_cmp_local_text_ChristianClock" stackId="2" startPc="268447491"/>
-        <entry endPc="268447863" name="rez_cmp_local_text_HebrewClock" stackId="3" startPc="268447491"/>
-        <entry endPc="268447863" name="rez_cmp_local_text_MazalLabel" stackId="4" startPc="268447491"/>
+        <entry arg="true" endPc="268443089" name="day" stackId="1" startPc="268442580"/>
+        <entry endPc="268443089" name="returnValue" stackId="2" startPc="268442584"/>
+        <entry arg="true" endPc="268443183" name="_month" stackId="1" startPc="268443090"/>
+        <entry arg="true" endPc="268443183" name="_year" stackId="2" startPc="268443090"/>
+        <entry arg="true" endPc="268443629" name="today" stackId="1" startPc="268443184"/>
+        <entry endPc="268443629" name="currentYear" stackId="2" startPc="268443188"/>
+        <entry endPc="268443629" name="currentMonth" stackId="3" startPc="268443188"/>
+        <entry endPc="268443629" name="currentDay" stackId="4" startPc="268443188"/>
+        <entry endPc="268443629" name="options" stackId="5" startPc="268443188"/>
+        <entry endPc="268443629" name="date" stackId="6" startPc="268443188"/>
+        <entry endPc="268443629" name="yasterday" stackId="7" startPc="268443188"/>
+        <entry endPc="268444088" name="templbHour" stackId="1" startPc="268443634"/>
+        <entry endPc="268444088" name="view" stackId="2" startPc="268443634"/>
+        <entry arg="true" endPc="268444510" name="today" stackId="1" startPc="268444090"/>
+        <entry endPc="268444510" name="currentYear" stackId="2" startPc="268444094"/>
+        <entry endPc="268444510" name="currentMonth" stackId="3" startPc="268444094"/>
+        <entry endPc="268444510" name="currentDay" stackId="4" startPc="268444094"/>
+        <entry endPc="268444510" name="options" stackId="5" startPc="268444094"/>
+        <entry endPc="268444510" name="date" stackId="6" startPc="268444094"/>
+        <entry endPc="268444510" name="tomorrow" stackId="7" startPc="268444094"/>
+        <entry endPc="268446009" name="date" stackId="1" startPc="268444515"/>
+        <entry endPc="268446009" name="h" stackId="2" startPc="268444515"/>
+        <entry endPc="268446009" name="m" stackId="3" startPc="268444515"/>
+        <entry endPc="268446009" name="s" stackId="4" startPc="268444515"/>
+        <entry endPc="268446009" name="day" stackId="5" startPc="268444515"/>
+        <entry endPc="268446009" name="clockHour" stackId="6" startPc="268444515"/>
+        <entry endPc="268446009" name="mida" stackId="7" startPc="268444515"/>
+        <entry endPc="268446009" name="deviceSettings" stackId="8" startPc="268444515"/>
+        <entry endPc="268446009" name="x" stackId="9" startPc="268444515"/>
+        <entry endPc="268446009" name="view" stackId="10" startPc="268444515"/>
+        <entry endPc="268446009" name="viewMazal" stackId="11" startPc="268444515"/>
+        <entry endPc="268446009" name="text" stackId="12" startPc="268444515"/>
+        <entry arg="true" endPc="268446178" name="dc" stackId="1" startPc="268446032"/>
+        <entry arg="true" endPc="268446678" name="t" stackId="1" startPc="268446179"/>
+        <entry arg="true" endPc="268446678" name="ampm" stackId="2" startPc="268446179"/>
+        <entry endPc="268446678" name="hour" stackId="3" startPc="268446183"/>
+        <entry endPc="268446678" name="min" stackId="4" startPc="268446183"/>
+        <entry endPc="268446678" name="sec" stackId="5" startPc="268446183"/>
+        <entry endPc="268446678" name="milisec" stackId="6" startPc="268446183"/>
+        <entry endPc="268446678" name="time" stackId="7" startPc="268446183"/>
+        <entry endPc="268446678" name="ampm_str" stackId="8" startPc="268446183"/>
+        <entry endPc="268446678" name="milisec_str" stackId="9" startPc="268446183"/>
+        <entry endPc="268446678" name="str" stackId="10" startPc="268446183"/>
+        <entry arg="true" endPc="268447084" name="year" stackId="1" startPc="268446679"/>
+        <entry arg="true" endPc="268447084" name="month" stackId="2" startPc="268446679"/>
+        <entry endPc="268447084" name="returnValue" stackId="3" startPc="268446683"/>
+        <entry arg="true" endPc="268447243" name="info" stackId="1" startPc="268447085"/>
+        <entry endPc="268447242" name="myLocation" stackId="2" startPc="268447097"/>
+        <entry arg="true" endPc="268447319" name="info" stackId="1" startPc="268447263"/>
+        <entry arg="true" endPc="268447357" name="code" stackId="1" startPc="268447320"/>
+        <entry arg="true" endPc="268447357" name="data" stackId="2" startPc="268447320"/>
+        <entry endPc="268447490" name="view" stackId="1" startPc="268447383"/>
+        <entry endPc="268447490" name="delegate" stackId="2" startPc="268447383"/>
+        <entry arg="true" endPc="268447998" name="dc" stackId="1" startPc="268447614"/>
+        <entry endPc="268447998" name="rez_cmp_local_text_ChristianClock" stackId="2" startPc="268447626"/>
+        <entry endPc="268447998" name="rez_cmp_local_text_HebrewClock" stackId="3" startPc="268447626"/>
+        <entry endPc="268447998" name="rez_cmp_local_text_MazalLabel" stackId="4" startPc="268447626"/>
     </localVars>
     <annotations>
         <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
@@ -1182,7 +1223,7 @@
         <functionEntry accessMode="public" name="onHide" parent="MenuTestView">
             <documentation><![CDATA[<div class="description"> Called when this View is removed from the screen. Save the<br/> state of this View here. This includes freeing resources from<br/> memory.<br/></div>]]></documentation>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268442949" name="getDayOfWeekInNumber" parent="MenuTestView" startPc="268442580">
+        <functionEntry accessMode="public" endPc="268443089" name="getDayOfWeekInNumber" parent="MenuTestView" startPc="268442580">
             <param id="day"/>
             <documentation/>
         </functionEntry>
@@ -1192,78 +1233,78 @@
         <functionEntry accessMode="public" name="onShow" parent="MenuTestView">
             <documentation><![CDATA[<div class="description"> Called when this View is brought to the foreground. Restore<br/> the state of this View and prepare it to be shown. This includes<br/> loading resources into memory.<br/></div>]]></documentation>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268443043" name="civMonthLength" parent="MenuTestView" startPc="268442950">
+        <functionEntry accessMode="public" endPc="268443183" name="civMonthLength" parent="MenuTestView" startPc="268443090">
             <param id="_month"/>
             <param id="_year"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268443489" name="getYasterday" parent="MenuTestView" startPc="268443044">
+        <functionEntry accessMode="public" endPc="268443629" name="getYasterday" parent="MenuTestView" startPc="268443184">
             <param id="today"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268443949" name="display_time" parent="MenuTestView" startPc="268443490">
+        <functionEntry accessMode="public" endPc="268444089" name="display_time" parent="MenuTestView" startPc="268443630">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268444370" name="getTomorrow" parent="MenuTestView" startPc="268443950">
+        <functionEntry accessMode="public" endPc="268444510" name="getTomorrow" parent="MenuTestView" startPc="268444090">
             <param id="today"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268445875" name="setmazal" parent="MenuTestView" startPc="268444371">
+        <functionEntry accessMode="public" endPc="268446010" name="setmazal" parent="MenuTestView" startPc="268444511">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268445896" name="initialize" parent="MenuTestView" startPc="268445876">
+        <functionEntry accessMode="public" endPc="268446031" name="initialize" parent="MenuTestView" startPc="268446011">
             <documentation><![CDATA[<div class="description"> Constructor<br/></div>]]></documentation>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268446043" name="onUpdate" parent="MenuTestView" startPc="268445897">
+        <functionEntry accessMode="public" endPc="268446178" name="onUpdate" parent="MenuTestView" startPc="268446032">
             <param id="dc"/>
             <documentation><![CDATA[<div class="description"> Update the view<br/> <div class="param"> dc Device context</div><br/></div>]]></documentation>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268446543" name="timeadj1_real" parent="MenuTestView" startPc="268446044">
+        <functionEntry accessMode="public" endPc="268446678" name="timeadj1_real" parent="MenuTestView" startPc="268446179">
             <param id="t"/>
             <param id="ampm"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268446949" name="getLastDayOfMonth" parent="MenuTestView" startPc="268446544">
+        <functionEntry accessMode="public" endPc="268447084" name="getLastDayOfMonth" parent="MenuTestView" startPc="268446679">
             <param id="year"/>
             <param id="month"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268447108" name="setPosition" startPc="268446950">
+        <functionEntry accessMode="public" endPc="268447243" name="setPosition" startPc="268447085">
             <param id="info"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268447127" name="&lt;init&gt;" parent="MyViewDelegate" startPc="268447109">
+        <functionEntry accessMode="public" endPc="268447262" name="&lt;init&gt;" parent="MyViewDelegate" startPc="268447244">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268447184" name="onPosition" parent="MyViewDelegate" startPc="268447128">
+        <functionEntry accessMode="public" endPc="268447319" name="onPosition" parent="MyViewDelegate" startPc="268447263">
             <param id="info"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268447222" name="onJsonResponse" parent="MyViewDelegate" startPc="268447185">
+        <functionEntry accessMode="public" endPc="268447357" name="onJsonResponse" parent="MyViewDelegate" startPc="268447320">
             <param id="code"/>
             <param id="data"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268447243" name="initialize" parent="MyViewDelegate" startPc="268447223">
+        <functionEntry accessMode="public" endPc="268447378" name="initialize" parent="MyViewDelegate" startPc="268447358">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268447355" name="onSelect" parent="MyViewDelegate" startPc="268447244">
+        <functionEntry accessMode="public" endPc="268447490" name="onSelect" parent="MyViewDelegate" startPc="268447379">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268447374" name="&lt;init&gt;" parent="MenuTestApp" startPc="268447356">
+        <functionEntry accessMode="public" endPc="268447509" name="&lt;init&gt;" parent="MenuTestApp" startPc="268447491">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268447377" name="onStart" parent="MenuTestApp" startPc="268447375">
+        <functionEntry accessMode="public" endPc="268447512" name="onStart" parent="MenuTestApp" startPc="268447510">
             <param id="state"/>
             <documentation><![CDATA[<div class="description"> Handle app startup<br/> <div class="param"> state Startup arguments</div><br/></div>]]></documentation>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268447454" name="getInitialView" parent="MenuTestApp" startPc="268447378">
+        <functionEntry accessMode="public" endPc="268447589" name="getInitialView" parent="MenuTestApp" startPc="268447513">
             <documentation><![CDATA[<div class="description"> Return the initial views for the app<br/> <div class="returns">Returns  Array Pair [View, InputDelegate]</div><br/></div>]]></documentation>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268447475" name="initialize" parent="MenuTestApp" startPc="268447455">
+        <functionEntry accessMode="public" endPc="268447610" name="initialize" parent="MenuTestApp" startPc="268447590">
             <documentation><![CDATA[<div class="description"> Constructor<br/></div>]]></documentation>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268447478" name="onStop" parent="MenuTestApp" startPc="268447476">
+        <functionEntry accessMode="public" endPc="268447613" name="onStop" parent="MenuTestApp" startPc="268447611">
             <param id="state"/>
             <documentation><![CDATA[<div class="description"> Handle app shutdown<br/> <div class="param"> state Shutdown arguments</div><br/></div>]]></documentation>
         </functionEntry>
@@ -1285,26 +1326,26 @@
         <functionEntry accessMode="public" name="&lt;init&gt;" parent="JsonData">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268447863" name="MainLayout" parent="Layouts" startPc="268447479">
+        <functionEntry accessMode="public" endPc="268447998" name="MainLayout" parent="Layouts" startPc="268447614">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268447882" name="&lt;init&gt;" parent="MainMenuHeb" startPc="268447864">
+        <functionEntry accessMode="public" endPc="268448017" name="&lt;init&gt;" parent="MainMenuHeb" startPc="268447999">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268448072" name="initialize" parent="MainMenuHeb" startPc="268447883">
+        <functionEntry accessMode="public" endPc="268448207" name="initialize" parent="MainMenuHeb" startPc="268448018">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268448091" name="&lt;init&gt;" parent="AuxMenu" startPc="268448073">
+        <functionEntry accessMode="public" endPc="268448226" name="&lt;init&gt;" parent="AuxMenu" startPc="268448208">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268448281" name="initialize" parent="AuxMenu" startPc="268448092">
+        <functionEntry accessMode="public" endPc="268448416" name="initialize" parent="AuxMenu" startPc="268448227">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268448300" name="&lt;init&gt;" parent="MainMenuEng" startPc="268448282">
+        <functionEntry accessMode="public" endPc="268448435" name="&lt;init&gt;" parent="MainMenuEng" startPc="268448417">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268448490" name="initialize" parent="MainMenuEng" startPc="268448301">
+        <functionEntry accessMode="public" endPc="268448625" name="initialize" parent="MainMenuEng" startPc="268448436">
             <documentation/>
         </functionEntry>
     </functions>

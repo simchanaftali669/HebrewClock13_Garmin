@@ -1148,30 +1148,37 @@ class MenuTestView extends WatchUi.View {
  		{
   			case "א'":
   			case "Sun":
+			case "Sunday":
  				returnValue = 1;
  				break;
  			case "ב'":
  			case "Mon":
+			case "Monday":
  				returnValue = 2;
  				break;
  			case "ג'":
  			case "Tue":
+			case "Tuesday":
  				returnValue = 3;
  				break;
  			case "ד'":
  			case "Wed":
+			case "Wednesday":
  				returnValue = 4;
  				break;
  			case "ה'":
  			case "Thu":
+			case "Thursday":
  				returnValue = 5;
  				break;
  			case "ו'":
  			case "Fri":
+			case "Friday":
  				returnValue = 6;
  				break;
   			case "ז'":
   			case "Sat":
+			case "Saturday":
  				returnValue = 7;
  				break; 		
  		}
@@ -1183,13 +1190,13 @@ class MenuTestView extends WatchUi.View {
  
     //mazal of the hour
 	public function setmazal() {
-	    var date =  Gregorian.info(Time.now(), Time.FORMAT_LONG);
+	    var date =  Gregorian.info(Time.now(), Time.FORMAT_SHORT);
 	
 	    var h = date.hour;
 	    var m = date.min;
 	    var s = date.sec;
 	
-	    var day = getDayOfWeekInNumber(date.day_of_week);
+	    var day = date.day_of_week+1;//getDayOfWeekInNumber(date.day_of_week);
 	    var clockHour = lbHour;
 	    if (clockHour == 24)
 	    {
