@@ -4099,27 +4099,28 @@ C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1192_
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1199 5 ]
         [ "C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1192_28_start" "C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1192_28_stop" ]
         %day.5 = local;
-        %tmp.15 = lgetv %date.1;
-        %tmp.16 = getv %tmp.15 :day_of_week;
-        %tmp.17 = 1;
-        %tmp.18 = add %tmp.16 %tmp.17;
-        lputv %day.5 %tmp.18;
+        %tmp.15 = self;
+        %tmp.16 = getv function %tmp.15 :getDayOfWeekInNumber;
+        %tmp.17 = lgetv %date.1;
+        %tmp.18 = getv %tmp.17 :day_of_week;
+        %tmp.19 = invoke %tmp.15 %tmp.16(%tmp.18);
+        lputv %day.5 %tmp.19;
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1200 5 ]
         [ "C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1192_28_start" "C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1192_28_stop" ]
         %clockHour.6 = local;
-        %tmp.20 = getv ? :lbHour;
-        lputv %clockHour.6 %tmp.20;
+        %tmp.21 = getv ? :lbHour;
+        lputv %clockHour.6 %tmp.21;
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1201 5 ]
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1201_5_if_stmt:
-        %tmp.22 = lgetv %clockHour.6;
-        %tmp.23 = 24;
-        %tmp.24 = eq %tmp.22 %tmp.23;
-        bf %tmp.24 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1201_5_if_end;
+        %tmp.23 = lgetv %clockHour.6;
+        %tmp.24 = 24;
+        %tmp.25 = eq %tmp.23 %tmp.24;
+        bf %tmp.25 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1201_5_if_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1201_5_if_true:
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1202_5_start:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1203 9 ]
-        %tmp.25 = 0;
-        lputv %clockHour.6 %tmp.25;
+        %tmp.26 = 0;
+        lputv %clockHour.6 %tmp.26;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1202_5_stop:
         goto @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1201_5_if_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1201_5_if_end:
@@ -4129,85 +4130,85 @@ C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_9_begin:
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_10_begin:
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_10_begin:
-        %tmp.26 = lgetv %h.2;
-        %tmp.27 = getv function %tmp.26 :toNumber;
-        %tmp.28 = invoke %tmp.26 %tmp.27();
-        %tmp.30 = getv ? :sunsetH;
-        %tmp.31 = getv function %tmp.30 :toNumber;
-        %tmp.32 = invoke %tmp.30 %tmp.31();
-        %tmp.33 = eq %tmp.28 %tmp.32;
-        %tmp.34 = dup %tmp.33;
-        bf %tmp.34 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_48_end;
+        %tmp.27 = lgetv %h.2;
+        %tmp.28 = getv function %tmp.27 :toNumber;
+        %tmp.29 = invoke %tmp.27 %tmp.28();
+        %tmp.31 = getv ? :sunsetH;
+        %tmp.32 = getv function %tmp.31 :toNumber;
+        %tmp.33 = invoke %tmp.31 %tmp.32();
+        %tmp.34 = eq %tmp.29 %tmp.33;
+        %tmp.35 = dup %tmp.34;
+        bf %tmp.35 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_48_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_48_true:
-        %tmp.35 = lgetv %m.3;
-        %tmp.36 = getv function %tmp.35 :toNumber;
-        %tmp.37 = invoke %tmp.35 %tmp.36();
-        %tmp.39 = getv ? :sunsetM;
-        %tmp.40 = getv function %tmp.39 :toNumber;
-        %tmp.41 = invoke %tmp.39 %tmp.40();
-        %tmp.42 = eq %tmp.37 %tmp.41;
-        %tmp.43 = and %tmp.33 %tmp.42;
-        push %tmp.43;
+        %tmp.36 = lgetv %m.3;
+        %tmp.37 = getv function %tmp.36 :toNumber;
+        %tmp.38 = invoke %tmp.36 %tmp.37();
+        %tmp.40 = getv ? :sunsetM;
+        %tmp.41 = getv function %tmp.40 :toNumber;
+        %tmp.42 = invoke %tmp.40 %tmp.41();
+        %tmp.43 = eq %tmp.38 %tmp.42;
+        %tmp.44 = and %tmp.34 %tmp.43;
+        push %tmp.44;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_48_end:
-        %tmp.44 = phi [%tmp.34 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_10_begin] [%tmp.43 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_48_true] [%tmp.44 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_48_end];
-        %tmp.45 = dup %tmp.44;
-        bf %tmp.45 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_86_end;
+        %tmp.45 = phi [%tmp.35 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_10_begin] [%tmp.44 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_48_true] [%tmp.45 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_48_end];
+        %tmp.46 = dup %tmp.45;
+        bf %tmp.46 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_86_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_86_true:
-        %tmp.46 = lgetv %s.4;
-        %tmp.47 = getv function %tmp.46 :toNumber;
-        %tmp.48 = invoke %tmp.46 %tmp.47();
-        %tmp.50 = getv ? :sunsetS;
-        %tmp.51 = getv function %tmp.50 :toNumber;
-        %tmp.52 = invoke %tmp.50 %tmp.51();
-        %tmp.53 = gte %tmp.48 %tmp.52;
-        %tmp.54 = and %tmp.44 %tmp.53;
-        push %tmp.54;
+        %tmp.47 = lgetv %s.4;
+        %tmp.48 = getv function %tmp.47 :toNumber;
+        %tmp.49 = invoke %tmp.47 %tmp.48();
+        %tmp.51 = getv ? :sunsetS;
+        %tmp.52 = getv function %tmp.51 :toNumber;
+        %tmp.53 = invoke %tmp.51 %tmp.52();
+        %tmp.54 = gte %tmp.49 %tmp.53;
+        %tmp.55 = and %tmp.45 %tmp.54;
+        push %tmp.55;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_86_end:
-        %tmp.55 = phi [%tmp.45 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_10_begin] [%tmp.54 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_86_true] [%tmp.55 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_86_end];
-        %tmp.56 = dup %tmp.55;
-        bt %tmp.56 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1207_9_end;
+        %tmp.56 = phi [%tmp.46 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_10_begin] [%tmp.55 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_86_true] [%tmp.56 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_86_end];
+        %tmp.57 = dup %tmp.56;
+        bt %tmp.57 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1207_9_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1207_9_false:
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1207_10_begin:
-        %tmp.57 = lgetv %h.2;
-        %tmp.58 = getv function %tmp.57 :toNumber;
-        %tmp.59 = invoke %tmp.57 %tmp.58();
-        %tmp.61 = getv ? :sunsetH;
-        %tmp.62 = getv function %tmp.61 :toNumber;
-        %tmp.63 = invoke %tmp.61 %tmp.62();
-        %tmp.64 = eq %tmp.59 %tmp.63;
-        %tmp.65 = dup %tmp.64;
-        bf %tmp.65 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1207_48_end;
+        %tmp.58 = lgetv %h.2;
+        %tmp.59 = getv function %tmp.58 :toNumber;
+        %tmp.60 = invoke %tmp.58 %tmp.59();
+        %tmp.62 = getv ? :sunsetH;
+        %tmp.63 = getv function %tmp.62 :toNumber;
+        %tmp.64 = invoke %tmp.62 %tmp.63();
+        %tmp.65 = eq %tmp.60 %tmp.64;
+        %tmp.66 = dup %tmp.65;
+        bf %tmp.66 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1207_48_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1207_48_true:
-        %tmp.66 = lgetv %m.3;
-        %tmp.67 = getv function %tmp.66 :toNumber;
-        %tmp.68 = invoke %tmp.66 %tmp.67();
-        %tmp.70 = getv ? :sunsetM;
-        %tmp.71 = getv function %tmp.70 :toNumber;
-        %tmp.72 = invoke %tmp.70 %tmp.71();
-        %tmp.73 = gt %tmp.68 %tmp.72;
-        %tmp.74 = and %tmp.64 %tmp.73;
-        push %tmp.74;
+        %tmp.67 = lgetv %m.3;
+        %tmp.68 = getv function %tmp.67 :toNumber;
+        %tmp.69 = invoke %tmp.67 %tmp.68();
+        %tmp.71 = getv ? :sunsetM;
+        %tmp.72 = getv function %tmp.71 :toNumber;
+        %tmp.73 = invoke %tmp.71 %tmp.72();
+        %tmp.74 = gt %tmp.69 %tmp.73;
+        %tmp.75 = and %tmp.65 %tmp.74;
+        push %tmp.75;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1207_48_end:
-        %tmp.75 = phi [%tmp.65 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1207_10_begin] [%tmp.74 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1207_48_true] [%tmp.75 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1207_48_end];
-        %tmp.76 = or %tmp.55 %tmp.75;
-        push %tmp.76;
+        %tmp.76 = phi [%tmp.66 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1207_10_begin] [%tmp.75 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1207_48_true] [%tmp.76 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1207_48_end];
+        %tmp.77 = or %tmp.56 %tmp.76;
+        push %tmp.77;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1207_9_end:
-        %tmp.77 = phi [%tmp.56 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_9_begin] [%tmp.76 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1207_9_false] [%tmp.77 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1207_9_end];
-        %tmp.78 = dup %tmp.77;
-        bt %tmp.78 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1208_9_end;
+        %tmp.78 = phi [%tmp.57 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_9_begin] [%tmp.77 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1207_9_false] [%tmp.78 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1207_9_end];
+        %tmp.79 = dup %tmp.78;
+        bt %tmp.79 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1208_9_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1208_9_false:
-        %tmp.79 = lgetv %h.2;
-        %tmp.80 = getv function %tmp.79 :toNumber;
-        %tmp.81 = invoke %tmp.79 %tmp.80();
-        %tmp.83 = getv ? :sunsetH;
-        %tmp.84 = getv function %tmp.83 :toNumber;
-        %tmp.85 = invoke %tmp.83 %tmp.84();
-        %tmp.86 = gt %tmp.81 %tmp.85;
-        %tmp.87 = or %tmp.77 %tmp.86;
-        push %tmp.87;
+        %tmp.80 = lgetv %h.2;
+        %tmp.81 = getv function %tmp.80 :toNumber;
+        %tmp.82 = invoke %tmp.80 %tmp.81();
+        %tmp.84 = getv ? :sunsetH;
+        %tmp.85 = getv function %tmp.84 :toNumber;
+        %tmp.86 = invoke %tmp.84 %tmp.85();
+        %tmp.87 = gt %tmp.82 %tmp.86;
+        %tmp.88 = or %tmp.78 %tmp.87;
+        push %tmp.88;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1208_9_end:
-        %tmp.88 = phi [%tmp.78 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_9_begin] [%tmp.87 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1208_9_false] [%tmp.88 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1208_9_end];
-        bf %tmp.88 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_5_if_end;
+        %tmp.89 = phi [%tmp.79 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_9_begin] [%tmp.88 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1208_9_false] [%tmp.89 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1208_9_end];
+        bf %tmp.89 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_5_if_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_5_if_true:
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1210_5_start:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1211 9 ]
@@ -4216,80 +4217,80 @@ C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_13_begin:
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_14_begin:
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_14_begin:
-        %tmp.89 = lgetv %h.2;
-        %tmp.90 = getv function %tmp.89 :toNumber;
-        %tmp.91 = invoke %tmp.89 %tmp.90();
-        %tmp.92 = 23;
-        %tmp.93 = eq %tmp.91 %tmp.92;
-        %tmp.94 = dup %tmp.93;
-        bf %tmp.94 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_36_end;
+        %tmp.90 = lgetv %h.2;
+        %tmp.91 = getv function %tmp.90 :toNumber;
+        %tmp.92 = invoke %tmp.90 %tmp.91();
+        %tmp.93 = 23;
+        %tmp.94 = eq %tmp.92 %tmp.93;
+        %tmp.95 = dup %tmp.94;
+        bf %tmp.95 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_36_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_36_true:
-        %tmp.95 = lgetv %m.3;
-        %tmp.96 = getv function %tmp.95 :toNumber;
-        %tmp.97 = invoke %tmp.95 %tmp.96();
-        %tmp.98 = 23;
-        %tmp.99 = eq %tmp.97 %tmp.98;
-        %tmp.100 = and %tmp.93 %tmp.99;
-        push %tmp.100;
+        %tmp.96 = lgetv %m.3;
+        %tmp.97 = getv function %tmp.96 :toNumber;
+        %tmp.98 = invoke %tmp.96 %tmp.97();
+        %tmp.99 = 23;
+        %tmp.100 = eq %tmp.98 %tmp.99;
+        %tmp.101 = and %tmp.94 %tmp.100;
+        push %tmp.101;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_36_end:
-        %tmp.101 = phi [%tmp.94 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_14_begin] [%tmp.100 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_36_true] [%tmp.101 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_36_end];
-        %tmp.102 = dup %tmp.101;
-        bf %tmp.102 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_58_end;
+        %tmp.102 = phi [%tmp.95 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_14_begin] [%tmp.101 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_36_true] [%tmp.102 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_36_end];
+        %tmp.103 = dup %tmp.102;
+        bf %tmp.103 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_58_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_58_true:
-        %tmp.103 = lgetv %s.4;
-        %tmp.104 = getv function %tmp.103 :toNumber;
-        %tmp.105 = invoke %tmp.103 %tmp.104();
-        %tmp.106 = 59;
-        %tmp.107 = lte %tmp.105 %tmp.106;
-        %tmp.108 = and %tmp.101 %tmp.107;
-        push %tmp.108;
+        %tmp.104 = lgetv %s.4;
+        %tmp.105 = getv function %tmp.104 :toNumber;
+        %tmp.106 = invoke %tmp.104 %tmp.105();
+        %tmp.107 = 59;
+        %tmp.108 = lte %tmp.106 %tmp.107;
+        %tmp.109 = and %tmp.102 %tmp.108;
+        push %tmp.109;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_58_end:
-        %tmp.109 = phi [%tmp.102 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_14_begin] [%tmp.108 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_58_true] [%tmp.109 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_58_end];
-        %tmp.110 = dup %tmp.109;
-        bt %tmp.110 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1212_13_end;
+        %tmp.110 = phi [%tmp.103 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_14_begin] [%tmp.109 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_58_true] [%tmp.110 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_58_end];
+        %tmp.111 = dup %tmp.110;
+        bt %tmp.111 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1212_13_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1212_13_false:
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1212_14_begin:
-        %tmp.111 = lgetv %h.2;
-        %tmp.112 = getv function %tmp.111 :toNumber;
-        %tmp.113 = invoke %tmp.111 %tmp.112();
-        %tmp.114 = 23;
-        %tmp.115 = eq %tmp.113 %tmp.114;
-        %tmp.116 = dup %tmp.115;
-        bf %tmp.116 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1212_36_end;
+        %tmp.112 = lgetv %h.2;
+        %tmp.113 = getv function %tmp.112 :toNumber;
+        %tmp.114 = invoke %tmp.112 %tmp.113();
+        %tmp.115 = 23;
+        %tmp.116 = eq %tmp.114 %tmp.115;
+        %tmp.117 = dup %tmp.116;
+        bf %tmp.117 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1212_36_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1212_36_true:
-        %tmp.117 = lgetv %m.3;
-        %tmp.118 = getv function %tmp.117 :toNumber;
-        %tmp.119 = invoke %tmp.117 %tmp.118();
-        %tmp.120 = 59;
-        %tmp.121 = lt %tmp.119 %tmp.120;
-        %tmp.122 = and %tmp.115 %tmp.121;
-        push %tmp.122;
+        %tmp.118 = lgetv %m.3;
+        %tmp.119 = getv function %tmp.118 :toNumber;
+        %tmp.120 = invoke %tmp.118 %tmp.119();
+        %tmp.121 = 59;
+        %tmp.122 = lt %tmp.120 %tmp.121;
+        %tmp.123 = and %tmp.116 %tmp.122;
+        push %tmp.123;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1212_36_end:
-        %tmp.123 = phi [%tmp.116 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1212_14_begin] [%tmp.122 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1212_36_true] [%tmp.123 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1212_36_end];
-        %tmp.124 = or %tmp.109 %tmp.123;
-        push %tmp.124;
+        %tmp.124 = phi [%tmp.117 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1212_14_begin] [%tmp.123 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1212_36_true] [%tmp.124 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1212_36_end];
+        %tmp.125 = or %tmp.110 %tmp.124;
+        push %tmp.125;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1212_13_end:
-        %tmp.125 = phi [%tmp.110 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_13_begin] [%tmp.124 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1212_13_false] [%tmp.125 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1212_13_end];
-        %tmp.126 = dup %tmp.125;
-        bt %tmp.126 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1213_13_end;
+        %tmp.126 = phi [%tmp.111 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_13_begin] [%tmp.125 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1212_13_false] [%tmp.126 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1212_13_end];
+        %tmp.127 = dup %tmp.126;
+        bt %tmp.127 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1213_13_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1213_13_false:
-        %tmp.127 = lgetv %h.2;
-        %tmp.128 = getv function %tmp.127 :toNumber;
-        %tmp.129 = invoke %tmp.127 %tmp.128();
-        %tmp.130 = 23;
-        %tmp.131 = lt %tmp.129 %tmp.130;
-        %tmp.132 = or %tmp.125 %tmp.131;
-        push %tmp.132;
+        %tmp.128 = lgetv %h.2;
+        %tmp.129 = getv function %tmp.128 :toNumber;
+        %tmp.130 = invoke %tmp.128 %tmp.129();
+        %tmp.131 = 23;
+        %tmp.132 = lt %tmp.130 %tmp.131;
+        %tmp.133 = or %tmp.126 %tmp.132;
+        push %tmp.133;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1213_13_end:
-        %tmp.133 = phi [%tmp.126 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_13_begin] [%tmp.132 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1213_13_false] [%tmp.133 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1213_13_end];
-        bf %tmp.133 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_9_if_end;
+        %tmp.134 = phi [%tmp.127 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_13_begin] [%tmp.133 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1213_13_false] [%tmp.134 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1213_13_end];
+        bf %tmp.134 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_9_if_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_9_if_true:
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1215_9_start:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1216 13 ]
-        %tmp.135 = lgetv %day.5;
-        %tmp.136 = 1;
-        %tmp.137 = add %tmp.135 %tmp.136;
-        lputv %day.5 %tmp.137;
+        %tmp.136 = lgetv %day.5;
+        %tmp.137 = 1;
+        %tmp.138 = add %tmp.136 %tmp.137;
+        lputv %day.5 %tmp.138;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1215_9_stop:
         goto @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_9_if_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1211_9_if_end:
@@ -4298,414 +4299,414 @@ C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1210_
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1206_5_if_end:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1223 5 ]
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1223_5_if_stmt:
-        %tmp.139 = lgetv %day.5;
-        %tmp.140 = 8;
-        %tmp.141 = eq %tmp.139 %tmp.140;
-        bf %tmp.141 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1223_5_if_end;
+        %tmp.140 = lgetv %day.5;
+        %tmp.141 = 8;
+        %tmp.142 = eq %tmp.140 %tmp.141;
+        bf %tmp.142 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1223_5_if_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1223_5_if_true:
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1224_5_start:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1225 9 ]
-        %tmp.142 = 1;
-        lputv %day.5 %tmp.142;
+        %tmp.143 = 1;
+        lputv %day.5 %tmp.143;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1224_5_stop:
         goto @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1223_5_if_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1223_5_if_end:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1231 5 ]
-        %tmp.144 = lgetv %day.5;
-        putv self :hebrewday %tmp.144;
+        %tmp.145 = lgetv %day.5;
+        putv self :hebrewday %tmp.145;
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1233 2 ]
         [ "C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1192_28_start" "C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1192_28_stop" ]
         %mida.7 = local;
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1234 2 ]
         [ "C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1192_28_start" "C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1192_28_stop" ]
         %deviceSettings.8 = local;
-        %tmp.145 = getm $.Toybox.System;
-        %tmp.146 = getv function %tmp.145 :getDeviceSettings;
-        %tmp.147 = invoke %tmp.145 %tmp.146();
-        lputv %deviceSettings.8 %tmp.147;
+        %tmp.146 = getm $.Toybox.System;
+        %tmp.147 = getv function %tmp.146 :getDeviceSettings;
+        %tmp.148 = invoke %tmp.146 %tmp.147();
+        lputv %deviceSettings.8 %tmp.148;
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1236 2 ]
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1236_2_if_stmt:
-        %tmp.148 = lgetv %deviceSettings.8;
-        %tmp.149 = getv %tmp.148 :systemLanguage;
-        %tmp.150 = getm $.Toybox.System;
-        %tmp.151 = getv %tmp.150 :LANGUAGE_HEB;
-        %tmp.152 = eq %tmp.149 %tmp.151;
-        bf %tmp.152 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1236_2_if_false;
+        %tmp.149 = lgetv %deviceSettings.8;
+        %tmp.150 = getv %tmp.149 :systemLanguage;
+        %tmp.151 = getm $.Toybox.System;
+        %tmp.152 = getv %tmp.151 :LANGUAGE_HEB;
+        %tmp.153 = eq %tmp.150 %tmp.152;
+        bf %tmp.153 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1236_2_if_false;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1236_2_if_true:
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1237_2_start:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1238 6 ]
-        %tmp.153 = newa 7;
-        %tmp.154 = "שבתאי";
-        %tmp.155 = dup %tmp.153;
-        %tmp.156 = aputv %tmp.155 0 %tmp.154;
-        %tmp.157 = "צדק";
-        %tmp.158 = dup %tmp.156;
-        %tmp.159 = aputv %tmp.158 1 %tmp.157;
-        %tmp.160 = "מאדים";
-        %tmp.161 = dup %tmp.159;
-        %tmp.162 = aputv %tmp.161 2 %tmp.160;
-        %tmp.163 = "חמה";
-        %tmp.164 = dup %tmp.162;
-        %tmp.165 = aputv %tmp.164 3 %tmp.163;
-        %tmp.166 = "נוגה";
-        %tmp.167 = dup %tmp.165;
-        %tmp.168 = aputv %tmp.167 4 %tmp.166;
-        %tmp.169 = "כוכב";
-        %tmp.170 = dup %tmp.168;
-        %tmp.171 = aputv %tmp.170 5 %tmp.169;
-        %tmp.172 = "לבנה";
-        %tmp.173 = dup %tmp.171;
-        %tmp.174 = aputv %tmp.173 6 %tmp.172;
-        lputv %mida.7 %tmp.174;
+        %tmp.154 = newa 7;
+        %tmp.155 = "שבתאי";
+        %tmp.156 = dup %tmp.154;
+        %tmp.157 = aputv %tmp.156 0 %tmp.155;
+        %tmp.158 = "צדק";
+        %tmp.159 = dup %tmp.157;
+        %tmp.160 = aputv %tmp.159 1 %tmp.158;
+        %tmp.161 = "מאדים";
+        %tmp.162 = dup %tmp.160;
+        %tmp.163 = aputv %tmp.162 2 %tmp.161;
+        %tmp.164 = "חמה";
+        %tmp.165 = dup %tmp.163;
+        %tmp.166 = aputv %tmp.165 3 %tmp.164;
+        %tmp.167 = "נוגה";
+        %tmp.168 = dup %tmp.166;
+        %tmp.169 = aputv %tmp.168 4 %tmp.167;
+        %tmp.170 = "כוכב";
+        %tmp.171 = dup %tmp.169;
+        %tmp.172 = aputv %tmp.171 5 %tmp.170;
+        %tmp.173 = "לבנה";
+        %tmp.174 = dup %tmp.172;
+        %tmp.175 = aputv %tmp.174 6 %tmp.173;
+        lputv %mida.7 %tmp.175;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1237_2_stop:
         goto @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1236_2_if_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1236_2_if_false:
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1241_2_start:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1242 6 ]
-        %tmp.175 = newa 7;
-        %tmp.176 = "Saturn";
-        %tmp.177 = dup %tmp.175;
-        %tmp.178 = aputv %tmp.177 0 %tmp.176;
-        %tmp.179 = "Jupiter";
-        %tmp.180 = dup %tmp.178;
-        %tmp.181 = aputv %tmp.180 1 %tmp.179;
-        %tmp.182 = "Mars";
-        %tmp.183 = dup %tmp.181;
-        %tmp.184 = aputv %tmp.183 2 %tmp.182;
-        %tmp.185 = "Sun";
-        %tmp.186 = dup %tmp.184;
-        %tmp.187 = aputv %tmp.186 3 %tmp.185;
-        %tmp.188 = "Venus";
-        %tmp.189 = dup %tmp.187;
-        %tmp.190 = aputv %tmp.189 4 %tmp.188;
-        %tmp.191 = "Mercury";
-        %tmp.192 = dup %tmp.190;
-        %tmp.193 = aputv %tmp.192 5 %tmp.191;
-        %tmp.194 = "Moon";
-        %tmp.195 = dup %tmp.193;
-        %tmp.196 = aputv %tmp.195 6 %tmp.194;
-        lputv %mida.7 %tmp.196;
+        %tmp.176 = newa 7;
+        %tmp.177 = "Saturn";
+        %tmp.178 = dup %tmp.176;
+        %tmp.179 = aputv %tmp.178 0 %tmp.177;
+        %tmp.180 = "Jupiter";
+        %tmp.181 = dup %tmp.179;
+        %tmp.182 = aputv %tmp.181 1 %tmp.180;
+        %tmp.183 = "Mars";
+        %tmp.184 = dup %tmp.182;
+        %tmp.185 = aputv %tmp.184 2 %tmp.183;
+        %tmp.186 = "Sun";
+        %tmp.187 = dup %tmp.185;
+        %tmp.188 = aputv %tmp.187 3 %tmp.186;
+        %tmp.189 = "Venus";
+        %tmp.190 = dup %tmp.188;
+        %tmp.191 = aputv %tmp.190 4 %tmp.189;
+        %tmp.192 = "Mercury";
+        %tmp.193 = dup %tmp.191;
+        %tmp.194 = aputv %tmp.193 5 %tmp.192;
+        %tmp.195 = "Moon";
+        %tmp.196 = dup %tmp.194;
+        %tmp.197 = aputv %tmp.196 6 %tmp.195;
+        lputv %mida.7 %tmp.197;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1241_2_stop:
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1236_2_if_end:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1245 2 ]
         [ "C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1192_28_start" "C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1192_28_stop" ]
         %x.9 = local;
-        %tmp.197 = 0;
-        lputv %x.9 %tmp.197;
+        %tmp.198 = 0;
+        lputv %x.9 %tmp.198;
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1246 5 ]
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1246_5_if_stmt:
-        %tmp.199 = getv ? :hebrewday;
-        %tmp.200 = 1;
-        %tmp.201 = eq %tmp.199 %tmp.200;
-        bf %tmp.201 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1246_5_if_end;
+        %tmp.200 = getv ? :hebrewday;
+        %tmp.201 = 1;
+        %tmp.202 = eq %tmp.200 %tmp.201;
+        bf %tmp.202 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1246_5_if_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1246_5_if_true:
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1247_5_start:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1248 9 ]
-        %tmp.202 = 6;
-        %tmp.203 = lgetv %clockHour.6;
-        %tmp.204 = getv function %tmp.203 :toNumber;
-        %tmp.205 = invoke %tmp.203 %tmp.204();
-        %tmp.206 = add %tmp.202 %tmp.205;
-        %tmp.207 = 7;
-        %tmp.208 = mod %tmp.206 %tmp.207;
-        lputv %x.9 %tmp.208;
+        %tmp.203 = 6;
+        %tmp.204 = lgetv %clockHour.6;
+        %tmp.205 = getv function %tmp.204 :toNumber;
+        %tmp.206 = invoke %tmp.204 %tmp.205();
+        %tmp.207 = add %tmp.203 %tmp.206;
+        %tmp.208 = 7;
+        %tmp.209 = mod %tmp.207 %tmp.208;
+        lputv %x.9 %tmp.209;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1247_5_stop:
         goto @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1246_5_if_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1246_5_if_end:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1250 5 ]
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1250_5_if_stmt:
-        %tmp.210 = getv ? :hebrewday;
-        %tmp.211 = 2;
-        %tmp.212 = eq %tmp.210 %tmp.211;
-        bf %tmp.212 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1250_5_if_end;
+        %tmp.211 = getv ? :hebrewday;
+        %tmp.212 = 2;
+        %tmp.213 = eq %tmp.211 %tmp.212;
+        bf %tmp.213 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1250_5_if_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1250_5_if_true:
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1251_5_start:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1252 9 ]
-        %tmp.213 = 2;
-        %tmp.214 = lgetv %clockHour.6;
-        %tmp.215 = getv function %tmp.214 :toNumber;
-        %tmp.216 = invoke %tmp.214 %tmp.215();
-        %tmp.217 = add %tmp.213 %tmp.216;
-        %tmp.218 = 7;
-        %tmp.219 = mod %tmp.217 %tmp.218;
-        lputv %x.9 %tmp.219;
+        %tmp.214 = 2;
+        %tmp.215 = lgetv %clockHour.6;
+        %tmp.216 = getv function %tmp.215 :toNumber;
+        %tmp.217 = invoke %tmp.215 %tmp.216();
+        %tmp.218 = add %tmp.214 %tmp.217;
+        %tmp.219 = 7;
+        %tmp.220 = mod %tmp.218 %tmp.219;
+        lputv %x.9 %tmp.220;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1251_5_stop:
         goto @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1250_5_if_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1250_5_if_end:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1254 5 ]
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1254_5_if_stmt:
-        %tmp.221 = getv ? :hebrewday;
-        %tmp.222 = 3;
-        %tmp.223 = eq %tmp.221 %tmp.222;
-        bf %tmp.223 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1254_5_if_end;
+        %tmp.222 = getv ? :hebrewday;
+        %tmp.223 = 3;
+        %tmp.224 = eq %tmp.222 %tmp.223;
+        bf %tmp.224 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1254_5_if_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1254_5_if_true:
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1255_5_start:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1256 9 ]
-        %tmp.224 = 5;
-        %tmp.225 = lgetv %clockHour.6;
-        %tmp.226 = getv function %tmp.225 :toNumber;
-        %tmp.227 = invoke %tmp.225 %tmp.226();
-        %tmp.228 = add %tmp.224 %tmp.227;
-        %tmp.229 = 7;
-        %tmp.230 = mod %tmp.228 %tmp.229;
-        lputv %x.9 %tmp.230;
+        %tmp.225 = 5;
+        %tmp.226 = lgetv %clockHour.6;
+        %tmp.227 = getv function %tmp.226 :toNumber;
+        %tmp.228 = invoke %tmp.226 %tmp.227();
+        %tmp.229 = add %tmp.225 %tmp.228;
+        %tmp.230 = 7;
+        %tmp.231 = mod %tmp.229 %tmp.230;
+        lputv %x.9 %tmp.231;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1255_5_stop:
         goto @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1254_5_if_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1254_5_if_end:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1258 5 ]
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1258_5_if_stmt:
-        %tmp.232 = getv ? :hebrewday;
-        %tmp.233 = 4;
-        %tmp.234 = eq %tmp.232 %tmp.233;
-        bf %tmp.234 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1258_5_if_end;
+        %tmp.233 = getv ? :hebrewday;
+        %tmp.234 = 4;
+        %tmp.235 = eq %tmp.233 %tmp.234;
+        bf %tmp.235 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1258_5_if_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1258_5_if_true:
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1259_5_start:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1260 9 ]
-        %tmp.235 = 1;
-        %tmp.236 = lgetv %clockHour.6;
-        %tmp.237 = getv function %tmp.236 :toNumber;
-        %tmp.238 = invoke %tmp.236 %tmp.237();
-        %tmp.239 = add %tmp.235 %tmp.238;
-        %tmp.240 = 7;
-        %tmp.241 = mod %tmp.239 %tmp.240;
-        lputv %x.9 %tmp.241;
+        %tmp.236 = 1;
+        %tmp.237 = lgetv %clockHour.6;
+        %tmp.238 = getv function %tmp.237 :toNumber;
+        %tmp.239 = invoke %tmp.237 %tmp.238();
+        %tmp.240 = add %tmp.236 %tmp.239;
+        %tmp.241 = 7;
+        %tmp.242 = mod %tmp.240 %tmp.241;
+        lputv %x.9 %tmp.242;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1259_5_stop:
         goto @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1258_5_if_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1258_5_if_end:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1262 5 ]
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1262_5_if_stmt:
-        %tmp.243 = getv ? :hebrewday;
-        %tmp.244 = 5;
-        %tmp.245 = eq %tmp.243 %tmp.244;
-        bf %tmp.245 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1262_5_if_end;
+        %tmp.244 = getv ? :hebrewday;
+        %tmp.245 = 5;
+        %tmp.246 = eq %tmp.244 %tmp.245;
+        bf %tmp.246 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1262_5_if_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1262_5_if_true:
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1263_5_start:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1264 9 ]
-        %tmp.246 = 4;
-        %tmp.247 = lgetv %clockHour.6;
-        %tmp.248 = getv function %tmp.247 :toNumber;
-        %tmp.249 = invoke %tmp.247 %tmp.248();
-        %tmp.250 = add %tmp.246 %tmp.249;
-        %tmp.251 = 7;
-        %tmp.252 = mod %tmp.250 %tmp.251;
-        lputv %x.9 %tmp.252;
+        %tmp.247 = 4;
+        %tmp.248 = lgetv %clockHour.6;
+        %tmp.249 = getv function %tmp.248 :toNumber;
+        %tmp.250 = invoke %tmp.248 %tmp.249();
+        %tmp.251 = add %tmp.247 %tmp.250;
+        %tmp.252 = 7;
+        %tmp.253 = mod %tmp.251 %tmp.252;
+        lputv %x.9 %tmp.253;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1263_5_stop:
         goto @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1262_5_if_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1262_5_if_end:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1266 5 ]
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1266_5_if_stmt:
-        %tmp.254 = getv ? :hebrewday;
-        %tmp.255 = 6;
-        %tmp.256 = eq %tmp.254 %tmp.255;
-        bf %tmp.256 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1266_5_if_end;
+        %tmp.255 = getv ? :hebrewday;
+        %tmp.256 = 6;
+        %tmp.257 = eq %tmp.255 %tmp.256;
+        bf %tmp.257 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1266_5_if_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1266_5_if_true:
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1267_5_start:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1268 9 ]
-        %tmp.257 = 7;
-        %tmp.258 = lgetv %clockHour.6;
-        %tmp.259 = getv function %tmp.258 :toNumber;
-        %tmp.260 = invoke %tmp.258 %tmp.259();
-        %tmp.261 = add %tmp.257 %tmp.260;
-        %tmp.262 = 7;
-        %tmp.263 = mod %tmp.261 %tmp.262;
-        lputv %x.9 %tmp.263;
+        %tmp.258 = 7;
+        %tmp.259 = lgetv %clockHour.6;
+        %tmp.260 = getv function %tmp.259 :toNumber;
+        %tmp.261 = invoke %tmp.259 %tmp.260();
+        %tmp.262 = add %tmp.258 %tmp.261;
+        %tmp.263 = 7;
+        %tmp.264 = mod %tmp.262 %tmp.263;
+        lputv %x.9 %tmp.264;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1267_5_stop:
         goto @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1266_5_if_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1266_5_if_end:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1270 5 ]
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1270_5_if_stmt:
-        %tmp.265 = getv ? :hebrewday;
-        %tmp.266 = 7;
-        %tmp.267 = eq %tmp.265 %tmp.266;
-        bf %tmp.267 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1270_5_if_end;
+        %tmp.266 = getv ? :hebrewday;
+        %tmp.267 = 7;
+        %tmp.268 = eq %tmp.266 %tmp.267;
+        bf %tmp.268 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1270_5_if_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1270_5_if_true:
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1271_5_start:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1272 9 ]
-        %tmp.268 = 3;
-        %tmp.269 = lgetv %clockHour.6;
-        %tmp.270 = getv function %tmp.269 :toNumber;
-        %tmp.271 = invoke %tmp.269 %tmp.270();
-        %tmp.272 = add %tmp.268 %tmp.271;
-        %tmp.273 = 7;
-        %tmp.274 = mod %tmp.272 %tmp.273;
-        lputv %x.9 %tmp.274;
+        %tmp.269 = 3;
+        %tmp.270 = lgetv %clockHour.6;
+        %tmp.271 = getv function %tmp.270 :toNumber;
+        %tmp.272 = invoke %tmp.270 %tmp.271();
+        %tmp.273 = add %tmp.269 %tmp.272;
+        %tmp.274 = 7;
+        %tmp.275 = mod %tmp.273 %tmp.274;
+        lputv %x.9 %tmp.275;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1271_5_stop:
         goto @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1270_5_if_end;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1270_5_if_end:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1274 2 ]
         [ "C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1192_28_start" "C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1192_28_stop" ]
         %view.10 = local;
-        %tmp.276 = getv ? :View;
-        %tmp.277 = getv function %tmp.276 :findDrawableById;
-        %tmp.278 = "HebrewClock";
-        %tmp.279 = invoke %tmp.276 %tmp.277(%tmp.278);
-        %tmp.280 = as %tmp.279 Text;
-        lputv %view.10 %tmp.280;
+        %tmp.277 = getv ? :View;
+        %tmp.278 = getv function %tmp.277 :findDrawableById;
+        %tmp.279 = "HebrewClock";
+        %tmp.280 = invoke %tmp.277 %tmp.278(%tmp.279);
+        %tmp.281 = as %tmp.280 Text;
+        lputv %view.10 %tmp.281;
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1275 2 ]
         [ "C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1192_28_start" "C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1192_28_stop" ]
         %viewMazal.11 = local;
-        %tmp.282 = getv ? :View;
-        %tmp.283 = getv function %tmp.282 :findDrawableById;
-        %tmp.284 = "MazalLabel";
-        %tmp.285 = invoke %tmp.282 %tmp.283(%tmp.284);
-        %tmp.286 = as %tmp.285 Text;
-        lputv %viewMazal.11 %tmp.286;
+        %tmp.283 = getv ? :View;
+        %tmp.284 = getv function %tmp.283 :findDrawableById;
+        %tmp.285 = "MazalLabel";
+        %tmp.286 = invoke %tmp.283 %tmp.284(%tmp.285);
+        %tmp.287 = as %tmp.286 Text;
+        lputv %viewMazal.11 %tmp.287;
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1282 2 ]
         [ "C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1192_28_start" "C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1192_28_stop" ]
         %text.12 = local;
-        %tmp.287 = "";
-        lputv %text.12 %tmp.287;
+        %tmp.288 = "";
+        lputv %text.12 %tmp.288;
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1283 2 ]
-        %tmp.289 = lgetv %x.9;
-        push %tmp.289;
+        %tmp.290 = lgetv %x.9;
+        push %tmp.290;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1283_2_switchStmtBegin:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1285 3 ]
-        %tmp.290 = dup %tmp.289;
-        %tmp.291 = 0;
-        %tmp.292 = getv function %tmp.290 :equals;
-        %tmp.293 = invoke %tmp.290 %tmp.292 (%tmp.291);
-        bt %tmp.293 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1285_3_switchCase;
+        %tmp.291 = dup %tmp.290;
+        %tmp.292 = 0;
+        %tmp.293 = getv function %tmp.291 :equals;
+        %tmp.294 = invoke %tmp.291 %tmp.293 (%tmp.292);
+        bt %tmp.294 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1285_3_switchCase;
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1296 3 ]
-        %tmp.294 = dup %tmp.289;
-        %tmp.295 = 1;
-        %tmp.296 = getv function %tmp.294 :equals;
-        %tmp.297 = invoke %tmp.294 %tmp.296 (%tmp.295);
-        bt %tmp.297 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1296_3_switchCase;
+        %tmp.295 = dup %tmp.290;
+        %tmp.296 = 1;
+        %tmp.297 = getv function %tmp.295 :equals;
+        %tmp.298 = invoke %tmp.295 %tmp.297 (%tmp.296);
+        bt %tmp.298 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1296_3_switchCase;
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1307 3 ]
-        %tmp.298 = dup %tmp.289;
-        %tmp.299 = 2;
-        %tmp.300 = getv function %tmp.298 :equals;
-        %tmp.301 = invoke %tmp.298 %tmp.300 (%tmp.299);
-        bt %tmp.301 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1307_3_switchCase;
+        %tmp.299 = dup %tmp.290;
+        %tmp.300 = 2;
+        %tmp.301 = getv function %tmp.299 :equals;
+        %tmp.302 = invoke %tmp.299 %tmp.301 (%tmp.300);
+        bt %tmp.302 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1307_3_switchCase;
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1318 3 ]
-        %tmp.302 = dup %tmp.289;
-        %tmp.303 = 3;
-        %tmp.304 = getv function %tmp.302 :equals;
-        %tmp.305 = invoke %tmp.302 %tmp.304 (%tmp.303);
-        bt %tmp.305 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1318_3_switchCase;
+        %tmp.303 = dup %tmp.290;
+        %tmp.304 = 3;
+        %tmp.305 = getv function %tmp.303 :equals;
+        %tmp.306 = invoke %tmp.303 %tmp.305 (%tmp.304);
+        bt %tmp.306 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1318_3_switchCase;
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1329 3 ]
-        %tmp.306 = dup %tmp.289;
-        %tmp.307 = 4;
-        %tmp.308 = getv function %tmp.306 :equals;
-        %tmp.309 = invoke %tmp.306 %tmp.308 (%tmp.307);
-        bt %tmp.309 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1329_3_switchCase;
+        %tmp.307 = dup %tmp.290;
+        %tmp.308 = 4;
+        %tmp.309 = getv function %tmp.307 :equals;
+        %tmp.310 = invoke %tmp.307 %tmp.309 (%tmp.308);
+        bt %tmp.310 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1329_3_switchCase;
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1340 3 ]
-        %tmp.310 = dup %tmp.289;
-        %tmp.311 = 5;
-        %tmp.312 = getv function %tmp.310 :equals;
-        %tmp.313 = invoke %tmp.310 %tmp.312 (%tmp.311);
-        bt %tmp.313 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1340_3_switchCase;
+        %tmp.311 = dup %tmp.290;
+        %tmp.312 = 5;
+        %tmp.313 = getv function %tmp.311 :equals;
+        %tmp.314 = invoke %tmp.311 %tmp.313 (%tmp.312);
+        bt %tmp.314 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1340_3_switchCase;
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1351 3 ]
-        %tmp.314 = dup %tmp.289;
-        %tmp.315 = 6;
-        %tmp.316 = getv function %tmp.314 :equals;
-        %tmp.317 = invoke %tmp.314 %tmp.316 (%tmp.315);
-        bt %tmp.317 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1351_3_switchCase;
+        %tmp.315 = dup %tmp.290;
+        %tmp.316 = 6;
+        %tmp.317 = getv function %tmp.315 :equals;
+        %tmp.318 = invoke %tmp.315 %tmp.317 (%tmp.316);
+        bt %tmp.318 @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1351_3_switchCase;
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1362 3 ]
         goto @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1283_2_defaultCodeBegin;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1285_3_switchCase:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1291 4 ]
-        %tmp.318 = lgetv %viewMazal.11;
-        %tmp.319 = getv function %tmp.318 :setText;
-        %tmp.321 = lgetv %mida.7;
-        %tmp.322 = 6;
-        %tmp.323 = agetv %tmp.321 %tmp.322;
-        invoke %tmp.318 %tmp.319(%tmp.323);
+        %tmp.319 = lgetv %viewMazal.11;
+        %tmp.320 = getv function %tmp.319 :setText;
+        %tmp.322 = lgetv %mida.7;
+        %tmp.323 = 6;
+        %tmp.324 = agetv %tmp.322 %tmp.323;
+        invoke %tmp.319 %tmp.320(%tmp.324);
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1292 5 ]
-        %tmp.325 = lgetv %mida.7;
-        %tmp.326 = 6;
-        %tmp.327 = agetv %tmp.325 %tmp.326;
-        lputv %text.12 %tmp.327;
+        %tmp.326 = lgetv %mida.7;
+        %tmp.327 = 6;
+        %tmp.328 = agetv %tmp.326 %tmp.327;
+        lputv %text.12 %tmp.328;
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1295 4 ]
         goto @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1283_2_switchStmtEnd;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1296_3_switchCase:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1302 4 ]
-        %tmp.328 = lgetv %viewMazal.11;
-        %tmp.329 = getv function %tmp.328 :setText;
-        %tmp.331 = lgetv %mida.7;
-        %tmp.332 = 0;
-        %tmp.333 = agetv %tmp.331 %tmp.332;
-        invoke %tmp.328 %tmp.329(%tmp.333);
+        %tmp.329 = lgetv %viewMazal.11;
+        %tmp.330 = getv function %tmp.329 :setText;
+        %tmp.332 = lgetv %mida.7;
+        %tmp.333 = 0;
+        %tmp.334 = agetv %tmp.332 %tmp.333;
+        invoke %tmp.329 %tmp.330(%tmp.334);
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1303 4 ]
-        %tmp.335 = lgetv %mida.7;
-        %tmp.336 = 0;
-        %tmp.337 = agetv %tmp.335 %tmp.336;
-        lputv %text.12 %tmp.337;
+        %tmp.336 = lgetv %mida.7;
+        %tmp.337 = 0;
+        %tmp.338 = agetv %tmp.336 %tmp.337;
+        lputv %text.12 %tmp.338;
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1306 4 ]
         goto @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1283_2_switchStmtEnd;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1307_3_switchCase:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1315 4 ]
-        %tmp.338 = lgetv %viewMazal.11;
-        %tmp.339 = getv function %tmp.338 :setText;
-        %tmp.341 = lgetv %mida.7;
-        %tmp.342 = 1;
-        %tmp.343 = agetv %tmp.341 %tmp.342;
-        invoke %tmp.338 %tmp.339(%tmp.343);
+        %tmp.339 = lgetv %viewMazal.11;
+        %tmp.340 = getv function %tmp.339 :setText;
+        %tmp.342 = lgetv %mida.7;
+        %tmp.343 = 1;
+        %tmp.344 = agetv %tmp.342 %tmp.343;
+        invoke %tmp.339 %tmp.340(%tmp.344);
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1316 4 ]
-        %tmp.345 = lgetv %mida.7;
-        %tmp.346 = 1;
-        %tmp.347 = agetv %tmp.345 %tmp.346;
-        lputv %text.12 %tmp.347;
+        %tmp.346 = lgetv %mida.7;
+        %tmp.347 = 1;
+        %tmp.348 = agetv %tmp.346 %tmp.347;
+        lputv %text.12 %tmp.348;
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1317 4 ]
         goto @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1283_2_switchStmtEnd;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1318_3_switchCase:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1326 4 ]
-        %tmp.348 = lgetv %viewMazal.11;
-        %tmp.349 = getv function %tmp.348 :setText;
-        %tmp.351 = lgetv %mida.7;
-        %tmp.352 = 2;
-        %tmp.353 = agetv %tmp.351 %tmp.352;
-        invoke %tmp.348 %tmp.349(%tmp.353);
+        %tmp.349 = lgetv %viewMazal.11;
+        %tmp.350 = getv function %tmp.349 :setText;
+        %tmp.352 = lgetv %mida.7;
+        %tmp.353 = 2;
+        %tmp.354 = agetv %tmp.352 %tmp.353;
+        invoke %tmp.349 %tmp.350(%tmp.354);
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1327 4 ]
-        %tmp.355 = lgetv %mida.7;
-        %tmp.356 = 2;
-        %tmp.357 = agetv %tmp.355 %tmp.356;
-        lputv %text.12 %tmp.357;
+        %tmp.356 = lgetv %mida.7;
+        %tmp.357 = 2;
+        %tmp.358 = agetv %tmp.356 %tmp.357;
+        lputv %text.12 %tmp.358;
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1328 4 ]
         goto @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1283_2_switchStmtEnd;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1329_3_switchCase:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1337 4 ]
-        %tmp.358 = lgetv %viewMazal.11;
-        %tmp.359 = getv function %tmp.358 :setText;
-        %tmp.361 = lgetv %mida.7;
-        %tmp.362 = 3;
-        %tmp.363 = agetv %tmp.361 %tmp.362;
-        invoke %tmp.358 %tmp.359(%tmp.363);
+        %tmp.359 = lgetv %viewMazal.11;
+        %tmp.360 = getv function %tmp.359 :setText;
+        %tmp.362 = lgetv %mida.7;
+        %tmp.363 = 3;
+        %tmp.364 = agetv %tmp.362 %tmp.363;
+        invoke %tmp.359 %tmp.360(%tmp.364);
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1338 4 ]
-        %tmp.365 = lgetv %mida.7;
-        %tmp.366 = 3;
-        %tmp.367 = agetv %tmp.365 %tmp.366;
-        lputv %text.12 %tmp.367;
+        %tmp.366 = lgetv %mida.7;
+        %tmp.367 = 3;
+        %tmp.368 = agetv %tmp.366 %tmp.367;
+        lputv %text.12 %tmp.368;
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1339 4 ]
         goto @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1283_2_switchStmtEnd;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1340_3_switchCase:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1348 4 ]
-        %tmp.368 = lgetv %viewMazal.11;
-        %tmp.369 = getv function %tmp.368 :setText;
-        %tmp.371 = lgetv %mida.7;
-        %tmp.372 = 4;
-        %tmp.373 = agetv %tmp.371 %tmp.372;
-        invoke %tmp.368 %tmp.369(%tmp.373);
+        %tmp.369 = lgetv %viewMazal.11;
+        %tmp.370 = getv function %tmp.369 :setText;
+        %tmp.372 = lgetv %mida.7;
+        %tmp.373 = 4;
+        %tmp.374 = agetv %tmp.372 %tmp.373;
+        invoke %tmp.369 %tmp.370(%tmp.374);
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1349 4 ]
-        %tmp.375 = lgetv %mida.7;
-        %tmp.376 = 4;
-        %tmp.377 = agetv %tmp.375 %tmp.376;
-        lputv %text.12 %tmp.377;
+        %tmp.376 = lgetv %mida.7;
+        %tmp.377 = 4;
+        %tmp.378 = agetv %tmp.376 %tmp.377;
+        lputv %text.12 %tmp.378;
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1350 4 ]
         goto @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1283_2_switchStmtEnd;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1351_3_switchCase:
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1359 4 ]
-        %tmp.378 = lgetv %viewMazal.11;
-        %tmp.379 = getv function %tmp.378 :setText;
-        %tmp.381 = lgetv %mida.7;
-        %tmp.382 = 5;
-        %tmp.383 = agetv %tmp.381 %tmp.382;
-        invoke %tmp.378 %tmp.379(%tmp.383);
+        %tmp.379 = lgetv %viewMazal.11;
+        %tmp.380 = getv function %tmp.379 :setText;
+        %tmp.382 = lgetv %mida.7;
+        %tmp.383 = 5;
+        %tmp.384 = agetv %tmp.382 %tmp.383;
+        invoke %tmp.379 %tmp.380(%tmp.384);
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1360 4 ]
-        %tmp.385 = lgetv %mida.7;
-        %tmp.386 = 5;
-        %tmp.387 = agetv %tmp.385 %tmp.386;
-        lputv %text.12 %tmp.387;
+        %tmp.386 = lgetv %mida.7;
+        %tmp.387 = 5;
+        %tmp.388 = agetv %tmp.386 %tmp.387;
+        lputv %text.12 %tmp.388;
 [ "C:\Users\User\Desktop\apps\garmin\github\hebrewClock\source\MenuTestView.mc" 1361 4 ]
         goto @C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1283_2_switchStmtEnd;
 C_Users_User_Desktop_apps_garmin_github_hebrewClock_source_MenuTestView_mc_1362_3_switchCase:

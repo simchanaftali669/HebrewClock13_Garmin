@@ -1196,7 +1196,7 @@ class MenuTestView extends WatchUi.View {
 	    var m = date.min;
 	    var s = date.sec;
 	
-	    var day = date.day_of_week+1;//getDayOfWeekInNumber(date.day_of_week);
+	    var day = date.day_of_week;//getDayOfWeekInNumber(date.day_of_week);
 	    var clockHour = lbHour;
 	    if (clockHour == 24)
 	    {
