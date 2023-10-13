@@ -89,6 +89,7 @@ class MenuTestView extends WatchUi.View {
 
 	public var tzeit;
 	public var alot;
+	public var misheyakir;
 	public var curr_hour;
 	public var sunset_hour;
 	public var sunrise_hour;
@@ -886,8 +887,24 @@ class MenuTestView extends WatchUi.View {
 	        {
 	        	alot = time_alot[2];
 			}
-		   
-		    var time_tzeit = [0, 0, 0, 0];
+
+			var time_misheyakir = [0,0,0,0];
+			//משיכיר
+			if( curr_hour > sunset_hour )
+			{
+				time_misheyakir = suntime(tomorrow.day, tomorrow.month, tomorrow.year, 101, 0, latitude, longitude);
+			}
+			else
+			{
+				time_misheyakir = suntime(today.day, today.month, today.year, 101, 0, latitude, longitude);
+			}
+
+			if (time_misheyakir[1] == 0)
+			{
+				misheyakir = time_misheyakir[2];
+			}
+		    
+			var time_tzeit = [0, 0, 0, 0];
 			//צאת הכוכבים
 			time_tzeit= suntime(today.day, today.month, today.year, 96, 0,latitude,longitude);
 			tzeit = time_tzeit[3];
@@ -945,7 +962,7 @@ class MenuTestView extends WatchUi.View {
 		//view.setColor(Application.getApp().getProperty("ForegroundColor"));
 		//view.setText("23:1079:75");
 		
-		if(isJustOpened || lbMinute == 0)
+		if(isJustOpened || lbMinute == 0 || lbHour ==11 || lbHour == 0)
 		{
 			var zmanit_hour = doit();       //get the 24 shaaotzmaniot
 			
@@ -1047,21 +1064,19 @@ class MenuTestView extends WatchUi.View {
 	{
 		var view = View.findDrawableById("HebrewClock") as Text;
 
- 		System.println("curr_hour: " + curr_hour.toDouble()/(1000 * 3600));
- 		System.println("tzeit: " + tzeit);
- 		System.println("alot: " + alot);
-
-
+ 		//System.println("curr_hour: " + curr_hour.toDouble()/(1000 * 3600));
+ 		//System.println("tzeit: " + tzeit);
+ 		//System.println("alot: " + alot);
 
 		if(curr_hour.toDouble()/(1000 * 3600) > tzeit  || 
-		   curr_hour.toDouble()/(1000 * 3600) < alot)
+		   curr_hour.toDouble()/(1000 * 3600) < misheyakir)
 		{
 			view.setColor(Graphics.COLOR_LT_GRAY);
 			//viewMazal.setText("Marriv");
 			//viewMazal.setText("ערבית - " + text);
 		}
 		else if(curr_hour.toDouble() < sunset_hour.toDouble() && 
-		        curr_hour.toDouble()/(1000 * 3600) > alot/*curr_hour.toDouble() > sunrise_hour.toDouble()*/ )
+		        curr_hour.toDouble()/(1000 * 3600) > misheyakir/*curr_hour.toDouble() > sunrise_hour.toDouble()*/ )
 		{
 			view.setColor(Graphics.COLOR_BLUE);
 
