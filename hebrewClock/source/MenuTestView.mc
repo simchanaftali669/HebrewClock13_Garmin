@@ -101,6 +101,14 @@ class MenuTestView extends WatchUi.View {
 
 	public var mazalColor;
 
+/*1*/ public var birkutHashahar; // -- ברכות השחר  
+/*2*/ public var patachEliyaou;  // -- פתח אליהו
+/*3*/ public var korbanot;		// -- קורבנות
+/*4*/ public var psokeiDzimra;	// -- פסוקי דזמרה
+/*5*/ public var nishmat = -1; 		// -- נשמת כל חי
+/*6*/ public var yozerOr;		//  -- יוצר אור
+/*7*/ public var kriyahtShema;	//  -- קריאת שמע
+
     //! Constructor
     public function initialize() {
         View.initialize();
@@ -603,8 +611,6 @@ class MenuTestView extends WatchUi.View {
 	
 		//System.println("sr: " + sr + ", ss: " + ss);
 		
-
-	
 	    ret[1] = invalid;
 	    ret[2] = sr;
 	    ret[3] = ss;
@@ -778,7 +784,7 @@ class MenuTestView extends WatchUi.View {
 		//timezone = tz + 2;
 	
 	
-	    var sunrise = 0, sunset, sunrise_tommorow, sunset_yasterdate;
+	    var sunset, sunrise_tommorow, sunset_yasterdate;
 	    var shaa_zmanit = 0;
 	    var hour = [0,0,0,0]; //29
 	
@@ -909,6 +915,34 @@ class MenuTestView extends WatchUi.View {
 			time_tzeit= suntime(today.day, today.month, today.year, 96, 0,latitude,longitude);
 			tzeit = time_tzeit[3];
 			
+
+			var shortDate =  Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+
+			//System.println(day);
+			if (shortDate.day_of_week == 7 || IsMoed())
+			{ 
+				System.println("Shabat");
+				birkutHashahar = sunrise - 1; // 	 60 regular minutes before sunrise -- ברכות השחר
+				patachEliyaou = sunrise - 56/60;// =  timeadj(s2 - 38/60, ampm); // 56 regular minutes before sunrise -- פתח אליהו
+				korbanot = sunrise - 53/60;// = 		 timeadj(s2 - 35/60, ampm);	// 53 regular minutes before sunrise -- קורבנות
+				psokeiDzimra = sunrise - 40/60;// =   timeadj(s2 - 22/60, ampm); // 40 regular minutes before sunrise -- פסוקי דזמרה
+				nishmat = sunrise - 15/60; // =   	 timeadj(s2 - 15/60, ampm); // 15 regular minutes before sunrise -- נשמת כל חי
+				yozerOr = sunrise - 10/60;// =	     timeadj(s2 - 8/60, ampm);  // 10 regular minutes before sunrise -- יוצר אור
+				kriyahtShema = sunrise - 4/60;// =    timeadj(s2 - 4/60, ampm);	// 04 regular minutes before sunrise -- קריאת שמע
+			}
+			else
+			{
+				System.println("Chol");
+				birkutHashahar = sunrise - 42/60; //  42 regular minutes before sunrise -- ברכות השחר
+				patachEliyaou = sunrise - 38/60;// =  timeadj(s2 - 38/60, ampm); // 38 regular minutes before sunrise -- פתח אליהו
+				korbanot = sunrise - 35/60;// = 		 timeadj(s2 - 35/60, ampm);	// 35 regular minutes before sunrise -- קורבנות
+				psokeiDzimra = sunrise - 22/60;// =   timeadj(s2 - 22/60, ampm); // 22 regular minutes before sunrise -- פסוקי דזמרה
+				nishmat = -1;
+				yozerOr = sunrise - 8/60;// =	     timeadj(s2 - 8/60, ampm);  // 08 regular minutes before sunrise -- יוצר אור
+				kriyahtShema = sunrise - 4/60;// =    timeadj(s2 - 4/60, ampm);	// 04 regular minutes before sunrise -- קריאת שמע
+				
+				//window.location.href = "en/Shabat/index.html";
+			}
 	    }
 	
 	
@@ -917,6 +951,29 @@ class MenuTestView extends WatchUi.View {
 	
 	}
 	
+	function IsMoed()
+	{
+		var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);	
+		var hebrew_month_name = hebrewDateFunc(today.year, today.month, today.day, true);
+		
+		var isMoed = false;
+		
+		// System.println(hebrew_month_name[3]);
+		// System.println(hebrew_month_name[3].equals(" בסיוון"));
+		// System.println(hebrew_month_name[2]);
+		// System.println(hebrew_month_name[2].equals("ו'"));
+
+		isMoed = isMoed || ((hebrew_month_name[3] == " בניסן") && 
+							(hebrew_month_name[2] == "ט\"ו" || hebrew_month_name[2] == "כ\"א"));
+		isMoed = isMoed || ((hebrew_month_name[3].equals(" בסיוון")) && 
+		                    (hebrew_month_name[2].equals("ו'")) );
+		isMoed = isMoed || ((hebrew_month_name[3] == " בתשרי") && 
+							(hebrew_month_name[2] == "ט\"ו" || hebrew_month_name[2] == "כ\"א" || hebrew_month_name[2] == "כ\"ב"));
+		
+		return isMoed;
+	}
+
+
     public function splitStr(str,delimiter)
     {
     	str = str + delimiter;
@@ -982,9 +1039,21 @@ class MenuTestView extends WatchUi.View {
 		//var milisec = date.getMilliseconds();
 	
 		var curr_hour = /*milisec +*/ ((s.toNumber())*1000) + ((m.toNumber())*60*1000) + ((h.toNumber())*60*60*1000);
-		
 		curr_hour = curr_hour.toDouble()/(1000 * 3600);		
 		
+		if(curr_hour > sunrise-1 && curr_hour < sunrise)
+		{
+			var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);	
+			var hebrew_month_name = hebrewDateFunc(today.year, today.month, today.day, false);
+			var viewHebrewDate = View.findDrawableById("ChristianClock") as Text;
+			viewHebrewDate.setText(hebrew_month_name[2] + hebrew_month_name[3]);	
+			MarkTime();
+
+			Tefila();
+			return;
+		}
+
+
 		//System.println("sunrise: " + sunrise + ", sunset:" + sunset);
 		//System.println("curr_hour: " + curr_hour);
 								
@@ -1080,16 +1149,16 @@ class MenuTestView extends WatchUi.View {
 		{
 			view.setColor(Graphics.COLOR_BLUE);
 
-			if(curr_hour.toDouble() < sunrise_hour.toDouble() || lbHour.toNumber() < 6)
-			{ 
-				//viewMazal.setText("Shacharit");			
-				//viewMazal.setText("שחרית - " + text);
-			}
-			else if(lbHour.toNumber() > 6 || (lbHour.toNumber() == 6 && lbMinute.toNumber() >= 540)) 
-			{
-				//viewMazal.setText("Mincha");
-				//viewMazal.setText("מנחה - " + text);
-			}			
+			// if(curr_hour.toDouble() < sunrise_hour.toDouble() || lbHour.toNumber() < 6)
+			// { 
+			// 	//viewMazal.setText("Shacharit");			
+			// 	//viewMazal.setText("שחרית - " + text);
+			// }
+			// else if(lbHour.toNumber() > 6 || (lbHour.toNumber() == 6 && lbMinute.toNumber() >= 540)) 
+			// {
+			// 	//viewMazal.setText("Mincha");
+			// 	//viewMazal.setText("מנחה - " + text);
+			// }			
 		}
 	}	
 	
@@ -1427,6 +1496,895 @@ class MenuTestView extends WatchUi.View {
         //    }
         }
 
+	//------------------------HebrewDate---------------------
+	
+	/*!
+	*      This script was taked from this page and ported to Node.js by Ionică Bizău
+	*      http://www.shamash.org/help/javadate.shtml
+	*
+	*      This script was adapted from C sources written by
+	*      Scott E. Lee, which contain the following copyright notice:
+	*
+	*      Copyright 1993-1995, Scott E. Lee, all rights reserved.
+	*      Permission granted to use, copy, modify, distribute and sell so long as
+	*      the above copyright and this permission statement are retained in all
+	*      copies.  THERE IS NO WARRANTY - USE AT YOUR OWN RISK.
+	*
+	*      Bill Hastings
+	*      RBI Software Systems
+	*      bhastings@rbi.com
+	*/
+	var GREG_SDN_OFFSET = 32045
+		, DAYS_PER_5_MONTHS = 153
+		, DAYS_PER_4_YEARS = 1461
+		, DAYS_PER_400_YEARS = 146097;
+
+	var HALAKIM_PER_HOUR = 1080
+		, HALAKIM_PER_DAY = 25920
+		, HALAKIM_PER_LUNAR_CYCLE = ((29 * HALAKIM_PER_DAY) + 13753)
+		, HALAKIM_PER_METONIC_CYCLE = (HALAKIM_PER_LUNAR_CYCLE * (12 * 19 + 7));
+
+	var HEB_SDN_OFFSET = 347997
+		, NEW_MOON_OF_CREATION = 31524
+		, NOON = (18 * HALAKIM_PER_HOUR)
+		, AM3_11_20 = ((9 * HALAKIM_PER_HOUR) + 204)
+		, AM9_32_43 = ((15 * HALAKIM_PER_HOUR) + 589);
+
+	var SUN = 0
+		, MON = 1
+		, TUES = 2
+		, WED = 3
+		, THUR = 4
+		, FRI = 5
+		, SAT = 6;
+
+	// public function weekdayarr(d0, d1, d2, d3, d4, d5, d6) 
+	// {
+	// 		this[0] = d0;
+	// 		this[1] = d1;
+	// 		this[2] = d2;
+	// 		this[3] = d3;
+	// 		this[4] = d4;
+	// 		this[5] = d5;
+	// 		this[6] = d6;
+	// }
+
+	// public function gregmontharr(m0, m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11) 
+	// {
+	// 	this[0] = m0;
+	// 	this[1] = m1;
+	// 	this[2] = m2;
+	// 	this[3] = m3;
+	// 	this[4] = m4;
+	// 	this[5] = m5;
+	// 	this[6] = m6;
+	// 	this[7] = m7;
+	// 	this[8] = m8;
+	// 	this[9] = m9;
+	// 	this[10] = m10;
+	// 	this[11] = m11;
+	// }
+
+	// public function hebrewmontharr(m0, m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13) 
+	// {
+	// 	this[0] = m0;
+	// 	this[1] = m1;
+	// 	this[2] = m2;
+	// 	this[3] = m3;
+	// 	this[4] = m4;
+	// 	this[5] = m5;
+	// 	this[6] = m6;
+	// 	this[7] = m7;
+	// 	this[8] = m8;
+	// 	this[9] = m9;
+	// 	this[10] = m10;
+	// 	this[11] = m11;
+	// 	this[12] = m12;
+	// 	this[13] = m13;
+	// }
+
+	// public function monthsperyeararr(m0, m1, m2, m3, m4, m5, m6, m7, m8, m9,
+	// 	m10, m11, m12, m13, m14, m15, m16, m17, m18) {
+	// 	this[0] = m0;
+	// 	this[1] = m1;
+	// 	this[2] = m2;
+	// 	this[3] = m3;
+	// 	this[4] = m4;
+	// 	this[5] = m5;
+	// 	this[6] = m6;
+	// 	this[7] = m7;
+	// 	this[8] = m8;
+	// 	this[9] = m9;
+	// 	this[10] = m10;
+	// 	this[11] = m11;
+	// 	this[12] = m12;
+	// 	this[13] = m13;
+	// 	this[14] = m14;
+	// 	this[15] = m15;
+	// 	this[16] = m16;
+	// 	this[17] = m17;
+	// 	this[18] = m18;
+	// }
+
+	public function getDateHebrew(date)
+	{
+		//the time of the current day
+		//var sunrise = zmanit_hour[1];
+		
+		var date_str = ""; 
+		//var dateNow = new Date();
+		var dateNow = Gregorian.info(Time.now(), Time.FORMAT_LONG);
+
+
+		var h = dateNow.hour;
+		var m = dateNow.min;
+		var s = dateNow.sec;
+		var mili = 500;
+        var curr_hour = mili + (s*1000) + (m*60*1000) + (h*60*60*1000);
+		curr_hour = curr_hour/(1000 * 3600);
+		
+		// System.println("h: " + h);
+		// System.println("sunsetH: " + sunsetH);
+
+
+		// if ((h == sunsetH.toNumber() && m == sunsetM.toNumber() && s >= sunsetS.toNumber()) ||    // אחרי שקיעה
+		// 	(h == sunsetH.toNumber() && m > sunsetM.toNumber()) ||
+		// 	(h > sunsetH.toNumber())
+		//    )
+		// {
+		// 	if ((h == 23 && m == 23 && s <= 59) ||    // לפני חצות
+		// 		(h == 23 && m < 59) ||
+		// 		(h < 23)
+		// 	)
+		// 	{	
+		// 		date = date + 1;
+		// 		if(date == 31)
+		// 		{
+		// 			date = 1;
+		// 		}
+		// 		date_str = "ליל ";
+		// 	}
+		// }
+		// System.println(curr_hour);
+		// System.println(sunrise);
+		// if(curr_hour<sunrise)
+		// {
+		// 	date_str = "ליל ";
+		// }
+
+		//date_str = "" + date;
+		// System.println("---Begin getDateHebrew---");
+		// System.println("date: " + date);
+		// System.println("---End getDateHebrew---");
+		switch(date.toNumber())
+		{
+			case 1:
+				return date_str + "א'";
+			case 2:
+				return date_str + "ב'";
+			case 3:
+				return date_str + "ג'";
+			case 4:
+				return date_str + "ד'";
+			case 5:
+				return date_str + "ה'";
+			case 6:
+				return date_str + "ו'";
+			case 7:
+				return date_str + "ז'";
+			case 8:
+				return date_str + "ח'";
+			case 9:
+				return date_str + "ט'";
+			case 10:
+				return date_str + "י'";
+			case 11:
+				return date_str + "י\"א";
+			case 12:
+				return date_str + "י\"ב";
+			case 13:
+				return date_str + "י\"ג";
+			case 14:
+				return date_str + "י\"ד";
+			case 15:
+				return date_str + "ט\"ו";
+			case 16:
+				return date_str + "ט\"ז";
+			case 17:
+				return date_str + "י\"ז";
+			case 18:
+				return date_str + "י\"ח";
+			case 19:
+				return date_str + "י\"ט";
+			case 20:
+				return date_str + "כ'";
+			case 21:
+				return date_str + "כ\"א";
+			case 22:
+				return date_str + "כ\"ב";
+			case 23:
+				return date_str + "כ\"ג";
+			case 24:
+				return date_str + "כ\"ד";
+			case 25:
+				return date_str + "כ\"ה";
+			case 26:
+				return date_str + "כ\"ו";
+			case 27:
+				return date_str + "כ\"ז";
+			case 28:
+				return date_str + "כ\"ח";
+			case 29:
+				return date_str + "כ\"ט";
+			case 30:
+				return date_str + "ל'";
+			default:
+				return "";
+		}
+	}
+
+//var ret = [0, 0, 0, 0];
+const gWeekday = ["Sun", "Mon", "Tues", "Wednes", "Thurs", "Fri", "Satur"]
+    , gMonth = ["January", "February", "March", "April", "May", "June", "July", "August","September","October","November","December"]
+    , hMonth = ["Tishri", "Heshvan", "Kislev", "Tevet", "Shevat", "AdarI", "AdarII", "Nisan", "Iyyar", "Sivan", "Tammuz", "Av", "Elul"]
+	, hMonthHebrew = ["תשרי", "חשוון", "כסלו", "טבת", "שבט", "אדר", "אדר ב", "ניסן", "אייר", "סיוון", "תמוז", "אב", "אלול"]
+    , mpy = [12, 12, 13, 12, 12, 13, 12, 13, 12, 12, 13, 12, 12, 13, 12, 12, 13, 12, 13]
+    ;
+
+/**
+ * hebrewDate
+ * Convert the Gregorian dates  into Hebrew calendar dates.
+ *
+ * @name hebrewDate
+ * @public function
+ * @param {Date|Number} inputDate The date object (representing the Gregorian date) or the year.
+ * @param {Number} inputMonth The Gregorian month (**one-indexed**, January being `1`!).
+ * @param {Number} inputDate The Gregorian date.
+ * @return {Object} An object containing:
+ *
+ *  - `year`: The Hebrew year.
+ *  - `month`: The Hebrew month.
+ *  - `month_name`: The Hebrew month name.
+ *  - `date`: The Hebrew date.
+ */
+
+     var hebrewMonth = 0
+      , hebrewDate = 0
+      , hebrewYear = 0
+      , metonicCycle = 0
+      , metonicYear = 0
+      , moladDay = 0
+      , moladHalakim = 0;
+
+	public function hebrewDateFunc(inputDateOrYear, inputMonth, inputDate, isHebrew) 
+	{
+		var inputLang = "English";
+		var deviceSettings = System.getDeviceSettings();
+		// it is safe to access the language
+		if(deviceSettings.systemLanguage == System.LANGUAGE_HEB || isHebrew == true)
+		{
+			inputLang = "Hebrew";
+		}
+		else
+		{
+			inputLang = "English";
+		}
+
+		var inputYear = inputDateOrYear;
+
+		//if (typeof inputYear === "object") {
+		//    inputMonth = inputDateOrYear.getMonth() + 1;
+		//    inputDate = inputDateOrYear.getDate();
+		//    inputYear = inputDateOrYear.getFullYear();
+		//}
+
+		SdnToHebrew(GregorianToSdn(inputYear, inputMonth, inputDate));
+
+		System.println("hebrewDate: " + hebrewDate);
+		System.println("getDateHebrew(hebrewDate): " + getDateHebrew(hebrewDate));
+		//System.println("hMonth[hebrewMonth - 1]: " + hMonth[hebrewMonth - 1]);
+		//System.println("inputLang: " + inputLang);
+
+		if(inputLang == "English")
+		{
+			var ret = [0, 0, 0, 0];
+			ret[0] =  hebrewYear;
+			ret[1] = hebrewMonth;
+			ret[2] = hebrewDate;
+			ret[3] = hMonth[hebrewMonth - 1];
+			return ret;
+			// return {
+			// 	year: hebrewYear
+			//   , month: hebrewMonth
+			//   , date: hebrewDate
+			//   , month_name: hMonth[hebrewMonth - 1]
+			// };
+		}
+		else
+		{
+			var ret = [0, 0, 0, 0];
+			ret[0] =  hebrewYear;
+			ret[1] = hebrewMonth;
+			ret[2] = getDateHebrew(hebrewDate);
+			ret[3] = " ב" + hMonthHebrew[hebrewMonth - 1];
+			return ret;
+
+			// return {
+			// 	year: hebrewYear
+			//   , month: hebrewMonth
+			//   , date: getDateHebrew(hebrewDate)
+			//   , month_name: hMonthHebrew[hebrewMonth - 1]
+			// };
+		}	
+	}
+
+    public function GregorianToSdn(inputYear, inputMonth, inputDay) 
+	{
+        var year = 0
+          , month = 0
+          , sdn
+          ;
+
+        // Make year a positive number
+        if (inputYear < 0) {
+            year = inputYear + 4801;
+        } else {
+            year = inputYear + 4800;
+        }
+
+        // Adjust the start of the year
+        if (inputMonth > 2) {
+            month = inputMonth - 3;
+        } else {
+            month = inputMonth + 9;
+            year--;
+        }
+
+        sdn = Math.floor((Math.floor(year / 100) * DAYS_PER_400_YEARS) / 4);
+        sdn += Math.floor(((year % 100) * DAYS_PER_4_YEARS) / 4);
+        sdn += Math.floor((month * DAYS_PER_5_MONTHS + 2) / 5);
+        sdn += inputDay - GREG_SDN_OFFSET;
+
+        return sdn;
+    }
+
+    public function SdnToHebrew(sdn) {
+        var tishri1 = 0
+          , tishri1After = 0
+          , yearLength = 0
+          , inputDay = sdn - HEB_SDN_OFFSET
+          ;
+
+        FindTishriMolad(inputDay);
+        tishri1 = Tishri1(metonicYear, moladDay, moladHalakim);
+
+        if (inputDay >= tishri1) {
+            // It found Tishri 1 at the start of the year.
+            hebrewYear = metonicCycle * 19 + metonicYear + 1;
+            if (inputDay < tishri1 + 59) {
+                if (inputDay < tishri1 + 30) {
+                    hebrewMonth = 1;
+                    hebrewDate = inputDay - tishri1 + 1;
+                } else {
+                    hebrewMonth = 2;
+                    hebrewDate = inputDay - tishri1 - 29;
+                }
+                return;
+            }
+            // We need the length of the year to figure this out,so find Tishri 1 of the next year.
+            moladHalakim += HALAKIM_PER_LUNAR_CYCLE * mpy[metonicYear];
+            moladDay += Math.floor(moladHalakim / HALAKIM_PER_DAY);
+            moladHalakim = moladHalakim % HALAKIM_PER_DAY;
+            tishri1After = Tishri1((metonicYear + 1) % 19, moladDay, moladHalakim);
+        } else {
+            // It found Tishri 1 at the end of the year.
+            hebrewYear = metonicCycle * 19 + metonicYear;
+            if (inputDay >= tishri1 - 177) {
+                // It is one of the last 6 months of the year.
+                if (inputDay > tishri1 - 30) {
+                    hebrewMonth = 13;
+                    hebrewDate = inputDay - tishri1 + 30;
+                } else if (inputDay > tishri1 - 60) {
+                    hebrewMonth = 12;
+                    hebrewDate = inputDay - tishri1 + 60;
+                } else if (inputDay > tishri1 - 89) {
+                    hebrewMonth = 11;
+                    hebrewDate = inputDay - tishri1 + 89;
+                } else if (inputDay > tishri1 - 119) {
+                    hebrewMonth = 10;
+                    hebrewDate = inputDay - tishri1 + 119;
+                } else if (inputDay > tishri1 - 148) {
+                    hebrewMonth = 9;
+                    hebrewDate = inputDay - tishri1 + 148;
+                } else {
+                    hebrewMonth = 8;
+                    hebrewDate = inputDay - tishri1 + 178;
+                }
+                return;
+            } else {
+                if (mpy[(hebrewYear - 1) % 19] == 13) {
+                    hebrewMonth = 7;
+                    hebrewDate = inputDay - tishri1 + 207;
+                    if (hebrewDate > 0)
+					{
+                        return;
+					}
+					hebrewMonth--;
+                    hebrewDate += 30;
+                    if (hebrewDate > 0)
+                    {
+						return;
+					}
+                    hebrewMonth--;
+                    hebrewDate += 30;
+                } else {
+                    hebrewMonth = 6;
+                    hebrewDate = inputDay - tishri1 + 207;
+                    if (hebrewDate > 0)
+					{
+                        return;
+					}
+					hebrewMonth--;
+                    hebrewDate += 30;
+                }
+                if (hebrewDate > 0)
+				{
+                    return;
+				}
+				hebrewMonth--;
+                hebrewDate += 29;
+                if (hebrewDate > 0)
+                {
+				    return;
+				}
+				// We need the length of the year to figure this out,so find Tishri 1 of this year.
+                tishri1After = tishri1;
+                FindTishriMolad(moladDay - 365);
+                tishri1 = Tishri1(metonicYear, moladDay, moladHalakim);
+            }
+        }
+        yearLength = tishri1After - tishri1;
+        moladDay = inputDay - tishri1 - 29;
+        if (yearLength == 355 || yearLength == 385) {
+            // Heshvan has 30 days
+            if (moladDay <= 30) {
+                hebrewMonth = 2;
+                hebrewDate = moladDay;
+                return;
+            }
+            moladDay -= 30;
+        } else {
+            // Heshvan has 29 days
+            if (moladDay <= 29) {
+                hebrewMonth = 2;
+                hebrewDate = moladDay;
+                return;
+            }
+            moladDay -= 29;
+        }
+        // It has to be Kislev.
+        hebrewMonth = 3;
+        hebrewDate = moladDay;
+    }
+
+    public function FindTishriMolad(inputDay) 
+	{
+        // Estimate the metonic cycle number.  Note that this may be an under
+        // estimate because there are 6939.6896 days in a metonic cycle not
+        // 6940,but it will never be an over estimate.   The loop below will
+        // correct for any error in this estimate.
+        metonicCycle = Math.floor((inputDay + 310) / 6940);
+        // Calculate the time of the starting molad for this metonic cycle.
+        MoladOfMetonicCycle();
+        // If the above was an under estimate,increment the cycle number until
+        // the correct one is found.  For modern dates this loop is about 98.6%
+        // likely to not execute,even once,because the above estimate is
+        // really quite close.
+        while (moladDay < inputDay - 6940 + 310) 
+		{
+            metonicCycle++;
+            moladHalakim += HALAKIM_PER_METONIC_CYCLE;
+            moladDay += Math.floor(moladHalakim / HALAKIM_PER_DAY);
+            moladHalakim = moladHalakim % HALAKIM_PER_DAY;
+        }
+        // Find the molad of Tishri closest to this date.
+        for (metonicYear = 0; metonicYear < 18; metonicYear++) 
+		{
+            if (moladDay > inputDay - 74)
+			{
+                break;
+			}
+            moladHalakim += HALAKIM_PER_LUNAR_CYCLE * mpy[metonicYear];
+            moladDay += Math.floor(moladHalakim / HALAKIM_PER_DAY);
+            moladHalakim = moladHalakim % HALAKIM_PER_DAY;
+        }
+    }
+
+    public function MoladOfMetonicCycle() {
+        var r1, r2, d1, d2;
+        // Start with the time of the first molad after creation.
+        r1 = NEW_MOON_OF_CREATION;
+        // Calculate gMetonicCycle * HALAKIM_PER_METONIC_CYCLE.  The upper 32
+        // bits of the result will be in r2 and the lower 16 bits will be in r1.
+        r1 += metonicCycle * (HALAKIM_PER_METONIC_CYCLE & 0xFFFF);
+        r2 = r1 >> 16;
+        r2 += metonicCycle * ((HALAKIM_PER_METONIC_CYCLE >> 16) & 0xFFFF);
+        // Calculate r2r1 / HALAKIM_PER_DAY.  The remainder will be in r1,the
+        // upper 16 bits of the quotient will be in d2 and the lower 16 bits
+        // will be in d1.
+        d2 = Math.floor(r2 / HALAKIM_PER_DAY);
+        r2 -= d2 * HALAKIM_PER_DAY;
+        r1 = (r2 << 16) | (r1 & 0xFFFF);
+        d1 = Math.floor(r1 / HALAKIM_PER_DAY);
+        r1 -= d1 * HALAKIM_PER_DAY;
+        moladDay = (d2 << 16) | d1;
+        moladHalakim = r1;
+    }
+
+    public function Tishri1(metonicYear, moladDay, moladHalakim) 
+	{
+        var tishri1 = moladDay
+          , dow = tishri1 % 7
+          , leapYear = metonicYear == 2 || metonicYear == 5 || metonicYear == 7 || metonicYear == 10
+                     || metonicYear == 13 || metonicYear == 16 || metonicYear == 18
+          , lastWasLeapYear = metonicYear == 3 || metonicYear == 6 || metonicYear == 8 || metonicYear == 11
+                           || metonicYear == 14 || metonicYear == 17 || metonicYear == 0
+          ;
+
+        // Apply rules 2,3 and 4
+        if ((moladHalakim >= NOON) ||
+            ((!leapYear) && dow == TUES && moladHalakim >= AM3_11_20) ||
+            (lastWasLeapYear && dow == MON && moladHalakim >= AM9_32_43)) {
+            tishri1++;
+            dow++;
+            if (dow == 7)
+			{
+                dow = 0;
+			}
+        }
+
+        // Apply rule 1 after the others because it can cause an additional delay of one day.
+        if (dow == WED || dow == FRI || dow == SUN) 
+		{
+            tishri1++;
+        }
+
+        return tishri1;
+    }
+	//------------------------HebrewDate---------------------
+
+
+// 	//------------------------Tefila-------------------------
+	public function Tefila()
+	{	
+		var date = Gregorian.info(Time.now(), Time.FORMAT_LONG);
+	
+	    var h = date.hour;
+	    var m = date.min;
+	    var s = date.sec;
+		//var milisec = date.getMilliseconds();
+	
+		var curr_hour = /*milisec +*/ ((s.toNumber())*1000) + ((m.toNumber())*60*1000) + ((h.toNumber())*60*60*1000);
+		curr_hour = curr_hour.toDouble()/(1000 * 3600);	
+
+		//console.log(curr_hour);
+		if(curr_hour >= birkutHashahar && curr_hour < patachEliyaou)
+		{
+			var viewPrayPart = View.findDrawableById("MazalLabel") as Text;
+			var deviceSettings = System.getDeviceSettings();
+			if(deviceSettings.systemLanguage == System.LANGUAGE_HEB)
+			{
+				viewPrayPart.setText("ברכות השחר");
+			}
+			else
+			{
+				viewPrayPart.setText("Birkut Hashahar");
+			}
+			SecLeft(curr_hour,patachEliyaou);
+		}
+		else if(curr_hour >= patachEliyaou && curr_hour < korbanot)
+		{
+			var viewPrayPart = View.findDrawableById("MazalLabel") as Text;
+			var deviceSettings = System.getDeviceSettings();
+			if(deviceSettings.systemLanguage == System.LANGUAGE_HEB)
+			{
+				viewPrayPart.setText("פתח אליהו");
+			}
+			else
+			{
+				viewPrayPart.setText("Patach Eliyaou");
+			}
+			SecLeft(curr_hour,korbanot);
+		}
+		else if(curr_hour >= korbanot && curr_hour < psokeiDzimra)
+		{
+			var viewPrayPart = View.findDrawableById("MazalLabel") as Text;
+			var deviceSettings = System.getDeviceSettings();
+			if(deviceSettings.systemLanguage == System.LANGUAGE_HEB)
+			{
+				viewPrayPart.setText("קורבנות");
+			}
+			else
+			{
+				viewPrayPart.setText("Korbanot");
+			}
+			SecLeft(curr_hour,psokeiDzimra);
+		}
+		else if(nishmat == -1 && curr_hour >= psokeiDzimra && curr_hour < yozerOr)
+		{
+			var viewPrayPart = View.findDrawableById("MazalLabel") as Text;
+			var deviceSettings = System.getDeviceSettings();
+			if(deviceSettings.systemLanguage == System.LANGUAGE_HEB)
+			{
+				viewPrayPart.setText("פסוקי דזמרה");
+			}
+			else
+			{
+				viewPrayPart.setText("Psokei Dzimra");
+			}
+			SecLeft(curr_hour,yozerOr);
+		}
+		else if(nishmat != -1 && curr_hour >= psokeiDzimra && curr_hour < nishmat)
+		{
+			var viewPrayPart = View.findDrawableById("MazalLabel") as Text;
+			var deviceSettings = System.getDeviceSettings();
+			if(deviceSettings.systemLanguage == System.LANGUAGE_HEB)
+			{
+				viewPrayPart.setText("פסוקי דזמרה");
+			}
+			else
+			{
+				viewPrayPart.setText("Psokei Dzimra");
+			}
+			SecLeft(curr_hour,nishmat);
+		}
+		else if(nishmat != -1 && curr_hour >= nishmat && curr_hour < yozerOr)
+		{
+			var viewPrayPart = View.findDrawableById("MazalLabel") as Text;
+			var deviceSettings = System.getDeviceSettings();
+			if(deviceSettings.systemLanguage == System.LANGUAGE_HEB)
+			{
+				viewPrayPart.setText("נשמת כל-חי");
+			}
+			else
+			{
+				viewPrayPart.setText("Nishmat");
+			}
+			SecLeft(curr_hour,yozerOr);
+		}
+		else if(curr_hour >= yozerOr && curr_hour < kriyahtShema)
+		{
+			var viewPrayPart = View.findDrawableById("MazalLabel") as Text;
+			var deviceSettings = System.getDeviceSettings();
+			if(deviceSettings.systemLanguage == System.LANGUAGE_HEB)
+			{
+				viewPrayPart.setText("יוצר אור");
+			}
+			else
+			{
+				viewPrayPart.setText("Yotzer Or");
+			}
+			SecLeft(curr_hour,kriyahtShema);
+		}
+		else if(curr_hour >= kriyahtShema && curr_hour < sunrise)
+		{
+			var viewPrayPart = View.findDrawableById("MazalLabel") as Text;
+			var deviceSettings = System.getDeviceSettings();
+			if(deviceSettings.systemLanguage == System.LANGUAGE_HEB)
+			{
+				viewPrayPart.setText("קריאת שמע");
+			}
+			else
+			{
+				viewPrayPart.setText("Kriyaht Shema");
+			}
+			SecLeft(curr_hour,sunrise);
+		}
+	}
+
+	//return the seconds left until the next action need to begin
+	public function SecLeft(curr_hour,nextAction_hour)
+	{
+		var counterDawn =  splitStr(timeadj1(nextAction_hour-curr_hour),":");
+
+		var viewTimer = View.findDrawableById("HebrewClock") as Text;
+		var minute = counterDawn[1].toNumber();
+		if(minute < 10)
+		{
+		 	minute = "0" + minute;
+		}
+		var second = counterDawn[2].toNumber();
+		if(second < 10)
+		{
+			second = "0" + second;
+		}
+
+		viewTimer.setText("00:" + minute + ":" + second);
+	}
+
+// public function BirkutHashahar(secLeft)
+// {
+// 	document.querySelector(".circular").style.display = "unset";
+// 	setTimeout(function() 
+// 	{
+// 		PatachEliyaou(60*3);		
+// 	}, 1000 * secLeft); //wait maximum 4 minutes for the birkutHashahar will ends
+// }
+
+// public function PatachEliyaou(secLeft)
+// {
+// 	//break between birkutHashahar & patachEliyaou
+// 	document.querySelector(".circular").style.display = "none";
+
+// 	//patachEliyaou
+// 	setTimeout(function() 
+// 	{
+// 		document.querySelector(".circular").style.display = "none";
+		
+// 		//3m
+// 		document.querySelector(".circle .left .progress").style.animation = "left " + Number((secLeft/2)-1) + "s linear both";
+// 		document.querySelector(".circle .right .progress").style.animation = "right " + Number((secLeft/2)-1) + "s linear both";
+// 		document.querySelector(".circle .right .progress").style.animationDelay = "" + Number((secLeft/2)-1) + "s";			
+// 		document.querySelector(".number").innerText = "פתח אליהו";
+
+// 		document.querySelector(".circular").style.display = "unset";
+		
+// 	}, 2000); //wait 4 minutes + 10s for the birkutHashahar will ends
+
+// 	setTimeout(function() 
+// 	{
+// 		Korbanot(60*13);
+// 	}, /*1000*60*4 +*/ 1000*secLeft); //wait maximum 3 minutes for the patachEliyaou will ends
+// }
+
+// public function Korbanot(secLeft)
+// {
+// 	//break between patachEliyaou & korbanot
+// 	document.querySelector(".circular").style.display = "none";
+
+// 	//korbanot
+// 	setTimeout(function() 
+// 	{
+// 		//13m
+// 		document.querySelector(".circle .left .progress").style.animation = "left " + Number((secLeft/2)-1) + "s linear both";
+// 		document.querySelector(".circle .right .progress").style.animation = "right " + Number((secLeft/2)-1) + "s linear both";
+// 		document.querySelector(".circle .right .progress").style.animationDelay = "" + Number((secLeft/2)-1) + "s";			
+// 		document.querySelector(".number").innerText = "קורבנות";
+
+// 		document.querySelector(".circular").style.display = "unset";
+// 	}, /*1000*60*4 + 1000*60*3*/2000); //wait 4+3 minutes + 10s for the patachEliyaou will ends
+
+// 	setTimeout(function()
+// 	{
+// 		PsokeiDzimra(60*14);
+// 	}, /*1000*60*4 + 1000*60*3 +*/ 1000*secLeft); //wait 4+3+13 minutes for the korbanot will ends
+	
+// }
+
+// public function PsokeiDzimra(secLeft)
+// {
+// 	//console.log(secLeft);
+// 	//break between korbanot & psokeiDzimra
+// 	document.querySelector(".circular").style.display = "none";
+
+// 	//psokeiDzimra
+// 	setTimeout(function()
+// 	{
+// 		//14m
+// 		document.querySelector(".circle .left .progress").style.animation = "left " + Number((secLeft/2)-1) + "s linear both";
+// 		document.querySelector(".circle .right .progress").style.animation = "right " + Number((secLeft/2)-1) + "s linear both";
+// 		document.querySelector(".circle .right .progress").style.animationDelay = "" + Number((secLeft/2)-1) + "s";			
+// 		document.querySelector(".number").innerText = "פסוקי דזמרה";
+
+// 		document.querySelector(".circular").style.display = "unset";
+// 	}, /*1000*60*4 + 1000*60*3 + 1000*60*13 +*/2000); //wait 4+3+13 minutes + 10s for the korbanot will ends
+
+// 	setTimeout(function() 
+// 	{		
+// 		YozerOr(60*4);		
+// 	}, /*1000*60*4 + 1000*60*3 + 1000*60*13 +*/ 1000*secLeft); //wait 4+3+13+14 minutes for the psokeiDzimra will ends
+	
+// }
+
+// public function YozerOr(secLeft)
+// {
+// 	//break between psokeiDzimra & YozerOr 
+// 	document.querySelector(".circular").style.display = "none";		
+
+// 	//YozerOr
+// 	setTimeout(function() 
+// 	{		
+// 		//4m
+// 		document.querySelector(".circle .left .progress").style.animation = "left " + Number((secLeft/2)-1) + "s linear both";
+// 		document.querySelector(".circle .right .progress").style.animation = "right " + Number((secLeft/2)-1) + "s linear both";
+// 		document.querySelector(".circle .right .progress").style.animationDelay = "" + Number((secLeft/2)-1) + "s";			
+// 		document.querySelector(".number").innerText = "יוצר אור";
+
+// 		document.querySelector(".circular").style.display = "unset";
+// 	}, /*1000*60*4 + 1000*60*3 + 1000*60*13 + 1000*60*14 +*/ 2000); //wait 4+3+13+14 minutes + 10s for the psokeiDzimra will ends
+
+// 	setTimeout(function() 
+// 	{
+// 		KriyahtShema(60*4);
+// 	}, /*1000*60*4 + 1000*60*3 + 1000*60*13 + 1000*60*14 +*/ 1000*secLeft); //wait 4+3+13+14+4 minutes for the YozerOr will ends
+
+// }
+
+// public function KriyahtShema(secLeft)
+// {
+// 	//break between YozerOr & kriyahtShema
+// 	document.querySelector(".circular").style.display = "none";
+
+// 	//kriyahtShema
+// 	setTimeout(function() 
+// 	{
+// 		document.querySelector(".circular").style.display = "none";
+
+// 		//4m
+// 		document.querySelector(".circle .left .progress").style.animation = "left " + Number((secLeft/2)-1) + "s linear both";
+// 		document.querySelector(".circle .right .progress").style.animation = "right " + Number((secLeft/2)-1) + "s linear both";
+// 		document.querySelector(".circle .right .progress").style.animationDelay = "" + Number((secLeft/2)-1) + "s";			
+// 		document.querySelector(".number").innerText = "קריאת שמע";
+
+// 		document.querySelector(".circular").style.display = "unset";		
+// 	}, /*1000*60*4 + 1000*60*3 + 1000*60*13 + 1000*60*14 + 1000*60*4 +*/ 2000); //wait 4+3+13+14+4 minutes + 10s for the YozerOr will ends
+
+// 	setTimeout(function() 
+// 	{
+// 		Netz(60*6);
+// 	}, /*1000*60*4 + 1000*60*3 + 1000*60*13 + 1000*60*14 + 1000*60*4 +*/ 1000*secLeft); //wait 4+3+13+14+4+4 minutes for the kriyahtShema will ends
+// }
+
+// public function Netz(secLeft)
+// {
+// 	window.location.href = "https://hebrewclock13.web.app/man/simple/index.html";
+// 	//break between kriyahtShema & netz
+// 	document.querySelector(".circular").style.display = "none";		
+
+// 	//netz
+// 	setTimeout(function() 
+// 	{
+// 		//6m
+// 		document.querySelector(".circle .left .progress").style.animation = "left " + Number((secLeft/2)-1) + "s linear both";
+// 		document.querySelector(".circle .right .progress").style.animation = "right " + Number((secLeft/2)-1) + "s linear both";
+// 		document.querySelector(".circle .right .progress").style.animationDelay = "" + Number((secLeft/2)-1) + "s";			
+// 		document.querySelector(".number").innerText = "תפילת שמונה עשרה";
+
+// 		document.querySelector(".circular").style.display = "unset";
+		
+// 	}, /*1000*60*4 + 1000*60*3 + 1000*60*13 + 1000*60*14 + 1000*60*4 + 1000*60*4 +*/ 2000); //wait 4+3+13+14+4+4 minutes + 10s for the kriyahtShema will ends
+
+// 	//end of netz
+// 	setTimeout(function() 
+// 	{
+// 		window.location.href = "https://hebrewclock13.web.app/man/simple/index.html";
+// 		//document.querySelector(".circular").style.display = "none";		
+// 	}, /*1000*60*4 + 1000*60*3 + 1000*60*13 + 1000*60*14 + 1000*60*4 + 1000*60*4 +*/1000*secLeft); //wait 4+3+13+14+4+4+6 minutes for the netz will ends
+// }
+
+// public function TefilaNetz()
+// {
+// 	document.getElementById("btn").style.display = "none";
+// 	document.getElementById("btn2").style.display = "none";
+// 	tefilaNetz	 = true;
+// 	Tefila(true);
+// }
+
+// //return the seconds left until the next action need to begin
+// public function SecLeft(curr_hour,nextAction_hour)
+// {
+// 	var counterDawn =  timeadj1(nextAction_hour-curr_hour).split(':');
+// 	var minuteLeft = Number(counterDawn[1]);
+// 	var secondLeft = Number(counterDawn[2]);
+	
+// 	var secLeft = (minuteLeft*60)+secondLeft; 
+	
+// 	//console.log(minuteLeft);
+// 	//console.log(secondLeft);
+	
+// 	return secLeft;
+// }
+	//------------------------Tefila-------------------------
 
     //! Called when this View is removed from the screen. Save the
     //! state of this View here. This includes freeing resources from
