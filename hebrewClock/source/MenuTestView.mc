@@ -923,23 +923,23 @@ class MenuTestView extends WatchUi.View {
 			{ 
 				System.println("Shabat");
 				birkutHashahar = sunrise - 1; // 	 60 regular minutes before sunrise -- ברכות השחר
-				patachEliyaou = sunrise - 56/60;// =  timeadj(s2 - 38/60, ampm); // 56 regular minutes before sunrise -- פתח אליהו
-				korbanot = sunrise - 53/60;// = 		 timeadj(s2 - 35/60, ampm);	// 53 regular minutes before sunrise -- קורבנות
-				psokeiDzimra = sunrise - 40/60;// =   timeadj(s2 - 22/60, ampm); // 40 regular minutes before sunrise -- פסוקי דזמרה
-				nishmat = sunrise - 15/60; // =   	 timeadj(s2 - 15/60, ampm); // 15 regular minutes before sunrise -- נשמת כל חי
-				yozerOr = sunrise - 10/60;// =	     timeadj(s2 - 8/60, ampm);  // 10 regular minutes before sunrise -- יוצר אור
-				kriyahtShema = sunrise - 4/60;// =    timeadj(s2 - 4/60, ampm);	// 04 regular minutes before sunrise -- קריאת שמע
+				patachEliyaou = sunrise - (56.toDouble())/(60.toDouble());// =  timeadj(s2 - 38/60, ampm); // 56 regular minutes before sunrise -- פתח אליהו
+				korbanot = sunrise - (53.toDouble())/(60.toDouble());// = 		 timeadj(s2 - 35/60, ampm);	// 53 regular minutes before sunrise -- קורבנות
+				psokeiDzimra = sunrise - (40.toDouble())/(60.toDouble());// =   timeadj(s2 - 22/60, ampm); // 40 regular minutes before sunrise -- פסוקי דזמרה
+				nishmat = sunrise - (15.toDouble())/(60.toDouble()); // =   	 timeadj(s2 - 15/60, ampm); // 15 regular minutes before sunrise -- נשמת כל חי
+				yozerOr = sunrise - (10.toDouble())/(60.toDouble());// =	     timeadj(s2 - 8/60, ampm);  // 10 regular minutes before sunrise -- יוצר אור
+				kriyahtShema = sunrise - (4.toDouble())/(60.toDouble());// =    timeadj(s2 - 4/60, ampm);	// 04 regular minutes before sunrise -- קריאת שמע
 			}
 			else
 			{
 				System.println("Chol");
-				birkutHashahar = sunrise - 42/60; //  42 regular minutes before sunrise -- ברכות השחר
-				patachEliyaou = sunrise - 38/60;// =  timeadj(s2 - 38/60, ampm); // 38 regular minutes before sunrise -- פתח אליהו
-				korbanot = sunrise - 35/60;// = 		 timeadj(s2 - 35/60, ampm);	// 35 regular minutes before sunrise -- קורבנות
-				psokeiDzimra = sunrise - 22/60;// =   timeadj(s2 - 22/60, ampm); // 22 regular minutes before sunrise -- פסוקי דזמרה
+				birkutHashahar = sunrise - (42.toDouble())/(60.toDouble()); //  42 regular minutes before sunrise -- ברכות השחר
+				patachEliyaou = sunrise - (38.toDouble())/(60.toDouble());// =  timeadj(s2 - 38/60, ampm); // 38 regular minutes before sunrise -- פתח אליהו
+				korbanot = sunrise - (35.toDouble())/(60.toDouble());// = 		 timeadj(s2 - 35/60, ampm);	// 35 regular minutes before sunrise -- קורבנות
+				psokeiDzimra = sunrise - (22.toDouble())/(60.toDouble());// =   timeadj(s2 - 22/60, ampm); // 22 regular minutes before sunrise -- פסוקי דזמרה
 				nishmat = -1;
-				yozerOr = sunrise - 8/60;// =	     timeadj(s2 - 8/60, ampm);  // 08 regular minutes before sunrise -- יוצר אור
-				kriyahtShema = sunrise - 4/60;// =    timeadj(s2 - 4/60, ampm);	// 04 regular minutes before sunrise -- קריאת שמע
+				yozerOr = sunrise - (8.toDouble())/(60.toDouble());// =	     timeadj(s2 - 8/60, ampm);  // 08 regular minutes before sunrise -- יוצר אור
+				kriyahtShema = sunrise - (4.toDouble())/(60.toDouble());// =    timeadj(s2 - 4/60, ampm);	// 04 regular minutes before sunrise -- קריאת שמע
 				
 				//window.location.href = "en/Shabat/index.html";
 			}
@@ -1041,7 +1041,7 @@ class MenuTestView extends WatchUi.View {
 		var curr_hour = /*milisec +*/ ((s.toNumber())*1000) + ((m.toNumber())*60*1000) + ((h.toNumber())*60*60*1000);
 		curr_hour = curr_hour.toDouble()/(1000 * 3600);		
 		
-		if(curr_hour > sunrise-1 && curr_hour < sunrise)
+		if(curr_hour > birkutHashahar && curr_hour < sunrise)
 		{
 			var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);	
 			var hebrew_month_name = hebrewDateFunc(today.year, today.month, today.day, false);
@@ -2067,7 +2067,10 @@ const gWeekday = ["Sun", "Mon", "Tues", "Wednes", "Thurs", "Fri", "Satur"]
 		var curr_hour = /*milisec +*/ ((s.toNumber())*1000) + ((m.toNumber())*60*1000) + ((h.toNumber())*60*60*1000);
 		curr_hour = curr_hour.toDouble()/(1000 * 3600);	
 
-		//console.log(curr_hour);
+		System.println("curr_hour: " + curr_hour);
+		System.println("birkutHashahar: " + birkutHashahar);
+		System.println("patachEliyaou: " + patachEliyaou);
+
 		if(curr_hour >= birkutHashahar && curr_hour < patachEliyaou)
 		{
 			var viewPrayPart = View.findDrawableById("MazalLabel") as Text;
