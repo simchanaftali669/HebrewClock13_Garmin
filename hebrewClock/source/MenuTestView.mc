@@ -968,7 +968,7 @@ class MenuTestView extends WatchUi.View {
 		isMoed = isMoed || ((hebrew_month_name[3].equals(" בסיוון")) && 
 		                    (hebrew_month_name[2].equals("ו'")) );
 		isMoed = isMoed || ((hebrew_month_name[3] == " בתשרי") && 
-							(hebrew_month_name[2] == "ט\"ו" || hebrew_month_name[2] == "כ\"א" || hebrew_month_name[2] == "כ\"ב"));
+							(hebrew_month_name[2] == "ט\"ו" || hebrew_month_name[2] == "כ\"א" || hebrew_month_name[2] == "כ\"ב" || hebrew_month_name[2] == "א'" || hebrew_month_name[2] == "ב'" || hebrew_month_name[2] == "י'"));
 		
 		return isMoed;
 	}
