@@ -43,6 +43,7 @@ module Rez {
                 Menu.setTitle((WatchUi.loadResource($.Rez.Strings.MainMenuTitle) as String));
                 addItem((WatchUi.loadResource($.Rez.Strings.menuEng_label_1) as String), :item_1);
                 addItem((WatchUi.loadResource($.Rez.Strings.menuEng_label_2) as String), :item_2);
+                addItem((WatchUi.loadResource($.Rez.Strings.menuEng_label_0) as String), :item_0);
             }
         }
 
@@ -52,6 +53,7 @@ module Rez {
                 Menu.setTitle((WatchUi.loadResource($.Rez.Strings.MainMenuTitle) as String));
                 addItem((WatchUi.loadResource($.Rez.Strings.menuHeb_label_1) as String), :item_1);
                 addItem((WatchUi.loadResource($.Rez.Strings.menuHeb_label_2) as String), :item_2);
+                addItem((WatchUi.loadResource($.Rez.Strings.menuHeb_label_0) as String), :item_0);
             }
         }
     } // Menus
@@ -74,6 +76,7 @@ module Rez {
         (:initialized) var HomeTitle as Symbol;
         (:initialized) var mazal_eng_7 as Symbol;
         (:initialized) var AppName as Symbol;
+        (:initialized) var menuEng_label_0 as Symbol;
         (:initialized) var menuEng_label_1 as Symbol;
         (:initialized) var menuEng_label_2 as Symbol;
         (:initialized) var MenuLabel1 as Symbol;
@@ -84,5 +87,6 @@ module Rez {
         (:initialized) var prompt as Symbol;
         (:initialized) var menuHeb_label_2 as Symbol;
         (:initialized) var menuHeb_label_1 as Symbol;
+        (:initialized) var menuHeb_label_0 as Symbol;
     } // Strings
 } // Rez
