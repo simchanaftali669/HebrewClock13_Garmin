@@ -13,6 +13,7 @@ import Toybox.Time.Gregorian;
 import Toybox.Timer;
 import Toybox.Math;
 import Toybox.Application.Storage;
+import Toybox.System;
 
 
 public var timer1;
@@ -25,6 +26,7 @@ public var count3 = 0;
 public var latitude = 31.656466;
 public var longitude = 35.228143;
 public var isJustOpened = true;
+public var isMoonClock = false;
 
 public function setPosition(info as Toybox.Position.Info) as Void
 {
@@ -39,6 +41,8 @@ public function setPosition(info as Toybox.Position.Info) as Void
 
 //! View for the home screen
 class MenuTestView extends WatchUi.View {
+	var sunCalc = new SunCalc();
+	var isMoonClock = false;
 
  	var posnInfo = null;
     public function setPosition(info as Toybox.Position.Info) as Void
@@ -159,6 +163,12 @@ class MenuTestView extends WatchUi.View {
     //! Update the view
     //! @param dc Device context
     public function onUpdate(dc as Dc) as Void {
+
+
+    	if(Storage.getValue("isMoonClock") != null)
+    	{
+    	    isMoonClock = Application.Storage.getValue("isMoonClock");
+		}
 
     	//Application.Storage.clearValues();
     	if(Storage.getValue("latitude") != null)
@@ -787,27 +797,41 @@ class MenuTestView extends WatchUi.View {
 	    var sunset, sunrise_tommorow, sunset_yasterdate;
 	    var shaa_zmanit = 0;
 	    var hour = [0,0,0,0]; //29
-	
+
 		var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
 		var yasterday = getYasterday(today); //Gregorian.info(Time.now() - 1, Time.FORMAT_SHORT);	
 	    var tomorrow = getTomorrow(today); //Gregorian.info(Time.now() + 1, Time.FORMAT_SHORT);
-	
-		
-	
+
+		//var yasterday = sunCalc.getMoonTimes(yasterday,latitude,longitude);
 	
 	    //the time of yasterday
 	    var time_yasterday = [0, 0, 0, 0];
-	    time_yasterday = suntime(yasterday.day, yasterday.month, yasterday.year, 90, 50,latitude,longitude);//, lngd, lngm, ewi, latd, latm, nsi, adj);
-	
-	    //the time of the current day
 	    var time_today = [0, 0, 0, 0];
-	    time_today = suntime(today.day, today.month, today.year, 90, 50,latitude,longitude);//, lngd, lngm, ewi, latd, latm, nsi, adj);
-
-//	    //the time of the next day
 	    var time_tommorow = [0, 0, 0, 0];
-	    time_tommorow = suntime(tomorrow.day, tomorrow.month, tomorrow.year, 90, 50,latitude,longitude);//, lngd, lngm, ewi, latd, latm, nsi, adj);
 
-	    if (time_today[1] == 0) {
+		if(!isMoonClock)
+		{
+			time_yasterday = suntime(yasterday.day, yasterday.month, yasterday.year, 90, 50,latitude,longitude);//, lngd, lngm, ewi, latd, latm, nsi, adj);
+
+			//the time of the current day
+			time_today = suntime(today.day, today.month, today.year, 90, 50,latitude,longitude);//, lngd, lngm, ewi, latd, latm, nsi, adj);
+
+		    //the time of the next day
+			time_tommorow = suntime(tomorrow.day, tomorrow.month, tomorrow.year, 90, 50,latitude,longitude);//, lngd, lngm, ewi, latd, latm, nsi, adj);
+		}	
+		else	
+		{
+ 			time_yasterday = sunCalc.getMoonTimes(yasterday,latitude,longitude,false);
+			
+			//the time of the current day
+			time_today = sunCalc.getMoonTimes(today,latitude,longitude,false);//, lngd, lngm, ewi, latd, latm, nsi, adj);
+
+		    //the time of the next day
+			time_tommorow = sunCalc.getMoonTimes(tomorrow,latitude,longitude,false);//, lngd, lngm, ewi, latd, latm, nsi, adj);
+		}
+
+			System.println(time_today[3]);
+	    //if (time_today[1] == 0) {
 	        //sunrise_yasterdate = time_yasterday[2];
 	        sunrise = time_today[2];
 	        sunrise_tommorow = time_tommorow[2];
@@ -857,12 +881,12 @@ class MenuTestView extends WatchUi.View {
 			//document.getElementById("Sefer").value = sunrise_tommorow; 
 			if(curr_hour > sunset_hour)
 			{
-				shaa_zmanit_night = (sunrise_tommorow + (24 - sunset)) / 12;
+				shaa_zmanit_night = ((sunrise_tommorow + (24 - sunset)) / 12).abs();
 				sunrise_hour = sunrise_tommorow ;
 	        }
 	        else
 	        {
-	            shaa_zmanit_night = (sunrise + (24 - sunset_yasterdate)) / 12;
+	            shaa_zmanit_night = ((sunrise + (24 - sunset_yasterdate)) / 12).abs();
 				sunrise_hour = sunrise;
 			}
 			//hour[25] = shaa_zmanit_night;
@@ -870,11 +894,11 @@ class MenuTestView extends WatchUi.View {
 	        //legnth of the shaa zmanit - day
 	        if(curr_hour > sunset_hour)
 	        {
-				shaa_zmanit_day = (sunset_tommorow - sunrise_tommorow) / 12;
+				shaa_zmanit_day = ((sunset_tommorow - sunrise_tommorow) / 12).abs();
 	        }
 	        else
 	        {
-				shaa_zmanit_day = (sunset - sunrise) / 12;
+				shaa_zmanit_day = ((sunset - sunrise) / 12).abs();
 			}
 			
 		 
@@ -943,7 +967,7 @@ class MenuTestView extends WatchUi.View {
 				
 				//window.location.href = "en/Shabat/index.html";
 			}
-	    }
+	    //}
 	
 	
 	

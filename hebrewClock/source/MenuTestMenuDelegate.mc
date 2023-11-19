@@ -61,6 +61,17 @@ class MenuTestMenuDelegate extends WatchUi.MenuInputDelegate {
 	    	Storage.setValue("longitude", longitude);
             isJustOpened = true; 
         }
+         else if (item == :item_3) {
+            isMoonClock = false;
+ 		    Storage.setValue("isMoonClock", false);
+            isJustOpened = true; 
+        }
+         else if (item == :item_4) {
+            isMoonClock = true;
+ 		    Storage.setValue("isMoonClock", true);
+            isJustOpened = true; 
+        }
+
 
     }
 }

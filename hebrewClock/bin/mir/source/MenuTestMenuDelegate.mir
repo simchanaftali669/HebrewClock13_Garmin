@@ -129,7 +129,7 @@ C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewCloc
         %tmp.32 = lgetv %item;
         %tmp.34 = const :item_2;
         %tmp.35 = eq %tmp.32 %tmp.34;
-        bf %tmp.35 @C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewClock_source_MenuTestMenuDelegate_mc_57_14_if_end;
+        bf %tmp.35 @C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewClock_source_MenuTestMenuDelegate_mc_57_14_if_false;
 C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewClock_source_MenuTestMenuDelegate_mc_57_14_if_true:
 C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewClock_source_MenuTestMenuDelegate_mc_57_35_start:
 [ "C:\Users\User\Desktop\apps\garmin\hebrewClock\github\hebrewClockGarmin\hebrewClock\source\MenuTestMenuDelegate.mc" 58 12 ]
@@ -155,6 +155,54 @@ C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewCloc
         putv self :isJustOpened %tmp.48;
 C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewClock_source_MenuTestMenuDelegate_mc_57_35_stop:
         goto @C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewClock_source_MenuTestMenuDelegate_mc_57_14_if_end;
+C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewClock_source_MenuTestMenuDelegate_mc_57_14_if_false:
+[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\github\hebrewClockGarmin\hebrewClock\source\MenuTestMenuDelegate.mc" 64 14 ]
+C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewClock_source_MenuTestMenuDelegate_mc_64_14_if_stmt:
+        %tmp.50 = lgetv %item;
+        %tmp.52 = const :item_3;
+        %tmp.53 = eq %tmp.50 %tmp.52;
+        bf %tmp.53 @C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewClock_source_MenuTestMenuDelegate_mc_64_14_if_false;
+C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewClock_source_MenuTestMenuDelegate_mc_64_14_if_true:
+C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewClock_source_MenuTestMenuDelegate_mc_64_35_start:
+[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\github\hebrewClockGarmin\hebrewClock\source\MenuTestMenuDelegate.mc" 65 12 ]
+        %tmp.54 = false;
+        putv self :isMoonClock %tmp.54;
+[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\github\hebrewClockGarmin\hebrewClock\source\MenuTestMenuDelegate.mc" 66 7 ]
+        %tmp.55 = getm $.Toybox.Application.Storage;
+        %tmp.56 = getv function %tmp.55 :setValue;
+        %tmp.57 = "isMoonClock";
+        %tmp.58 = false;
+        invoke %tmp.55 %tmp.56(%tmp.57, %tmp.58);
+[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\github\hebrewClockGarmin\hebrewClock\source\MenuTestMenuDelegate.mc" 67 12 ]
+        %tmp.59 = true;
+        putv self :isJustOpened %tmp.59;
+C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewClock_source_MenuTestMenuDelegate_mc_64_35_stop:
+        goto @C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewClock_source_MenuTestMenuDelegate_mc_64_14_if_end;
+C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewClock_source_MenuTestMenuDelegate_mc_64_14_if_false:
+[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\github\hebrewClockGarmin\hebrewClock\source\MenuTestMenuDelegate.mc" 69 14 ]
+C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewClock_source_MenuTestMenuDelegate_mc_69_14_if_stmt:
+        %tmp.61 = lgetv %item;
+        %tmp.63 = const :item_4;
+        %tmp.64 = eq %tmp.61 %tmp.63;
+        bf %tmp.64 @C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewClock_source_MenuTestMenuDelegate_mc_69_14_if_end;
+C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewClock_source_MenuTestMenuDelegate_mc_69_14_if_true:
+C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewClock_source_MenuTestMenuDelegate_mc_69_35_start:
+[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\github\hebrewClockGarmin\hebrewClock\source\MenuTestMenuDelegate.mc" 70 12 ]
+        %tmp.65 = true;
+        putv self :isMoonClock %tmp.65;
+[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\github\hebrewClockGarmin\hebrewClock\source\MenuTestMenuDelegate.mc" 71 7 ]
+        %tmp.66 = getm $.Toybox.Application.Storage;
+        %tmp.67 = getv function %tmp.66 :setValue;
+        %tmp.68 = "isMoonClock";
+        %tmp.69 = true;
+        invoke %tmp.66 %tmp.67(%tmp.68, %tmp.69);
+[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\github\hebrewClockGarmin\hebrewClock\source\MenuTestMenuDelegate.mc" 72 12 ]
+        %tmp.70 = true;
+        putv self :isJustOpened %tmp.70;
+C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewClock_source_MenuTestMenuDelegate_mc_69_35_stop:
+        goto @C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewClock_source_MenuTestMenuDelegate_mc_69_14_if_end;
+C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewClock_source_MenuTestMenuDelegate_mc_69_14_if_end:
+C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewClock_source_MenuTestMenuDelegate_mc_64_14_if_end:
 C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewClock_source_MenuTestMenuDelegate_mc_57_14_if_end:
 C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewClock_source_MenuTestMenuDelegate_mc_52_8_if_end:
 C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewClock_source_MenuTestMenuDelegate_mc_45_55_stop:
