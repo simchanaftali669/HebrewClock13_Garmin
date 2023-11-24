@@ -406,7 +406,7 @@ C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewCloc
         lputv %i.18 %tmp.72;
 C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewClock_source_SunCalc_mc_70_8_for_test:
         %tmp.74 = lgetv %i.18;
-        %tmp.75 = 24;
+        %tmp.75 = 25;
         %tmp.76 = lte %tmp.74 %tmp.75;
         bf %tmp.76 @C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewClock_source_SunCalc_mc_70_8_for_end;
 C_Users_User_Desktop_apps_garmin_hebrewClock_github_hebrewClockGarmin_hebrewClock_source_SunCalc_mc_70_8_for_begin:

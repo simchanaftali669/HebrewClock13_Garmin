@@ -1077,9 +1077,8 @@ class MenuTestView extends WatchUi.View {
 			return;
 		}
 
-
-		//System.println("sunrise: " + sunrise + ", sunset:" + sunset);
-		//System.println("curr_hour: " + curr_hour);
+		System.println("sunrise: " + sunrise + ", sunset:" + sunset);
+		System.println("curr_hour: " + curr_hour);
 								
 		//day
 		if(curr_hour > sunrise && curr_hour < sunset)
@@ -1117,8 +1116,25 @@ class MenuTestView extends WatchUi.View {
 			lbSecond = second;
 			displaySecond = lbSecond;
 		}
-		//night after 00:00
-		else if(curr_hour < sunrise)
+		//day after 00:00 before sunset
+		else if(isMoonClock && curr_hour < sunrise && curr_hour < sunset)
+		{
+			var length = sunrise - sunset_yasterdate;
+			var curr_hour_offset = curr_hour + 24 - sunrise;
+			
+			var hour = Math.floor(12* (curr_hour_offset/length));
+			var minute = Math.floor(12 * 1080 * (curr_hour_offset / length)) - hour*1080;
+			var second = Math.floor(12 * 1080 * 76 * (curr_hour_offset / length)) - (hour * 1080 * 76) - (minute * 76);
+			
+			lbHour = hour;
+			displayHour = lbHour;
+			lbMinute = minute;
+			displayMinute = lbMinute;
+			lbSecond = second;
+			displaySecond = lbSecond;
+		}
+		//night after 00:00 after sunset
+		else if(!isMoonClock && curr_hour < sunrise)
 		{
 			var length = sunrise + 24 - sunset_yasterdate;
 			var curr_hour_offset = curr_hour + 24 - sunset_yasterdate;
@@ -1134,7 +1150,8 @@ class MenuTestView extends WatchUi.View {
 			lbSecond = second;
 			displaySecond = lbSecond;
 		}
-		
+
+
 		display_time();
 		
 		if(isJustOpened)
@@ -1156,6 +1173,22 @@ class MenuTestView extends WatchUi.View {
 	public function MarkTime()
 	{
 		var view = View.findDrawableById("HebrewClock") as Text;
+
+		if(isMoonClock)
+		{
+
+			if( curr_hour.toDouble()/(1000 * 3600) > sunset  || 
+				curr_hour.toDouble()/(1000 * 3600) < sunrise)
+			{
+				view.setColor(Graphics.COLOR_LT_GRAY);
+			}
+			else if(curr_hour.toDouble()/(1000 * 3600) > sunrise  || 
+					curr_hour.toDouble()/(1000 * 3600) < sunset/*curr_hour.toDouble() > sunrise_hour.toDouble()*/ )
+			{
+				view.setColor(Graphics.COLOR_PINK);
+			}
+			return;
+		}
 
  		//System.println("curr_hour: " + curr_hour.toDouble()/(1000 * 3600));
  		//System.println("tzeit: " + tzeit);

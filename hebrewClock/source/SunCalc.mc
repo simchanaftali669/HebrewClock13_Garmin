@@ -67,7 +67,7 @@ class SunCalc
         h1=0, h2=0, rise=0, set=0, a=0, b=0, xe=0, ye=0, d=0, roots=0, x1=0, x2=0, dx=0;
 
         // go in 2-hour chunks, each time seeing if a 3-point quadratic curve crosses zero (which means rise or set)
-        for (var i = 1; i <= 24; i += 2) 
+        for (var i = 1; i <= 25; i += 2) 
         {
             h1 = SunCalc.getMoonPosition(hoursLater(t, i), lat, lng)[1] - hc;
             h2 = SunCalc.getMoonPosition(hoursLater(t, i + 1), lat, lng)[1] - hc;
