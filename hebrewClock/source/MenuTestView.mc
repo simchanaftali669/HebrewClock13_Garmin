@@ -98,10 +98,12 @@ class MenuTestView extends WatchUi.View {
 	public var sunset_hour;
 	public var sunrise_hour;
 
-	public var sunset_yasterdate;
+	public var sunrise_yasterday;
 	public var sunrise;
-	public var sunset;
 	public var sunrise_tommorow;
+	public var sunset_yasterday;
+	public var sunset;
+	public var sunset_tommorow;
 
 	public var mazalColor;
 
@@ -794,9 +796,15 @@ class MenuTestView extends WatchUi.View {
 		//timezone = tz + 2;
 	
 	
-	    var sunset, sunrise_tommorow, sunset_yasterdate;
+		var sunrise_yasterday;
+        var sunrise;
+        var sunrise_tommorow;
+        var sunset_yasterday;
+        var sunset;
+        var sunset_tommorow;
+
 	    var shaa_zmanit = 0;
-	    var hour = [0,0,0,0]; //29
+	    var hour = [0,0,0,0,0,0]; //29
 
 		var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
 		var yasterday = getYasterday(today); //Gregorian.info(Time.now() - 1, Time.FORMAT_SHORT);	
@@ -833,18 +841,20 @@ class MenuTestView extends WatchUi.View {
 			System.println(time_today[3]);
 	    //if (time_today[1] == 0) {
 	        //sunrise_yasterdate = time_yasterday[2];
-	        sunrise = time_today[2];
-	        sunrise_tommorow = time_tommorow[2];
-	        sunset_yasterdate = time_yasterday[3];
-	        sunset = time_today[3];
+			sunrise_yasterday = time_yasterday[2];
+			sunrise = time_today[2];
+			sunrise_tommorow = time_tommorow[2];
+			sunset_yasterday = time_yasterday[3];
+			sunset = time_today[3];
+			sunset_tommorow = time_tommorow[3];
 	        
-	        //System.println("sunrise: " + sunrise);
-	        var sunset_tommorow = time_tommorow[3];
-	
-			hour[0] = sunset_yasterdate;
+	        //System.println("sunrise: " + sunrise);	
+			hour[0] = sunrise_yasterday;
 			hour[1] = sunrise;
-			hour[2] = sunset;
-			hour[3] = sunrise_tommorow;
+			hour[2] = sunrise_tommorow;
+			hour[3] = sunset_yasterday;
+			hour[4] = sunset;
+			hour[5] = sunset_tommorow;
 			
 	        shaa_zmanit = (sunset - sunrise) / 12;
 	
@@ -886,7 +896,7 @@ class MenuTestView extends WatchUi.View {
 	        }
 	        else
 	        {
-	            shaa_zmanit_night = ((sunrise + (24 - sunset_yasterdate)) / 12).abs();
+	            shaa_zmanit_night = ((sunrise + (24 - sunset_yasterday)) / 12).abs();
 				sunrise_hour = sunrise;
 			}
 			//hour[25] = shaa_zmanit_night;
@@ -1034,6 +1044,7 @@ class MenuTestView extends WatchUi.View {
 		return strSplited;
     }
         
+	var isNight = false;
     //hebrewclock.js
 	public function hebrewclock()
 	{
@@ -1047,10 +1058,12 @@ class MenuTestView extends WatchUi.View {
 		{
 			var zmanit_hour = doit();       //get the 24 shaaotzmaniot
 			
-			sunset_yasterdate = zmanit_hour[0];
+			sunrise_yasterday = zmanit_hour[0];
 			sunrise = zmanit_hour[1];
-			sunset = zmanit_hour[2];
-			sunrise_tommorow = zmanit_hour[3];
+			sunrise_tommorow = zmanit_hour[2];
+			sunset_yasterday = zmanit_hour[3];
+			sunset = zmanit_hour[4];
+			sunset_tommorow = zmanit_hour[5];
 		}
 
 		var shaa_zmanit_night, shaa_zmanit_day;
@@ -1080,8 +1093,11 @@ class MenuTestView extends WatchUi.View {
 		System.println("sunrise: " + sunrise + ", sunset:" + sunset);
 		System.println("curr_hour: " + curr_hour);
 								
-		//day
-		if(curr_hour > sunrise && curr_hour < sunset)
+		//month days 23-7						
+		//case 1:
+		//moonrise at 06:57 and moonset at 17:17
+		//curr_hour between them.
+		if(sunset > sunrise && curr_hour < sunset)
 		{
 			var length = sunset - sunrise;
 			var curr_hour_offset = curr_hour - sunrise;
@@ -1090,7 +1106,90 @@ class MenuTestView extends WatchUi.View {
 			var minute = Math.floor((12 * 1080 * (curr_hour_offset / length)).toDouble()) - hour*1080;
 			var second = Math.floor((12 * 1080 * 76 * (curr_hour_offset / length)).toDouble()) - (hour * 1080 * 76) - (minute * 76);
 		    
-		    //System.println("minute : " + minute );
+			lbHour = hour+12;
+			displayHour = lbHour;
+			lbMinute = minute;
+			displayMinute = lbMinute;
+			lbSecond = second;
+			displaySecond = lbSecond;
+			
+			isNight = false;
+		}
+		//case 2:
+		//moonrise at 06:57 and moonset at 17:17
+		//curr_hour earlier.
+		if(sunset > sunrise && curr_hour < sunrise)
+		{
+			var length = sunrise + 24-sunset_yasterday;
+			var curr_hour_offset = curr_hour + 24-sunset_yasterday;
+			
+			var hour = Math.floor((12*(curr_hour_offset/length)).toDouble());
+			var minute = Math.floor((12 * 1080 * (curr_hour_offset / length)).toDouble()) - hour*1080;
+			var second = Math.floor((12 * 1080 * 76 * (curr_hour_offset / length)).toDouble()) - (hour * 1080 * 76) - (minute * 76);
+		    
+			lbHour = hour;
+			displayHour = lbHour;
+			lbMinute = minute;
+			displayMinute = lbMinute;
+			lbSecond = second;
+			displaySecond = lbSecond;
+			
+			isNight = true;
+		}
+		//case 3:
+		//moonrise at 06:57 and moonset at 17:17
+		//curr_hour after moonset.
+		if(sunset > sunrise && curr_hour > sunset)
+		{
+			var length = sunrise_tommorow + 24-sunset;
+			var curr_hour_offset = curr_hour - sunset;
+			
+			var hour = Math.floor((12*(curr_hour_offset/length)).toDouble());
+			var minute = Math.floor((12 * 1080 * (curr_hour_offset / length)).toDouble()) - hour*1080;
+			var second = Math.floor((12 * 1080 * 76 * (curr_hour_offset / length)).toDouble()) - (hour * 1080 * 76) - (minute * 76);
+		    
+			lbHour = hour;
+			displayHour = lbHour;
+			lbMinute = minute;
+			displayMinute = lbMinute;
+			lbSecond = second;
+			displaySecond = lbSecond;
+			
+			isNight = true;
+		}
+		//month days 07-23	
+		//case 1:
+		//moonrise at 13:05 and moonset at 00:00
+		//curr_hour between them.
+		if(sunset < sunrise  && curr_hour < sunrise)
+		{
+			var length = sunrise - sunset;
+			var curr_hour_offset = curr_hour - sunset;
+			
+			var hour = Math.floor((12*(curr_hour_offset/length)).toDouble());
+			var minute = Math.floor((12 * 1080 * (curr_hour_offset / length)).toDouble()) - hour*1080;
+			var second = Math.floor((12 * 1080 * 76 * (curr_hour_offset / length)).toDouble()) - (hour * 1080 * 76) - (minute * 76);
+		    
+			lbHour = hour;
+			displayHour = lbHour;
+			lbMinute = minute;
+			displayMinute = lbMinute;
+			lbSecond = second;
+			displaySecond = lbSecond;
+			
+			isNight = true;
+		}
+		//case 2:
+		//moonrise at 13:05 and moonset at 00:00
+		//curr_hour earlier.
+		if(sunset < sunrise && curr_hour < sunset)
+		{
+			var length = sunset + 24-sunrise_yasterday;
+			var curr_hour_offset = curr_hour + 24-sunrise_yasterday;
+			
+			var hour = Math.floor((12*(curr_hour_offset/length)).toDouble());
+			var minute = Math.floor((12 * 1080 * (curr_hour_offset / length)).toDouble()) - hour*1080;
+			var second = Math.floor((12 * 1080 * 76 * (curr_hour_offset / length)).toDouble()) - (hour * 1080 * 76) - (minute * 76);
 		    
 			lbHour = hour+12;
 			displayHour = lbHour;
@@ -1098,57 +1197,29 @@ class MenuTestView extends WatchUi.View {
 			displayMinute = lbMinute;
 			lbSecond = second;
 			displaySecond = lbSecond;
-		}
-		//night before 00:00
-		else if( curr_hour > sunset)
-		{
-			var length = sunrise_tommorow + 24 - sunset;
-			var curr_hour_offset = curr_hour - sunset;
 			
-			var hour = Math.floor(12* (curr_hour_offset/length));
-			var minute = Math.floor(12 * 1080 * (curr_hour_offset / length)) - hour*1080;
-			var second = Math.floor(12 * 1080 * 76 * (curr_hour_offset / length)) - (hour * 1080 * 76) - (minute * 76);
-	
-			lbHour = hour;
+			isNight = false;
+		}
+		//case 3:
+		//moonrise at 13:05 and moonset at 00:00
+		//curr_hour after moonset.
+		if(sunset < sunrise && curr_hour > sunrise)
+		{
+			var length = sunset_tommorow + 24-sunrise;
+			var curr_hour_offset = curr_hour - sunrise;
+			
+			var hour = Math.floor((12*(curr_hour_offset/length)).toDouble());
+			var minute = Math.floor((12 * 1080 * (curr_hour_offset / length)).toDouble()) - hour*1080;
+			var second = Math.floor((12 * 1080 * 76 * (curr_hour_offset / length)).toDouble()) - (hour * 1080 * 76) - (minute * 76);
+		    
+			lbHour = hour+12;
 			displayHour = lbHour;
 			lbMinute = minute;
 			displayMinute = lbMinute;
 			lbSecond = second;
 			displaySecond = lbSecond;
-		}
-		//day after 00:00 before sunset
-		else if(isMoonClock && curr_hour < sunrise && curr_hour < sunset)
-		{
-			var length = sunrise - sunset_yasterdate;
-			var curr_hour_offset = curr_hour + 24 - sunrise;
 			
-			var hour = Math.floor(12* (curr_hour_offset/length));
-			var minute = Math.floor(12 * 1080 * (curr_hour_offset / length)) - hour*1080;
-			var second = Math.floor(12 * 1080 * 76 * (curr_hour_offset / length)) - (hour * 1080 * 76) - (minute * 76);
-			
-			lbHour = hour;
-			displayHour = lbHour;
-			lbMinute = minute;
-			displayMinute = lbMinute;
-			lbSecond = second;
-			displaySecond = lbSecond;
-		}
-		//night after 00:00 after sunset
-		else if(!isMoonClock && curr_hour < sunrise)
-		{
-			var length = sunrise + 24 - sunset_yasterdate;
-			var curr_hour_offset = curr_hour + 24 - sunset_yasterdate;
-			
-			var hour = Math.floor(12* (curr_hour_offset/length));
-			var minute = Math.floor(12 * 1080 * (curr_hour_offset / length)) - hour*1080;
-			var second = Math.floor(12 * 1080 * 76 * (curr_hour_offset / length)) - (hour * 1080 * 76) - (minute * 76);
-			
-			lbHour = hour;
-			displayHour = lbHour;
-			lbMinute = minute;
-			displayMinute = lbMinute;
-			lbSecond = second;
-			displaySecond = lbSecond;
+			isNight = false;
 		}
 
 
@@ -1177,13 +1248,11 @@ class MenuTestView extends WatchUi.View {
 		if(isMoonClock)
 		{
 
-			if( curr_hour.toDouble()/(1000 * 3600) > sunset  || 
-				curr_hour.toDouble()/(1000 * 3600) < sunrise)
+			if(isNight)
 			{
 				view.setColor(Graphics.COLOR_LT_GRAY);
 			}
-			else if(curr_hour.toDouble()/(1000 * 3600) > sunrise  || 
-					curr_hour.toDouble()/(1000 * 3600) < sunset/*curr_hour.toDouble() > sunrise_hour.toDouble()*/ )
+			else
 			{
 				view.setColor(Graphics.COLOR_PINK);
 			}
@@ -1371,6 +1440,9 @@ class MenuTestView extends WatchUi.View {
 		
 	    hebrewday = day;
 	
+		System.println("hebrewday: " + hebrewday);
+		System.println("clockHour: " + clockHour);
+
 		var mida;
 		var deviceSettings = System.getDeviceSettings();
 		// it is safe to access the language
