@@ -1901,6 +1901,7 @@ const gWeekday = ["Sun", "Mon", "Tues", "Wednes", "Thurs", "Fri", "Satur"]
 	{
 		var inputLang = "English";
 		var deviceSettings = System.getDeviceSettings();
+		
 		// it is safe to access the language
 		if(deviceSettings.systemLanguage == System.LANGUAGE_HEB || isHebrew == true)
 		{
@@ -1921,10 +1922,23 @@ const gWeekday = ["Sun", "Mon", "Tues", "Wednes", "Thurs", "Fri", "Satur"]
 
 		SdnToHebrew(GregorianToSdn(inputYear, inputMonth, inputDate));
 
-		System.println("hebrewDate: " + hebrewDate);
-		System.println("getDateHebrew(hebrewDate): " + getDateHebrew(hebrewDate));
-		//System.println("hMonth[hebrewMonth - 1]: " + hMonth[hebrewMonth - 1]);
-		//System.println("inputLang: " + inputLang);
+		var dateNow = Gregorian.info(Time.now(), Time.FORMAT_LONG);
+
+		var h = dateNow.hour;
+		var m = dateNow.min;
+		var s = dateNow.sec;
+		var mili = 500;
+        var curr_hour = mili + (s*1000) + (m*60*1000) + (h*60*60*1000);
+		curr_hour = curr_hour/(1000 * 3600);
+
+		if (curr_hour > tzeit)
+		{	
+			hebrewDate = hebrewDate + 1;
+			if(hebrewDate == 31)
+			{
+				hebrewDate = 1;
+			}
+		}
 
 		if(inputLang == "English")
 		{
@@ -1934,12 +1948,6 @@ const gWeekday = ["Sun", "Mon", "Tues", "Wednes", "Thurs", "Fri", "Satur"]
 			ret[2] = hebrewDate;
 			ret[3] = hMonth[hebrewMonth - 1];
 			return ret;
-			// return {
-			// 	year: hebrewYear
-			//   , month: hebrewMonth
-			//   , date: hebrewDate
-			//   , month_name: hMonth[hebrewMonth - 1]
-			// };
 		}
 		else
 		{
@@ -1949,13 +1957,6 @@ const gWeekday = ["Sun", "Mon", "Tues", "Wednes", "Thurs", "Fri", "Satur"]
 			ret[2] = getDateHebrew(hebrewDate);
 			ret[3] = " ב" + hMonthHebrew[hebrewMonth - 1];
 			return ret;
-
-			// return {
-			// 	year: hebrewYear
-			//   , month: hebrewMonth
-			//   , date: getDateHebrew(hebrewDate)
-			//   , month_name: hMonthHebrew[hebrewMonth - 1]
-			// };
 		}	
 	}
 

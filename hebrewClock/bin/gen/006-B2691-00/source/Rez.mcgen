@@ -42,7 +42,6 @@ module Rez {
                 Menu.initialize();
                 Menu.setTitle((WatchUi.loadResource($.Rez.Strings.MainMenuTitle) as String));
                 addItem((WatchUi.loadResource($.Rez.Strings.menuEng_label_1) as String), :item_1);
-                addItem((WatchUi.loadResource($.Rez.Strings.menuEng_label_2) as String), :item_2);
                 addItem((WatchUi.loadResource($.Rez.Strings.menuEng_label_0) as String), :item_0);
                 addItem((WatchUi.loadResource($.Rez.Strings.menuEng_label_3) as String), :item_3);
                 addItem((WatchUi.loadResource($.Rez.Strings.menuEng_label_4) as String), :item_4);
@@ -54,7 +53,6 @@ module Rez {
                 Menu.initialize();
                 Menu.setTitle((WatchUi.loadResource($.Rez.Strings.MainMenuTitle) as String));
                 addItem((WatchUi.loadResource($.Rez.Strings.menuHeb_label_1) as String), :item_1);
-                addItem((WatchUi.loadResource($.Rez.Strings.menuHeb_label_2) as String), :item_2);
                 addItem((WatchUi.loadResource($.Rez.Strings.menuHeb_label_0) as String), :item_0);
                 addItem((WatchUi.loadResource($.Rez.Strings.menuHeb_label_3) as String), :item_3);
                 addItem((WatchUi.loadResource($.Rez.Strings.menuHeb_label_4) as String), :item_4);
@@ -82,7 +80,6 @@ module Rez {
         (:initialized) var AppName as Symbol;
         (:initialized) var menuEng_label_0 as Symbol;
         (:initialized) var menuEng_label_1 as Symbol;
-        (:initialized) var menuEng_label_2 as Symbol;
         (:initialized) var menuEng_label_3 as Symbol;
         (:initialized) var menuEng_label_4 as Symbol;
         (:initialized) var MenuLabel1 as Symbol;
@@ -93,7 +90,6 @@ module Rez {
         (:initialized) var AuxMenuLabel1 as Symbol;
         (:initialized) var menuHeb_label_3 as Symbol;
         (:initialized) var prompt as Symbol;
-        (:initialized) var menuHeb_label_2 as Symbol;
         (:initialized) var menuHeb_label_1 as Symbol;
         (:initialized) var menuHeb_label_0 as Symbol;
     } // Strings
