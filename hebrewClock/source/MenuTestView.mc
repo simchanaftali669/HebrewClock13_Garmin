@@ -1232,8 +1232,12 @@ class MenuTestView extends WatchUi.View {
 			isJustOpened = false;
 		}
 		
-		if(lbMinute == 0)
+		//System.println("curr_hour : " + curr_hour);
+		//System.println("tzeit : " + tzeit);
+
+		if(lbMinute == 0 || (curr_hour >= tzeit && curr_hour < tzeit + 0.001))
 	    {
+			//System.println("setMazal");
 			setmazal();	
 		}
 		
@@ -1749,54 +1753,8 @@ class MenuTestView extends WatchUi.View {
 
 	public function getDateHebrew(date)
 	{
-		//the time of the current day
-		//var sunrise = zmanit_hour[1];
-		
 		var date_str = ""; 
-		//var dateNow = new Date();
-		var dateNow = Gregorian.info(Time.now(), Time.FORMAT_LONG);
-
-
-		var h = dateNow.hour;
-		var m = dateNow.min;
-		var s = dateNow.sec;
-		var mili = 500;
-        var curr_hour = mili + (s*1000) + (m*60*1000) + (h*60*60*1000);
-		curr_hour = curr_hour/(1000 * 3600);
-		
-		// System.println("h: " + h);
-		// System.println("sunsetH: " + sunsetH);
-
-
-		// if ((h == sunsetH.toNumber() && m == sunsetM.toNumber() && s >= sunsetS.toNumber()) ||    // אחרי שקיעה
-		// 	(h == sunsetH.toNumber() && m > sunsetM.toNumber()) ||
-		// 	(h > sunsetH.toNumber())
-		//    )
-		// {
-		// 	if ((h == 23 && m == 23 && s <= 59) ||    // לפני חצות
-		// 		(h == 23 && m < 59) ||
-		// 		(h < 23)
-		// 	)
-		// 	{	
-		// 		date = date + 1;
-		// 		if(date == 31)
-		// 		{
-		// 			date = 1;
-		// 		}
-		// 		date_str = "ליל ";
-		// 	}
-		// }
-		// System.println(curr_hour);
-		// System.println(sunrise);
-		// if(curr_hour<sunrise)
-		// {
-		// 	date_str = "ליל ";
-		// }
-
-		//date_str = "" + date;
-		// System.println("---Begin getDateHebrew---");
-		// System.println("date: " + date);
-		// System.println("---End getDateHebrew---");
+		//System.println("---date---" + date);
 		switch(date.toNumber())
 		{
 			case 1:
@@ -1931,8 +1889,8 @@ const gWeekday = ["Sun", "Mon", "Tues", "Wednes", "Thurs", "Fri", "Satur"]
 		var curr_hour = mili.toNumber() + ((s.toNumber())*1000) + ((m.toNumber())*60*1000) + ((h.toNumber())*60*60*1000);
 		curr_hour = curr_hour.toDouble()/(1000 * 3600);	
 
-		//System.println("curr_hour: " + curr_hour);
-		//System.println("tzeit: " + tzeit);
+		System.println("curr_hour: " + curr_hour);
+		System.println("tzeit: " + tzeit);
 
 
 		if (curr_hour > tzeit)
