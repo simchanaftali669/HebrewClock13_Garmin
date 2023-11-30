@@ -1928,8 +1928,12 @@ const gWeekday = ["Sun", "Mon", "Tues", "Wednes", "Thurs", "Fri", "Satur"]
 		var m = dateNow.min;
 		var s = dateNow.sec;
 		var mili = 500;
-        var curr_hour = mili + (s*1000) + (m*60*1000) + (h*60*60*1000);
-		curr_hour = curr_hour/(1000 * 3600);
+		var curr_hour = mili.toNumber() + ((s.toNumber())*1000) + ((m.toNumber())*60*1000) + ((h.toNumber())*60*60*1000);
+		curr_hour = curr_hour.toDouble()/(1000 * 3600);	
+
+		//System.println("curr_hour: " + curr_hour);
+		//System.println("tzeit: " + tzeit);
+
 
 		if (curr_hour > tzeit)
 		{	
