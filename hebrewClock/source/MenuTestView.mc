@@ -1077,13 +1077,14 @@ class MenuTestView extends WatchUi.View {
 	
 		var curr_hour = /*milisec +*/ ((s.toNumber())*1000) + ((m.toNumber())*60*1000) + ((h.toNumber())*60*60*1000);
 		curr_hour = curr_hour.toDouble()/(1000 * 3600);		
-		
+
 		if(curr_hour > birkutHashahar && curr_hour < sunrise)
 		{
 			var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);	
 			var hebrew_month_name = hebrewDateFunc(today.year, today.month, today.day, false);
 			var viewHebrewDate = View.findDrawableById("ChristianClock") as Text;
 			viewHebrewDate.setText(hebrew_month_name[2] + hebrew_month_name[3]);	
+
 			MarkTime();
 
 			Tefila();
@@ -1399,7 +1400,18 @@ class MenuTestView extends WatchUi.View {
  
  
     //mazal of the hour
-	public function setmazal() {
+	public function setmazal() 
+	{
+		if(isMoonClock)
+		{
+			var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);	
+			var hebrew_month_name = hebrewDateFunc(today.year, today.month, today.day, false);
+			var viewHebrewDate = View.findDrawableById("MazalLabel") as Text;
+			viewHebrewDate.setText(hebrew_month_name[2] + hebrew_month_name[3]);
+			return;	
+		}
+
+
 	    var date =  Gregorian.info(Time.now(), Time.FORMAT_SHORT);
 	
 	    var h = date.hour;

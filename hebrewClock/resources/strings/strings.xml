@@ -14,16 +14,14 @@
     <string id="prompt">Click the menu button</string>
 
     <string id="menuHeb_label_1">מיקום נוכחי</string>
-    <string id="menuHeb_label_2">ניו-יורק</string>
-    <string id="menuHeb_label_0">גירסא 1.0.0</string>
+    <string id="menuHeb_label_0">גירסא 2.0.0</string>
     <string id="menuHeb_label_3">שעון חמה</string>
     <string id="menuHeb_label_4">שעון לבנה</string>
 
 
 
     <string id="menuEng_label_1">Current Location</string>
-    <string id="menuEng_label_2">New-York</string>
-    <string id="menuEng_label_0">Version 1.0.0</string>
+    <string id="menuEng_label_0">Version 2.0.0</string>
     <string id="menuEng_label_3">SunClock</string>
     <string id="menuEng_label_4">MoonClock</string>
 
