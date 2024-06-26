@@ -1,6 +1,4 @@
 <menu id="MainMenuEng" title="@Strings.MainMenuTitle">
     <menu-item id="item_1" label="@Strings.menuEng_label_1" />
     <menu-item id="item_0" label="@Strings.menuEng_label_0" />
-    <menu-item id="item_3" label="@Strings.menuEng_label_3" />
-    <menu-item id="item_4" label="@Strings.menuEng_label_4" />
 </menu>

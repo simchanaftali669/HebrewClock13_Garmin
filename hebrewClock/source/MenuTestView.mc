@@ -91,9 +91,12 @@ class MenuTestView extends WatchUi.View {
 	public var hebrewday;
 	public var omer;
 
+	public var shaa;
 	public var tzeit;
+	public var fajar;
 	public var alot;
 	public var misheyakir;
+	public var atzer;
 	public var curr_hour;
 	public var sunset_hour;
 	public var sunrise_hour;
@@ -797,10 +800,10 @@ class MenuTestView extends WatchUi.View {
 	
 	
 		var sunrise_yasterday;
-        var sunrise;
+        //var sunrise;
         var sunrise_tommorow;
         var sunset_yasterday;
-        var sunset;
+        //var sunset;
         var sunset_tommorow;
 
 	    var shaa_zmanit = 0;
@@ -948,6 +951,21 @@ class MenuTestView extends WatchUi.View {
 			//צאת הכוכבים
 			time_tzeit= suntime(today.day, today.month, today.year, 96, 0,latitude,longitude);
 			tzeit = time_tzeit[3];
+
+			var time_fajar = [0, 0, 0, 0];
+			//פג'אר
+			time_fajar= suntime(today.day, today.month, today.year, 108, 0, latitude, longitude);
+			fajar = time_fajar[2];
+
+			var time_shaa = [0, 0, 0, 0];
+			//shaa
+			time_shaa = suntime(today.day, today.month, today.year, 106, 40, latitude, longitude);
+			shaa = time_shaa[3];
+
+			var time_atzer = [0, 0, 0, 0];
+			//shaa
+			time_atzer = suntime(today.day, today.month, today.year, 48, 35, latitude, longitude);
+			atzer = time_atzer[3];
 			
 
 			var shortDate =  Gregorian.info(Time.now(), Time.FORMAT_SHORT);
@@ -1078,18 +1096,18 @@ class MenuTestView extends WatchUi.View {
 		var curr_hour = /*milisec +*/ ((s.toNumber())*1000) + ((m.toNumber())*60*1000) + ((h.toNumber())*60*60*1000);
 		curr_hour = curr_hour.toDouble()/(1000 * 3600);		
 
-		if(curr_hour > birkutHashahar && curr_hour < sunrise)
-		{
-			var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);	
-			var hebrew_month_name = hebrewDateFunc(today.year, today.month, today.day, false);
-			var viewHebrewDate = View.findDrawableById("ChristianClock") as Text;
-			viewHebrewDate.setText(hebrew_month_name[2] + hebrew_month_name[3]);	
+		// if(curr_hour > birkutHashahar && curr_hour < sunrise)
+		// {
+		// 	var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);	
+		// 	var hebrew_month_name = hebrewDateFunc(today.year, today.month, today.day, false);
+		// 	var viewHebrewDate = View.findDrawableById("ChristianClock") as Text;
+		// 	viewHebrewDate.setText(hebrew_month_name[2] + hebrew_month_name[3]);	
 
-			MarkTime();
+		// 	MarkTime();
 
-			Tefila();
-			return;
-		}
+		// 	Tefila();
+		// 	return;
+		// }
 
 		System.println("sunrise: " + sunrise + ", sunset:" + sunset);
 		System.println("curr_hour: " + curr_hour);
@@ -1248,49 +1266,67 @@ class MenuTestView extends WatchUi.View {
 
 	public function MarkTime()
 	{
-		var view = View.findDrawableById("HebrewClock") as Text;
+		var viewHour = View.findDrawableById("HebrewClockHour") as Text;
 
 		if(isMoonClock)
 		{
 
 			if(isNight)
 			{
-				view.setColor(Graphics.COLOR_LT_GRAY);
+				viewHour.setColor(Graphics.COLOR_LT_GRAY);
 			}
 			else
 			{
-				view.setColor(Graphics.COLOR_PINK);
+				viewHour.setColor(Graphics.COLOR_PINK);
 			}
 			return;
 		}
 
- 		//System.println("curr_hour: " + curr_hour.toDouble()/(1000 * 3600));
- 		//System.println("tzeit: " + tzeit);
- 		//System.println("alot: " + alot);
 
 		if(curr_hour.toDouble()/(1000 * 3600) > tzeit  || 
 		   curr_hour.toDouble()/(1000 * 3600) < misheyakir)
 		{
-			view.setColor(Graphics.COLOR_LT_GRAY);
-			//viewMazal.setText("Marriv");
-			//viewMazal.setText("ערבית - " + text);
+			viewHour.setColor(Graphics.COLOR_LT_GRAY);
+
 		}
 		else if(curr_hour.toDouble() < sunset_hour.toDouble() && 
 		        curr_hour.toDouble()/(1000 * 3600) > misheyakir/*curr_hour.toDouble() > sunrise_hour.toDouble()*/ )
 		{
-			view.setColor(Graphics.COLOR_BLUE);
-
-			// if(curr_hour.toDouble() < sunrise_hour.toDouble() || lbHour.toNumber() < 6)
-			// { 
-			// 	//viewMazal.setText("Shacharit");			
-			// 	//viewMazal.setText("שחרית - " + text);
-			// }
-			// else if(lbHour.toNumber() > 6 || (lbHour.toNumber() == 6 && lbMinute.toNumber() >= 540)) 
-			// {
-			// 	//viewMazal.setText("Mincha");
-			// 	//viewMazal.setText("מנחה - " + text);
-			// }			
+			viewHour.setColor(Graphics.COLOR_BLUE);
 		}
+
+		var viewMin = View.findDrawableById("HebrewClockMin") as Text;
+		if(curr_hour.toDouble()/(1000 * 3600) > sunset  || 
+		   curr_hour.toDouble()/(1000 * 3600) < sunrise)
+		{
+			viewMin.setColor(Graphics.COLOR_LT_GRAY);
+
+		}
+		else if(curr_hour.toDouble()/(1000 * 3600) > sunrise && 
+		        curr_hour.toDouble()/(1000 * 3600) < sunset/*curr_hour.toDouble() > sunrise_hour.toDouble()*/ )
+		{
+			viewMin.setColor(Graphics.COLOR_RED);
+		}
+
+		var viewSec = View.findDrawableById("HebrewClockSec") as Text;
+		if(curr_hour.toDouble()/(1000 * 3600) > shaa  || 
+		   curr_hour.toDouble()/(1000 * 3600) < fajar)
+		{
+			viewSec.setColor(Graphics.COLOR_LT_GRAY);
+
+		}
+		else if(curr_hour.toDouble()/(1000 * 3600) < sunset && 
+		        curr_hour.toDouble()/(1000 * 3600) > fajar/*curr_hour.toDouble() > sunrise_hour.toDouble()*/ )
+		{
+			viewSec.setColor(Graphics.COLOR_GREEN);
+		}
+		else if(curr_hour.toDouble()/(1000 * 3600) > sunrise && 
+		        curr_hour.toDouble()/(1000 * 3600) > atzer/*curr_hour.toDouble() > sunrise_hour.toDouble()*/ )
+		{
+			viewSec.setColor(Graphics.COLOR_YELLOW);
+		}
+
+
 	}	
 	
 	//---clock timer---
@@ -1315,7 +1351,7 @@ class MenuTestView extends WatchUi.View {
 	    }
 	    else
 	    {
-	        displaySecond = lbSecond.toNumber();
+	        displaySecond = "" + lbSecond.toNumber();
 		}
 	    //minute
 	    if (lbMinute < 10)
@@ -1332,7 +1368,7 @@ class MenuTestView extends WatchUi.View {
 	    }
 	    else
 	    {
-	        displayMinute = lbMinute.toNumber();
+	        displayMinute = "" + lbMinute.toNumber();
 		}
 		
 		var templbHour = lbHour; 		
@@ -1345,14 +1381,20 @@ class MenuTestView extends WatchUi.View {
 	    }
 	    else
 	    {
-	        displayHour = lbHour.toNumber();
+	        displayHour = "" + lbHour.toNumber();
 		}
 	
 		lbHour = templbHour;
 			
-		var view = View.findDrawableById("HebrewClock") as Text;
-		view.setText(displayHour + ":" + displayMinute +  ":" + displaySecond);
-		
+		var viewHour = View.findDrawableById("HebrewClockHour") as Text;
+		var viewMin = View.findDrawableById("HebrewClockMin") as Text;
+		var viewSec = View.findDrawableById("HebrewClockSec") as Text;
+
+		viewHour.setText(displayHour);
+		viewMin.setText(displayMinute);
+
+		System.println("displaySecond: " + displaySecond);
+		viewSec.setText(displaySecond);
 	}
  
  	public function getDayOfWeekInNumber(day)
