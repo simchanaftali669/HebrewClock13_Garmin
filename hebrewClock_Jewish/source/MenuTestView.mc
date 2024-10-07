@@ -992,17 +992,17 @@ class MenuTestView extends WatchUi.View {
 		
 		var isMoed = false;
 		
-		// System.println(hebrew_month_name[3]);
+		//System.println(hebrew_month_name[3]);
 		// System.println(hebrew_month_name[3].equals(" בסיוון"));
-		// System.println(hebrew_month_name[2]);
+		//System.println( hebrew_month_name[2].find("ב'") >= 0);
 		// System.println(hebrew_month_name[2].equals("ו'"));
 
-		isMoed = isMoed || ((hebrew_month_name[3] == " בניסן") && 
-							(hebrew_month_name[2] == "ט\"ו" || hebrew_month_name[2] == "כ\"א"));
-		isMoed = isMoed || ((hebrew_month_name[3].equals(" בסיוון")) && 
+		isMoed = isMoed || (hebrew_month_name[3].equals(" בניסן") && 
+							(hebrew_month_name[2].equals("ט\"ו") || hebrew_month_name[2].equals("כ\"א")));
+		isMoed = isMoed || (hebrew_month_name[3].equals(" בסיוון") && 
 		                    (hebrew_month_name[2].equals("ו'")) );
-		isMoed = isMoed || ((hebrew_month_name[3] == " בתשרי") && 
-							(hebrew_month_name[2] == "ט\"ו" || hebrew_month_name[2] == "כ\"א" || hebrew_month_name[2] == "כ\"ב" || hebrew_month_name[2] == "א'" || hebrew_month_name[2] == "ב'" || hebrew_month_name[2] == "י'"));
+		isMoed = isMoed || (hebrew_month_name[3].equals(" בתשרי") && 
+							(hebrew_month_name[2].equals("ט\"ו") || hebrew_month_name[2].equals("כ\"א") || hebrew_month_name[2].equals("כ\"ב") || hebrew_month_name[2].equals("א'") || hebrew_month_name[2].equals("ב'") || hebrew_month_name[2].equals("י'")));
 		
 		return isMoed;
 	}

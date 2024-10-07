@@ -1315,13 +1315,12 @@ class MenuTestView extends WatchUi.View {
 			viewSec.setColor(Graphics.COLOR_LT_GRAY);
 
 		}
-		else if(curr_hour.toDouble()/(1000 * 3600) < sunset && 
+		else if(curr_hour.toDouble()/(1000 * 3600) < atzer && 
 		        curr_hour.toDouble()/(1000 * 3600) > fajar/*curr_hour.toDouble() > sunrise_hour.toDouble()*/ )
 		{
 			viewSec.setColor(Graphics.COLOR_GREEN);
 		}
-		else if(curr_hour.toDouble()/(1000 * 3600) > sunrise && 
-		        curr_hour.toDouble()/(1000 * 3600) > atzer/*curr_hour.toDouble() > sunrise_hour.toDouble()*/ )
+		else if(curr_hour.toDouble()/(1000 * 3600) > atzer/*curr_hour.toDouble() > sunrise_hour.toDouble()*/ )
 		{
 			viewSec.setColor(Graphics.COLOR_YELLOW);
 		}
