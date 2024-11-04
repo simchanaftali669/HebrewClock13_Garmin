@@ -22,9 +22,9 @@ public var timer3;
 public var count1 = 0;
 public var count2 = 0;
 public var count3 = 0;
-//tekoa location
-public var latitude = 31.656466;
-public var longitude = 35.228143;
+//Naftali Moshe Bilig land
+public var latitude = 31.6496953;
+public var longitude = 35.2282653;
 public var isJustOpened = true;
 public var isMoonClock = false;
 

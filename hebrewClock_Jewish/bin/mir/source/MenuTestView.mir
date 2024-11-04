@@ -33,9 +33,9 @@ var count2 = 0;
 [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestView.mc"; @line = 24; @position = 11; ]
 var count3 = 0;
 [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestView.mc"; @line = 26; @position = 11; ]
-var latitude = 31.656466;
+var latitude = 31.6496953;
 [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestView.mc"; @line = 27; @position = 11; ]
-var longitude = 35.228143;
+var longitude = 35.2282653;
 [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestView.mc"; @line = 28; @position = 11; ]
 var isJustOpened = true;
 [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestView.mc"; @line = 29; @position = 11; ]
