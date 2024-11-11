@@ -1,48 +1,48 @@
-[ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestApp.mc"; @line = 7; ]
+[ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestApp.mc"; @line = 7; ]
 import Toybox.Application;
-[ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestApp.mc"; @line = 8; ]
+[ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestApp.mc"; @line = 8; ]
 import Toybox.Lang;
-[ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestApp.mc"; @line = 9; ]
+[ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestApp.mc"; @line = 9; ]
 import Toybox.WatchUi;
-[ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestApp.mc"; @line = 14; ]
+[ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestApp.mc"; @line = 14; ]
 class MenuTestApp extends Application.AppBase{
-    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestApp.mc"; @line = 14; ]
+    [ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestApp.mc"; @line = 14; ]
     <init> {
     }
-    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestApp.mc"; @line = 14; ]
+    [ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestApp.mc"; @line = 14; ]
     static
     <init> {
     }
     //! Constructor
-    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestApp.mc"; @line = 17; ]
+    [ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestApp.mc"; @line = 17; ]
     public
     function initialize() as Void {
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MenuTestApp_mc_17_33_start:
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestApp.mc" 18 8 ]
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MenuTestApp_mc_17_33_start:
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestApp.mc" 18 8 ]
         %tmp.2 = getv ? :AppBase;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MenuTestApp_mc_17_33_stop:
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MenuTestApp_mc_17_33_stop:
     }
     //! Handle app startup
     //! @param state Startup arguments
-    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestApp.mc"; @line = 23; ]
+    [ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestApp.mc"; @line = 23; ]
     public
     function onStart(state as Dictionary or Null) as Void {
     }
     //! Handle app shutdown
     //! @param state Shutdown arguments
-    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestApp.mc"; @line = 28; ]
+    [ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestApp.mc"; @line = 28; ]
     public
     function onStop(state as Dictionary or Null) as Void {
     }
     //! Return the initial views for the app
     //! @return Array Pair [View, InputDelegate]
-    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestApp.mc"; @line = 33; ]
+    [ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestApp.mc"; @line = 33; ]
     public
     function getInitialView() as Array<Views or InputDelegates> or Null {
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MenuTestApp_mc_33_72_start:
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestApp.mc" 34 8 ]
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MenuTestApp_mc_33_72_start:
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestApp.mc" 34 8 ]
         %tmp.1 = newa Array<Views or InputDelegates> 2;
         %tmp.5 = getm $;
         %tmp.6 = getv %tmp.5 :MenuTestView;
@@ -55,9 +55,9 @@ C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewis
         %tmp.14 = dup %tmp.8;
         %tmp.15 = aputv %tmp.14 1 %tmp.9;
         ret %tmp.15;
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MenuTestApp_mc_33_72_stop:
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MenuTestApp_mc_33_72_stop:
     }
 }
-[ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestApp.mc"; @line = 7; ]
+[ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MenuTestApp.mc"; @line = 7; ]
 <init> {
 }
