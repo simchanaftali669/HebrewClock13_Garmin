@@ -22,9 +22,11 @@ public var timer3;
 public var count1 = 0;
 public var count2 = 0;
 public var count3 = 0;
-//Naftali Moshe Bilig land
-public var latitude = 31.6496953;
-public var longitude = 35.2282653;
+
+//Jerusalem
+public var latitude = 31.7773393;
+public var longitude = 35.2343929;
+
 public var isJustOpened = true;
 public var isMoonClock = false;
 
@@ -988,7 +990,7 @@ class MenuTestView extends WatchUi.View {
 	function IsMoed()
 	{
 		var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);	
-		var hebrew_month_name = hebrewDateFunc(today.year, today.month, today.day, true);
+		var hebrew_month_name = hebrewDateFunc(today.year, today.month, today.day, "Hebrew");
 		
 		var isMoed = false;
 		
@@ -1044,6 +1046,23 @@ class MenuTestView extends WatchUi.View {
 		return strSplited;
     }
         
+	public function language()
+	{
+		var deviceSettings = System.getDeviceSettings();
+		// it is safe to access the language
+		var inputLang = "English";
+		if(deviceSettings.systemLanguage == System.LANGUAGE_HEB)
+		{
+			inputLang = "Hebrew";
+		}
+		else
+		{
+			inputLang = "English";
+		}
+
+		return inputLang;
+	}
+
 	var isNight = false;
     //hebrewclock.js
 	public function hebrewclock()
@@ -1081,9 +1100,12 @@ class MenuTestView extends WatchUi.View {
 		if(curr_hour > birkutHashahar && curr_hour < sunrise)
 		{
 			var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);	
-			var hebrew_month_name = hebrewDateFunc(today.year, today.month, today.day, false);
-			var viewHebrewDate = View.findDrawableById("ChristianClock") as Text;
+
+			var language = language();
+			var hebrew_month_name = hebrewDateFunc(today.year, today.month, today.day, language());
+			var viewHebrewDate = View.findDrawableById("ChristianClock") as Text;		
 			viewHebrewDate.setText(hebrew_month_name[2] + hebrew_month_name[3]);	
+
 
 			MarkTime();
 
@@ -1409,7 +1431,7 @@ class MenuTestView extends WatchUi.View {
 		if(isMoonClock)
 		{
 			var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);	
-			var hebrew_month_name = hebrewDateFunc(today.year, today.month, today.day, false);
+			var hebrew_month_name = hebrewDateFunc(today.year, today.month, today.day, language());
 			var viewHebrewDate = View.findDrawableById("MazalLabel") as Text;
 			viewHebrewDate.setText(hebrew_month_name[2] + hebrew_month_name[3]);
 			return;	
@@ -1855,20 +1877,9 @@ const gWeekday = ["Sun", "Mon", "Tues", "Wednes", "Thurs", "Fri", "Satur"]
       , moladDay = 0
       , moladHalakim = 0;
 
-	public function hebrewDateFunc(inputDateOrYear, inputMonth, inputDate, isHebrew) 
+	public function hebrewDateFunc(inputDateOrYear, inputMonth, inputDate, inputLang) 
 	{
-		var inputLang = "English";
-		var deviceSettings = System.getDeviceSettings();
-		
-		// it is safe to access the language
-		if(deviceSettings.systemLanguage == System.LANGUAGE_HEB || isHebrew == true)
-		{
-			inputLang = "Hebrew";
-		}
-		else
-		{
-			inputLang = "English";
-		}
+		//var deviceSettings = System.getDeviceSettings();
 
 		var inputYear = inputDateOrYear;
 
@@ -1902,13 +1913,13 @@ const gWeekday = ["Sun", "Mon", "Tues", "Wednes", "Thurs", "Fri", "Satur"]
 			}
 		}
 
-		if(inputLang == "English")
+		if(inputLang.equals("English"))
 		{
 			var ret = [0, 0, 0, 0];
 			ret[0] =  hebrewYear;
 			ret[1] = hebrewMonth;
 			ret[2] = hebrewDate;
-			ret[3] = hMonth[hebrewMonth - 1];
+			ret[3] = " At " + hMonth[hebrewMonth - 1];
 			return ret;
 		}
 		else
