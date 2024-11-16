@@ -77,6 +77,10 @@ class MenuTestView extends WatchUi.View {
 
     var monCount = [13, 1, 32, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335, 366];
 
+	var sunsetH_man;
+	var sunsetM_man;
+	var sunsetS_man;
+
     var sunsetH;
     var sunsetM;
     var sunsetS;
@@ -84,14 +88,18 @@ class MenuTestView extends WatchUi.View {
 	//need to insert to the public function that recive gps location
     var tz; //= (new Date().getTimezoneOffset() / -60); //current time zone
 
+
 	public var shaa_zmanit_night,shaa_zmanit_day;
-	
 	public var lbSecond,lbMinute,lbHour; 
+	public var lbSecond_man, lbMinute_man,lbHour_man;
 	public var displaySecond,displayMinute,displayHour; 
 	public var oTimer;
 
+	public var hebrewday_man;
 	public var hebrewday;
 	public var omer;
+
+	public var curr_hour_man;
 
 	public var tzeit;
 	public var alot;
@@ -99,6 +107,13 @@ class MenuTestView extends WatchUi.View {
 	public var curr_hour;
 	public var sunset_hour;
 	public var sunrise_hour;
+
+	public var sunrise_yasterday_man;
+	public var sunrise_man;
+	public var sunrise_tommorow_man;
+	public var sunset_yasterday_man;
+	public var sunset_man;
+	public var sunset_tommorow_man;
 
 	public var sunrise_yasterday;
 	public var sunrise;
@@ -1107,6 +1122,8 @@ class MenuTestView extends WatchUi.View {
 			viewHebrewDate.setText(hebrew_month_name[2] + hebrew_month_name[3]);	
 
 
+			isNight = true;
+
 			MarkTime();
 
 			Tefila();
@@ -1245,7 +1262,6 @@ class MenuTestView extends WatchUi.View {
 			isNight = false;
 		}
 
-
 		display_time();
 		
 		if(isJustOpened)
@@ -1275,14 +1291,16 @@ class MenuTestView extends WatchUi.View {
 		if(isMoonClock)
 		{
 
-			if(isNight)
-			{
-				view.setColor(Graphics.COLOR_LT_GRAY);
-			}
-			else
-			{
-				view.setColor(Graphics.COLOR_PINK);
-			}
+			// if(isNight)
+			// {
+			// 	var view1 = View.findDrawableById("MazalLabel") as Text;
+			// 	view1.setColor(Graphics.COLOR_LT_GRAY);
+			// }
+			// else
+			// {
+			// 	var view1 = View.findDrawableById("MazalLabel") as Text;
+			// 	view1.setColor(Graphics.COLOR_BLUE);
+			// }
 			return;
 		}
 
@@ -1434,7 +1452,7 @@ class MenuTestView extends WatchUi.View {
 			var hebrew_month_name = hebrewDateFunc(today.year, today.month, today.day, language());
 			var viewHebrewDate = View.findDrawableById("MazalLabel") as Text;
 			viewHebrewDate.setText(hebrew_month_name[2] + hebrew_month_name[3]);
-			return;	
+			//return;	
 		}
 
 
@@ -1468,7 +1486,7 @@ class MenuTestView extends WatchUi.View {
 	
 	    //document.getElementById("test").value = h > sunsetH;
 	
-	    if (day == 8)
+	    if (!isMoonClock && day == 8)
 	    {
 	        day = 1;
 		}
@@ -1477,7 +1495,12 @@ class MenuTestView extends WatchUi.View {
 		//System.println("clockHour: " + clockHour);
 		
 	    hebrewday = day;
-	
+		
+		if(isMoonClock)
+		{
+			hebrewday += hebrewDayOffset();
+		}
+		
 		System.println("hebrewday: " + hebrewday);
 		System.println("clockHour: " + clockHour);
 
@@ -1539,7 +1562,7 @@ class MenuTestView extends WatchUi.View {
 				//mazalColor = "#0070c0";
 				//view.setColor(Application.getApp().getProperty("color#mazal_07"));		
 				//viewMazal.setText("Moon");
-				viewMazal.setText(mida[6]);
+				//viewMazal.setText(mida[6]);
 			 	text = mida[6];
 				//document.body.style.backgroundImage = "url('pic/1.jpg')";
 				//omer = ((day.toNumber() - 1) * 7) + 1;
@@ -1550,7 +1573,7 @@ class MenuTestView extends WatchUi.View {
 				//mazalColor ="red";
 				//view.setColor(Application.getApp().getProperty("color#mazal_01"));
 				//viewMazal.setText("Saturn");
-				viewMazal.setText(mida[0]);
+				//viewMazal.setText(mida[0]);
 				text = mida[0];
 				//document.body.style.backgroundImage = "url('pic/2.jpg')";
 				//omer = ((day.toNumber() - 1) * 7) + 2;
@@ -1563,7 +1586,7 @@ class MenuTestView extends WatchUi.View {
 				//omer = ((day.toNumber() - 1) * 7) + 3;
 				//view.setColor(Application.getApp().getProperty("color#mazal_02"));
 				//viewMazal.setText("Jupiter");				
-				viewMazal.setText(mida[1]);
+				//viewMazal.setText(mida[1]);
 				text = mida[1];
 				break;
 			case (3):
@@ -1574,7 +1597,7 @@ class MenuTestView extends WatchUi.View {
 				//omer = ((day.toNumber() - 1) * 7) + 4;
 				//view.setColor(Application.getApp().getProperty("color#mazal_03"));
 				//viewMazal.setText("Mars");
-				viewMazal.setText(mida[2]);
+				//viewMazal.setText(mida[2]);
 				text = mida[2];
 				break;
 			case (4):
@@ -1585,7 +1608,7 @@ class MenuTestView extends WatchUi.View {
 				//omer = ((day.toNumber() - 1) * 7) + 5;
 				//view.setColor(Application.getApp().getProperty("color#mazal_04"));
 				//viewMazal.setText("Sun");
-				viewMazal.setText(mida[3]);
+				//viewMazal.setText(mida[3]);
 				text = mida[3];
 				break;
 			case (5):
@@ -1596,7 +1619,7 @@ class MenuTestView extends WatchUi.View {
 				//omer = ((day.toNumber() - 1) * 7) + 6;
 				//view.setColor(Application.getApp().getProperty("color#mazal_05"));
 				//viewMazal.setText("Venus");
-				viewMazal.setText(mida[4]);
+				//viewMazal.setText(mida[4]);
 				text = mida[4];
 				break;
 			case (6):
@@ -1607,13 +1630,33 @@ class MenuTestView extends WatchUi.View {
 				//omer = ((day.toNumber() - 1) * 7) + 7;
 				//view.setColor(Application.getApp().getProperty("color#mazal_06"));
 				//viewMazal.setText("Mercury");
-				viewMazal.setText(mida[5]);
+				//viewMazal.setText(mida[5]);
 				text = mida[5];
 				break;
 			default:
 				break;
 		}
-						
+
+
+		if(isMoonClock)
+		{
+			var colors = [	Graphics.COLOR_LT_GRAY,
+							Graphics.COLOR_GREEN,
+							Graphics.COLOR_BLUE,
+							Graphics.COLOR_RED,
+							Graphics.COLOR_PURPLE,
+							Graphics.COLOR_YELLOW,
+							Graphics.COLOR_ORANGE];
+			
+			view = View.findDrawableById("HebrewClock") as Text;
+			view.setColor(colors[x]);
+		}
+		else 
+		{
+			viewMazal.setText(text);	
+		}
+
+
 		//viewMazal.setText("");
 //		System.println("curr_hour: " + curr_hour.toDouble()/(1000 * 3600));
 //		System.println("tzeit: " + tzeit  );
@@ -1622,6 +1665,320 @@ class MenuTestView extends WatchUi.View {
 		//viewMazal.setText(date.day_of_week);
 	}
 	
+	public function hebrewDayOffset()
+	{
+		hebrewclock4man();
+		setmazal4man();
+
+		//Man is leading
+		if((hebrewday > hebrewday_man) || (hebrewday == 1 && hebrewday_man == 7))
+		{
+			return -1;
+		}
+		if((hebrewday == hebrewday_man) &&
+			((lbHour > lbHour_man) || (lbHour == lbHour_man && lbMinute > lbMinute_man)))
+		{
+			return -1;
+		}
+		
+		return 0;
+	}
+
+	public function setmazal4man()
+	{
+	    var date =  Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+	
+	    var h = date.hour;
+	    var m = date.min;
+	    var s = date.sec;
+	
+	    var day = date.day_of_week;//getDayOfWeekInNumber(date.day_of_week);
+	    var clockHour = lbHour;
+	    if (clockHour == 24)
+	    {
+	        clockHour = 0;
+		}
+		
+	    if ((h.toNumber() == sunsetH_man.toNumber() && m.toNumber() == sunsetM_man.toNumber() && s.toNumber() >= sunsetS_man.toNumber()) ||    // אחרי שקיעה
+	        (h.toNumber() == sunsetH_man.toNumber() && m.toNumber() > sunsetM_man.toNumber()) ||
+	        (h.toNumber() > sunsetH_man.toNumber())
+	       )
+	    {
+	        if ((h.toNumber() == 23 && m.toNumber() == 23 && s.toNumber() <= 59) ||    // לפני חצות
+	            (h.toNumber() == 23 && m.toNumber() < 59) ||
+	            (h.toNumber() < 23)
+	           )
+	        {
+	            day = day + 1;
+	        }
+		}
+	    
+	
+	    //document.getElementById("test").value = h > sunsetH;
+	
+	    if (day == 8)
+	    {
+	        day = 1;
+		}
+		
+		//day = mazal_offset(day);
+		//System.println("clockHour: " + clockHour);
+		
+	    hebrewday_man= day;
+	}
+
+	public function doit4man() 
+	{
+	    //var nsi, ewi;
+	    var i;
+	
+	
+	    if (ns != "N")
+	    {
+	        nsi = 1;
+	    }
+	    else
+	    {
+	        nsi = 0;
+		}
+		
+	    if (ns != "W")
+	    {
+	        ewi = 1;
+	    }
+	    else
+	    {
+	        ewi = 0;
+		}
+		
+		
+		//need to set it back to time zone
+		var myTime = System.getClockTime(); // ClockTime object
+		tz = myTime.timeZoneOffset/3600 + myTime.dst;
+
+		//System.println("timeZoneOffset: " + );
+
+		//tz = 2;
+		//System.println("tzXXX: " + tz);
+
+	    
+	    //var adj = -(12 - tz);
+	    //adj += 2;
+		timezone = tz;
+		
+		//timezone = tz + 2;
+	
+	
+		var sunrise_yasterday;
+        var sunrise;
+        var sunrise_tommorow;
+        var sunset_yasterday;
+        var sunset;
+        var sunset_tommorow;
+
+	    var shaa_zmanit = 0;
+	    var hour = [0,0,0,0,0,0]; //29
+
+		var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+		var yasterday = getYasterday(today); //Gregorian.info(Time.now() - 1, Time.FORMAT_SHORT);	
+	    var tomorrow = getTomorrow(today); //Gregorian.info(Time.now() + 1, Time.FORMAT_SHORT);
+
+		//var yasterday = sunCalc.getMoonTimes(yasterday,latitude,longitude);
+	
+	    //the time of yasterday
+	    var time_yasterday = [0, 0, 0, 0];
+	    var time_today = [0, 0, 0, 0];
+	    var time_tommorow = [0, 0, 0, 0];
+
+
+		time_yasterday = suntime(yasterday.day, yasterday.month, yasterday.year, 90, 50,latitude,longitude);//, lngd, lngm, ewi, latd, latm, nsi, adj);
+
+		//the time of the current day
+		time_today = suntime(today.day, today.month, today.year, 90, 50,latitude,longitude);//, lngd, lngm, ewi, latd, latm, nsi, adj);
+
+		//the time of the next day
+		time_tommorow = suntime(tomorrow.day, tomorrow.month, tomorrow.year, 90, 50,latitude,longitude);//, lngd, lngm, ewi, latd, latm, nsi, adj);
+
+
+			System.println(time_today[3]);
+	    //if (time_today[1] == 0) {
+	        //sunrise_yasterdate = time_yasterday[2];
+			sunrise_yasterday_man = time_yasterday[2];
+			sunrise_man = time_today[2];
+			sunrise_tommorow_man = time_tommorow[2];
+			sunset_yasterday_man = time_yasterday[3];
+			sunset_man = time_today[3];
+			sunset_tommorow_man = time_tommorow[3];
+	        
+	        //System.println("sunrise: " + sunrise);	
+			hour[0] = sunrise_yasterday_man;
+			hour[1] = sunrise_man;
+			hour[2] = sunrise_tommorow_man;
+			hour[3] = sunset_yasterday_man;
+			hour[4] = sunset_man;
+			hour[5] = sunset_tommorow_man;
+			
+	        var shaa_zmanit_man = (sunset_man - sunrise_man) / 12;
+	
+	        //using current time in the computer to adjust the right secdule...
+	        //get the time right now
+			var date = Gregorian.info(Time.now(), Time.FORMAT_LONG);
+	
+	        //var date = new Date();
+	
+	        var h = date.hour;
+	        var minute = date.min;
+	        var s = date.sec;
+			var m = 500; //Sys.getTimer();
+	        curr_hour_man = m + (s*1000) + (minute*60*1000) + (h*60*60*1000); 
+	
+	        var str = timeadj1(sunset_man);
+	        var sunsetArray = splitStr(str,":");//str.split(":");
+	        
+	        
+	        sunsetH_man = sunsetArray[0];
+	        sunsetM_man = sunsetArray[1];
+	        sunsetS_man = sunsetArray[2];
+
+			return hour;
+			//var sunsetMili = sunsetArray[3];
+	}
+
+	public function hebrewclock4man()
+	{
+        // Update the view
+        //var view = View.findDrawableById("TimeLabel");
+		//view.setColor(Application.getApp().getProperty("color#mazal_02"));
+		//view.setColor(Application.getApp().getProperty("ForegroundColor"));
+		//view.setText("23:1079:75")f;
+		
+		var zmanit_hour = doit4man();       //get the 24 shaaotzmaniot
+		
+		sunrise_yasterday_man = zmanit_hour[0];
+		sunrise_man = zmanit_hour[1];
+		sunrise_tommorow_man = zmanit_hour[2];
+		sunset_yasterday_man = zmanit_hour[3];
+		sunset_man = zmanit_hour[4];
+		sunset_tommorow_man = zmanit_hour[5];
+
+
+		var shaa_zmanit_night, shaa_zmanit_day;
+	    
+	    var date = Gregorian.info(Time.now(), Time.FORMAT_LONG);
+	
+	    var h = date.hour;
+	    var m = date.min;
+	    var s = date.sec;
+		//var milisec = date.getMilliseconds();
+	
+		var curr_hour_man = /*milisec +*/ ((s.toNumber())*1000) + ((m.toNumber())*60*1000) + ((h.toNumber())*60*60*1000);
+		curr_hour_man = curr_hour.toDouble()/(1000 * 3600);		
+
+
+
+		System.println("sunrise: " + sunrise + ", sunset:" + sunset);
+		System.println("curr_hour: " + curr_hour);
+								
+		//month days 23-7						
+		//case 1:
+		//moonrise at 06:57 and moonset at 17:17
+		//curr_hour between them.
+		if(sunset_man > sunrise_man && curr_hour_man < sunset_man)
+		{
+			var length = sunset - sunrise;
+			var curr_hour_offset = curr_hour_man - sunrise;
+			
+			var hour = Math.floor((12*(curr_hour_offset/length)).toDouble());
+			var minute = Math.floor((12 * 1080 * (curr_hour_offset / length)).toDouble()) - hour*1080;
+			var second = Math.floor((12 * 1080 * 76 * (curr_hour_offset / length)).toDouble()) - (hour * 1080 * 76) - (minute * 76);
+		    
+			lbHour_man = hour+12;
+			lbMinute_man = minute;
+			lbSecond_man = second;
+		}
+		//case 2:
+		//moonrise at 06:57 and moonset at 17:17
+		//curr_hour earlier.
+		if(sunset_man > sunrise_man && curr_hour_man < sunrise_man)
+		{
+			var length = sunrise + 24-sunset_yasterday;
+			var curr_hour_offset = curr_hour + 24-sunset_yasterday;
+			
+			var hour = Math.floor((12*(curr_hour_offset/length)).toDouble());
+			var minute = Math.floor((12 * 1080 * (curr_hour_offset / length)).toDouble()) - hour*1080;
+			var second = Math.floor((12 * 1080 * 76 * (curr_hour_offset / length)).toDouble()) - (hour * 1080 * 76) - (minute * 76);
+		    
+			lbHour_man = hour;
+			lbMinute_man = minute;
+			lbSecond_man = second;
+		}
+		//case 3:
+		//moonrise at 06:57 and moonset at 17:17
+		//curr_hour after moonset.
+		if(sunset_man > sunrise_man && curr_hour_man > sunset_man)
+		{
+			var length = sunrise_tommorow + 24-sunset;
+			var curr_hour_offset = curr_hour - sunset;
+			
+			var hour = Math.floor((12*(curr_hour_offset/length)).toDouble());
+			var minute = Math.floor((12 * 1080 * (curr_hour_offset / length)).toDouble()) - hour*1080;
+			var second = Math.floor((12 * 1080 * 76 * (curr_hour_offset / length)).toDouble()) - (hour * 1080 * 76) - (minute * 76);
+		    
+			lbHour_man = hour;
+			lbMinute_man = minute;
+			lbSecond_man = second;
+		}
+		//month days 07-23	
+		//case 1:
+		//moonrise at 13:05 and moonset at 00:00
+		//curr_hour between them.
+		if(sunset_man < sunrise_man  && curr_hour_man < sunrise_man)
+		{
+			var length = sunrise - sunset;
+			var curr_hour_offset = curr_hour - sunset;
+			
+			var hour = Math.floor((12*(curr_hour_offset/length)).toDouble());
+			var minute = Math.floor((12 * 1080 * (curr_hour_offset / length)).toDouble()) - hour*1080;
+			var second = Math.floor((12 * 1080 * 76 * (curr_hour_offset / length)).toDouble()) - (hour * 1080 * 76) - (minute * 76);
+		    
+			lbHour_man = hour;
+			lbMinute_man = minute;
+			lbSecond_man = second;
+		}
+		//case 2:
+		//moonrise at 13:05 and moonset at 00:00
+		//curr_hour earlier.
+		if(sunset_man < sunrise_man && curr_hour_man < sunset_man)
+		{
+			var length = sunset + 24-sunrise_yasterday;
+			var curr_hour_offset = curr_hour + 24-sunrise_yasterday;
+			
+			var hour = Math.floor((12*(curr_hour_offset/length)).toDouble());
+			var minute = Math.floor((12 * 1080 * (curr_hour_offset / length)).toDouble()) - hour*1080;
+			var second = Math.floor((12 * 1080 * 76 * (curr_hour_offset / length)).toDouble()) - (hour * 1080 * 76) - (minute * 76);
+		    
+			lbHour_man = hour+12;
+			lbMinute_man = minute;
+			lbSecond_man = second;
+		}
+		//case 3:
+		//moonrise at 13:05 and moonset at 00:00
+		//curr_hour after moonset.
+		if(sunset_man < sunrise_man && curr_hour_man > sunrise_man)
+		{
+			var length = sunset_tommorow + 24-sunrise;
+			var curr_hour_offset = curr_hour - sunrise;
+			
+			var hour = Math.floor((12*(curr_hour_offset/length)).toDouble());
+			var minute = Math.floor((12 * 1080 * (curr_hour_offset / length)).toDouble()) - hour*1080;
+			var second = Math.floor((12 * 1080 * 76 * (curr_hour_offset / length)).toDouble()) - (hour * 1080 * 76) - (minute * 76);
+		    
+			lbHour_man = hour+12;
+			lbMinute_man = minute;
+			lbSecond_man = second;
+		}
+	}
+
 	public function paintText(p_color)
 	{
 //		var clockInputs = document.getElementsByClassName("clock");
