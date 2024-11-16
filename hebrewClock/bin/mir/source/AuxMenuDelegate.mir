@@ -1,77 +1,77 @@
-[ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\AuxMenuDelegate.mc"; @line = 7; ]
+[ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\AuxMenuDelegate.mc"; @line = 7; ]
 import Toybox.Lang;
-[ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\AuxMenuDelegate.mc"; @line = 8; ]
+[ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\AuxMenuDelegate.mc"; @line = 8; ]
 import Toybox.System;
-[ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\AuxMenuDelegate.mc"; @line = 9; ]
+[ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\AuxMenuDelegate.mc"; @line = 9; ]
 import Toybox.WatchUi;
-[ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\AuxMenuDelegate.mc"; @line = 12; ]
+[ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\AuxMenuDelegate.mc"; @line = 12; ]
 class AuxMenuDelegate extends WatchUi.MenuInputDelegate{
-    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\AuxMenuDelegate.mc"; @line = 12; ]
+    [ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\AuxMenuDelegate.mc"; @line = 12; ]
     <init> {
     }
-    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\AuxMenuDelegate.mc"; @line = 12; ]
+    [ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\AuxMenuDelegate.mc"; @line = 12; ]
     static
     <init> {
     }
     //! Constructor
-    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\AuxMenuDelegate.mc"; @line = 15; ]
+    [ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\AuxMenuDelegate.mc"; @line = 15; ]
     public
     function initialize() as Void {
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_AuxMenuDelegate_mc_15_33_start:
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\AuxMenuDelegate.mc" 16 8 ]
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_AuxMenuDelegate_mc_15_33_start:
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\AuxMenuDelegate.mc" 16 8 ]
         %tmp.2 = getv ? :MenuInputDelegate;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_AuxMenuDelegate_mc_15_33_stop:
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_AuxMenuDelegate_mc_15_33_stop:
     }
     //! Handle a menu item being selected
     //! @param item Symbol identifier of the menu item that was chosen
-    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\AuxMenuDelegate.mc"; @line = 21; ]
+    [ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\AuxMenuDelegate.mc"; @line = 21; ]
     public
     function onMenuItem(item as Symbol) as Void {
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_AuxMenuDelegate_mc_21_55_start:
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\AuxMenuDelegate.mc" 22 8 ]
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_AuxMenuDelegate_mc_22_8_if_stmt:
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_AuxMenuDelegate_mc_21_55_start:
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\AuxMenuDelegate.mc" 22 8 ]
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_AuxMenuDelegate_mc_22_8_if_stmt:
         %tmp.2 = lgetv %item;
         %tmp.4 = const :AuxItem1;
         %tmp.5 = eq %tmp.2 %tmp.4;
-        bf %tmp.5 @C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_AuxMenuDelegate_mc_22_8_if_false;
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_AuxMenuDelegate_mc_22_8_if_true:
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_AuxMenuDelegate_mc_22_31_start:
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\AuxMenuDelegate.mc" 23 12 ]
+        bf %tmp.5 @C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_AuxMenuDelegate_mc_22_8_if_false;
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_AuxMenuDelegate_mc_22_8_if_true:
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_AuxMenuDelegate_mc_22_31_start:
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\AuxMenuDelegate.mc" 23 12 ]
         %tmp.6 = getm $.Toybox.System;
         %tmp.7 = getv function %tmp.6 :println;
         %tmp.8 = "Aux Item 1";
         invoke %tmp.6 %tmp.7(%tmp.8);
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_AuxMenuDelegate_mc_22_31_stop:
-        goto @C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_AuxMenuDelegate_mc_22_8_if_end;
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_AuxMenuDelegate_mc_22_8_if_false:
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\AuxMenuDelegate.mc" 24 15 ]
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_AuxMenuDelegate_mc_24_15_if_stmt:
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_AuxMenuDelegate_mc_22_31_stop:
+        goto @C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_AuxMenuDelegate_mc_22_8_if_end;
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_AuxMenuDelegate_mc_22_8_if_false:
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\AuxMenuDelegate.mc" 24 15 ]
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_AuxMenuDelegate_mc_24_15_if_stmt:
         %tmp.10 = lgetv %item;
         %tmp.12 = const :AuxItem2;
         %tmp.13 = eq %tmp.10 %tmp.12;
-        bf %tmp.13 @C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_AuxMenuDelegate_mc_24_15_if_end;
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_AuxMenuDelegate_mc_24_15_if_true:
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_AuxMenuDelegate_mc_24_38_start:
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\AuxMenuDelegate.mc" 25 12 ]
+        bf %tmp.13 @C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_AuxMenuDelegate_mc_24_15_if_end;
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_AuxMenuDelegate_mc_24_15_if_true:
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_AuxMenuDelegate_mc_24_38_start:
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\AuxMenuDelegate.mc" 25 12 ]
         %tmp.14 = getm $.Toybox.System;
         %tmp.15 = getv function %tmp.14 :println;
         %tmp.16 = "Aux Item 2";
         invoke %tmp.14 %tmp.15(%tmp.16);
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\AuxMenuDelegate.mc" 26 12 ]
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\AuxMenuDelegate.mc" 26 12 ]
         %tmp.17 = getm $.Toybox.WatchUi;
         %tmp.18 = getv function %tmp.17 :popView;
         %tmp.19 = getm $.Toybox.WatchUi;
         %tmp.20 = getv %tmp.19 :SLIDE_DOWN;
         invoke %tmp.17 %tmp.18(%tmp.20);
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_AuxMenuDelegate_mc_24_38_stop:
-        goto @C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_AuxMenuDelegate_mc_24_15_if_end;
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_AuxMenuDelegate_mc_24_15_if_end:
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_AuxMenuDelegate_mc_22_8_if_end:
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_AuxMenuDelegate_mc_21_55_stop:
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_AuxMenuDelegate_mc_24_38_stop:
+        goto @C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_AuxMenuDelegate_mc_24_15_if_end;
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_AuxMenuDelegate_mc_24_15_if_end:
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_AuxMenuDelegate_mc_22_8_if_end:
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_AuxMenuDelegate_mc_21_55_stop:
     }
 }
-[ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\AuxMenuDelegate.mc"; @line = 7; ]
+[ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\AuxMenuDelegate.mc"; @line = 7; ]
 <init> {
 }

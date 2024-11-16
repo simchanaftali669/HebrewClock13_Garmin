@@ -1,40 +1,40 @@
-[ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 1; ]
+[ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc"; @line = 1; ]
 using Toybox.Application as :App;
-[ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 2; ]
+[ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc"; @line = 2; ]
 using Toybox.Graphics as :Gfx;
-[ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 3; ]
+[ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc"; @line = 3; ]
 using Toybox.WatchUi as :Ui;
-[ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 4; ]
+[ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc"; @line = 4; ]
 import Toybox.Application.Storage;
-[ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 6; ]
+[ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc"; @line = 6; ]
 class MyAcquirePositionDelegate extends Ui.BehaviorDelegate{
-    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 6; ]
+    [ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc"; @line = 6; ]
     <init> {
     }
-    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 6; ]
+    [ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc"; @line = 6; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 8; @position = 15; ]
+    [ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc"; @line = 8; @position = 15; ]
     protected
     var _view;
-    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 9; @position = 15; ]
+    [ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc"; @line = 9; @position = 15; ]
     protected
     var _callback;
-    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 11; ]
+    [ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc"; @line = 11; ]
     function initialize(view, callback) as Void {
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_12_4_start:
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc" 13 8 ]
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_12_4_start:
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc" 13 8 ]
         %tmp.2 = getv ? :BehaviorDelegate;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc" 14 8 ]
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc" 14 8 ]
         %tmp.5 = lgetv %view;
         putv self :_view %tmp.5;
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc" 15 8 ]
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc" 15 8 ]
         %tmp.7 = lgetv %callback;
         putv self :_callback %tmp.7;
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc" 17 8 ]
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc" 17 8 ]
         %tmp.9 = getv ? :Position;
         %tmp.10 = getv function %tmp.9 :enableLocationEvents;
         %tmp.12 = getv ? :Position;
@@ -44,20 +44,20 @@ C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_sourc
         %tmp.17 = const :onPosition;
         %tmp.18 = invoke %tmp.14 %tmp.15(%tmp.17);
         invoke %tmp.9 %tmp.10(%tmp.13, %tmp.18);
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_12_4_stop:
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_12_4_stop:
     }
-    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 20; ]
+    [ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc"; @line = 20; ]
     function onPosition(info as Toybox.Position.Info) as Void {
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_21_4_start:
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc" 22 8 ]
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_22_8_if_stmt:
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_22_12_begin:
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_21_4_start:
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc" 22 8 ]
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_22_8_if_stmt:
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_22_12_begin:
         %tmp.2 = lgetv %info;
         %tmp.3 = null;
         %tmp.4 = eq %tmp.2 %tmp.3;
         %tmp.5 = dup %tmp.4;
-        bt %tmp.5 @C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_22_28_end;
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_22_28_false:
+        bt %tmp.5 @C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_22_28_end;
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_22_28_false:
         %tmp.6 = lgetv %info;
         %tmp.7 = as %tmp.6 { (!Null) };
         %tmp.8 = getv %tmp.7 :accuracy;
@@ -65,150 +65,150 @@ C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_sourc
         %tmp.10 = eq %tmp.8 %tmp.9;
         %tmp.11 = or %tmp.4 %tmp.10;
         push %tmp.11;
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_22_28_end:
-        %tmp.12 = phi [%tmp.5 @C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_22_12_begin] [%tmp.11 @C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_22_28_false] [%tmp.12 @C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_22_28_end];
-        bf %tmp.12 @C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_22_8_if_end;
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_22_8_if_true:
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_22_51_start:
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc" 23 12 ]
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_22_28_end:
+        %tmp.12 = phi [%tmp.5 @C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_22_12_begin] [%tmp.11 @C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_22_28_false] [%tmp.12 @C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_22_28_end];
+        bf %tmp.12 @C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_22_8_if_end;
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_22_8_if_true:
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_22_51_start:
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc" 23 12 ]
         ret ?;
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_22_51_stop:
-        goto @C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_22_8_if_end;
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_22_8_if_end:
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc" 26 8 ]
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_26_8_if_stmt:
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_22_51_stop:
+        goto @C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_22_8_if_end;
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_22_8_if_end:
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc" 26 8 ]
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_26_8_if_stmt:
         %tmp.13 = lgetv %info;
         %tmp.14 = getv %tmp.13 :accuracy;
         %tmp.16 = getv ? :Position;
         %tmp.17 = getv %tmp.16 :QUALITY_GOOD;
         %tmp.18 = ne %tmp.14 %tmp.17;
-        bf %tmp.18 @C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_26_8_if_end;
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_26_8_if_true:
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_26_52_start:
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc" 27 12 ]
+        bf %tmp.18 @C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_26_8_if_end;
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_26_8_if_true:
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_26_52_start:
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc" 27 12 ]
         ret ?;
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_26_52_stop:
-        goto @C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_26_8_if_end;
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_26_8_if_end:
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc" 30 8 ]
-        [ "C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_21_4_start" "C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_21_4_stop" ]
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_26_52_stop:
+        goto @C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_26_8_if_end;
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_26_8_if_end:
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc" 30 8 ]
+        [ "C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_21_4_start" "C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_21_4_stop" ]
         %myLocation.1 = local;
         %tmp.19 = lgetv %info;
         %tmp.20 = getv %tmp.19 :position;
         %tmp.21 = getv function %tmp.20 :toDegrees;
         %tmp.22 = invoke %tmp.20 %tmp.21();
         lputv %myLocation.1 %tmp.22;
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc" 31 8 ]
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc" 31 8 ]
         %tmp.24 = lgetv %myLocation.1;
         %tmp.25 = 0;
         %tmp.26 = agetv %tmp.24 %tmp.25;
         putv self :latitude %tmp.26;
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc" 32 8 ]
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc" 32 8 ]
         %tmp.28 = lgetv %myLocation.1;
         %tmp.29 = 1;
         %tmp.30 = agetv %tmp.28 %tmp.29;
         putv self :longitude %tmp.30;
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc" 34 8 ]
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc" 34 8 ]
         %tmp.31 = getm $.Toybox.Application.Storage;
         %tmp.32 = getv function %tmp.31 :setValue;
         %tmp.33 = "latitude";
         %tmp.35 = getv ? :latitude;
         invoke %tmp.31 %tmp.32(%tmp.33, %tmp.35);
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc" 35 8 ]
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc" 35 8 ]
         %tmp.36 = getm $.Toybox.Application.Storage;
         %tmp.37 = getv function %tmp.36 :setValue;
         %tmp.38 = "longitude";
         %tmp.40 = getv ? :longitude;
         invoke %tmp.36 %tmp.37(%tmp.38, %tmp.40);
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc" 36 8 ]
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc" 36 8 ]
         %tmp.41 = true;
         putv self :isJustOpened %tmp.41;
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc" 38 8 ]
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc" 38 8 ]
         %tmp.43 = getv ? :_callback;
         %tmp.44 = getv function %tmp.43 :invoke;
         %tmp.46 = lgetv %info;
         invoke %tmp.43 %tmp.44(%tmp.46);
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_21_4_stop:
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_21_4_stop:
     }
-    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 41; ]
+    [ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc"; @line = 41; ]
     function onBack() {
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_41_22_start:
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc" 42 8 ]
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_41_22_start:
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc" 42 8 ]
         %tmp.1 = false;
         ret %tmp.1;
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_41_22_stop:
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_41_22_stop:
     }
 }
-[ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 46; ]
+[ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc"; @line = 46; ]
 class MyViewDelegate extends Ui.BehaviorDelegate{
-    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 46; ]
+    [ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc"; @line = 46; ]
     <init> {
     }
-    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 46; ]
+    [ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc"; @line = 46; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 48; ]
+    [ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc"; @line = 48; ]
     function initialize() as Void {
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_49_4_start:
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc" 50 8 ]
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_49_4_start:
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc" 50 8 ]
         %tmp.2 = getv ? :BehaviorDelegate;
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_49_4_stop:
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_49_4_stop:
     }
-    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 53; ]
+    [ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc"; @line = 53; ]
     function onPosition(info) {
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_54_4_start:
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc" 55 8 ]
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_54_4_start:
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc" 55 8 ]
         %tmp.1 = getm $.Toybox.WatchUi;
         %tmp.2 = getv function %tmp.1 :popView;
         %tmp.3 = getm $.Toybox.WatchUi;
         %tmp.4 = getv %tmp.3 :SLIDE_IMMEDIATE;
         invoke %tmp.1 %tmp.2(%tmp.4);
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc" 57 8 ]
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_57_8_if_stmt:
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc" 57 8 ]
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_57_8_if_stmt:
         %tmp.6 = lgetv %info;
         %tmp.7 = null;
         %tmp.8 = ne %tmp.6 %tmp.7;
-        bf %tmp.8 @C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_57_8_if_end;
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_57_8_if_true:
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_58_8_start:
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc" 60 12 ]
+        bf %tmp.8 @C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_57_8_if_end;
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_57_8_if_true:
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_58_8_start:
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc" 60 12 ]
         %tmp.10 = getv ? :System;
         %tmp.11 = getv function %tmp.10 :println;
         %tmp.12 = "submit request";
         invoke %tmp.10 %tmp.11(%tmp.12);
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_58_8_stop:
-        goto @C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_57_8_if_end;
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_57_8_if_end:
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_54_4_stop:
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_58_8_stop:
+        goto @C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_57_8_if_end;
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_57_8_if_end:
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_54_4_stop:
     }
-    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 69; ]
+    [ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc"; @line = 69; ]
     function onJsonResponse(code, data) {
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_70_4_start:
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc" 71 8 ]
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_70_4_start:
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc" 71 8 ]
         %tmp.1 = getm $.Toybox.WatchUi;
         %tmp.2 = getv function %tmp.1 :popView;
         %tmp.3 = getm $.Toybox.WatchUi;
         %tmp.4 = getv %tmp.3 :SLIDE_IMMEDIATE;
         invoke %tmp.1 %tmp.2(%tmp.4);
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc" 73 8 ]
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_73_8_if_stmt:
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc" 73 8 ]
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_73_8_if_stmt:
         %tmp.6 = lgetv %code;
         %tmp.7 = 200;
         %tmp.8 = eq %tmp.6 %tmp.7;
-        bf %tmp.8 @C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_73_8_if_end;
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_73_8_if_true:
-        goto @C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_73_8_if_end;
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_73_8_if_end:
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_70_4_stop:
+        bf %tmp.8 @C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_73_8_if_end;
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_73_8_if_true:
+        goto @C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_73_8_if_end;
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_73_8_if_end:
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_70_4_stop:
     }
-    [ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 78; ]
+    [ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc"; @line = 78; ]
     function onSelect() {
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_79_4_start:
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc" 80 8 ]
-        [ "C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_79_4_start" "C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_79_4_stop" ]
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_79_4_start:
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc" 80 8 ]
+        [ "C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_79_4_start" "C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_79_4_stop" ]
         %view.1 = local;
         %tmp.3 = getm $.Toybox.WatchUi;
         %tmp.4 = getv function ? %tmp.3 :ProgressBar;
@@ -216,8 +216,8 @@ C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_sourc
         %tmp.6 = null;
         %tmp.1 = newc %tmp.4 (%tmp.5, %tmp.6);
         lputv %view.1 %tmp.1;
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc" 81 8 ]
-        [ "C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_79_4_start" "C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_79_4_stop" ]
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc" 81 8 ]
+        [ "C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_79_4_start" "C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_79_4_stop" ]
         %delegate.2 = local;
         %tmp.10 = getv ? :MyAcquirePositionDelegate;
         %tmp.12 = lgetv %view.1;
@@ -227,7 +227,7 @@ C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_sourc
         %tmp.17 = invoke %tmp.13 %tmp.14(%tmp.16);
         %tmp.7 = newc %tmp.10 (%tmp.12, %tmp.17);
         lputv %delegate.2 %tmp.7;
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc" 83 8 ]
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc" 83 8 ]
         %tmp.18 = getm $.Toybox.WatchUi;
         %tmp.19 = getv function %tmp.18 :pushView;
         %tmp.21 = lgetv %view.1;
@@ -235,12 +235,12 @@ C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_sourc
         %tmp.24 = getm $.Toybox.WatchUi;
         %tmp.25 = getv %tmp.24 :SLIDE_IMMEDIATE;
         invoke %tmp.18 %tmp.19(%tmp.21, %tmp.23, %tmp.25);
-[ "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc" 85 8 ]
+[ "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc" 85 8 ]
         %tmp.26 = true;
         ret %tmp.26;
-C_Users_User_Desktop_apps_garmin_hebrewClock_hebrewClockGarmin_hebrewClock_source_MyAcquirePositionDelegate_mc_79_4_stop:
+C_Users_USER_Desktop_גמילות_חסדים_יששכר_זמן_תוכנה_יישומים_Garmin_hebrewClock_hebrewClockGarmin_hebrewClock_Jewish_source_MyAcquirePositionDelegate_mc_79_4_stop:
     }
 }
-[ @file = "C:\Users\User\Desktop\apps\garmin\hebrewClock\hebrewClockGarmin\hebrewClock\source\MyAcquirePositionDelegate.mc"; @line = 1; ]
+[ @file = "C:\Users\USER\Desktop\גמילות חסדים\יששכר\זמן\תוכנה\יישומים\Garmin\hebrewClock\hebrewClockGarmin\hebrewClock_Jewish\source\MyAcquirePositionDelegate.mc"; @line = 1; ]
 <init> {
 }

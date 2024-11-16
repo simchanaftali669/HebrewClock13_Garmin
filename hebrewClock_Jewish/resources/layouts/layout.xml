@@ -1,5 +1,0 @@
-<layout id="MainLayout">
-    <label id="ChristianClock" x="center" y="50" font="Graphics.FONT_LARGE" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_LT_GRAY" />   
-    <label id="HebrewClock" x="center" y="100" font="Graphics.FONT_LARGE" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_BLUE" />   
-    <label id="MazalLabel" x="center" y="150" font="Graphics.FONT_LARGE" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_LT_GRAY" />   
-</layout>

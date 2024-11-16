@@ -1,9 +1,5 @@
 <layout id="MainLayout">
     <label id="ChristianClock" x="center" y="50" font="Graphics.FONT_LARGE" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_LT_GRAY" />   
-    <label id="HebrewClockHour" x="45" y="100" font="Graphics.FONT_LARGE" justification="Graphics.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_BLUE" /> 
-    <label text=":" id="HebrewClock1" x="80" y="100" font="Graphics.FONT_LARGE" justification="Graphics.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_LT_GRAY" />   
-    <label id="HebrewClockMin" x="90" y="100" font="Graphics.FONT_LARGE" justification="Graphics.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_BLUE" /> 
-    <label text=":" id="HebrewClock2" x="155" y="100" font="Graphics.FONT_LARGE" justification="Graphics.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_LT_GRAY" />   
-    <label id="HebrewClockSec" x="165" y="100" font="Graphics.FONT_LARGE" justification="Graphics.TEXT_JUSTIFY_LEFT" color="Graphics.COLOR_BLUE" />   
+    <label id="HebrewClock" x="center" y="100" font="Graphics.FONT_LARGE" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_BLUE" />   
     <label id="MazalLabel" x="center" y="150" font="Graphics.FONT_LARGE" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_LT_GRAY" />   
 </layout>
