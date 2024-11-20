@@ -1,6 +1,7 @@
 using Toybox.Lang;
 using Toybox.Time;
 using Toybox.Time.Gregorian;
+import Toybox.Application.Storage;
 
 //System.println("Time.today(): " + Time.today());
 ////same as javascript date.valueOf()
@@ -42,16 +43,18 @@ class SunCalc
         return 0.0002967 / Math.tan(h + 0.00312536 / (h + 0.08901179));
     }
 
-    public function getMoonTimes(date, lat, lng, inUTC) 
+    public function getMoonTimes(lat, lng, inUTC) 
     {
+        //var t = Storage.getValue(date);
+
         // Options for Saturday February 24th, 2018 12:12am
         var options = {
-            :year   => date.year,
-            :month  => date.month,
-            :day    => date.day,
-            :hour   => 0,
+            :year   => Storage.getValue("year"),
+            :month  => Storage.getValue("month"),
+            :day    => Storage.getValue("day")-1,
+            :hour   => 22,
             :minute => 0,
-            :second => 0
+            :second => 0,
         };
 
         var t = Gregorian.moment(options);
@@ -218,7 +221,8 @@ class SunCalc
 
     public function hoursLater(date, h) 
     {
-        var hoursLater = (Time.today().value().toString()+"000").toDouble() + h * dayMs / 24;
+        //var hoursLater = (Time.today().value().toString()+"000").toDouble() + h * dayMs / 24;
+        var hoursLater = (date.value().toString()+"000").toDouble() + h * dayMs / 24;
         return new Time.Moment(hoursLater);
     }
 

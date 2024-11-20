@@ -213,14 +213,16 @@ class MenuTestView extends WatchUi.View {
     }
 
 	//my personal utils -- naftali bilig
-	public function getYasterday(today)
+	public function getYasterday(today, type)
 	{
 		var currentYear = today.year;
 		var currentMonth = today.month;
 		var currentDay = today.day;
 
+		var options = null;
+
 		//current date
-		var options = 
+		options = 
     	{
   		  :year   => today.year,
   		  :month  => today.month, // 3.x devices can also use :month => Gregorian.MONTH_MAY
@@ -264,14 +266,47 @@ class MenuTestView extends WatchUi.View {
 			}
 		}
 		
-		var date = Gregorian.moment(options);
-		var yasterday = Gregorian.info(date, Time.FORMAT_SHORT);
-		
-		return yasterday;    
+
+		if(type == "Moment")
+		{
+			return Gregorian.moment(options);    
+		}
+		else 
+		{
+			var date = Gregorian.moment(options);
+			var yasterday = Gregorian.info(date, Time.FORMAT_SHORT);
+			return yasterday;
+		}
 	}
-	
-	
-	public function getTomorrow(today)
+
+	public function getToday(today, type)
+	{
+		var currentYear = today.year;
+		var currentMonth = today.month;
+		var currentDay = today.day;
+
+		//current date
+		var options = 
+    	{
+  		  :year   => today.year,
+  		  :month  => today.month, // 3.x devices can also use :month => Gregorian.MONTH_MAY
+   		  :day    => today.day,
+          :hour   => 0
+		};
+
+		if(type == "Moment")
+		{
+			return Gregorian.moment(options);    
+		}
+		else 
+		{
+			var date = Gregorian.moment(options);
+			var yasterday = Gregorian.info(date, Time.FORMAT_SHORT);
+			return yasterday;
+		}
+	}
+
+	public function getTomorrow(today,type)
 	{
 		var currentYear = today.year;
 		var currentMonth = today.month;
@@ -323,10 +358,16 @@ class MenuTestView extends WatchUi.View {
 			}
 		}
 		
-		var date = Gregorian.moment(options);
-		var tomorrow = Gregorian.info(date, Time.FORMAT_SHORT);
-		
-		return tomorrow;	
+		if(type == "Moment")
+		{
+			return Gregorian.moment(options);    
+		}
+		else 
+		{
+			var date = Gregorian.moment(options);
+			var tomorrow = Gregorian.info(date, Time.FORMAT_SHORT);
+			return tomorrow;
+		}	
 	}
 
 	public function isLastDayOfMonth(year,month,day)
@@ -809,7 +850,8 @@ class MenuTestView extends WatchUi.View {
 	    //var adj = -(12 - tz);
 	    //adj += 2;
 		timezone = tz;
-		
+		//Storage.setValue("tz", tz);
+
 		//timezone = tz + 2;
 	
 	
@@ -824,8 +866,8 @@ class MenuTestView extends WatchUi.View {
 	    var hour = [0,0,0,0,0,0]; //29
 
 		var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-		var yasterday = getYasterday(today); //Gregorian.info(Time.now() - 1, Time.FORMAT_SHORT);	
-	    var tomorrow = getTomorrow(today); //Gregorian.info(Time.now() + 1, Time.FORMAT_SHORT);
+		var yasterday = getYasterday(today,"info"); //Gregorian.info(Time.now() - 1, Time.FORMAT_SHORT);	
+	    var tomorrow = getTomorrow(today,"info"); //Gregorian.info(Time.now() + 1, Time.FORMAT_SHORT);
 
 		//var yasterday = sunCalc.getMoonTimes(yasterday,latitude,longitude);
 	
@@ -846,13 +888,22 @@ class MenuTestView extends WatchUi.View {
 		}	
 		else	
 		{
- 			time_yasterday = sunCalc.getMoonTimes(yasterday,latitude,longitude,false);
-			
-			//the time of the current day
-			time_today = sunCalc.getMoonTimes(today,latitude,longitude,false);//, lngd, lngm, ewi, latd, latm, nsi, adj);
+			Storage.setValue("year", yasterday.year);
+			Storage.setValue("month", yasterday.month);
+			Storage.setValue("day", yasterday.day);
+			time_yasterday = sunCalc.getMoonTimes(latitude,longitude,false);
 
+			Storage.setValue("year", today.year);
+			Storage.setValue("month", today.month);
+			Storage.setValue("day", today.day);
+			//the time of the current day
+			time_today = sunCalc.getMoonTimes(latitude,longitude,false);//, lngd, lngm, ewi, latd, latm, nsi, adj);
+
+			Storage.setValue("year", tomorrow.year);
+			Storage.setValue("month", tomorrow.month);
+			Storage.setValue("day", tomorrow.day);
 		    //the time of the next day
-			time_tommorow = sunCalc.getMoonTimes(tomorrow,latitude,longitude,false);//, lngd, lngm, ewi, latd, latm, nsi, adj);
+			time_tommorow = sunCalc.getMoonTimes(latitude,longitude,false);//, lngd, lngm, ewi, latd, latm, nsi, adj);
 		}
 
 			System.println(time_today[3]);
@@ -1784,8 +1835,8 @@ class MenuTestView extends WatchUi.View {
 	    var hour = [0,0,0,0,0,0]; //29
 
 		var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
-		var yasterday = getYasterday(today); //Gregorian.info(Time.now() - 1, Time.FORMAT_SHORT);	
-	    var tomorrow = getTomorrow(today); //Gregorian.info(Time.now() + 1, Time.FORMAT_SHORT);
+		var yasterday = getYasterday(today,"info"); //Gregorian.info(Time.now() - 1, Time.FORMAT_SHORT);	
+	    var tomorrow = getTomorrow(today,"info"); //Gregorian.info(Time.now() + 1, Time.FORMAT_SHORT);
 
 		//var yasterday = sunCalc.getMoonTimes(yasterday,latitude,longitude);
 	
