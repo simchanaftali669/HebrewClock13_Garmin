@@ -51,13 +51,19 @@ class SunCalc
         var options = {
             :year   => Storage.getValue("year"),
             :month  => Storage.getValue("month"),
-            :day    => Storage.getValue("day")-1,
-            :hour   => 22,
+            :day    => Storage.getValue("day"),
+            :hour   => 0,
             :minute => 0,
             :second => 0,
         };
 
         var t = Gregorian.moment(options);
+
+        //add timezone offset        
+        var tz = Storage.getValue("tz");
+        var tz_sec = new Time.Duration(-tz * Gregorian.SECONDS_PER_HOUR);
+        
+        t = t.add(tz_sec);
 
         //System.println(t.value());
         //console.log(t); --> check here the bug...

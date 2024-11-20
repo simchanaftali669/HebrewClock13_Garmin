@@ -850,7 +850,7 @@ class MenuTestView extends WatchUi.View {
 	    //var adj = -(12 - tz);
 	    //adj += 2;
 		timezone = tz;
-		//Storage.setValue("tz", tz);
+		Storage.setValue("tz", tz);
 
 		//timezone = tz + 2;
 	
