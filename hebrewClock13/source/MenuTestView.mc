@@ -1705,6 +1705,19 @@ class MenuTestView extends WatchUi.View {
 			
 			view = View.findDrawableById("HebrewClock") as Text;
 			view.setColor(colors[x]);
+
+			var viewHebrewDate = View.findDrawableById("MazalLabel") as Text;
+			var viewChristianClock = View.findDrawableById("ChristianClock") as Text;
+			if(isNight)
+			{
+				viewHebrewDate.setColor(Graphics.COLOR_LT_GRAY);
+				viewChristianClock.setColor(Graphics.COLOR_LT_GRAY);
+			}
+			else
+			{
+				viewHebrewDate.setColor(Graphics.COLOR_WHITE);
+				viewChristianClock.setColor(Graphics.COLOR_WHITE);
+			}
 		}
 		else 
 		{
