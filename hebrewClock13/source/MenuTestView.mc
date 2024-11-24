@@ -1715,8 +1715,8 @@ class MenuTestView extends WatchUi.View {
 			}
 			else
 			{
-				viewHebrewDate.setColor(Graphics.COLOR_WHITE);
-				viewChristianClock.setColor(Graphics.COLOR_WHITE);
+				//viewHebrewDate.setColor(Graphics.COLOR_BLUE);
+				//viewChristianClock.setColor(Graphics.COLOR_BLUE);
 			}
 		}
 		else 

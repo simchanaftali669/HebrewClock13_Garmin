@@ -135,11 +135,19 @@ class SunCalc
 
         if (rise != 0) 
         {
-            result[2] = rise;//hoursLater(t, rise); ***need to fix
+            result[2] = rise;
+            if(result[2] >= 24)
+            {
+                result[2] -= 24;//hoursLater(t, rise); ***need to fix
+            }
         }
         if (set != 0) 
         {
             result[3] = set;//convertDateTimeToFloat(hoursLater(t, set)); ***need to fix
+            if(result[3]  >= 24)
+            {
+                result[3] -= 24;//hoursLater(t, rise); ***need to fix
+            }
         }
         if (rise == 0 && set == 0)
         { 
