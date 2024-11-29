@@ -1342,16 +1342,16 @@ class MenuTestView extends WatchUi.View {
 		if(isMoonClock)
 		{
 
-			// if(isNight)
-			// {
-			// 	var view1 = View.findDrawableById("MazalLabel") as Text;
-			// 	view1.setColor(Graphics.COLOR_LT_GRAY);
-			// }
-			// else
-			// {
-			// 	var view1 = View.findDrawableById("MazalLabel") as Text;
-			// 	view1.setColor(Graphics.COLOR_BLUE);
-			// }
+			if(isNight)
+			{
+				var moonrise = View.findDrawableById("MoonriseBitmap") as Text;
+				moonrise.setVisible(false);
+			}
+			else
+			{
+				var moonrise = View.findDrawableById("MoonriseBitmap") as Text;
+				moonrise.setVisible(true);
+			}
 			return;
 		}
 
