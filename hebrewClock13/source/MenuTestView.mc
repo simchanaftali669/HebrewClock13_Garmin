@@ -1341,16 +1341,15 @@ class MenuTestView extends WatchUi.View {
 
 		if(isMoonClock)
 		{
-
 			if(isNight)
 			{
-				var moonrise = View.findDrawableById("MoonriseBitmap") as Text;
-				moonrise.setVisible(false);
+				var view1 = View.findDrawableById("MazalLabel") as Text;
+				view1.setColor(Graphics.COLOR_LT_GRAY);
 			}
 			else
 			{
-				var moonrise = View.findDrawableById("MoonriseBitmap") as Text;
-				moonrise.setVisible(true);
+				var view1 = View.findDrawableById("MazalLabel") as Text;
+				view1.setColor(Graphics.COLOR_WHITE);
 			}
 			return;
 		}

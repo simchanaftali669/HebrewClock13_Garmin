@@ -1,5 +1,4 @@
 <layout id="MainLayout">
-    <bitmap id="MoonriseBitmap" x="center" y="80%" filename="hebrewCommercial_icon.png" visible="false" />
     <label id="ChristianClock" x="center" y="20%" font="Graphics.FONT_LARGE" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_LT_GRAY" />   
     <label id="HebrewClock" x="center" y="40%" font="Graphics.FONT_LARGE" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_BLUE" />   
     <label id="MazalLabel" x="center" y="60%" font="Graphics.FONT_LARGE" justification="Graphics.TEXT_JUSTIFY_CENTER" color="Graphics.COLOR_LT_GRAY" />   
