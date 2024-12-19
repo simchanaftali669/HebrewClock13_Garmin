@@ -132,6 +132,8 @@ class MenuTestView extends WatchUi.View {
 /*6*/ public var yozerOr;		//  -- יוצר אור
 /*7*/ public var kriyahtShema;	//  -- קריאת שמע
 
+	public var SOLAR_DECLINATION;
+
     //! Constructor
     public function initialize() {
         View.initialize();
@@ -631,7 +633,9 @@ class MenuTestView extends WatchUi.View {
 	        var Q = .39782 * Math.sin(M);      // Solar Declination
 	        Q = Q / Math.sqrt(-Q * Q + 1);     // This is how the original author wrote it!
 	        Q = Math.atan2(Q, 1);
-	
+
+			SOLAR_DECLINATION = Q; 
+
 	        var S = R - (Math.sin(Q) * Math.sin(E));
 	        S = S / (Math.cos(Q) * Math.cos(E));
 	
@@ -1149,6 +1153,13 @@ class MenuTestView extends WatchUi.View {
 			sunset_yasterday = zmanit_hour[3];
 			sunset = zmanit_hour[4];
 			sunset_tommorow = zmanit_hour[5];
+
+			System.println("zmanit_hour[0]: " + zmanit_hour[0]);
+			System.println("zmanit_hour[1]: " + zmanit_hour[1]);
+			System.println("zmanit_hour[2]: " + zmanit_hour[2]);
+			System.println("zmanit_hour[3]: " + zmanit_hour[3]);
+			System.println("zmanit_hour[4]: " + zmanit_hour[4]);
+			System.println("zmanit_hour[5]: " + zmanit_hour[5]);
 		}
 
 		var shaa_zmanit_night, shaa_zmanit_day;
