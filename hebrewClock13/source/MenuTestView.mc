@@ -1355,7 +1355,7 @@ class MenuTestView extends WatchUi.View {
 			if(isNight)
 			{
 				var view1 = View.findDrawableById("MazalLabel") as Text;
-				view1.setColor(Graphics.COLOR_LT_GRAY);
+				view1.setColor(0x808080);
 			}
 			else
 			{
@@ -1372,14 +1372,14 @@ class MenuTestView extends WatchUi.View {
 		if(curr_hour.toDouble()/(1000 * 3600) > tzeit  || 
 		   curr_hour.toDouble()/(1000 * 3600) < misheyakir)
 		{
-			view.setColor(Graphics.COLOR_LT_GRAY);
+			view.setColor(0x808080);
 			//viewMazal.setText("Marriv");
 			//viewMazal.setText("ערבית - " + text);
 		}
 		else if(curr_hour.toDouble() < sunset_hour.toDouble() && 
 		        curr_hour.toDouble()/(1000 * 3600) > misheyakir/*curr_hour.toDouble() > sunrise_hour.toDouble()*/ )
 		{
-			view.setColor(Graphics.COLOR_BLUE);
+			view.setColor(0x5DBCD2);
 
 			// if(curr_hour.toDouble() < sunrise_hour.toDouble() || lbHour.toNumber() < 6)
 			// { 
@@ -1705,13 +1705,13 @@ class MenuTestView extends WatchUi.View {
 
 		if(isMoonClock)
 		{
-			var colors = [	Graphics.COLOR_LT_GRAY,
-							Graphics.COLOR_GREEN,
-							Graphics.COLOR_BLUE,
-							Graphics.COLOR_RED,
-							Graphics.COLOR_PURPLE,
-							Graphics.COLOR_YELLOW,
-							Graphics.COLOR_ORANGE];
+			var colors = [	0x808080,//Graphics.COLOR_LT_GRAY,
+							0x84C45E,//Graphics.COLOR_GREEN,
+							0x5DBCD2,//Graphics.COLOR_BLUE,
+							0xA6230E,//Graphics.COLOR_RED,
+							0x815AA8,//Graphics.COLOR_PURPLE,
+							0xBA8D1A,//Graphics.COLOR_YELLOW,
+							0xB45D02];//Graphics.COLOR_ORANGE];
 			
 			view = View.findDrawableById("HebrewClock") as Text;
 			view.setColor(colors[x]);
@@ -1720,8 +1720,8 @@ class MenuTestView extends WatchUi.View {
 			var viewChristianClock = View.findDrawableById("ChristianClock") as Text;
 			if(isNight)
 			{
-				viewHebrewDate.setColor(Graphics.COLOR_LT_GRAY);
-				viewChristianClock.setColor(Graphics.COLOR_LT_GRAY);
+				viewHebrewDate.setColor(0x808080);
+				viewChristianClock.setColor(0x808080);
 			}
 			else
 			{
