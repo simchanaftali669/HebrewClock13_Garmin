@@ -5,6 +5,7 @@
 
 import Toybox.Graphics;
 import Toybox.Lang;
+import Toybox.SensorHistory;
 import Toybox.WatchUi;
 import Toybox.Position;
 import Toybox.System;
@@ -42,7 +43,60 @@ public function setPosition(info as Toybox.Position.Info) as Void
 }
 
 //! View for the home screen
-class MenuTestView extends WatchUi.View {
+class MenuTestView extends WatchUi.View 
+{
+    private var _index as Number = 0;
+
+	private var _sensorSymbols as Array<Symbol> = [
+		:getHeartRateHistory,
+		:getTemperatureHistory,
+		:getPressureHistory,
+		:getElevationHistory,
+		:getOxygenSaturationHistory,
+		:getStressHistory,
+		:getBodyBatteryHistory,
+	] as Array<Symbol>;
+
+	private var _sensorLabel as Array<String> = [
+		"Heart Rate",
+		"Temperature",
+		"Pressure",
+		"Elevation",
+		"Oxygen Saturation",
+		"Stress",
+		"Body Battery"
+	] as Array<String>;
+
+	private var _sensorMin as Array<Number> = [
+		50,
+		0,
+		50000,
+		0,
+		80,
+		0,
+		0,
+	] as Array<Number>;
+
+	private var _sensorRange as Array<Number> = [
+		140,
+		45,
+		60000,
+		6000,
+		20,
+		100,
+		100,
+	] as Array<Number>;
+
+    //! Get the iterator for the current sensor
+    //! @return The iterator for the current sensor
+    private function getIterator() as SensorHistoryIterator? {
+        if ((Toybox has :SensorHistory) && (SensorHistory has _sensorSymbols[_index])) {
+            var getMethod = new Lang.Method(SensorHistory, _sensorSymbols[_index]);
+            return getMethod.invoke({}) as SensorHistoryIterator;
+        }
+        return null;
+    }
+
 	var sunCalc = new SunCalc();
 	var isMoonClock = false;
 
@@ -202,8 +256,10 @@ class MenuTestView extends WatchUi.View {
 		}
 	
     	//initializeListener();
-   		drawChristianClock();	
-   		
+		if(!isDeath)
+   		{
+			drawChristianClock();	
+		}
    		//set the latitude and longtiude minutes and time zone for calculations
    		//list_pos();
    		
@@ -1133,16 +1189,23 @@ class MenuTestView extends WatchUi.View {
 		return inputLang;
 	}
 
+	var isDeath = false;
 	var isNight = false;
     //hebrewclock.js
 	public function hebrewclock()
 	{
+		if(isDeath)
+		{
+			return;
+		}
         // Update the view
         //var view = View.findDrawableById("TimeLabel");
 		//view.setColor(Application.getApp().getProperty("color#mazal_02"));
 		//view.setColor(Application.getApp().getProperty("ForegroundColor"));
 		//view.setText("23:1079:75");
-		
+
+
+
 		if(isJustOpened || lbMinute == 0 || lbHour ==11 || lbHour == 0)
 		{
 			var zmanit_hour = doit();       //get the 24 shaaotzmaniot
@@ -1194,7 +1257,7 @@ class MenuTestView extends WatchUi.View {
 
 		System.println("sunrise: " + sunrise + ", sunset:" + sunset);
 		System.println("curr_hour: " + curr_hour);
-								
+
 		//month days 23-7						
 		//case 1:
 		//moonrise at 06:57 and moonset at 17:17
@@ -1344,6 +1407,58 @@ class MenuTestView extends WatchUi.View {
 		MarkTime();
 	    //if(lbMinute == 0 || lbMinute == 360 || lbMinute == 720)
 	    //    tick_sound();
+
+		if(true || lbMinute == 360 || lbMinute == 720 || lbMinute == 0)
+		{
+			if (Toybox has :SensorHistory) 
+			{
+				var sensorIter = getIterator();
+				if (sensorIter != null) 
+				{
+					var previous = sensorIter.next();
+					var sample = sensorIter.next();
+					var x = 15;
+					var min = sensorIter.getMin();
+					System.println("death measure:" + min);
+
+					if(min < 25)
+					{
+						isDeath = true;
+						var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);	
+
+						var language = language();
+						var hebrew_month_name = hebrewDateFunc(today.year, today.month, today.day, language());
+						var viewHebrewDate = View.findDrawableById("ChristianClock") as Text;		
+						viewHebrewDate.setText(hebrew_month_name[2] + hebrew_month_name[3]);	
+
+
+						var deathHebrewHour = View.findDrawableById("HebrewClock") as Text;
+						var deathHebrewMazal = View.findDrawableById("MazalLabel") as Text;
+						
+						System.println("death measure: " + hebrew_month_name[2] + hebrew_month_name[3]);
+						System.println("death measure: " + display_time());
+						System.println("death measure: " + setmazal());
+
+						Storage.setValue("deathHebrewDate", hebrew_month_name[2] + hebrew_month_name[3]);
+						Storage.setValue("deathHebrewHour", display_time());
+						Storage.setValue("deathHebrewMazal", setmazal());
+
+
+						//System.println("death measure:" + deathHebrewMazal);
+
+
+						//System.println("death hebrewDate: " + hebrew_month_name[3]);
+						//var deathHebrewDate = hebrew_month_name[2] + hebrew_month_name[3];
+						//System.println("death hebrewDate: " + hebrew_month_name[2]);
+
+						//View.findDrawableById("MazalLabel") as Text;
+						//System.println("death hebrewHour: " + View.findDrawableById("HebrewClock") as Text);
+						//System.println("death hebrewMazal: " + View.findDrawableById("MazalLabel") as Text);
+
+					}
+				}
+			}
+		}
 	}
 
 	public function MarkTime()
@@ -1355,7 +1470,7 @@ class MenuTestView extends WatchUi.View {
 			if(isNight)
 			{
 				var view1 = View.findDrawableById("MazalLabel") as Text;
-				view1.setColor(0x808080);
+				view1.setColor(Graphics.COLOR_LT_GRAY);
 			}
 			else
 			{
@@ -1372,14 +1487,14 @@ class MenuTestView extends WatchUi.View {
 		if(curr_hour.toDouble()/(1000 * 3600) > tzeit  || 
 		   curr_hour.toDouble()/(1000 * 3600) < misheyakir)
 		{
-			view.setColor(0x808080);
+			view.setColor(Graphics.COLOR_LT_GRAY);
 			//viewMazal.setText("Marriv");
 			//viewMazal.setText("ערבית - " + text);
 		}
 		else if(curr_hour.toDouble() < sunset_hour.toDouble() && 
 		        curr_hour.toDouble()/(1000 * 3600) > misheyakir/*curr_hour.toDouble() > sunrise_hour.toDouble()*/ )
 		{
-			view.setColor(0x5DBCD2);
+			view.setColor(Graphics.COLOR_BLUE);
 
 			// if(curr_hour.toDouble() < sunrise_hour.toDouble() || lbHour.toNumber() < 6)
 			// { 
@@ -1453,7 +1568,7 @@ class MenuTestView extends WatchUi.View {
 			
 		var view = View.findDrawableById("HebrewClock") as Text;
 		view.setText(displayHour + ":" + displayMinute +  ":" + displaySecond);
-		
+		return displayHour + ":" + displayMinute +  ":" + displaySecond;
 	}
  
  	public function getDayOfWeekInNumber(day)
@@ -1705,13 +1820,13 @@ class MenuTestView extends WatchUi.View {
 
 		if(isMoonClock)
 		{
-			var colors = [	0x808080,//Graphics.COLOR_LT_GRAY,
-							0x84C45E,//Graphics.COLOR_GREEN,
-							0x5DBCD2,//Graphics.COLOR_BLUE,
-							0xA6230E,//Graphics.COLOR_RED,
-							0x815AA8,//Graphics.COLOR_PURPLE,
-							0xBA8D1A,//Graphics.COLOR_YELLOW,
-							0xB45D02];//Graphics.COLOR_ORANGE];
+			var colors = [	Graphics.COLOR_LT_GRAY,//Graphics.COLOR_LT_GRAY,
+							Graphics.COLOR_GREEN,//Graphics.COLOR_GREEN,
+							Graphics.COLOR_BLUE,//Graphics.COLOR_BLUE,
+							Graphics.COLOR_RED,//Graphics.COLOR_RED,
+							Graphics.COLOR_PURPLE,//Graphics.COLOR_PURPLE,
+							0xFFFF00,//Graphics.COLOR_YELLOW,
+							Graphics.COLOR_ORANGE];//Graphics.COLOR_ORANGE];
 			
 			view = View.findDrawableById("HebrewClock") as Text;
 			view.setColor(colors[x]);
@@ -1720,8 +1835,8 @@ class MenuTestView extends WatchUi.View {
 			var viewChristianClock = View.findDrawableById("ChristianClock") as Text;
 			if(isNight)
 			{
-				viewHebrewDate.setColor(0x808080);
-				viewChristianClock.setColor(0x808080);
+				viewHebrewDate.setColor(Graphics.COLOR_LT_GRAY);
+				viewChristianClock.setColor(Graphics.COLOR_LT_GRAY);
 			}
 			else
 			{
@@ -1734,7 +1849,7 @@ class MenuTestView extends WatchUi.View {
 			viewMazal.setText(text);	
 		}
 
-
+		return text;
 		//viewMazal.setText("");
 //		System.println("curr_hour: " + curr_hour.toDouble()/(1000 * 3600));
 //		System.println("tzeit: " + tzeit  );
