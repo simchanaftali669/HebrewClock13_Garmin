@@ -1413,7 +1413,7 @@ class MenuTestView extends WatchUi.View
 	    //if(lbMinute == 0 || lbMinute == 360 || lbMinute == 720)
 	    //    tick_sound();
 
-		if(true || lbMinute == 360 || lbMinute == 720 || lbMinute == 0)
+		if(lbMinute == 360 || lbMinute == 720 || lbMinute == 0)
 		{
 			Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE] as Array<SensorType>);
 			Sensor.enableSensorEvents(method(:onSnsr));
