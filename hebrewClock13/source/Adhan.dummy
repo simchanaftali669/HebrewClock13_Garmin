@@ -1,0 +1,538 @@
+// Adhan.mc
+using Toybox.Lang;
+using Toybox.Time;
+using Toybox.Time.Gregorian;
+import Toybox.Application.Storage;
+
+// Prayer class to hold prayer time constants
+class Prayer {
+    const Fajr = 0;
+    const Sunrise = 1;
+    const Dhuhr = 2;
+    const Asr = 3;
+    const Maghrib = 4;
+    const Isha = 5;
+    const None = 6;
+}
+
+
+// Madhab class to hold Madhab constants
+class Madhab {
+    const Shafi = 1;
+    const Hanafi = 2;
+}
+
+// HighLatitudeRule class to hold HighLatitudeRule constants
+class HighLatitudeRule {
+    const MiddleOfTheNight = 1;
+    const SeventhOfTheNight = 2;
+    const TwilightAngle = 3;
+}
+
+// Coordinates class
+class Coordinates {
+    // Define the instance variables
+    var latitude;
+    var longitude;
+
+    // Constructor method
+    function initialize(p_latitude, p_longitude) {
+        // Assign the values to the instance variables
+        latitude = p_latitude;
+        longitude = p_longitude;
+    }
+}
+
+
+const FAJR = 0;
+const SUNRISE = 1;
+const DHUHR = 2;
+const ASR = 3;
+const MAGHRIB = 4;
+const ISHA = 5;
+
+// NightPortionResult class to hold fajr and isha values
+class NightPortionResult {
+    var fajr;
+    var isha;
+
+    function initialize(p_fajr, p_isha) {
+        fajr = p_fajr;
+        isha = p_isha;
+    }
+}
+
+// CalculationParameters class
+class CalculationParameters {
+    // Constants for prayer times
+    var method;
+    var fajrAngle;
+    var ishaAngle;
+    var ishaInterval;
+    var madhab;
+    var highLatitudeRule;
+    var adjustments;
+    var methodAdjustments;
+
+    function initialize(p_fajrAngle, p_ishaAngle, p_ishaInterval, p_methodName) {
+        method = p_methodName || "Other";
+        fajrAngle = p_fajrAngle || 0;
+        ishaAngle = p_ishaAngle || 0;
+        ishaInterval = p_ishaInterval || 0;
+        madhab = Madhab.Shafi;
+        highLatitudeRule = HighLatitudeRule.MiddleOfTheNight;
+        adjustments = [0, 0, 0, 0, 0, 0];  // Array to hold adjustments for each prayer time
+        methodAdjustments = [0, 0, 0, 0, 0, 0];  // Array to hold adjustments for each prayer time
+    }
+
+    // Night portions method
+    function nightPortions() {
+        switch(highLatitudeRule) {
+            case HighLatitudeRule.MiddleOfTheNight:
+                return new NightPortionResult(0.5, 0.5);
+            case HighLatitudeRule.SeventhOfTheNight:
+                return new NightPortionResult(1/7, 1/7);
+            case HighLatitudeRule.TwilightAngle:
+                return new NightPortionResult(fajrAngle / 60, ishaAngle / 60);
+        }
+    }
+}
+
+// Define the CalculationMethod class
+class CalculationMethod {
+
+    // Method for MuslimWorldLeague calculation
+    function MuslimWorldLeague() {
+        var params = new CalculationParameters(18, 17, 0, "MuslimWorldLeague");
+        params.methodAdjustments.put(DHUHR, 1);
+        return params;
+    }
+
+    // Method for Egyptian calculation
+    function Egyptian() {
+        var params = new CalculationParameters(19.5, 17.5, 0, "Egyptian");
+        params.methodAdjustments.put(DHUHR, 1);
+        return params;
+    }
+
+    // Method for Karachi calculation
+    function Karachi() {
+        var params = new CalculationParameters(18, 18, 0, "Karachi");
+        params.methodAdjustments.put(DHUHR, 1);
+        return params;
+    }
+
+    // Method for UmmAlQura calculation
+    function UmmAlQura() {
+        return new CalculationParameters(18.5, 0, 90, "UmmAlQura");
+    }
+
+    // Method for Dubai calculation
+    function Dubai() {
+        var params = new CalculationParameters(18.2, 18.2, 0, "Dubai");
+        params.methodAdjustments.put("sunrise", -3);
+        params.methodAdjustments.put(DHUHR, 3);
+        params.methodAdjustments.put("asr", 3);
+        params.methodAdjustments.put("maghrib", 3);
+        return params;
+    }
+
+    // Method for MoonsightingCommittee calculation
+    function MoonsightingCommittee() {
+        var params = new CalculationParameters(18, 18, 0, "MoonsightingCommittee");
+        params.methodAdjustments.put(DHUHR, 5);
+        params.methodAdjustments.put("maghrib", 3);
+        return params;
+    }
+
+    // Method for NorthAmerica calculation
+    function NorthAmerica() {
+        var params = new CalculationParameters(15, 15, 0, "NorthAmerica");
+        params.methodAdjustments.put(DHUHR, 1);
+        return params;
+    }
+
+    // Method for Kuwait calculation
+    function Kuwait() {
+        return new CalculationParameters(18, 17.5, 0, "Kuwait");
+    }
+
+    // Method for Qatar calculation
+    function Qatar() {
+        return new CalculationParameters(18, 0, 90, "Qatar");
+    }
+
+    // Method for Singapore calculation
+    function Singapore() {
+        var params = new CalculationParameters(20, 18, 0, "Singapore");
+        params.methodAdjustments.put(DHUHR, 1);
+        return params;
+    }
+
+    // Method for Other calculation
+    function Other() {
+        return new CalculationParameters(0, 0, 0, "Other");
+    }
+}
+
+
+// PrayerTimes class
+class PrayerTimes {
+    var coordinates;
+    var date;
+    var calculationParameters;
+    var night;
+
+    // Assuming necessary methods are defined elsewhere, e.g., 'Astronomical', 'dateByAddingSeconds', etc.
+    function safeFajr(calculationParameters, coordinates, sunriseTime, date) {
+        var nightFraction;
+        
+        
+        if (calculationParameters.method == "MoonsightingCommittee") {
+
+            var Astronomical = new Astronomical();
+            // Use Astronomical's method to adjust morning twilight for MoonsightingCommittee
+            return Astronomical.seasonAdjustedMorningTwilight(coordinates.latitude, dayOfYear(date), date.year, sunriseTime);
+        } else {
+            // Handle other calculation methods
+            var portion = calculationParameters.nightPortions().fajr;
+            nightFraction = portion * night;
+            
+            // Use dateByAddingSeconds to adjust sunriseTime
+            return dateByAddingSeconds(sunriseTime, -nightFraction);
+        }
+    }
+
+    function initialize(p_coordinates, p_date, p_calculationParameters) {
+        coordinates = p_coordinates;
+        date = p_date;
+        calculationParameters = p_calculationParameters;
+
+        var solarTime = new SolarTime(date, coordinates);
+
+        var fajrTime;
+        var sunriseTime;
+        var dhuhrTime;
+        var asrTime;
+        var maghribTime;
+        var ishaTime;
+
+        var nightFraction;
+
+        dhuhrTime = timeComponents(solarTime.transit).UTCDate(date.year, date.getMonth(), date.getDate());
+        sunriseTime = timeComponents(solarTime.sunrise).UTCDate(date.year, date.getMonth(), date.getDate());
+        maghribTime = timeComponents(solarTime.sunset).UTCDate(date.year, date.getMonth(), date.getDate());
+
+        asrTime = timeComponents(solarTime.afternoon(calculationParameters.madhab)).UTCDate(date.year, date.getMonth(), date.getDate());
+
+        var tomorrowSunrise = dateByAddingDays(sunriseTime, 1);
+        night = (tomorrowSunrise - maghribTime) / 1000;
+
+        fajrTime = timeComponents(solarTime.hourAngle(-1 * calculationParameters.fajrAngle, false)).UTCDate(date.year, date.getMonth(), date.getDate());
+
+
+
+
+        // var safeFajr = (function(){
+        //     if (calculationParameters.method == "MoonsightingCommittee") {
+        //         return Astronomical.seasonAdjustedMorningTwilight(coordinates.latitude, dayOfYear(date), date.year, sunriseTime);
+        //     } else {
+        //         var portion = calculationParameters.nightPortions().fajr;
+        //         nightFraction = portion * night;
+
+        //         return dateByAddingSeconds(sunriseTime, -nightFraction);
+        //     }
+        // })();
+
+        if (fajrTime == null || isNaN(fajrTime.getTime()) || safeFajr > fajrTime) {
+            fajrTime = safeFajr;
+        }
+
+        if (calculationParameters.ishaInterval > 0) {
+            ishaTime = dateByAddingMinutes(maghribTime, calculationParameters.ishaInterval);
+        } else {
+            ishaTime = timeComponents(solarTime.hourAngle(-1 * calculationParameters.ishaAngle, true)).UTCDate(date.year, date.getMonth(), date.getDate());
+        }
+
+        this.fajr = roundedMinute(dateByAddingMinutes(fajrTime, (calculationParameters.adjustments.fajr || 0) + (calculationParameters.methodAdjustments.fajr || 0)));
+        this.sunrise = roundedMinute(dateByAddingMinutes(sunriseTime, (calculationParameters.adjustments.sunrise || 0) + (calculationParameters.methodAdjustments.sunrise || 0)));
+        this.dhuhr = roundedMinute(dateByAddingMinutes(dhuhrTime, (calculationParameters.adjustments.dhuhr || 0) + (calculationParameters.methodAdjustments.dhuhr || 0)));
+        this.asr = roundedMinute(dateByAddingMinutes(asrTime, (calculationParameters.adjustments.asr || 0) + (calculationParameters.methodAdjustments.asr || 0)));
+        this.maghrib = roundedMinute(dateByAddingMinutes(maghribTime, (calculationParameters.adjustments.maghrib || 0) + (calculationParameters.methodAdjustments.maghrib || 0)));
+        this.isha = roundedMinute(dateByAddingMinutes(ishaTime, (calculationParameters.adjustments.isha || 0) + (calculationParameters.methodAdjustments.isha || 0)));
+
+        // // Return the time for a specific prayer
+        // this.timeForPrayer = function(prayer) {
+        //     if (prayer == Prayer.Fajr) {
+        //         return this.fajr;
+        //     } else if (prayer == Prayer.Sunrise) {
+        //         return this.sunrise;
+        //     } else if (prayer == Prayer.Dhuhr) {
+        //         return this.dhuhr;
+        //     } else if (prayer == Prayer.Asr) {
+        //         return this.asr;
+        //     } else if (prayer == Prayer.Maghrib) {
+        //         return this.maghrib;
+        //     } else if (prayer == Prayer.Isha) {
+        //         return this.isha;
+        //     } else {
+        //         return null;
+        //     }
+        // };
+    }
+
+    // Return the time for a specific prayer
+    function timeForPrayer(prayer) 
+    {
+        if (prayer == Prayer.Fajr) {
+            return this.fajr;
+        } else if (prayer == Prayer.Sunrise) {
+            return this.sunrise;
+        } else if (prayer == Prayer.Dhuhr) {
+            return this.dhuhr;
+        } else if (prayer == Prayer.Asr) {
+            return this.asr;
+        } else if (prayer == Prayer.Maghrib) {
+            return this.maghrib;
+        } else if (prayer == Prayer.Isha) {
+            return this.isha;
+        } else {
+            return null;
+        }
+    }
+}
+
+// Helper functions
+
+function timeComponents(number) {
+    return new TimeComponents(number);
+}
+
+class TimeComponents {
+    function initialize(number) {
+        this.hours = Math.floor(number);
+        this.minutes = Math.floor((number - this.hours) * 60);
+        this.seconds = Math.floor((number - (this.hours + this.minutes/60)) * 60 * 60);
+        return this;
+    }
+
+    function UTCDate(year, month, date) {
+        return new Date(Date.UTC(year, month, date, this.hours, this.minutes, this.seconds));
+    }
+}
+
+// Function to convert degrees to radians
+function degreesToRadians(degrees) {
+    return (degrees * Math.PI) / 180.0;
+}
+
+// Function to convert radians to degrees
+function radiansToDegrees(radians) {
+    return (radians * 180.0) / Math.PI;
+}
+
+// Function to normalize a number to a given scale
+function normalizeToScale(number, max) {
+    return number - (max * Math.floor(number / max));
+}
+
+// Function to unwind an angle to the range [0, 360)
+function unwindAngle(angle) {
+    return normalizeToScale(angle, 360.0);
+}
+
+// Function to shift an angle to the correct quadrant, ensuring it's between -180 and 180
+function quadrantShiftAngle(angle) {
+    if (angle >= -180 && angle <= 180) {
+        return angle;
+    }
+    return angle - (360 * Math.round(angle / 360));
+}
+
+// Function to format time with UTC offset and style
+function formattedTime(date, UTCOffset, style) {
+    var offset = dateByAddingHours(date, UTCOffset);
+    var hours, minutes;
+    if (style == "24h") {
+        hours = offset.getUTCHours().toString();
+        if (hours.length < 2) {
+            hours = '0' + hours;
+        }
+
+        minutes = offset.getUTCMinutes().toString();
+        if (minutes.length < 2) {
+            minutes = '0' + minutes;
+        }
+
+        return hours + ':' + minutes;
+    } else {
+        if(offset.getUTCHours() > 12){
+            hours = (offset.getUTCHours() - 12).toString();
+        } 
+        else{
+            hours = offset.getUTCHours().toString();
+        } 
+        minutes = offset.getUTCMinutes().toString();
+        if (minutes.length < 2) {
+            minutes = '0' + minutes;
+        }
+
+        var ampm;
+        if(offset.getUTCHours() >= 12){
+            ampm = "PM";
+        }
+        else{
+            ampm = "AM";
+        }
+
+        return hours + ':' + minutes + ' ' + ampm;
+    }
+}
+
+// Function to add days to a date
+function dateByAddingDays(date, days) {
+    var year = date.getUTCFullYear();
+    var month = date.getUTCMonth();
+    var day = date.getUTCDate() + days;
+    var hours = date.getUTCHours();
+    var minutes = date.getUTCMinutes();
+    var seconds = date.getUTCSeconds();
+    return new Date(Date.UTC(year, month, day, hours, minutes, seconds));
+}
+
+// Function to add hours to a date
+function dateByAddingHours(date, hours) {
+    return dateByAddingMinutes(date, hours * 60);
+}
+
+// Function to add minutes to a date
+function dateByAddingMinutes(date, minutes) {
+    return dateByAddingSeconds(date, minutes * 60);
+}
+
+// Function to add seconds to a date
+function dateByAddingSeconds(date, seconds) {
+    return new Date(date.getTime() + (seconds * 1000));
+}
+
+
+function roundedMinute(date) {
+    var seconds = date.getUTCSeconds();
+    var offset = seconds >= 30 ? 60 - seconds : -1 * seconds;
+    return dateByAddingSeconds(date, offset);
+}
+
+function dateByAddingSeconds(date, seconds) {
+    return new Date(date.getTime() + (seconds * 1000));
+}
+
+// Helper functions
+
+// Function to round a date to the nearest minute
+function roundedMinute(date) {
+    var seconds = date.getUTCSeconds();
+    var offset = seconds >= 30 ? 60 - seconds : -1 * seconds;
+    return dateByAddingSeconds(date, offset);
+}
+
+// Function to calculate the day of the year
+function dayOfYear(date) {
+    var returnedDayOfYear = 0;
+    var feb = Astronomical.isLeapYear(date.year) ? 29 : 28;
+    var months = [31, feb, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    for (var i = 0; i < date.getMonth(); i++) {
+        returnedDayOfYear += months[i];
+    }
+
+    returnedDayOfYear += date.getDate();
+
+    return returnedDayOfYear;
+}
+
+// Function to calculate the Julian date
+function julianDate(date) {
+    return Astronomical.julianDay(date.year, date.getMonth() + 1, date.getDate(), date.getHours() + (date.getMinutes() / 60));
+}
+
+
+// Polyfill for Math.trunc in Monkey C
+function trunc(x) {
+    return (x < 0) ? Math.ceil(x) : Math.floor(x);
+}
+
+// Adhan context class that groups everything
+class Adhan {
+    function Prayer() {
+        return Prayer;
+    }
+
+    function Madhab() {
+        return Madhab;
+    }
+
+    function HighLatitudeRule() {
+        return HighLatitudeRule;
+    }
+
+    function Coordinates() {
+        return Coordinates;
+    }
+
+    function CalculationParameters() {
+        return CalculationParameters;
+    }
+
+    function CalculationMethod() {
+        return CalculationMethod;
+    }
+
+    function PrayerTimes() {
+        return PrayerTimes;
+    }
+
+    function Qibla() {
+        return Qibla;
+    }
+
+    function SolarTime() {
+        return SolarTime;
+    }
+
+    function SolarCoordinates() {
+        return SolarCoordinates;
+    }
+
+    function Astronomical() {
+        return Astronomical;
+    }
+
+    function Math() {
+        return Math;
+    }
+
+    function Date() {
+        return Date;
+    }
+}
+
+// Math context class
+class Math {
+    function degreesToRadians(degrees);
+    function radiansToDegrees(radians);
+    function normalizeToScale(number, max);
+    function unwindAngle(angle);
+    function quadrantShiftAngle(angle);
+    function timeComponents(number);
+}
+
+// Date context class
+class Date {
+    function formattedTime(date, UTCOffset, style);
+    function dateByAddingDays(date, days);
+    function dateByAddingHours(date, hours);
+    function dateByAddingMinutes(date, minutes);
+    function dateByAddingSeconds(date, seconds);
+    function roundedMinute(date);
+    function dayOfYear(date);
+    function julianDate(date);
+}

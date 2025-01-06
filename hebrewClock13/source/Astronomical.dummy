@@ -1,0 +1,407 @@
+// SolarTime class
+class SolarTime {
+    var date;
+    var observer;
+    var solar;
+    var prevSolar;
+    var nextSolar;
+    var approxTransit;
+    var transit;
+    var sunrise;
+    var sunset;
+
+    // Constructor
+    function initialize(date, coordinates) {
+        // Set calculations to occur at 0h0m UTC
+        date.setHours(0);
+        date.setMinutes(0);
+        this.date = date;
+        this.observer = coordinates;
+        this.solar = new SolarCoordinates(Astronomical.julianDate(date));
+
+        var previous = new DateTime(date.getFullYear(), date.getMonth(), date.getDate() - 1);
+        var next = new DateTime(date.getFullYear(), date.getMonth(), date.getDate() + 1);
+
+        this.prevSolar = new SolarCoordinates(Astronomical.julianDate(previous));
+        this.nextSolar = new SolarCoordinates(Astronomical.julianDate(next));
+
+        var m0 = Astronomical.approximateTransit(coordinates.longitude, this.solar.apparentSiderealTime, this.solar.rightAscension);
+        var solarAltitude = -50.0 / 60.0;
+
+        this.approxTransit = m0;
+
+        this.transit = Astronomical.correctedTransit(m0, coordinates.longitude, this.solar.apparentSiderealTime,
+            this.solar.rightAscension, this.prevSolar.rightAscension, this.nextSolar.rightAscension);
+
+        this.sunrise = Astronomical.correctedHourAngle(m0, solarAltitude, coordinates, false, this.solar.apparentSiderealTime,
+            this.solar.rightAscension, this.prevSolar.rightAscension, this.nextSolar.rightAscension,
+            this.solar.declination, this.prevSolar.declination, this.nextSolar.declination);
+
+        this.sunset = Astronomical.correctedHourAngle(m0, solarAltitude, coordinates, true, this.solar.apparentSiderealTime,
+            this.solar.rightAscension, this.prevSolar.rightAscension, this.nextSolar.rightAscension,
+            this.solar.declination, this.prevSolar.declination, this.nextSolar.declination);
+    }
+
+    // Method for hour angle
+    function hourAngle(angle, afterTransit) {
+        return Astronomical.correctedHourAngle(this.approxTransit, angle, this.observer, afterTransit, this.solar.apparentSiderealTime,
+            this.solar.rightAscension, this.prevSolar.rightAscension, this.nextSolar.rightAscension,
+            this.solar.declination, this.prevSolar.declination, this.nextSolar.declination);
+    }
+
+    // Method for afternoon shadow calculation
+    function afternoon(shadowLength) {
+        var tangent = Math.abs(this.observer.latitude - this.solar.declination);
+        var inverse = shadowLength + Math.tan(degreesToRadians(tangent));
+        var angle = radiansToDegrees(Math.atan(1.0 / inverse));
+
+        return this.hourAngle(angle, true);
+    }
+}
+
+// SolarCoordinates class
+class SolarCoordinates {
+    var declination;
+    var rightAscension;
+    var apparentSiderealTime;
+
+    // Constructor
+    function initialize(julianDay) {
+        var T = Astronomical.julianCentury(julianDay);
+        var L0 = Astronomical.meanSolarLongitude(T);
+        var Lp = Astronomical.meanLunarLongitude(T);
+        var Omega = Astronomical.ascendingLunarNodeLongitude(T);
+        var Lambda = degreesToRadians(Astronomical.apparentSolarLongitude(T, L0));
+
+        var Theta0 = Astronomical.meanSiderealTime(T);
+        var dPsi = Astronomical.nutationInLongitude(T, L0, Lp, Omega);
+        var dEpsilon = Astronomical.nutationInObliquity(T, L0, Lp, Omega);
+
+        var Epsilon0 = Astronomical.meanObliquityOfTheEcliptic(T);
+        var EpsilonApparent = degreesToRadians(Astronomical.apparentObliquityOfTheEcliptic(T, Epsilon0));
+
+        // Declination
+        this.declination = radiansToDegrees(Math.asin(Math.sin(EpsilonApparent) * Math.sin(Lambda)));
+
+        // Right Ascension
+        this.rightAscension = unwindAngle(radiansToDegrees(Math.atan2(Math.cos(EpsilonApparent) * Math.sin(Lambda), Math.cos(Lambda))));
+
+        // Apparent Sidereal Time
+        this.apparentSiderealTime = Theta0 + (((dPsi * 3600) * Math.cos(degreesToRadians(Epsilon0 + dEpsilon))) / 3600);
+    }
+}
+
+
+class Astronomical {
+    
+    // The geometric mean longitude of the sun in degrees
+    function meanSolarLongitude(julianCentury) {
+        var T = julianCentury;
+        var term1 = 280.4664567;
+        var term2 = 36000.76983 * T;
+        var term3 = 0.0003032 * Math.pow(T, 2);
+        var L0 = term1 + term2 + term3;
+        return unwindAngle(L0);
+    }
+
+    // The geometric mean longitude of the moon in degrees
+    function meanLunarLongitude(julianCentury) {
+        var T = julianCentury;
+        var term1 = 218.3165;
+        var term2 = 481267.8813 * T;
+        var Lp = term1 + term2;
+        return unwindAngle(Lp);
+    }
+
+    // Ascending lunar node longitude
+    function ascendingLunarNodeLongitude(julianCentury) {
+        var T = julianCentury;
+        var term1 = 125.04452;
+        var term2 = 1934.136261 * T;
+        var term3 = 0.0020708 * Math.pow(T, 2);
+        var term4 = Math.pow(T, 3) / 450000;
+        var Omega = term1 - term2 + term3 + term4;
+        return unwindAngle(Omega);
+    }
+
+    // The mean anomaly of the sun
+    function meanSolarAnomaly(julianCentury) {
+        var T = julianCentury;
+        var term1 = 357.52911;
+        var term2 = 35999.05029 * T;
+        var term3 = 0.0001537 * Math.pow(T, 2);
+        var M = term1 + term2 - term3;
+        return unwindAngle(M);
+    }
+
+    // The Sun's equation of the center in degrees
+    function solarEquationOfTheCenter(julianCentury, meanAnomaly) {
+        var T = julianCentury;
+        var Mrad = degreesToRadians(meanAnomaly);
+        var term1 = (1.914602 - (0.004817 * T) - (0.000014 * Math.pow(T, 2))) * Math.sin(Mrad);
+        var term2 = (0.019993 - (0.000101 * T)) * Math.sin(2 * Mrad);
+        var term3 = 0.000289 * Math.sin(3 * Mrad);
+        return term1 + term2 + term3;
+    }
+
+    // The apparent longitude of the Sun, referred to the true equinox of the date
+    function apparentSolarLongitude(julianCentury, meanLongitude) {
+        var T = julianCentury;
+        var L0 = meanLongitude;
+        var longitude = L0 + Astronomical.solarEquationOfTheCenter(T, Astronomical.meanSolarAnomaly(T));
+        var Omega = 125.04 - (1934.136 * T);
+        var Lambda = longitude - 0.00569 - (0.00478 * Math.sin(degreesToRadians(Omega)));
+        return unwindAngle(Lambda);
+    }
+
+    // The mean obliquity of the ecliptic, formula adopted by the International Astronomical Union
+    function meanObliquityOfTheEcliptic(julianCentury) {
+        var T = julianCentury;
+        var term1 = 23.439291;
+        var term2 = 0.013004167 * T;
+        var term3 = 0.0000001639 * Math.pow(T, 2);
+        var term4 = 0.0000005036 * Math.pow(T, 3);
+        return term1 - term2 - term3 + term4;
+    }
+
+    // The mean obliquity of the ecliptic, corrected for calculating the apparent position of the sun
+    function apparentObliquityOfTheEcliptic(julianCentury, meanObliquityOfTheEcliptic) {
+        var T = julianCentury;
+        var Epsilon0 = meanObliquityOfTheEcliptic;
+        var O = 125.04 - (1934.136 * T);
+        return Epsilon0 + (0.00256 * Math.cos(degreesToRadians(O)));
+    }
+
+    // Mean sidereal time, the hour angle of the vernal equinox, in degrees
+    function meanSiderealTime(julianCentury) {
+        var T = julianCentury;
+        var JD = (T * 36525) + 2451545.0;
+        var term1 = 280.46061837;
+        var term2 = 360.98564736629 * (JD - 2451545);
+        var term3 = 0.000387933 * Math.pow(T, 2);
+        var term4 = Math.pow(T, 3) / 38710000;
+        var Theta = term1 + term2 + term3 - term4;
+        return unwindAngle(Theta);
+    }
+
+    // Nutation in longitude
+    function nutationInLongitude(julianCentury, solarLongitude, lunarLongitude, ascendingNode) {
+        var L0 = solarLongitude;
+        var Lp = lunarLongitude;
+        var Omega = ascendingNode;
+        var term1 = (-17.2 / 3600) * Math.sin(degreesToRadians(Omega));
+        var term2 = (1.32 / 3600) * Math.sin(2 * degreesToRadians(L0));
+        var term3 = (0.23 / 3600) * Math.sin(2 * degreesToRadians(Lp));
+        var term4 = (0.21 / 3600) * Math.sin(2 * degreesToRadians(Omega));
+        return term1 - term2 - term3 + term4;
+    }
+
+    // Nutation in obliquity
+    function nutationInObliquity(julianCentury, solarLongitude, lunarLongitude, ascendingNode) {
+        var L0 = solarLongitude;
+        var Lp = lunarLongitude;
+        var Omega = ascendingNode;
+        var term1 = (9.2 / 3600) * Math.cos(degreesToRadians(Omega));
+        var term2 = (0.57 / 3600) * Math.cos(2 * degreesToRadians(L0));
+        var term3 = (0.10 / 3600) * Math.cos(2 * degreesToRadians(Lp));
+        var term4 = (0.09 / 3600) * Math.cos(2 * degreesToRadians(Omega));
+        return term1 + term2 + term3 - term4;
+    }
+
+    // Altitude of a celestial body
+    function altitudeOfCelestialBody(observerLatitude, declination, localHourAngle) {
+        var Phi = observerLatitude;
+        var delta = declination;
+        var H = localHourAngle;
+        var term1 = Math.sin(degreesToRadians(Phi)) * Math.sin(degreesToRadians(delta));
+        var term2 = Math.cos(degreesToRadians(Phi)) * Math.cos(degreesToRadians(delta)) * Math.cos(degreesToRadians(H));
+        return radiansToDegrees(Math.asin(term1 + term2));
+    }
+
+    // Approximate transit
+    function approximateTransit(longitude, siderealTime, rightAscension) {
+        var L = longitude;
+        var Theta0 = siderealTime;
+        var a2 = rightAscension;
+        var Lw = L * -1;
+        return normalizeToScale((a2 + Lw - Theta0) / 360, 1);
+    }
+
+    // Corrected transit
+    function correctedTransit(approximateTransit, longitude, siderealTime, rightAscension, previousRightAscension, nextRightAscension) {
+        var m0 = approximateTransit;
+        var L = longitude;
+        var Theta0 = siderealTime;
+        var a2 = rightAscension;
+        var a1 = previousRightAscension;
+        var a3 = nextRightAscension;
+        var Lw = L * -1;
+        var Theta = unwindAngle((Theta0 + (360.985647 * m0)));
+        var a = unwindAngle(Astronomical.interpolateAngles(a2, a1, a3, m0));
+        var H = quadrantShiftAngle(Theta - Lw - a);
+        var dm = H / -360;
+        return (m0 + dm) * 24;
+    }
+
+    // Corrected hour angle
+    function correctedHourAngle(approximateTransit, angle, coordinates, afterTransit, siderealTime, rightAscension, previousRightAscension, nextRightAscension, declination, previousDeclination, nextDeclination) {
+        var m0 = approximateTransit;
+        var h0 = angle;
+        var Theta0 = siderealTime;
+        var a2 = rightAscension;
+        var a1 = previousRightAscension;
+        var a3 = nextRightAscension;
+        var d2 = declination;
+        var d1 = previousDeclination;
+        var d3 = nextDeclination;
+
+        var Lw = coordinates.longitude * -1;
+        var term1 = Math.sin(degreesToRadians(h0)) - (Math.sin(degreesToRadians(coordinates.latitude)) * Math.sin(degreesToRadians(d2)));
+        var term2 = Math.cos(degreesToRadians(coordinates.latitude)) * Math.cos(degreesToRadians(d2));
+        var H0 = radiansToDegrees(Math.acos(term1 / term2));
+        var m = afterTransit ? m0 + (H0 / 360) : m0 - (H0 / 360);
+        var Theta = unwindAngle((Theta0 + (360.985647 * m)));
+        var a = unwindAngle(Astronomical.interpolateAngles(a2, a1, a3, m));
+        var delta = Astronomical.interpolate(d2, d1, d3, m);
+        var H = (Theta - Lw - a);
+        var h = Astronomical.altitudeOfCelestialBody(coordinates.latitude, delta, H);
+        var term3 = h - h0;
+        var term4 = 360 * Math.cos(degreesToRadians(delta)) * Math.cos(degreesToRadians(coordinates.latitude)) * Math.sin(degreesToRadians(H));
+        var dm = term3 / term4;
+        return (m + dm) * 24;
+    }
+
+    // Interpolation of a value
+    function interpolate(y2, y1, y3, n) {
+        var a = y2 - y1;
+        var b = y3 - y2;
+        var c = b - a;
+        return y2 + ((n / 2) * (a + b + (n * c)));
+    }
+
+    // Interpolation of three angles, accounting for angle unwinding
+    function interpolateAngles(y2, y1, y3, n) {
+        var a = unwindAngle(y2 - y1);
+        var b = unwindAngle(y3 - y2);
+        var c = b - a;
+        return y2 + ((n / 2) * (a + b + (n * c)));
+    }
+
+    // Julian Day for a given Gregorian date
+    function julianDay(year, month, day, hours) {
+        if (hours == null) {  // Check if hours is undefined or null
+            hours = 0;
+        }
+
+        var Y = trunc(month > 2 ? year : year - 1);
+        var M = trunc(month > 2 ? month : month + 12);
+        var D = day + (hours / 24);
+
+        var A = trunc(Y / 100);
+        var B = trunc(2 - A + trunc(A / 4));
+
+        var i0 = trunc(365.25 * (Y + 4716));
+        var i1 = trunc(30.6001 * (M + 1));
+
+        return i0 + i1 + D + B - 1524.5;
+    }
+
+    // Julian century from the epoch
+    function julianCentury(julianDay) {
+        return (julianDay - 2451545.0) / 36525;
+    }
+
+    // Whether or not a year is a leap year (has 366 days)
+    function isLeapYear(year) {
+        if (year % 4 != 0) {
+            return false;
+        }
+
+        if (year % 100 == 0 && year % 400 != 0) {
+            return false;
+        }
+
+        return true;
+    }
+
+    // Season adjusted morning twilight
+    function seasonAdjustedMorningTwilight(latitude, dayOfYear, year, sunrise) {
+        var a = 75 + ((28.65 / 55.0) * Math.abs(latitude));
+        var b = 75 + ((19.44 / 55.0) * Math.abs(latitude));
+        var c = 75 + ((32.74 / 55.0) * Math.abs(latitude));
+        var d = 75 + ((48.10 / 55.0) * Math.abs(latitude));
+
+        // Calculate the day of the year since the solstice
+        var dyy = Astronomical.daysSinceSolstice(dayOfYear, year, latitude);
+
+        // Calculate the adjustment based on the day of the year
+        var adjustment;
+        if (dyy < 91) {
+            adjustment = a + (b - a) / 91.0 * dyy;
+        } else if (dyy < 137) {
+            adjustment = b + (c - b) / 46.0 * (dyy - 91);
+        } else if (dyy < 183) {
+            adjustment = c + (d - c) / 46.0 * (dyy - 137);
+        } else if (dyy < 229) {
+            adjustment = d + (c - d) / 46.0 * (dyy - 183);
+        } else if (dyy < 275) {
+            adjustment = c + (b - c) / 46.0 * (dyy - 229);
+        } else {
+            adjustment = b + (a - b) / 91.0 * (dyy - 275);
+        }
+        
+        return dateByAddingSeconds(sunrise, Math.round(adjustment * -60.0));
+    }
+
+    // Season adjusted evening twilight
+    function seasonAdjustedEveningTwilight(latitude, dayOfYear, year, sunset) {
+        var a = 75 + ((25.60 / 55.0) * Math.abs(latitude));
+        var b = 75 + ((2.050 / 55.0) * Math.abs(latitude));
+        var c = 75 - ((9.210 / 55.0) * Math.abs(latitude));
+        var d = 75 + ((6.140 / 55.0) * Math.abs(latitude));
+
+        // Calculate the day of the year since the solstice
+        var dyy = Astronomical.daysSinceSolstice(dayOfYear, year, latitude);
+
+        // Calculate the adjustment directly based on the day of the year
+        var adjustment;
+        if (dyy < 91) {
+            adjustment = a + (b - a) / 91.0 * dyy;
+        } else if (dyy < 137) {
+            adjustment = b + (c - b) / 46.0 * (dyy - 91);
+        } else if (dyy < 183) {
+            adjustment = c + (d - c) / 46.0 * (dyy - 137);
+        } else if (dyy < 229) {
+            adjustment = d + (c - d) / 46.0 * (dyy - 183);
+        } else if (dyy < 275) {
+            adjustment = c + (b - c) / 46.0 * (dyy - 229);
+        } else {
+            adjustment = b + (a - b) / 91.0 * (dyy - 275);
+        }
+
+        // Return the date with the adjustment applied
+        return dateByAddingSeconds(sunrise, Math.round(adjustment * -60.0));
+    }
+
+    // Days since the solstice
+    function daysSinceSolstice(dayOfYear, year, latitude) {
+        var daysSinceSolstice = 0;
+        var northernOffset = 10;
+        var southernOffset = Astronomical.isLeapYear(year) ? 173 : 172;
+        var daysInYear = Astronomical.isLeapYear(year) ? 366 : 365;
+
+        if (latitude >= 0) {
+            daysSinceSolstice = dayOfYear + northernOffset;
+            if (daysSinceSolstice >= daysInYear) {
+                daysSinceSolstice = daysSinceSolstice - daysInYear;
+            }
+        } else {
+            daysSinceSolstice = dayOfYear - southernOffset;
+            if (daysSinceSolstice < 0) {
+                daysSinceSolstice = daysSinceSolstice + daysInYear;
+            }
+        }
+
+        return daysSinceSolstice;
+    }
+}

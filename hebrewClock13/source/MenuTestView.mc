@@ -197,6 +197,7 @@ class MenuTestView extends WatchUi.View
 
 		if(Storage.getValue("deathHebrewDate") != null && Storage.getValue("showDeath") == true)
 		{
+			isDeath = true; 
 			var deathHebrewDate_val = Storage.getValue("deathHebrewDate");
 			var deathHebrewHour_val = Storage.getValue("deathHebrewHour");
 			var deathHebrewMazal_val = Storage.getValue("deathHebrewMazal");
@@ -243,6 +244,10 @@ class MenuTestView extends WatchUi.View
 						break;
 				}
 			}
+		}
+		else
+		{
+			isDeath = false;
 		}
 
     	if(Storage.getValue("isMoonClock") != null)
@@ -1413,11 +1418,16 @@ class MenuTestView extends WatchUi.View
 	    //if(lbMinute == 0 || lbMinute == 360 || lbMinute == 720)
 	    //    tick_sound();
 
-		if(lbMinute == 360 || lbMinute == 720 || lbMinute == 0)
+		if(lbMinute == 0 || lbMinute == 270 || lbMinute == 540 || lbMinute == 810)
 		{
+			// Enable the heart rate sensor
 			Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE] as Array<SensorType>);
-			Sensor.enableSensorEvents(method(:onSnsr));
+			
+			// Enable sensor events for one-time check
+			Sensor.enableSensorEvents(method(:onSnsr));			
 		}
+
+
 	}
 
 	//! Handle sensor updates
@@ -1448,6 +1458,9 @@ class MenuTestView extends WatchUi.View
 			Storage.setValue("deathHebrewHour", display_time());
 			Storage.setValue("deathHebrewMazal", setmazal());
 		}	
+
+		// Disable the sensor by clearing the enabled sensors list
+		Sensor.setEnabledSensors([]);  // Disable all sensors
     }
 
 	public function MarkTime()
