@@ -53,13 +53,13 @@ class MenuTestMenuDelegate extends WatchUi.MenuInputDelegate {
             //var view = new WatchUi.ProgressBar("Waiting for GPS", null);
             //var delegate = new MyAcquirePositionDelegate(view, self.method(:onPosition));
             //WatchUi.pushView(view, delegate, WatchUi.SLIDE_IMMEDIATE);    
-            if(Storage.getValue("showDeath") == false)
+            if(Storage.getValue("showBirth") == false)
             {
-                Storage.setValue("showDeath",true);
+                Storage.setValue("showBirth",true);
             }
             else
             {
-                Storage.setValue("showDeath",false);
+                Storage.setValue("showBirth",false);
             }
         }
          else if (item == :item_2) {

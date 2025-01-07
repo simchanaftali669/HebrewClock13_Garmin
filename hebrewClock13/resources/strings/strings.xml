@@ -13,14 +13,14 @@
 
     <string id="prompt">Click the menu button</string>
 
-    <string id="menuHeb_label_1">שעת מוות</string>
+    <string id="menuHeb_label_1">שעת המולד</string>
     <string id="menuHeb_label_0">גירסא 6.6.9</string>
     <string id="menuHeb_label_3">שעון חמה</string>
     <string id="menuHeb_label_4">שעון לבנה</string>
 
 
 
-    <string id="menuEng_label_1">Death Hour</string>
+    <string id="menuEng_label_1">Birth Hour</string>
     <string id="menuEng_label_0">Version 6.6.9</string>
     <string id="menuEng_label_3">SunClock</string>
     <string id="menuEng_label_4">MoonClock</string>

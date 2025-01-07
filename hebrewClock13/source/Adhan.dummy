@@ -219,16 +219,16 @@ class PrayerTimes {
 
         var nightFraction;
 
-        dhuhrTime = timeComponents(solarTime.transit).UTCDate(date.year, date.getMonth(), date.getDate());
-        sunriseTime = timeComponents(solarTime.sunrise).UTCDate(date.year, date.getMonth(), date.getDate());
-        maghribTime = timeComponents(solarTime.sunset).UTCDate(date.year, date.getMonth(), date.getDate());
+        dhuhrTime = timeComponents(solarTime.transit).UTCDate(date.year, date.month, date.date);
+        sunriseTime = timeComponents(solarTime.sunrise).UTCDate(date.year, date.month, date.date);
+        maghribTime = timeComponents(solarTime.sunset).UTCDate(date.year, date.month, date.date);
 
-        asrTime = timeComponents(solarTime.afternoon(calculationParameters.madhab)).UTCDate(date.year, date.getMonth(), date.getDate());
+        asrTime = timeComponents(solarTime.afternoon(calculationParameters.madhab)).UTCDate(date.year, date.month, date.date);
 
         var tomorrowSunrise = dateByAddingDays(sunriseTime, 1);
         night = (tomorrowSunrise - maghribTime) / 1000;
 
-        fajrTime = timeComponents(solarTime.hourAngle(-1 * calculationParameters.fajrAngle, false)).UTCDate(date.year, date.getMonth(), date.getDate());
+        fajrTime = timeComponents(solarTime.hourAngle(-1 * calculationParameters.fajrAngle, false)).UTCDate(date.year, date.month, date.date);
 
 
 
@@ -251,7 +251,7 @@ class PrayerTimes {
         if (calculationParameters.ishaInterval > 0) {
             ishaTime = dateByAddingMinutes(maghribTime, calculationParameters.ishaInterval);
         } else {
-            ishaTime = timeComponents(solarTime.hourAngle(-1 * calculationParameters.ishaAngle, true)).UTCDate(date.year, date.getMonth(), date.getDate());
+            ishaTime = timeComponents(solarTime.hourAngle(-1 * calculationParameters.ishaAngle, true)).UTCDate(date.year, date.month, date.date);
         }
 
         this.fajr = roundedMinute(dateByAddingMinutes(fajrTime, (calculationParameters.adjustments.fajr || 0) + (calculationParameters.methodAdjustments.fajr || 0)));
@@ -440,18 +440,18 @@ function dayOfYear(date) {
     var returnedDayOfYear = 0;
     var feb = Astronomical.isLeapYear(date.year) ? 29 : 28;
     var months = [31, feb, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-    for (var i = 0; i < date.getMonth(); i++) {
+    for (var i = 0; i < date.month; i++) {
         returnedDayOfYear += months[i];
     }
 
-    returnedDayOfYear += date.getDate();
+    returnedDayOfYear += date.date;
 
     return returnedDayOfYear;
 }
 
 // Function to calculate the Julian date
 function julianDate(date) {
-    return Astronomical.julianDay(date.year, date.getMonth() + 1, date.getDate(), date.getHours() + (date.getMinutes() / 60));
+    return Astronomical.julianDay(date.year, date.month + 1, date.date, date.getHours() + (date.getMinutes() / 60));
 }
 
 
