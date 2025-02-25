@@ -1561,11 +1561,9 @@ class MenuTestView extends WatchUi.View
 
 	public function MarkTime()
 	{
-		//return;
 		var viewHour = View.findDrawableById("HebrewClockHour") as Text;
 		var viewMin = View.findDrawableById("HebrewClockMin") as Text;
 		var viewSec = View.findDrawableById("HebrewClockSec") as Text;
-
 
 		if(isMoonClock)
 		{
@@ -1579,35 +1577,49 @@ class MenuTestView extends WatchUi.View
 				var view1 = View.findDrawableById("MazalLabel") as Text;
 				view1.setColor(Graphics.COLOR_WHITE);
 			}
-			return;
+			//return;
 		}
 
- 		//System.println("curr_hour: " + curr_hour.toDouble()/(1000 * 3600));
- 		//System.println("tzeit: " + tzeit);
- 		//System.println("alot: " + alot);
 
+		//JEWISH CLOCK
 		if(curr_hour.toDouble()/(1000 * 3600) > tzeit  || 
 		   curr_hour.toDouble()/(1000 * 3600) < misheyakir)
 		{
 			viewHour.setColor(Graphics.COLOR_LT_GRAY);
-			//viewMazal.setText("Marriv");
-			//viewMazal.setText("ערבית - " + text);
 		}
-		else if(curr_hour.toDouble() < sunset_hour.toDouble() && 
-		        curr_hour.toDouble()/(1000 * 3600) > misheyakir/*curr_hour.toDouble() > sunrise_hour.toDouble()*/ )
+		else if(curr_hour.toDouble()/(1000 * 3600) < sunset_hour && 
+		        curr_hour.toDouble()/(1000 * 3600) > misheyakir )
 		{
 			viewHour.setColor(Graphics.COLOR_BLUE);
+		}
 
-			// if(curr_hour.toDouble() < sunrise_hour.toDouble() || lbHour.toNumber() < 6)
-			// { 
-			// 	//viewMazal.setText("Shacharit");			
-			// 	//viewMazal.setText("שחרית - " + text);
-			// }
-			// else if(lbHour.toNumber() > 6 || (lbHour.toNumber() == 6 && lbMinute.toNumber() >= 540)) 
-			// {
-			// 	//viewMazal.setText("Mincha");
-			// 	//viewMazal.setText("מנחה - " + text);
-			// }			
+		//CHRISTIAN CLOCK
+		if(curr_hour.toDouble()/(1000 * 3600) > sunset.toDouble() ||
+		   curr_hour.toDouble()/(1000 * 3600) < sunrise.toDouble())
+		{
+			viewMin.setColor(Graphics.COLOR_LT_GRAY);
+		}
+		else
+		{
+			viewMin.setColor(Graphics.COLOR_RED);
+		}
+
+		//MUSLIM CLOCK
+		if(curr_hour.toDouble()/(1000 * 3600) > isha.toDouble()  || 
+		   curr_hour.toDouble()/(1000 * 3600) < fajar.toDouble())
+		{
+			viewSec.setColor(Graphics.COLOR_LT_GRAY);
+		}
+		
+		if(curr_hour.toDouble()/(1000 * 3600) > fajar.toDouble() &&
+		   curr_hour.toDouble()/(1000 * 3600) < atzer.toDouble())
+		{
+			viewSec.setColor(Graphics.COLOR_GREEN);
+		}
+		if( curr_hour.toDouble()/(1000 * 3600) > atzer.toDouble() &&
+			curr_hour.toDouble()/(1000 * 3600) < isha.toDouble())
+		{
+			viewSec.setColor(0xFFFF00);//Graphics.COLOR_YELLOW);
 		}
 	}	
 	
