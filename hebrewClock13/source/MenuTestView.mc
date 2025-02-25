@@ -1625,6 +1625,7 @@ class MenuTestView extends WatchUi.View
 	{
 		var displayMinute = 0;
 		var displaySecond = 0;
+		    
 		//displayHour = 0;
 		//setmazal();
 		//---displaying the clock---

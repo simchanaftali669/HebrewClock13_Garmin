@@ -65,7 +65,7 @@ class SunCalc
         
         t = t.add(tz_sec);
 
-        //System.println(t.value());
+        System.println("tz: " + tz);
         //console.log(t); --> check here the bug...
 //        if (inUTC) t.setUTCHours(0, 0, 0, 0);
         //else 
