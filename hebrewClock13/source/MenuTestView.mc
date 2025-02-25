@@ -72,7 +72,7 @@ class MenuTestView extends WatchUi.View
 		var viewHebrewDate = View.findDrawableById("ChristianClock") as Text;		
 		viewHebrewDate.setText(hebrew_month_name[2] + hebrew_month_name[3]);	
 
-		var birthHebrewHour = View.findDrawableById("HebrewClock") as Text;
+		//var birthHebrewHour = View.findDrawableById("HebrewClock") as Text;
 		var birthHebrewMazal = View.findDrawableById("MazalLabel") as Text;
 		
 		System.println("birth measure: " + hebrew_month_name[2] + hebrew_month_name[3]);
@@ -224,8 +224,10 @@ class MenuTestView extends WatchUi.View
 			var birthHebrewHour_val = Storage.getValue("birthHebrewHour");
 			var birthHebrewMazal_val = Storage.getValue("birthHebrewMazal");
             
+
 			var viewHebrewDate = View.findDrawableById("ChristianClock") as Text;		
-			var birthHebrewHour = View.findDrawableById("HebrewClock") as Text;
+			var birthHebrewHour = View.findDrawableById("HebrewClockHour") as Text;
+
 			var birthHebrewMazal = View.findDrawableById("MazalLabel") as Text;
 
             viewHebrewDate.setText(birthHebrewDate_val);
@@ -746,14 +748,6 @@ class MenuTestView extends WatchUi.View
 	        Q = Q / Math.sqrt(-Q * Q + 1);     // This is how the original author wrote it!
 	        Q = Math.atan2(Q, 1);
 
-<<<<<<< HEAD
-			var DECLINATION = Q;
-			System.println("Declination" + DECLINATION);
-
-=======
-			SOLAR_DECLINATION = Q; 
->>>>>>> da49f528b5ba37bece24717a8c1ec96e160c7dcc
-
 	        var S = R - (Math.sin(Q) * Math.sin(E));
 	        S = S / (Math.cos(Q) * Math.cos(E));
 	
@@ -1157,7 +1151,7 @@ class MenuTestView extends WatchUi.View
 			var atzerAngle = 90 - calculateAsrAngle(latitude,longitude,yday);
 
 			var time_atzer = [0, 0, 0, 0];
-=			time_atzer= suntime(today.day, today.month, today.year, atzerAngle, 0,latitude,longitude);
+			time_atzer= suntime(today.day, today.month, today.year, atzerAngle, 0,latitude,longitude);
 			atzer = time_atzer[3];
 
 			var time_isha = [0, 0, 0, 0];
@@ -1567,7 +1561,11 @@ class MenuTestView extends WatchUi.View
 
 	public function MarkTime()
 	{
-		var view = View.findDrawableById("HebrewClock") as Text;
+		//return;
+		var viewHour = View.findDrawableById("HebrewClockHour") as Text;
+		var viewMin = View.findDrawableById("HebrewClockMin") as Text;
+		var viewSec = View.findDrawableById("HebrewClockSec") as Text;
+
 
 		if(isMoonClock)
 		{
@@ -1591,14 +1589,14 @@ class MenuTestView extends WatchUi.View
 		if(curr_hour.toDouble()/(1000 * 3600) > tzeit  || 
 		   curr_hour.toDouble()/(1000 * 3600) < misheyakir)
 		{
-			view.setColor(Graphics.COLOR_LT_GRAY);
+			viewHour.setColor(Graphics.COLOR_LT_GRAY);
 			//viewMazal.setText("Marriv");
 			//viewMazal.setText("ערבית - " + text);
 		}
 		else if(curr_hour.toDouble() < sunset_hour.toDouble() && 
 		        curr_hour.toDouble()/(1000 * 3600) > misheyakir/*curr_hour.toDouble() > sunrise_hour.toDouble()*/ )
 		{
-			view.setColor(Graphics.COLOR_BLUE);
+			viewHour.setColor(Graphics.COLOR_BLUE);
 
 			// if(curr_hour.toDouble() < sunrise_hour.toDouble() || lbHour.toNumber() < 6)
 			// { 
@@ -1625,7 +1623,9 @@ class MenuTestView extends WatchUi.View
 	
 	public function display_time()
 	{
-	
+		var displayMinute = 0;
+		var displaySecond = 0;
+		//displayHour = 0;
 		//setmazal();
 		//---displaying the clock---
 		//second
@@ -1669,9 +1669,15 @@ class MenuTestView extends WatchUi.View
 		}
 	
 		lbHour = templbHour;
-			
-		var view = View.findDrawableById("HebrewClock") as Text;
-		view.setText(displayHour + ":" + displayMinute +  ":" + displaySecond);
+
+		var viewHour = View.findDrawableById("HebrewClockHour") as Text;
+		var viewMin = View.findDrawableById("HebrewClockMin") as Text;
+		var viewSec = View.findDrawableById("HebrewClockSec") as Text;
+
+		viewHour.setText(displayHour);
+		viewMin.setText(displayMinute);
+		viewSec.setText(displaySecond);
+		//view.setText(displayHour + ":" + displayMinute +  ":" + displaySecond);
 		return displayHour + ":" + displayMinute +  ":" + displaySecond;
 	}
  
@@ -1829,7 +1835,7 @@ class MenuTestView extends WatchUi.View
 	    {
 	        x = (3 + clockHour.toNumber()) % 7;
         }	
-		var view = View.findDrawableById("HebrewClock") as Text;
+		//var view = View.findDrawableById("HebrewClock") as Text;
 		var viewMazal = View.findDrawableById("MazalLabel") as Text;
 		
 		//System.println("hebrewday: " + hebrewday);
@@ -1932,9 +1938,13 @@ class MenuTestView extends WatchUi.View
 							0xFFFF00,//Graphics.COLOR_YELLOW,
 							Graphics.COLOR_ORANGE];//Graphics.COLOR_ORANGE];
 			
-			view = View.findDrawableById("HebrewClock") as Text;
-			view.setColor(colors[x]);
-
+			var viewHour = View.findDrawableById("HebrewClockHour") as Text;
+			viewHour.setColor(colors[x]);
+			var viewMin = View.findDrawableById("HebrewClockMin") as Text;
+			viewMin.setColor(colors[x]);
+			var viewSec = View.findDrawableById("HebrewClockSec") as Text;
+			viewSec.setColor(colors[x]);
+			
 			var viewHebrewDate = View.findDrawableById("MazalLabel") as Text;
 			var viewChristianClock = View.findDrawableById("ChristianClock") as Text;
 			if(isNight)
@@ -2965,7 +2975,10 @@ const gWeekday = ["Sun", "Mon", "Tues", "Wednes", "Thurs", "Fri", "Satur"]
 	{
 		var counterDawn =  splitStr(timeadj1(nextAction_hour-curr_hour),":");
 
-		var viewTimer = View.findDrawableById("HebrewClock") as Text;
+		var viewTimerHour = View.findDrawableById("HebrewClockHour") as Text;
+		var viewTimerMin = View.findDrawableById("HebrewClockMin") as Text;
+		var viewTimerSec = View.findDrawableById("HebrewClockSec") as Text;
+
 		var minute = counterDawn[1].toNumber();
 		if(minute < 10)
 		{
@@ -2977,7 +2990,11 @@ const gWeekday = ["Sun", "Mon", "Tues", "Wednes", "Thurs", "Fri", "Satur"]
 			second = "0" + second;
 		}
 
-		viewTimer.setText("00:" + minute + ":" + second);
+		viewTimerHour.setText("00");
+		viewTimerMin.setText(minute);
+		viewTimerSec.setText(second);
+
+		//viewTimer.setText("00:" + minute + ":" + second);
 	}
 
 // public function BirkutHashahar(secLeft)
