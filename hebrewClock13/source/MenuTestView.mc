@@ -1676,8 +1676,8 @@ class MenuTestView extends WatchUi.View
 		var viewSec = View.findDrawableById("HebrewClockSec") as Text;
 
 		viewHour.setText(displayHour);
-		viewMin.setText(displayMinute);
-		viewSec.setText(displaySecond);
+		viewMin.setText(displayMinute.toString());
+		viewSec.setText(displaySecond.toString());
 		//view.setText(displayHour + ":" + displayMinute +  ":" + displaySecond);
 		return displayHour + ":" + displayMinute +  ":" + displaySecond;
 	}
