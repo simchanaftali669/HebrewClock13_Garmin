@@ -1565,6 +1565,10 @@ class MenuTestView extends WatchUi.View
 		var viewMin = View.findDrawableById("HebrewClockMin") as Text;
 		var viewSec = View.findDrawableById("HebrewClockSec") as Text;
 
+		//var viewSeparation01 = View.findDrawableById("Separation01") as Text;
+		//var viewSeparation02 = View.findDrawableById("Separation02") as Text;
+
+
 		if(isMoonClock)
 		{
 			if(isNight)
@@ -1577,7 +1581,7 @@ class MenuTestView extends WatchUi.View
 				var view1 = View.findDrawableById("MazalLabel") as Text;
 				view1.setColor(Graphics.COLOR_WHITE);
 			}
-			//return;
+			return;
 		}
 
 
@@ -1953,8 +1957,12 @@ class MenuTestView extends WatchUi.View
 			
 			var viewHour = View.findDrawableById("HebrewClockHour") as Text;
 			viewHour.setColor(colors[x]);
+			var viewSeparation01 = View.findDrawableById("Separation01") as Text;
+			viewSeparation01.setColor(colors[x]);
 			var viewMin = View.findDrawableById("HebrewClockMin") as Text;
 			viewMin.setColor(colors[x]);
+			var viewSeparation02 = View.findDrawableById("Separation02") as Text;
+			viewSeparation02.setColor(colors[x]);
 			var viewSec = View.findDrawableById("HebrewClockSec") as Text;
 			viewSec.setColor(colors[x]);
 			
