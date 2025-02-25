@@ -24,8 +24,8 @@ public var count2 = 0;
 public var count3 = 0;
 
 //Jerusalem
-public var latitude = 31.7773393;
-public var longitude = 35.2343929;
+public var latitude = 31.7768514;
+public var longitude = 35.2331664;
 
 public var isJustOpened = true;
 public var isMoonClock = false;
@@ -100,6 +100,10 @@ class MenuTestView extends WatchUi.View {
 	public var omer;
 
 	public var curr_hour_man;
+
+	public var fajar;
+	public var atzer;
+	public var isha;
 
 	public var tzeit;
 	public var alot;
@@ -527,6 +531,30 @@ class MenuTestView extends WatchUi.View {
 //	//var ns, 
 //	var timezone;
 	
+	// // פונקציה לדימוי חישוב זמן חצות שמשי
+    // function getSolarNoon(latitude, longitude, date) {
+    //     return Time.Gregorian.info(date).toLocal(12, 0, 0);
+    // }
+    
+    // // פונקציה לחישוב נטיית השמש (declination)
+    // function getSolarDeclination(latitude, longitude, time) {
+    //     // כאן ניתן לשלב חישוב אסטרונומי מדויק יותר
+    //     return 23.44 * Math.sin(degreesToRadians((360/365) * (Time.Gregorian.getDayOfYear(time) - 81)));
+    // }
+
+	// function calculateAsrAngle(latitude, longitude, date) {
+    //     var noonTime = getSolarNoon(latitude, longitude, date);
+    //     var solarDeclination = getSolarDeclination(latitude, longitude, noonTime);
+        
+    //     // חישוב זווית השמש בזמן תפילת עצ'ר
+    //     var shadowLength = 1.0; // לפי ההגדרה: אורך הצל = אורך הגוף
+    //     var tangent = Math.abs(latitude - solarDeclination);
+    //     var inverse = shadowLength + Math.tan(degreesToRadians(tangent));
+    //     var thetaAsr = radiansToDegrees(Math.atan(1.0 / inverse));
+        
+    //     return thetaAsr;
+    // }
+
 	//SunTime.js
 	public function suntime(dy,mn,yr,sundeg,sunmin,latitude,longitude) 
 	{
@@ -631,7 +659,11 @@ class MenuTestView extends WatchUi.View {
 	        var Q = .39782 * Math.sin(M);      // Solar Declination
 	        Q = Q / Math.sqrt(-Q * Q + 1);     // This is how the original author wrote it!
 	        Q = Math.atan2(Q, 1);
-	
+
+			var DECLINATION = Q;
+			System.println("Declination" + DECLINATION);
+
+
 	        var S = R - (Math.sin(Q) * Math.sin(E));
 	        S = S / (Math.cos(Q) * Math.cos(E));
 	
@@ -924,6 +956,14 @@ class MenuTestView extends WatchUi.View {
 			hour[4] = sunset;
 			hour[5] = sunset_tommorow;
 			
+	        System.println("hour[0]: " + hour[0]);	
+	        System.println("hour[1]: " + hour[1]);	
+	        System.println("hour[2]: " + hour[2]);	
+	        System.println("hour[3]: " + hour[3]);	
+	        System.println("hour[4]: " + hour[4]);	
+	        System.println("hour[5]: " + hour[5]);	
+
+
 	        shaa_zmanit = (sunset - sunrise) / 12;
 	
 	        //using current time in the computer to adjust the right secdule...
@@ -1017,6 +1057,23 @@ class MenuTestView extends WatchUi.View {
 			time_tzeit= suntime(today.day, today.month, today.year, 96, 0,latitude,longitude);
 			tzeit = time_tzeit[3];
 			
+			var time_fajar = [0, 0, 0, 0];
+			//פאג'אר
+			time_fajar= suntime(tomorrow.day, tomorrow.month, tomorrow.year, 108, 0,latitude,longitude);
+			fajar = time_fajar[2];
+
+			//עצ'ר
+			var yday = doy(today.day,today.month, today.year);
+			var atzerAngle = 90 - calculateAsrAngle(latitude,longitude,yday);
+
+			var time_atzer = [0, 0, 0, 0];
+=			time_atzer= suntime(today.day, today.month, today.year, atzerAngle, 0,latitude,longitude);
+			atzer = time_atzer[3];
+
+			var time_isha = [0, 0, 0, 0];
+			//אשעא
+			time_isha= suntime(today.day, today.month, today.year, 108, 0,latitude,longitude);
+			isha = time_isha[3];
 
 			var shortDate =  Gregorian.info(Time.now(), Time.FORMAT_SHORT);
 
@@ -1053,6 +1110,29 @@ class MenuTestView extends WatchUi.View {
 	
 	}
 	
+	function abs(val)
+	{
+		if(val<0)
+		{
+			return val * -1;
+		}
+		else
+		{
+			return val;
+		}
+	}
+
+    // חישוב זווית השמש בזמן תפילת עצ'ר ליום נתון
+    function calculateAsrAngle(latitude, longitude, dayOfYear) {
+        var declination = 23.44 * Math.sin(Math.toRadians((360.0 / 365.0) * (dayOfYear - 81)));
+        var thetaNoon = 90.0 - abs(latitude - declination);
+        var shadowLength = 1.0; // ההגדרה של עצ'ר: אורך הצל שווה לגובה הגוף
+        var S0 = 1.0 /  Math.tan(Math.toRadians(thetaNoon));
+        var thetaAsr = Math.toDegrees( Math.atan(1.0 / (shadowLength + S0)));
+        
+        return thetaAsr;
+    }
+
 	function IsMoed()
 	{
 		var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);	
@@ -1952,6 +2032,7 @@ class MenuTestView extends WatchUi.View {
 		//curr_hour between them.
 		if(sunset_man > sunrise_man && curr_hour_man < sunset_man)
 		{
+			//System.println("1");
 			var length = sunset_man - sunrise_man;
 			var curr_hour_offset = curr_hour_man - sunrise_man;
 			
@@ -1968,6 +2049,7 @@ class MenuTestView extends WatchUi.View {
 		//curr_hour earlier.
 		if(sunset_man > sunrise_man && curr_hour_man < sunrise_man)
 		{
+			//System.println("2");
 			var length = sunrise_man + 24-sunset_yasterday_man;
 			var curr_hour_offset = curr_hour_man + 24-sunset_yasterday_man;
 			
@@ -1984,6 +2066,7 @@ class MenuTestView extends WatchUi.View {
 		//curr_hour after moonset.
 		if(sunset_man > sunrise_man && curr_hour_man > sunset_man)
 		{
+			//System.println("3");
 			var length = sunrise_tommorow_man + 24-sunset_man;
 			var curr_hour_offset = curr_hour_man - sunset_man;
 			
@@ -2001,6 +2084,7 @@ class MenuTestView extends WatchUi.View {
 		//curr_hour between them.
 		if(sunset_man < sunrise_man  && curr_hour_man < sunrise_man)
 		{
+			//System.println("4");
 			var length = sunrise_man - sunset_man;
 			var curr_hour_offset = curr_hour_man - sunset_man;
 			
@@ -2017,6 +2101,7 @@ class MenuTestView extends WatchUi.View {
 		//curr_hour earlier.
 		if(sunset_man < sunrise_man && curr_hour_man < sunset_man)
 		{
+			//System.println("5");
 			var length = sunset_man + 24-sunrise_yasterday_man;
 			var curr_hour_offset = curr_hour_man + 24-sunrise_yasterday_man;
 			
@@ -2033,6 +2118,7 @@ class MenuTestView extends WatchUi.View {
 		//curr_hour after moonset.
 		if(sunset_man < sunrise_man && curr_hour_man > sunrise_man)
 		{
+			//System.println("6");
 			var length = sunset_tommorow_man + 24-sunrise_man;
 			var curr_hour_offset = curr_hour_man - sunrise_man;
 			
