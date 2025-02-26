@@ -222,16 +222,27 @@ class MenuTestView extends WatchUi.View
 			showBirth();
 			var birthHebrewDate_val = Storage.getValue("birthHebrewDate");
 			var birthHebrewHour_val = Storage.getValue("birthHebrewHour");
+			//var parts = splitStr(birthHebrewHour_val, ":");
+			var hours = birthHebrewHour_val.substring(0, 2);
+			var minutes =  birthHebrewHour_val.substring(3, 7);
+			var seconds =  birthHebrewHour_val.substring(8, 10);
 			var birthHebrewMazal_val = Storage.getValue("birthHebrewMazal");
             
 
 			var viewHebrewDate = View.findDrawableById("ChristianClock") as Text;		
 			var birthHebrewHour = View.findDrawableById("HebrewClockHour") as Text;
+			birthHebrewHour.setText(hours);
+			var Separation01 = View.findDrawableById("Separation01") as Text;
+			var birthHebrewMin = View.findDrawableById("HebrewClockMin") as Text;
+			birthHebrewMin.setText(minutes);
+			var viewSeparation02 = View.findDrawableById("Separation02") as Text;
+			var birthHebrewSec = View.findDrawableById("HebrewClockSec") as Text;
+			birthHebrewSec.setText(seconds);
 
 			var birthHebrewMazal = View.findDrawableById("MazalLabel") as Text;
 
             viewHebrewDate.setText(birthHebrewDate_val);
-            birthHebrewHour.setText(birthHebrewHour_val);
+            //birthHebrewHour.setText(birthHebrewHour_val);
             birthHebrewMazal.setText(birthHebrewMazal_val);
 
 			if(Storage.getValue("isMoonClock") != null && Application.Storage.getValue("isMoonClock") == true)
@@ -241,30 +252,58 @@ class MenuTestView extends WatchUi.View
 					case "Jupiter":
 					case "צדק":
 						birthHebrewHour.setColor(Graphics.COLOR_BLUE);
+						Separation01.setColor(Graphics.COLOR_BLUE);
+						birthHebrewMin.setColor(Graphics.COLOR_BLUE);
+						viewSeparation02.setColor(Graphics.COLOR_BLUE);
+						birthHebrewSec.setColor(Graphics.COLOR_BLUE);
 						break;
 					case "Mars":
 					case "מאדים":
 						birthHebrewHour.setColor(Graphics.COLOR_RED);
+						Separation01.setColor(Graphics.COLOR_RED);
+						birthHebrewMin.setColor(Graphics.COLOR_RED);
+						viewSeparation02.setColor(Graphics.COLOR_RED);
+						birthHebrewSec.setColor(Graphics.COLOR_RED);
 						break;
 					case "Sun":
 					case "חמה":
 						birthHebrewHour.setColor(Graphics.COLOR_PURPLE);
+						Separation01.setColor(Graphics.COLOR_PURPLE);
+						birthHebrewMin.setColor(Graphics.COLOR_PURPLE);
+						viewSeparation02.setColor(Graphics.COLOR_PURPLE);
+						birthHebrewSec.setColor(Graphics.COLOR_PURPLE);
 						break;
 					case "Saturn":
 					case "שבתאי":
 						birthHebrewHour.setColor(Graphics.COLOR_GREEN);
+						Separation01.setColor(Graphics.COLOR_GREEN);
+						birthHebrewMin.setColor(Graphics.COLOR_GREEN);
+						viewSeparation02.setColor(Graphics.COLOR_GREEN);
+						birthHebrewSec.setColor(Graphics.COLOR_GREEN);
 						break;
 					case "Venus":
 					case "נוגה":
 						birthHebrewHour.setColor(0xFFFF00);
+						Separation01.setColor(0xFFFF00);
+						birthHebrewMin.setColor(0xFFFF00);
+						viewSeparation02.setColor(0xFFFF00);
+						birthHebrewSec.setColor(0xFFFF00);
 						break;
 					case "Mercury":
 					case "כוכב":
 						birthHebrewHour.setColor(Graphics.COLOR_ORANGE);
+						Separation01.setColor(Graphics.COLOR_ORANGE);
+						birthHebrewMin.setColor(Graphics.COLOR_ORANGE);
+						viewSeparation02.setColor(Graphics.COLOR_ORANGE);
+						birthHebrewSec.setColor(Graphics.COLOR_ORANGE);
 						break;
 					case "Moon":
 					case "לבנה":
 						birthHebrewHour.setColor(Graphics.COLOR_LT_GRAY);
+						Separation01.setColor(Graphics.COLOR_LT_GRAY);
+						birthHebrewMin.setColor(Graphics.COLOR_LT_GRAY);
+						viewSeparation02.setColor(Graphics.COLOR_LT_GRAY);
+						birthHebrewSec.setColor(Graphics.COLOR_LT_GRAY);
 						break;
 				}
 			}
@@ -1151,7 +1190,7 @@ class MenuTestView extends WatchUi.View
 			var atzerAngle = 90 - calculateAsrAngle(latitude,longitude,yday);
 
 			var time_atzer = [0, 0, 0, 0];
-			time_atzer= suntime(today.day, today.month, today.year, atzerAngle, 0,latitude,longitude);
+			time_atzer = suntime(today.day, today.month, today.year, atzerAngle, 0,latitude,longitude);
 			atzer = time_atzer[3];
 
 			var time_isha = [0, 0, 0, 0];
@@ -1565,8 +1604,8 @@ class MenuTestView extends WatchUi.View
 		var viewMin = View.findDrawableById("HebrewClockMin") as Text;
 		var viewSec = View.findDrawableById("HebrewClockSec") as Text;
 
-		//var viewSeparation01 = View.findDrawableById("Separation01") as Text;
-		//var viewSeparation02 = View.findDrawableById("Separation02") as Text;
+		var viewSeparation01 = View.findDrawableById("Separation01") as Text;
+		var viewSeparation02 = View.findDrawableById("Separation02") as Text;
 
 
 		if(isMoonClock)
@@ -1691,7 +1730,7 @@ class MenuTestView extends WatchUi.View
 		var viewMin = View.findDrawableById("HebrewClockMin") as Text;
 		var viewSec = View.findDrawableById("HebrewClockSec") as Text;
 
-		viewHour.setText(displayHour);
+		viewHour.setText(displayHour.toString());
 		viewMin.setText(displayMinute.toString());
 		viewSec.setText(displaySecond.toString());
 		//view.setText(displayHour + ":" + displayMinute +  ":" + displaySecond);
@@ -3012,8 +3051,8 @@ const gWeekday = ["Sun", "Mon", "Tues", "Wednes", "Thurs", "Fri", "Satur"]
 		}
 
 		viewTimerHour.setText("00");
-		viewTimerMin.setText(minute);
-		viewTimerSec.setText(second);
+		viewTimerMin.setText(minute.toString());
+		viewTimerSec.setText(second.toString());
 
 		//viewTimer.setText("00:" + minute + ":" + second);
 	}
