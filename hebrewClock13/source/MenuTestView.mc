@@ -217,6 +217,8 @@ class MenuTestView extends WatchUi.View
     public function onUpdate(dc as Dc) as Void {
 
 
+		var Separation01 = View.findDrawableById("Separation01") as Text;
+		var viewSeparation02 = View.findDrawableById("Separation02") as Text;
 		if(Storage.getValue("showBirth") == true && !isJustOpened)
 		{
 			showBirth();
@@ -232,10 +234,10 @@ class MenuTestView extends WatchUi.View
 			var viewHebrewDate = View.findDrawableById("ChristianClock") as Text;		
 			var birthHebrewHour = View.findDrawableById("HebrewClockHour") as Text;
 			birthHebrewHour.setText(hours);
-			var Separation01 = View.findDrawableById("Separation01") as Text;
+			//var Separation01 = View.findDrawableById("Separation01") as Text;
 			var birthHebrewMin = View.findDrawableById("HebrewClockMin") as Text;
 			birthHebrewMin.setText(minutes);
-			var viewSeparation02 = View.findDrawableById("Separation02") as Text;
+			//var viewSeparation02 = View.findDrawableById("Separation02") as Text;
 			var birthHebrewSec = View.findDrawableById("HebrewClockSec") as Text;
 			birthHebrewSec.setText(seconds);
 
@@ -310,6 +312,8 @@ class MenuTestView extends WatchUi.View
 		}
 		else
 		{
+			Separation01.setColor(Graphics.COLOR_LT_GRAY);
+			viewSeparation02.setColor(Graphics.COLOR_LT_GRAY);
 			isBirth = false;
 		}
 
@@ -1061,7 +1065,7 @@ class MenuTestView extends WatchUi.View
 			time_tommorow = sunCalc.getMoonTimes(latitude,longitude,false);//, lngd, lngm, ewi, latd, latm, nsi, adj);
 		}
 
-			System.println(time_today[3]);
+			//System.println(time_today[3]);
 	    //if (time_today[1] == 0) {
 	        //sunrise_yasterdate = time_yasterday[2];
 			sunrise_yasterday = time_yasterday[2];
@@ -1079,12 +1083,12 @@ class MenuTestView extends WatchUi.View
 			hour[4] = sunset;
 			hour[5] = sunset_tommorow;
 			
-	        System.println("hour[0]: " + hour[0]);	
-	        System.println("hour[1]: " + hour[1]);	
-	        System.println("hour[2]: " + hour[2]);	
-	        System.println("hour[3]: " + hour[3]);	
-	        System.println("hour[4]: " + hour[4]);	
-	        System.println("hour[5]: " + hour[5]);	
+	        //System.println("hour[0]: " + hour[0]);	
+	        //System.println("hour[1]: " + hour[1]);	
+	        //System.println("hour[2]: " + hour[2]);	
+	        //System.println("hour[3]: " + hour[3]);	
+	        //System.println("hour[4]: " + hour[4]);	
+	        //System.println("hour[5]: " + hour[5]);	
 
 
 	        shaa_zmanit = (sunset - sunrise) / 12;
@@ -1192,6 +1196,9 @@ class MenuTestView extends WatchUi.View
 			var time_atzer = [0, 0, 0, 0];
 			time_atzer = suntime(today.day, today.month, today.year, atzerAngle, 0,latitude,longitude);
 			atzer = time_atzer[3];
+
+			//System.println("asr: " + curr_hour);
+			//System.println("asr: " + atzer);
 
 			var time_isha = [0, 0, 0, 0];
 			//אשעא
@@ -1359,8 +1366,7 @@ class MenuTestView extends WatchUi.View
 			sunset_yasterday = zmanit_hour[3];
 			sunset = zmanit_hour[4];
 			sunset_tommorow = zmanit_hour[5];
-
-			System.println("zmanit_hour[0]: " + zmanit_hour[0]);
+ 
 			System.println("zmanit_hour[1]: " + zmanit_hour[1]);
 			System.println("zmanit_hour[2]: " + zmanit_hour[2]);
 			System.println("zmanit_hour[3]: " + zmanit_hour[3]);
@@ -1393,13 +1399,14 @@ class MenuTestView extends WatchUi.View
 			isNight = true;
 
 			MarkTime();
+			//setmazal(); 
 
 			Tefila();
-			return;
+			//return;
 		}
 
-		System.println("sunrise: " + sunrise + ", sunset:" + sunset);
-		System.println("curr_hour: " + curr_hour);
+		//System.println("sunrise: " + sunrise + ", sunset:" + sunset);
+		//System.println("curr_hour: " + curr_hour);
 
 		//month days 23-7						
 		//case 1:
@@ -1530,6 +1537,12 @@ class MenuTestView extends WatchUi.View
 			isNight = false;
 		}
 
+		if(curr_hour > birkutHashahar && curr_hour < sunrise)
+		{
+			setmazal(); 
+			return;
+		}
+
 		display_time();
 		
 		if(isJustOpened)
@@ -1600,6 +1613,12 @@ class MenuTestView extends WatchUi.View
 
 	public function MarkTime()
 	{
+		var date = Gregorian.info(Time.now(), Time.FORMAT_LONG);
+	    var h = date.hour;
+	    var m = date.min;
+	    var s = date.sec;
+		var curr_hour = /*milisec +*/ ((s.toNumber())*1000) + ((m.toNumber())*60*1000) + ((h.toNumber())*60*60*1000);
+
 		var viewHour = View.findDrawableById("HebrewClockHour") as Text;
 		var viewMin = View.findDrawableById("HebrewClockMin") as Text;
 		var viewSec = View.findDrawableById("HebrewClockSec") as Text;
@@ -1620,9 +1639,14 @@ class MenuTestView extends WatchUi.View
 				var view1 = View.findDrawableById("MazalLabel") as Text;
 				view1.setColor(Graphics.COLOR_WHITE);
 			}
+
+			//viewHour.setColor(Graphics.COLOR_LT_GRAY);
+			//viewSeparation01.setColor(Graphics.COLOR_LT_GRAY);
+			//viewMin.setColor(Graphics.COLOR_LT_GRAY);
+			//viewSeparation02.setColor(Graphics.COLOR_LT_GRAY);
+			//viewSec.setColor(Graphics.COLOR_LT_GRAY);
 			return;
 		}
-
 
 		//JEWISH CLOCK
 		if(curr_hour.toDouble()/(1000 * 3600) > tzeit  || 
@@ -1788,7 +1812,11 @@ class MenuTestView extends WatchUi.View
     //mazal of the hour
 	public function setmazal() 
 	{
-		if(isMoonClock)
+		if(curr_hour > birkutHashahar && curr_hour < sunrise)
+		{
+			
+		}
+		else if(isMoonClock)
 		{
 			var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);	
 			var hebrew_month_name = hebrewDateFunc(today.year, today.month, today.day, language());
