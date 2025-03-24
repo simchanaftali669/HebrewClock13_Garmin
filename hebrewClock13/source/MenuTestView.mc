@@ -1402,7 +1402,7 @@ class MenuTestView extends WatchUi.View
 			//setmazal(); 
 
 			Tefila();
-			//return;
+			return;
 		}
 
 		//System.println("sunrise: " + sunrise + ", sunset:" + sunset);
