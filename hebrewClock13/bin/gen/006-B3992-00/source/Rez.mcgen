@@ -49,8 +49,10 @@ module Rez {
             function initialize() {
                 Menu.initialize();
                 Menu.setTitle((WatchUi.loadResource($.Rez.Strings.MainMenuTitle) as String));
+                addItem((WatchUi.loadResource($.Rez.Strings.menuEng_label_5) as String), :item_5);
                 addItem((WatchUi.loadResource($.Rez.Strings.menuEng_label_1) as String), :item_1);
                 addItem((WatchUi.loadResource($.Rez.Strings.menuEng_label_0) as String), :item_0);
+                addItem((WatchUi.loadResource($.Rez.Strings.menuEng_label_6) as String), :item_6);
                 addItem((WatchUi.loadResource($.Rez.Strings.menuEng_label_3) as String), :item_3);
                 addItem((WatchUi.loadResource($.Rez.Strings.menuEng_label_4) as String), :item_4);
             }
@@ -60,8 +62,10 @@ module Rez {
             function initialize() {
                 Menu.initialize();
                 Menu.setTitle((WatchUi.loadResource($.Rez.Strings.MainMenuTitle) as String));
+                addItem((WatchUi.loadResource($.Rez.Strings.menuHeb_label_5) as String), :item_5);
                 addItem((WatchUi.loadResource($.Rez.Strings.menuHeb_label_1) as String), :item_1);
                 addItem((WatchUi.loadResource($.Rez.Strings.menuHeb_label_0) as String), :item_0);
+                addItem((WatchUi.loadResource($.Rez.Strings.menuHeb_label_6) as String), :item_6);
                 addItem((WatchUi.loadResource($.Rez.Strings.menuHeb_label_3) as String), :item_3);
                 addItem((WatchUi.loadResource($.Rez.Strings.menuHeb_label_4) as String), :item_4);
             }
@@ -91,7 +95,11 @@ module Rez {
         (:initialized) var menuEng_label_3 as Symbol;
         (:initialized) var menuEng_label_4 as Symbol;
         (:initialized) var MenuLabel1 as Symbol;
+        (:initialized) var menuEng_label_5 as Symbol;
         (:initialized) var MenuLabel2 as Symbol;
+        (:initialized) var menuEng_label_6 as Symbol;
+        (:initialized) var menuHeb_label_6 as Symbol;
+        (:initialized) var menuHeb_label_5 as Symbol;
         (:initialized) var menuHeb_label_4 as Symbol;
         (:initialized) var AuxMenuTitle as Symbol;
         (:initialized) var AuxMenuLabel2 as Symbol;

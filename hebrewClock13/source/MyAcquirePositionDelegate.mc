@@ -31,6 +31,8 @@ class MyAcquirePositionDelegate extends Ui.BehaviorDelegate
         latitude = myLocation[0];
         longitude = myLocation[1];
  
+        Storage.setValue("current_latitude", latitude);
+        Storage.setValue("current_longitude", longitude);
         Storage.setValue("latitude", latitude);
         Storage.setValue("longitude", longitude);  
         isJustOpened = true; 

@@ -62,12 +62,26 @@ class MenuTestMenuDelegate extends WatchUi.MenuInputDelegate {
                 Storage.setValue("showBirth",false);
             }
         }
-         else if (item == :item_2) {
-            latitude = 40.6971494;
-         	longitude = -73.6994959;
+         else if (item == :item_5) {    //jeruslaem location
+            latitude = 31.7768514;
+            longitude = 35.2331664;
  		    Storage.setValue("latitude", latitude);
 	    	Storage.setValue("longitude", longitude);
             isJustOpened = true; 
+        }
+         else if (item == :item_6) {    //current location
+            if(Storage.getValue("current_latitude") != null)
+            {
+                latitude = Storage.getValue("current_latitude");
+                longitude = Storage.getValue("current_longitude");
+                Storage.setValue("latitude", latitude);
+                Storage.setValue("longitude", longitude);
+                isJustOpened = true; 
+            }
+            
+            var view = new WatchUi.ProgressBar("Waiting for GPS", null);
+            var delegate = new MyAcquirePositionDelegate(view, self.method(:onPosition));
+            WatchUi.pushView(view, delegate, WatchUi.SLIDE_IMMEDIATE);    
         }
          else if (item == :item_3) {
             isMoonClock = false;
