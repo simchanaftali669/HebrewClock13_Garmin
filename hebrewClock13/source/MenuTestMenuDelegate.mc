@@ -63,8 +63,8 @@ class MenuTestMenuDelegate extends WatchUi.MenuInputDelegate {
             }
         }
          else if (item == :item_5) {    //jeruslaem location
-            latitude = 31.7768514;
-            longitude = 35.2331664;
+            latitude = 31.776852;
+            longitude = 35.233166;
  		    Storage.setValue("latitude", latitude);
 	    	Storage.setValue("longitude", longitude);
             isJustOpened = true; 

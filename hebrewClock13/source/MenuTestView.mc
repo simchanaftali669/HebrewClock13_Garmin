@@ -25,8 +25,13 @@ public var count2 = 0;
 public var count3 = 0;
 
 //Jerusalem
-public var latitude = 31.7768514;
-public var longitude = 35.2331664;
+//public var latitude = 31.776852;
+//public var longitude = 35.233166;
+
+//N.Y - testing only
+public var latitude = 40.712833;
+public var longitude = -73.9647733;
+
 
 public var isJustOpened = true;
 public var isMoonClock = false;
@@ -65,7 +70,8 @@ class MenuTestView extends WatchUi.View
     public function showBirth() as Void
     {
 		isBirth = true;
-		var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);	
+		//var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);	
+		var today = getRealToday();
 
 		var language = language();
 		var hebrew_month_name = hebrewDateFunc(today.year, today.month, today.day, language());
@@ -84,6 +90,57 @@ class MenuTestView extends WatchUi.View
 		Storage.setValue("birthHebrewMazal", setmazal());
     }
    
+	public function getRealToday()
+	{
+		//need to set it back to time zone
+		var myTime = System.getClockTime(); // ClockTime object
+		tz = myTime.timeZoneOffset/3600 + myTime.dst;
+
+		if(latitude == 31.7768514 && longitude == 35.2331664)
+		{
+			var israelTimeZone = getIsraelTimeZone();
+			tz_offset = -(tz - israelTimeZone); 
+			tz = israelTimeZone;
+		}
+		//System.println("timeZoneOffset: " + );
+
+		//tz = 2;
+		//System.println("tzXXX: " + tz);
+
+	    
+	    //var adj = -(12 - tz);
+	    //adj += 2;
+		timezone = tz;
+		Storage.setValue("tz", tz);
+
+		//timezone = tz + 2;
+	
+		//using current time in the computer to adjust the right secdule...
+		//get the time right now
+		var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+		var date = Gregorian.info(Time.now(), Time.FORMAT_LONG);
+
+		//var date = new Date();
+
+		var h = date.hour;
+		var minute = date.min;
+		var s = date.sec;
+		var m = 500; //Sys.getTimer();
+		curr_hour = m + (s*1000) + (minute*60*1000) + (h*60*60*1000); 
+		curr_hour += tz_offset; 
+		if(curr_hour < 0)
+		{
+			curr_hour += 24;
+			today = getYasterday(today,"info");
+		}
+		if(curr_hour >= 24)
+		{
+			curr_hour -= 24;
+			today = getTomorrow(today,"info");
+		}
+
+		return today;
+	}
 
 	public var londeg = 35;
 	public var lonmin = 0;
@@ -114,7 +171,7 @@ class MenuTestView extends WatchUi.View
 
 	//need to insert to the public function that recive gps location
     var tz; //= (new Date().getTimezoneOffset() / -60); //current time zone
-
+	var tz_offset = 0;
 
 	public var shaa_zmanit_night,shaa_zmanit_day;
 	public var lbSecond,lbMinute,lbHour; 
@@ -969,7 +1026,60 @@ class MenuTestView extends WatchUi.View
 	    return str;
 	}
 
-	
+ function getIsraelTimeZone() as Number {
+    var nowTs = Time.now();
+    var now = Gregorian.info(nowTs, Time.FORMAT_SHORT);
+    var year = now.year;
+
+    var dstStartTs = getLastSunday(year, 3);  // March
+    var dstEndTs   = getLastSunday(year, 10); // October
+
+    if (nowTs.greaterThan(dstStartTs) && nowTs.lessThan(dstEndTs) ) {
+        return 3;
+    } else {
+        return 2;
+    }
+}
+
+
+function getLastSunday(year as Number, month as Number) as Moment {
+    // Start from the last day of the month (31, 30, 29, or 28)
+    var lastDay = 31;
+    if (month == 2) {
+        lastDay = 28;
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+            lastDay = 29;
+        }
+    } else if ([4, 6, 9, 11].indexOf(month) != -1) {
+        lastDay = 30;
+    }
+
+    // Build time for that day at 02:00
+    var dt = {
+        :year => year,
+        :month => month,
+        :day => lastDay,
+        :hour => 2,
+        :min => 0,
+        :sec => 0
+    };
+    
+	var ts = Gregorian.moment(dt);
+    //var ts = Time.toNumber(dt); // get timestamp
+    var info = Gregorian.info(ts, Time.FORMAT_SHORT);
+
+    // Go back to previous Sunday
+    while (info.day_of_week != 1) { // 0 = Sunday
+		var goBackOneDay = new Time.Duration(-24 * Gregorian.SECONDS_PER_HOUR);
+		ts = ts.add(goBackOneDay); // subtract one day
+        info = Gregorian.info(ts, Time.FORMAT_SHORT);
+    }
+
+    return ts;
+}
+
+
+
 	//set the sunset and sunrise
 	public function doit() 
 	{
@@ -1000,6 +1110,12 @@ class MenuTestView extends WatchUi.View
 		var myTime = System.getClockTime(); // ClockTime object
 		tz = myTime.timeZoneOffset/3600 + myTime.dst;
 
+		if(latitude == 31.776852 && longitude == 35.233166)
+		{
+			var israelTimeZone = getIsraelTimeZone();
+			tz_offset = -(tz - israelTimeZone); 
+			tz = israelTimeZone;
+		}
 		//System.println("timeZoneOffset: " + );
 
 		//tz = 2;
@@ -1013,6 +1129,30 @@ class MenuTestView extends WatchUi.View
 
 		//timezone = tz + 2;
 	
+		//using current time in the computer to adjust the right secdule...
+		//get the time right now
+		var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+		var date = Gregorian.info(Time.now(), Time.FORMAT_LONG);
+
+		//var date = new Date();
+
+		var h = date.hour;
+		var minute = date.min;
+		var s = date.sec;
+		var m = 500; //Sys.getTimer();
+		curr_hour = m + (s*1000) + (minute*60*1000) + (h*60*60*1000); 
+		curr_hour += tz_offset; 
+		if(curr_hour < 0)
+		{
+			curr_hour += 24;
+			today = getYasterday(today,"info");
+		}
+		if(curr_hour >= 24)
+		{
+			curr_hour -= 24;
+			today = getTomorrow(today,"info");
+		}
+
 	
 		var sunrise_yasterday;
         var sunrise;
@@ -1024,7 +1164,6 @@ class MenuTestView extends WatchUi.View
 	    var shaa_zmanit = 0;
 	    var hour = [0,0,0,0,0,0]; //29
 
-		var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
 		var yasterday = getYasterday(today,"info"); //Gregorian.info(Time.now() - 1, Time.FORMAT_SHORT);	
 	    var tomorrow = getTomorrow(today,"info"); //Gregorian.info(Time.now() + 1, Time.FORMAT_SHORT);
 
@@ -1093,18 +1232,8 @@ class MenuTestView extends WatchUi.View
 
 	        shaa_zmanit = (sunset - sunrise) / 12;
 	
-	        //using current time in the computer to adjust the right secdule...
-	        //get the time right now
-			var date = Gregorian.info(Time.now(), Time.FORMAT_LONG);
-	
-	        //var date = new Date();
-	
-	        var h = date.hour;
-	        var minute = date.min;
-	        var s = date.sec;
-			var m = 500; //Sys.getTimer();
-	        curr_hour = m + (s*1000) + (minute*60*1000) + (h*60*60*1000); 
-	
+
+
 	        var str = timeadj1(sunset);
 	        var sunsetArray = splitStr(str,":");//str.split(":");
 	        
@@ -1265,7 +1394,8 @@ class MenuTestView extends WatchUi.View
 
 	function IsMoed()
 	{
-		var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);	
+		//var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);	
+		var today = getRealToday();
 		var hebrew_month_name = hebrewDateFunc(today.year, today.month, today.day, "Hebrew");
 		
 		var isMoed = false;
@@ -1384,11 +1514,20 @@ class MenuTestView extends WatchUi.View
 		//var milisec = date.getMilliseconds();
 	
 		var curr_hour = /*milisec +*/ ((s.toNumber())*1000) + ((m.toNumber())*60*1000) + ((h.toNumber())*60*60*1000);
-		curr_hour = curr_hour.toDouble()/(1000 * 3600);		
+		curr_hour = curr_hour.toDouble()/(1000 * 3600);	
+		curr_hour += tz_offset;
+		if(curr_hour < 0)
+		{
+			curr_hour += 24;
+		}
+		if(curr_hour >= 24)
+		{
+			curr_hour -= 24;
+		}
 
 		if(curr_hour > birkutHashahar && curr_hour < sunrise)
 		{
-			var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);	
+			var today = getRealToday();	
 
 			var language = language();
 			var hebrew_month_name = hebrewDateFunc(today.year, today.month, today.day, language());
@@ -1618,6 +1757,16 @@ class MenuTestView extends WatchUi.View
 	    var m = date.min;
 	    var s = date.sec;
 		var curr_hour = /*milisec +*/ ((s.toNumber())*1000) + ((m.toNumber())*60*1000) + ((h.toNumber())*60*60*1000);
+		curr_hour = curr_hour.toDouble()/(1000 * 3600);	
+		curr_hour += tz_offset;
+		if(curr_hour < 0)
+		{
+			curr_hour += 24;
+		}
+		if(curr_hour >= 24)
+		{
+			curr_hour -= 24;
+		}
 
 		var viewHour = View.findDrawableById("HebrewClockHour") as Text;
 		var viewMin = View.findDrawableById("HebrewClockMin") as Text;
@@ -1649,20 +1798,20 @@ class MenuTestView extends WatchUi.View
 		}
 
 		//JEWISH CLOCK
-		if(curr_hour.toDouble()/(1000 * 3600) > tzeit  || 
-		   curr_hour.toDouble()/(1000 * 3600) < misheyakir)
+		if(curr_hour.toDouble() > tzeit  || 
+		   curr_hour.toDouble() < misheyakir)
 		{
 			viewHour.setColor(Graphics.COLOR_LT_GRAY);
 		}
-		else if(curr_hour.toDouble()/(1000 * 3600) < sunset_hour && 
-		        curr_hour.toDouble()/(1000 * 3600) > misheyakir )
+		else if(curr_hour.toDouble() < sunset_hour && 
+		        curr_hour.toDouble() > misheyakir )
 		{
 			viewHour.setColor(Graphics.COLOR_BLUE);
 		}
 
 		//CHRISTIAN CLOCK
-		if(curr_hour.toDouble()/(1000 * 3600) > sunset.toDouble() ||
-		   curr_hour.toDouble()/(1000 * 3600) < sunrise.toDouble())
+		if(curr_hour.toDouble() > sunset.toDouble() ||
+		   curr_hour.toDouble() < sunrise.toDouble())
 		{
 			viewMin.setColor(Graphics.COLOR_LT_GRAY);
 		}
@@ -1672,19 +1821,19 @@ class MenuTestView extends WatchUi.View
 		}
 
 		//MUSLIM CLOCK
-		if(curr_hour.toDouble()/(1000 * 3600) > isha.toDouble()  || 
-		   curr_hour.toDouble()/(1000 * 3600) < fajar.toDouble())
+		if(curr_hour.toDouble() > isha.toDouble()  || 
+		   curr_hour.toDouble() < fajar.toDouble())
 		{
 			viewSec.setColor(Graphics.COLOR_LT_GRAY);
 		}
 		
-		if(curr_hour.toDouble()/(1000 * 3600) > fajar.toDouble() &&
-		   curr_hour.toDouble()/(1000 * 3600) < atzer.toDouble())
+		if(curr_hour.toDouble() > fajar.toDouble() &&
+		   curr_hour.toDouble() < atzer.toDouble())
 		{
 			viewSec.setColor(Graphics.COLOR_GREEN);
 		}
-		if( curr_hour.toDouble()/(1000 * 3600) > atzer.toDouble() &&
-			curr_hour.toDouble()/(1000 * 3600) < isha.toDouble())
+		if( curr_hour.toDouble() > atzer.toDouble() &&
+			curr_hour.toDouble() < isha.toDouble())
 		{
 			viewSec.setColor(0xFFFF00);//Graphics.COLOR_YELLOW);
 		}
@@ -1812,13 +1961,13 @@ class MenuTestView extends WatchUi.View
     //mazal of the hour
 	public function setmazal() 
 	{
+		var today = getRealToday();	
 		if(curr_hour > birkutHashahar && curr_hour < sunrise)
 		{
 			
 		}
 		else if(isMoonClock)
 		{
-			var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);	
 			var hebrew_month_name = hebrewDateFunc(today.year, today.month, today.day, language());
 			var viewHebrewDate = View.findDrawableById("MazalLabel") as Text;
 			viewHebrewDate.setText(hebrew_month_name[2] + hebrew_month_name[3]);
@@ -1829,10 +1978,20 @@ class MenuTestView extends WatchUi.View
 	    var date =  Gregorian.info(Time.now(), Time.FORMAT_SHORT);
 	
 	    var h = date.hour;
+		h += tz_offset;
+		if(h < 0)
+		{
+			h += 24;
+		}
+		if(h >= 24)
+		{
+			h -= 24;
+		}
+
 	    var m = date.min;
 	    var s = date.sec;
 	
-	    var day = date.day_of_week;//getDayOfWeekInNumber(date.day_of_week);
+	    var day = today.day_of_week;//getDayOfWeekInNumber(date.day_of_week);
 	    var clockHour = lbHour;
 	    if (clockHour == 24)
 	    {
@@ -2081,13 +2240,23 @@ class MenuTestView extends WatchUi.View
 
 	public function setmazal4man()
 	{
+		var today = getRealToday();	
 	    var date =  Gregorian.info(Time.now(), Time.FORMAT_SHORT);
 	
 	    var h = date.hour;
+		h += tz_offset;
+		if(h < 0)
+		{
+			h += 24;
+		}
+		if(h >= 24)
+		{
+			h -= 24;
+		}
 	    var m = date.min;
 	    var s = date.sec;
 	
-	    var day = date.day_of_week;//getDayOfWeekInNumber(date.day_of_week);
+	    var day = today.day_of_week;//getDayOfWeekInNumber(date.day_of_week);
 	    var clockHour = lbHour;
 	    if (clockHour == 24)
 	    {
@@ -2155,14 +2324,44 @@ class MenuTestView extends WatchUi.View
 
 		//tz = 2;
 		//System.println("tzXXX: " + tz);
+		if(latitude == 31.776852 && longitude == 35.233166)
+		{
+			var israelTimeZone = getIsraelTimeZone();
+			tz_offset = -(tz - israelTimeZone); 
+			tz = israelTimeZone;
+		}
 
-	    
 	    //var adj = -(12 - tz);
 	    //adj += 2;
 		timezone = tz;
 		
 		//timezone = tz + 2;
 	
+
+	
+		//using current time in the computer to adjust the right secdule...
+		//get the time right now
+		var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+		var date = Gregorian.info(Time.now(), Time.FORMAT_LONG);
+
+		//var date = new Date();
+
+		var h = date.hour;
+		var minute = date.min;
+		var s = date.sec;
+		var m = 500; //Sys.getTimer();
+		curr_hour_man = m + (s*1000) + (minute*60*1000) + (h*60*60*1000); 
+		curr_hour_man += tz_offset; 
+		if(curr_hour_man < 0)
+		{
+			curr_hour_man += 24;
+			today = getYasterday(today,"info");
+		}
+		if(curr_hour_man >= 24)
+		{
+			curr_hour_man -= 24;
+			today = getTomorrow(today,"info");
+		}
 	
 		var sunrise_yasterday;
         var sunrise;
@@ -2174,7 +2373,7 @@ class MenuTestView extends WatchUi.View
 	    var shaa_zmanit = 0;
 	    var hour = [0,0,0,0,0,0]; //29
 
-		var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
+		//var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);
 		var yasterday = getYasterday(today,"info"); //Gregorian.info(Time.now() - 1, Time.FORMAT_SHORT);	
 	    var tomorrow = getTomorrow(today,"info"); //Gregorian.info(Time.now() + 1, Time.FORMAT_SHORT);
 
@@ -2217,15 +2416,15 @@ class MenuTestView extends WatchUi.View
 	
 	        //using current time in the computer to adjust the right secdule...
 	        //get the time right now
-			var date = Gregorian.info(Time.now(), Time.FORMAT_LONG);
+			// var date = Gregorian.info(Time.now(), Time.FORMAT_LONG);
 	
-	        //var date = new Date();
+	        // //var date = new Date();
 	
-	        var h = date.hour;
-	        var minute = date.min;
-	        var s = date.sec;
-			var m = 500; //Sys.getTimer();
-	        curr_hour_man = m + (s*1000) + (minute*60*1000) + (h*60*60*1000); 
+	        // var h = date.hour;
+	        // var minute = date.min;
+	        // var s = date.sec;
+			// var m = 500; //Sys.getTimer();
+	        // curr_hour_man = m + (s*1000) + (minute*60*1000) + (h*60*60*1000); 
 	
 	        var str = timeadj1(sunset_man);
 	        var sunsetArray = splitStr(str,":");//str.split(":");
@@ -2657,6 +2856,15 @@ const gWeekday = ["Sun", "Mon", "Tues", "Wednes", "Thurs", "Fri", "Satur"]
 		var mili = 500;
 		var curr_hour = mili.toNumber() + ((s.toNumber())*1000) + ((m.toNumber())*60*1000) + ((h.toNumber())*60*60*1000);
 		curr_hour = curr_hour.toDouble()/(1000 * 3600);	
+		curr_hour += tz_offset; 
+		if(curr_hour < 0)
+		{
+			curr_hour += 24;
+		}
+		if(curr_hour >= 24)
+		{
+			curr_hour -= 24;
+		}
 
 		System.println("curr_hour: " + curr_hour);
 		System.println("tzeit: " + tzeit);
