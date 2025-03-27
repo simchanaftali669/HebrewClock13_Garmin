@@ -25,12 +25,12 @@ public var count2 = 0;
 public var count3 = 0;
 
 //Jerusalem
-//public var latitude = 31.776852;
-//public var longitude = 35.233166;
+public var latitude = 31.776852;
+public var longitude = 35.233166;
 
 //N.Y - testing only
-public var latitude = 40.712833;
-public var longitude = -73.9647733;
+//public var latitude = 40.712833;
+//public var longitude = -73.9647733;
 
 
 public var isJustOpened = true;
@@ -127,6 +127,7 @@ class MenuTestView extends WatchUi.View
 		var s = date.sec;
 		var m = 500; //Sys.getTimer();
 		curr_hour = m + (s*1000) + (minute*60*1000) + (h*60*60*1000); 
+		curr_hour = curr_hour.toDouble()/(1000 * 3600);		
 		curr_hour += tz_offset; 
 		if(curr_hour < 0)
 		{
@@ -2351,6 +2352,7 @@ function getLastSunday(year as Number, month as Number) as Moment {
 		var s = date.sec;
 		var m = 500; //Sys.getTimer();
 		curr_hour_man = m + (s*1000) + (minute*60*1000) + (h*60*60*1000); 
+		curr_hour_man = curr_hour_man.toDouble()/(1000 * 3600);	
 		curr_hour_man += tz_offset; 
 		if(curr_hour_man < 0)
 		{
@@ -2466,8 +2468,16 @@ function getLastSunday(year as Number, month as Number) as Moment {
 		//var milisec = date.getMilliseconds();
 	
 		var curr_hour_man = /*milisec +*/ ((s.toNumber())*1000) + ((m.toNumber())*60*1000) + ((h.toNumber())*60*60*1000);
-		curr_hour_man = curr_hour.toDouble()/(1000 * 3600);		
-
+		curr_hour_man = curr_hour_man.toDouble()/(1000 * 3600);		
+		curr_hour_man += tz_offset; 
+		if(curr_hour_man < 0)
+		{
+			curr_hour_man += 24;
+		}
+		if(curr_hour_man >= 24)
+		{
+			curr_hour_man -= 24;
+		}
 
 
 		//System.println("sunrise: " + sunrise + ", sunset:" + sunset);
