@@ -94,7 +94,7 @@ class MenuTestView extends WatchUi.View
 	{
 		//need to set it back to time zone
 		var myTime = System.getClockTime(); // ClockTime object
-		tz = myTime.timeZoneOffset/3600 + myTime.dst;
+		tz = myTime.timeZoneOffset/3600;// + myTime.dst/3600;
 
 		if(latitude == 31.7768514 && longitude == 35.2331664)
 		{
@@ -1109,7 +1109,7 @@ function getLastSunday(year as Number, month as Number) as Moment {
 		
 		//need to set it back to time zone
 		var myTime = System.getClockTime(); // ClockTime object
-		tz = myTime.timeZoneOffset/3600 + myTime.dst;
+		tz = myTime.timeZoneOffset/3600;// + myTime.dst/3600;
 
 		if(latitude == 31.776852 && longitude == 35.233166)
 		{
@@ -1142,6 +1142,7 @@ function getLastSunday(year as Number, month as Number) as Moment {
 		var s = date.sec;
 		var m = 500; //Sys.getTimer();
 		curr_hour = m + (s*1000) + (minute*60*1000) + (h*60*60*1000); 
+		curr_hour = curr_hour.toDouble()/(1000 * 3600);	
 		curr_hour += tz_offset; 
 		if(curr_hour < 0)
 		{
@@ -2319,7 +2320,7 @@ function getLastSunday(year as Number, month as Number) as Moment {
 		
 		//need to set it back to time zone
 		var myTime = System.getClockTime(); // ClockTime object
-		tz = myTime.timeZoneOffset/3600 + myTime.dst;
+		tz = myTime.timeZoneOffset/3600;// + myTime.dst/3600;
 
 		//System.println("timeZoneOffset: " + );
 
