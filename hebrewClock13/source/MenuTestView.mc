@@ -3158,6 +3158,15 @@ const gWeekday = ["Sun", "Mon", "Tues", "Wednes", "Thurs", "Fri", "Satur"]
 	
 		var curr_hour = /*milisec +*/ ((s.toNumber())*1000) + ((m.toNumber())*60*1000) + ((h.toNumber())*60*60*1000);
 		curr_hour = curr_hour.toDouble()/(1000 * 3600);	
+		curr_hour += tz_offset; 
+		if(curr_hour < 0)
+		{
+			curr_hour += 24;
+		}
+		if(curr_hour >= 24)
+		{
+			curr_hour -= 24;
+		}
 
 		System.println("curr_hour: " + curr_hour);
 		System.println("birkutHashahar: " + birkutHashahar);
