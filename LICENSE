@@ -1,28 +1,55 @@
-Proprietary License - All Rights Reserved
+רישיון קנייני - כל הזכויות שמורות
 
 Copyright (c) 2026 Naftali Bilig
 
-This software, including all source code, documentation, assets, designs,
-configuration files, and related materials, is proprietary and confidential.
+כל הזכויות בקוד, בתיעוד, בעיצוב, בקבצי ההגדרות, במשאבים, ברעיונות
+הממומשים, בלוגיקת החישוב, ובכל חומר אחר הכלול בפרויקט זה שמורות למפתח
+ולבעל הזכויות, Naftali Bilig.
 
-No permission is granted to copy, reproduce, distribute, publish, sublicense,
-sell, lease, modify, adapt, translate, create derivative works from, reverse
-engineer, decompile, disassemble, or otherwise use this software, in whole or
-in part, without prior express written permission from the copyright holder.
+אין לעשות כל שימוש בקוד או בכל חלק ממנו ללא אישור ישיר, מפורש ובכתב
+מהמפתח ובעל הזכויות.
 
-Any unauthorized use, copying, distribution, modification, publication, or
-commercial exploitation of this software is strictly prohibited.
+בפרט, וללא הגבלה, אסור ללא אישור כאמור:
 
-Access to this repository or possession of a copy of this software does not
-grant any ownership rights, license rights, or usage rights.
+- להעתיק את הקוד או כל חלק ממנו.
+- לפרסם את הקוד, את הפרויקט, או חלקים מהם.
+- להפיץ את הקוד בכל דרך, ציבורית או פרטית.
+- להעלות את הקוד למאגר ציבורי או פרטי אחר.
+- למסור את הקוד לצד שלישי.
+- לשנות, לערוך, לתרגם, להתאים, או ליצור יצירות נגזרות מהקוד.
+- להשתמש בקוד לצורך אישי, מסחרי, לימודי, מחקרי, או ציבורי.
+- לשלב את הקוד בפרויקט אחר.
+- למכור, להשכיר, להעניק רישיון משנה, או להפיק רווח מהקוד.
+- לבצע reverse engineering, פירוק, שחזור, או ניסיון לגזור ממנו לוגיקה,
+  נוסחאות, מבנה, רעיונות ממומשים, או שיטת פעולה.
 
-If you received this software without explicit written authorization, you must
-delete all copies immediately and notify the copyright holder.
+עצם הגישה למאגר, קבלת עותק של הקוד, צפייה בקוד, או החזקת עותק שלו אינם
+מקנים כל רישיון, זכות שימוש, זכות פרסום, זכות הפצה, זכות שינוי, או זכות
+בעלות.
 
-THE SOFTWARE IS PROVIDED "AS IS" ONLY TO AUTHORIZED USERS. TO THE MAXIMUM
-EXTENT PERMITTED BY LAW, THE COPYRIGHT HOLDER DISCLAIMS ALL WARRANTIES,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING
-FROM THE SOFTWARE OR ITS USE.
+כל שימוש, פרסום, העתקה, הפצה, שינוי, או ניצול של הקוד ללא אישור ישיר,
+מפורש ובכתב מהמפתח ובעל הזכויות מהווה הפרה של תנאי רישיון זה ושל זכויות
+היוצרים.
 
+מי שקיבל עותק של הקוד ללא אישור ישיר מהמפתח ובעל הזכויות נדרש למחוק אותו
+ואת כל העותקים הנגזרים ממנו מיד, ולהימנע מכל שימוש נוסף בו.
+
+הרשאה, אם תינתן, חייבת להינתן בכתב ישירות על ידי המפתח ובעל הזכויות. אין
+להסתמך על אישור בעל פה, על שתיקה, על זמינות הקוד ברשת, או על עצם היכולת
+הטכנית לגשת אליו.
+
+התוכנה מסופקת, ככל שסופקה, "כמות שהיא" ולמשתמשים מורשים בלבד. במידה
+המרבית המותרת לפי דין, בעל הזכויות אינו נותן כל אחריות, מפורשת או משתמעת,
+לרבות אחריות לסחירות, התאמה למטרה מסוימת, אי-הפרה, תקינות, דיוק, זמינות,
+או התאמה לשימוש כלשהו.
+
+במידה המרבית המותרת לפי דין, בעל הזכויות לא יישא באחריות לכל נזק, הפסד,
+תביעה, דרישה, או חבות הנובעים מהקוד, מהשימוש בו, מהסתמכות עליו, או מאי
+יכולת להשתמש בו.
+
+English summary:
+
+This is proprietary software. All rights are reserved by Naftali Bilig. No
+use, publication, copying, distribution, modification, sublicensing, reverse
+engineering, or any other use of the code is permitted without direct, express,
+written permission from the developer and copyright holder.

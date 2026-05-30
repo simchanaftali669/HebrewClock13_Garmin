@@ -131,4 +131,7 @@ is granted to copy, reproduce, distribute, publish, sublicense, sell, modify,
 adapt, reverse engineer, or otherwise use this project, in whole or in part,
 without prior express written permission from the copyright holder.
 
+No use or publication of the code is allowed without direct, express, written
+permission from the developer and copyright holder.
+
 See the LICENSE file for the full proprietary license terms.
