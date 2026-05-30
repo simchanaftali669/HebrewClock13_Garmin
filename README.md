@@ -222,7 +222,7 @@ The Garmin app will be published after Garmin review and approval.
 
 ## Version
 
-Initial public version: `1.0.0`
+Initial public version: `6.9.9`
 
 ## License / Usage
 
