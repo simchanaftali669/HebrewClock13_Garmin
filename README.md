@@ -21,6 +21,7 @@ into a unique time expression according to a defined calculation method.
 - [Permissions](#permissions)
 - [Development Notes](#development-notes)
 - [Official Links and Related Projects](#official-links-and-related-projects)
+- [Support the Creator](#support-the-creator)
 - [Disclaimer](#disclaimer)
 - [Author](#author)
 - [Status](#status)
@@ -189,6 +190,17 @@ corresponding to a person's Hebrew birth month.
 A supporting Hebrew-date tool for calculating the Hebrew date from a Gregorian
 date, useful for working with birth dates, Hebrew months, and related JClock
 calculations.
+
+## Support the Creator
+
+If you want to support Naftali Bilig's work financially, the preferred place is
+Spotify:
+
+- [Naftali Bilig on Spotify](https://open.spotify.com/artist/0LpQSavVuwhZZROZ27WWGG?si=E_D1V2bSR4yhzIhaLaBe8w)
+
+You can also follow related videos and creative work on YouTube:
+
+- [Naftali Bilig on YouTube](http://youtube.com/@naftali-bilig/videos)
 
 ## Disclaimer
 
