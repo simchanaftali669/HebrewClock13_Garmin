@@ -123,8 +123,12 @@ Initial public version: 1.0.0
 
 License / Usage
 
-This section can be updated before publication.
+All rights reserved.
 
-Suggested wording:
+The JClock Garmin app, including its source code, documentation, assets,
+designs, calculation logic, and related materials, is proprietary. No permission
+is granted to copy, reproduce, distribute, publish, sublicense, sell, modify,
+adapt, reverse engineer, or otherwise use this project, in whole or in part,
+without prior express written permission from the copyright holder.
 
-All rights reserved unless otherwise stated.
+See the LICENSE file for the full proprietary license terms.
