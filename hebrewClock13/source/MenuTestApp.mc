@@ -30,7 +30,7 @@ class MenuTestApp extends Application.AppBase {
 
     //! Return the initial views for the app
     //! @return Array Pair [View, InputDelegate]
-    public function getInitialView() as Array<Views or InputDelegates>? {
-        return [new $.MenuTestView(), new $.MenuTestDelegate()] as Array<Views or InputDelegates>;
+    function getInitialView() {
+        return [ new MenuTestView(), new MenuTestDelegate() ];
     }
 }
