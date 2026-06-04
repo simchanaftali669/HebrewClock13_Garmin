@@ -1,126 +1,95 @@
-רישיון שימוש קנייני וסודי
+# Proprietary and Confidential Use License
 
-פרויקט: JClock / HebrewClock13 Garmin
-בעל הזכויות והמפתח: Naftali Bilig
-שנת זכויות יוצרים: 2026
+**Project:** JClock
+**Developer:** Naftali Bilig
+**Rights Holder and Patent Owner:** Tidhar Eylon-Azoulay
+**Copyright Year:** 2026
 
-1. בעלות מלאה
+## 1. Ownership and Rights
 
-כל הזכויות בפרויקט זה שמורות באופן בלעדי ל־Naftali Bilig.
+All rights in this project, including proprietary, intellectual property, commercial, technological, legal, and patent-related rights, are reserved exclusively by the rights holder and patent owner, Rabbi Eilon Azulay.
 
-הפרויקט כולל, בין היתר, את קוד המקור, קבצי הפרויקט, קבצי Garmin Connect IQ,
-קבצי Monkey C, תיעוד, עיצוב, מבנה, שמות, טקסטים, חישובים, נוסחאות,
-אלגוריתמים, לוגיקה, רעיונות ממומשים, משאבים, תמונות, קבצי הגדרות וכל חומר
-אחר שנוצר במסגרת הפרויקט או לצורך הפעלתו.
+The project was developed by Naftali Bilig as the developer of the project, for the rights holder and patent owner.
 
-2. אין רישיון שימוש אוטומטי
+The project includes, among other things, the source code, project files, Garmin Connect IQ files, Monkey C files, documentation, design, structure, names, texts, calculations, formulas, algorithms, logic, implemented ideas, resources, images, configuration files, and any other material created as part of the project or for its operation.
 
-עצם העובדה שהקוד נמצא במאגר Git, ב־GitHub, במחשב, בקובץ, בקישור, בעותק
-מקומי, או בכל מקום אחר, אינה מעניקה לאף אדם או גוף כל זכות להשתמש בו.
+## 2. No Automatic License
 
-אין לפרש גישה לקוד, צפייה בקוד, הורדת הקוד, fork, clone, קבלת קובץ, או
-החזקה בעותק של הקוד כמתן רישיון, הרשאה, ויתור, הסכמה, או אישור כלשהו.
+The fact that the code exists in a Git repository, on GitHub, on a computer, in a file, through a link, in a local copy, or in any other location does not grant any person or entity any right to use it.
 
-3. איסור שימוש ללא אישור ישיר
+Accessing the code, viewing the code, downloading the code, forking, cloning, receiving a file, or possessing a copy of the code must not be interpreted as granting any license, permission, waiver, consent, or authorization of any kind.
 
-אין לעשות כל שימוש בקוד, בפרויקט, או בכל חלק מהם, ללא אישור ישיר, מפורש,
-מוקדם ובכתב מאת Naftali Bilig בלבד.
+## 3. No Use Without Direct Permission
 
-אישור יכול להינתן רק ישירות על ידי המפתח ובעל הזכויות. אין תוקף לאישור
-עקיף, בעל פה, משתמע, חלקי, או כזה שניתן על ידי אדם אחר.
+No use may be made of the code, the project, or any part of them without direct, express, prior written permission from the rights holder and patent owner, Rabbi Eilon Azulay.
 
-4. פעולות אסורות
+Where technical, operational, or development-related approval is required from the developer, such approval may be given only by Naftali Bilig. However, such approval does not constitute a waiver of any rights held by the rights holder and patent owner.
 
-ללא אישור ישיר, מפורש, מוקדם ובכתב מאת Naftali Bilig, אסור לבצע כל אחת
-מהפעולות הבאות:
+No indirect, oral, implied, partial, or third-party approval shall have any validity unless expressly authorized in writing.
 
-- להשתמש בקוד או בכל חלק ממנו.
-- לפרסם את הקוד או כל חלק ממנו.
-- להעתיק את הקוד או כל חלק ממנו.
-- להפיץ את הקוד, למסור אותו, לשלוח אותו, לשתף אותו, או להעמיד אותו לרשות
-  אחרים.
-- להעלות את הקוד למאגר אחר, ציבורי או פרטי.
-- לבצע fork, clone, mirror, archive, backup, או כל שכפול אחר למטרה שאינה
-  מורשית במפורש.
-- לשנות, לערוך, לתקן, לתרגם, להתאים, להרחיב, לקצר, או לעבד את הקוד.
-- ליצור יצירה נגזרת, מוצר, אפליקציה, שירות, אתר, ספרייה, מודול, תוסף,
-  שעון, Watch Face, או רכיב אחר המבוסס על הקוד או על חלק ממנו.
-- לשלב את הקוד בפרויקט אחר.
-- ללמוד מהקוד לצורך העתקת שיטה, מבנה, חישוב, אלגוריתם, רעיון ממומש, או
-  דרך פעולה ייחודית.
-- לבצע reverse engineering, decompilation, disassembly, שחזור, פירוק, ניתוח
-  לשם העתקה, או ניסיון להפיק מהקוד נוסחאות, מבנה, לוגיקה או שיטת פעולה.
-- להשתמש בקוד לצורך מסחרי, אישי, ציבורי, לימודי, מחקרי, ניסיוני, הדגמתי,
-  בדיקתי, או כל צורך אחר.
-- למכור, להשכיר, להעניק רישיון משנה, להעביר זכויות, או להפיק רווח ישיר או
-  עקיף מהקוד או מהפרויקט.
+## 4. Prohibited Actions
 
-5. איסור פרסום מיוחד
+Without direct, express, prior written permission from the rights holder and patent owner, Rabbi Eilon Azulay, it is prohibited to perform any of the following actions:
 
-חל איסור מוחלט לפרסם את הקוד, חלקים ממנו, צילומי מסך שלו, קטעי קוד מתוכו,
-תיאור טכני מפורט שלו, או הסבר שמאפשר לשחזר את הלוגיקה שלו, ללא אישור ישיר,
-מפורש, מוקדם ובכתב מאת Naftali Bilig.
+* Use the code or any part of it.
+* Publish the code or any part of it.
+* Copy the code or any part of it.
+* Distribute, deliver, send, share, or make the code available to others.
+* Upload the code to another repository, whether public or private.
+* Fork, clone, mirror, archive, back up, or otherwise duplicate the code for any purpose not expressly authorized.
+* Modify, edit, fix, translate, adapt, expand, shorten, or process the code.
+* Create any derivative work, product, application, service, website, library, module, plugin, watch, Watch Face, or any other component based on the code or any part of it.
+* Integrate the code into another project.
+* Study the code for the purpose of copying a method, structure, calculation, algorithm, implemented idea, or unique mode of operation.
+* Perform reverse engineering, decompilation, disassembly, reconstruction, dismantling, analysis for copying, or any attempt to extract formulas, structure, logic, or methods of operation from the code.
+* Use the code for commercial, personal, public, educational, research, experimental, demonstrative, testing, or any other purpose.
+* Sell, rent, sublicense, transfer rights, or derive any direct or indirect profit from the code or the project.
 
-איסור זה חל על GitHub, GitLab, Bitbucket, אתרים פרטיים, רשתות חברתיות,
-פורומים, מסמכים, מאמרים, סרטונים, מאגרי קוד, מערכות בינה מלאכותית, וכל
-פלטפורמה אחרת.
+## 5. Special Publication Prohibition
 
-6. שמירת סודיות
+It is strictly prohibited to publish the code, any part of it, screenshots of it, code snippets from it, detailed technical descriptions of it, or any explanation that enables reconstruction of its logic, without direct, express, prior written permission from the rights holder and patent owner, Rabbi Eilon Azulay.
 
-מי שקיבל גישה לקוד או לפרויקט מחויב לשמור על סודיות מלאה ביחס לקוד, למבנה
-שלו, ללוגיקה שלו, לחישובים שבו, לרעיונות הממומשים בו, ולכל פרט טכני או
-יצירתי הנוגע אליו.
+This prohibition applies to GitHub, GitLab, Bitbucket, private websites, social networks, forums, documents, articles, videos, code repositories, artificial intelligence systems, and any other platform.
 
-אין להעביר מידע זה לצד שלישי ללא אישור ישיר, מפורש, מוקדם ובכתב מאת
-Naftali Bilig.
+## 6. Confidentiality
 
-7. מחיקה במקרה של גישה לא מורשית
+Anyone who has received access to the code or the project is required to maintain full confidentiality regarding the code, its structure, its logic, its calculations, its implemented ideas, and any technical or creative detail related to it.
 
-מי שקיבל, הוריד, העתיק, שמר, או החזיק בקוד ללא אישור ישיר ומפורש מאת
-Naftali Bilig נדרש למחוק מיד את הקוד, את כל העותקים שלו, ואת כל החומרים
-שנוצרו ממנו או על בסיסו.
+This information may not be transferred to any third party without direct, express, prior written permission from the rights holder and patent owner, Rabbi Eilon Azulay.
 
-8. אין ויתור על זכויות
+## 7. Deletion in Case of Unauthorized Access
 
-אי־אכיפה מיידית של תנאי רישיון זה, עיכוב בפנייה, שתיקה, או זמינות הקוד
-בפועל אינם מהווים ויתור על זכויות, הסכמה לשימוש, או הרשאה מכל סוג.
+Anyone who has received, downloaded, copied, stored, or possessed the code without direct and express permission from the rights holder and patent owner, Rabbi Eilon Azulay, is required to immediately delete the code, all copies of it, and all materials created from it or based on it.
 
-כל הזכויות נשמרות במלואן.
+## 8. No Waiver of Rights
 
-9. אחריות
+Failure to immediately enforce this license, delay in taking action, silence, or the practical availability of the code shall not constitute a waiver of rights, consent to use, or permission of any kind.
 
-הקוד והפרויקט מסופקים, ככל שסופקו, "כמות שהם" ולמשתמשים שקיבלו הרשאה
-בלבד. בעל הזכויות אינו מתחייב שהקוד תקין, מלא, מתאים למטרה כלשהי, בטוח,
-מדויק, זמין, או נקי משגיאות.
+All rights remain fully reserved by the rights holder and patent owner, Rabbi Eilon Azulay.
 
-במידה המרבית המותרת לפי דין, Naftali Bilig לא יישא באחריות לכל נזק, הפסד,
-תביעה, דרישה, הוצאה, פגיעה, תקלה, או חבות הנובעים מהקוד, מהפרויקט, משימוש
-בהם, מהסתמכות עליהם, או מאי־יכולת להשתמש בהם.
+## 9. Liability
 
-10. תקפות
+The code and the project are provided, to the extent they are provided, “as is” and only to authorized users.
 
-אם הוראה כלשהי ברישיון זה תיחשב בלתי תקפה או בלתי אכיפה, יתר הוראות
-הרישיון ימשיכו לעמוד בתוקפן במידה המרבית האפשרית.
+The rights holder, patent owner, and developer do not warrant that the code is functional, complete, suitable for any purpose, safe, accurate, available, or free from errors.
 
-11. סיכום מחייב
+To the maximum extent permitted by law, Rabbi Eilon Azulay and Naftali Bilig shall not be liable for any damage, loss, claim, demand, expense, injury, malfunction, or liability arising from the code, the project, their use, reliance on them, or inability to use them.
 
-הקוד הזה אינו קוד פתוח.
+## 10. Validity
 
-אסור להשתמש בו.
-אסור לפרסם אותו.
-אסור להעתיק אותו.
-אסור להפיץ אותו.
-אסור לשנות אותו.
-אסור לבנות עליו.
+If any provision of this license is found to be invalid or unenforceable, the remaining provisions shall continue to remain in effect to the maximum extent possible.
 
-כל פעולה כזו דורשת אישור ישיר, מפורש, מוקדם ובכתב מאת המפתח ובעל הזכויות,
-Naftali Bilig.
+## 11. Binding Summary
 
-English Notice
+This code is not open source.
 
-This project is proprietary and confidential. It is not open source.
+It is prohibited to use it.
+It is prohibited to publish it.
+It is prohibited to copy it.
+It is prohibited to distribute it.
+It is prohibited to modify it.
+It is prohibited to build upon it.
 
-All rights are reserved by Naftali Bilig. No use, publication, copying,
-distribution, modification, sublicensing, reverse engineering, derivative work,
-or any other use of this code or project is permitted without direct, express,
-prior written permission from Naftali Bilig.
+Any such action requires direct, express, prior written permission from the rights holder and patent owner, Rabbi Eilon Azulay.
+
+The project was developed by Naftali Bilig as the developer of the project. The development of the project, possession of the code, or appearance of the developer’s name does not derogate from the rights of the rights holder and patent owner.
