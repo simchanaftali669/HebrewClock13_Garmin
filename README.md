@@ -1,6 +1,15 @@
-# How To Install?
+# How to Install JClock on Garmin Forerunner 965
 
-#איך מתקינים?
+1. Go to [https://JClock.net/Product/](https://JClock.net/Product/)
+2. Right-click **Garmin - Digital JClock**.
+3. Choose **Save link as...** or **Save target as...** and save the `.prg` file to your computer.
+4. Connect your Garmin watch to your computer using a USB cable.
+5. On Windows, open the watch storage: **This PC → [Your Garmin Watch] → Internal Storage**
+6. Navigate to the folder: **GARMIN/APPS**
+7. Copy the `.prg` file into that folder.
+8. Safely eject / disconnect the watch from USB.
+9. On the watch, look for the app in the apps list.
+
 
 # JClock - Jerusalem Clock for Garmin
 
