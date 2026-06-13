@@ -1,3 +1,7 @@
+# How To Install?
+
+#איך מתקינים?
+
 # JClock - Jerusalem Clock for Garmin
 
 JClock is a Garmin watch application that presents time through a
