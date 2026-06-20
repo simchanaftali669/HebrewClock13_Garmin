@@ -179,6 +179,7 @@ class MenuTestView extends WatchUi.View
 	public var lbSecond_man, lbMinute_man,lbHour_man;
 	public var displaySecond,displayMinute,displayHour; 
 	public var oTimer;
+	public var moonClockColor = Graphics.COLOR_LT_GRAY;
 
 	public var hebrewday_man;
 	public var hebrewday;
@@ -1832,12 +1833,6 @@ function getLastSunday(year as Number, month as Number) as Moment {
 
 		if(isMoonClock)
 		{
-			var moonClockColor = Graphics.COLOR_LT_GRAY;
-			if(!isNight)
-			{
-				moonClockColor = Graphics.COLOR_WHITE;
-			}
-
 			if(isNight)
 			{
 				var view1 = View.findDrawableById("MazalLabel") as Text;
@@ -2242,6 +2237,7 @@ function getLastSunday(year as Number, month as Number) as Moment {
 							Graphics.COLOR_ORANGE];//Graphics.COLOR_ORANGE];
 			
 			var viewHour = View.findDrawableById("HebrewClockHour") as Text;
+			moonClockColor = colors[x];
 			viewHour.setColor(colors[x]);
 			var viewSeparation01 = View.findDrawableById("Separation01") as Text;
 			viewSeparation01.setColor(colors[x]);
