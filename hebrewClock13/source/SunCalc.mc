@@ -72,14 +72,14 @@ class SunCalc
         //t.setHours(0, 0, 0, 0);
 
         var hc = 0.133 * rad,
-        h0 = SunCalc.getMoonPosition(t, lat, lng)[1] - hc,
+        h0 = getMoonPosition(t, lat, lng)[1] - hc,
         h1=0, h2=0, rise=0, set=0, a=0, b=0, xe=0, ye=0, d=0, roots=0, x1=0, x2=0, dx=0;
 
         // go in 2-hour chunks, each time seeing if a 3-point quadratic curve crosses zero (which means rise or set)
         for (var i = 1; i <= 25; i += 2) 
         {
-            h1 = SunCalc.getMoonPosition(hoursLater(t, i), lat, lng)[1] - hc;
-            h2 = SunCalc.getMoonPosition(hoursLater(t, i + 1), lat, lng)[1] - hc;
+            h1 = getMoonPosition(hoursLater(t, i), lat, lng)[1] - hc;
+            h2 = getMoonPosition(hoursLater(t, i + 1), lat, lng)[1] - hc;
 
             a = (h0 + h2) / 2 - h1;
             b = (h2 - h0) / 2;
@@ -235,9 +235,7 @@ class SunCalc
 
     public function hoursLater(date, h) 
     {
-        //var hoursLater = (Time.today().value().toString()+"000").toDouble() + h * dayMs / 24;
-        var hoursLater = (date.value().toString()+"000").toDouble() + h * dayMs / 24;
-        return new Time.Moment(hoursLater);
+        return date.add(new Time.Duration(h * Gregorian.SECONDS_PER_HOUR));
     }
 
 }

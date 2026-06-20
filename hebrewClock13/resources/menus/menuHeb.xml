@@ -5,4 +5,5 @@
     <menu-item id="item_6" label="@Strings.menuHeb_label_6" />
     <menu-item id="item_3" label="@Strings.menuHeb_label_3" />
     <menu-item id="item_4" label="@Strings.menuHeb_label_4" />
+    <menu-item id="item_7" label="@Strings.menuHeb_label_7" /> 
 </menu>

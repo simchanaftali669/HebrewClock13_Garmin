@@ -270,6 +270,8 @@ class MenuTestView extends WatchUi.View
 					  myTime.sec.format("%02d"));		
 	}
 
+	public var islocal = 1;
+
     //! Update the view
     //! @param dc Device context
     public function onUpdate(dc as Dc) as Void {
@@ -375,9 +377,59 @@ class MenuTestView extends WatchUi.View
 			isBirth = false;
 		}
 
+		var isCombinedClock = false;
+		if(Storage.getValue("isLocal") != null)
+		{
+			isCombinedClock = Storage.getValue("isLocal");
+		}
+		var switchCombinedClockNow = false;
+		if(Storage.getValue("switchCombinedClockNow") != null)
+		{
+			switchCombinedClockNow = Storage.getValue("switchCombinedClockNow");
+		}
+
+		if(isCombinedClock && (islocal == 7 || switchCombinedClockNow))
+		{
+			islocal = 1;
+			var storedMoonClock = Storage.getValue("isMoonClock");
+			if(storedMoonClock == null)
+			{
+	            isMoonClock = true;
+            	//isJustOpened = true; 
+			}
+			else
+			{
+				if(storedMoonClock == false)
+				{
+					isMoonClock = true;
+				}
+				else
+				{
+					isMoonClock = false;
+				}
+				//isJustOpened = true; 
+			}
+			Storage.setValue("isMoonClock", isMoonClock);
+			Storage.setValue("switchCombinedClockNow", false);
+			isJustOpened = true;
+		}
+		else if(!isCombinedClock)
+		{
+			islocal = 1;
+		}
+
     	if(Storage.getValue("isMoonClock") != null)
     	{
-    	    isMoonClock = Application.Storage.getValue("isMoonClock");
+			var savedMoonClock = Application.Storage.getValue("isMoonClock");
+			if(isMoonClock != savedMoonClock)
+			{
+				isMoonClock = savedMoonClock;
+				isJustOpened = true;
+			}
+		}
+		if(isCombinedClock)
+		{
+			islocal = islocal + 1;
 		}
 
     	//Application.Storage.clearValues();
@@ -1780,6 +1832,12 @@ function getLastSunday(year as Number, month as Number) as Moment {
 
 		if(isMoonClock)
 		{
+			var moonClockColor = Graphics.COLOR_LT_GRAY;
+			if(!isNight)
+			{
+				moonClockColor = Graphics.COLOR_WHITE;
+			}
+
 			if(isNight)
 			{
 				var view1 = View.findDrawableById("MazalLabel") as Text;
@@ -1791,11 +1849,11 @@ function getLastSunday(year as Number, month as Number) as Moment {
 				view1.setColor(Graphics.COLOR_WHITE);
 			}
 
-			//viewHour.setColor(Graphics.COLOR_LT_GRAY);
-			//viewSeparation01.setColor(Graphics.COLOR_LT_GRAY);
-			//viewMin.setColor(Graphics.COLOR_LT_GRAY);
-			//viewSeparation02.setColor(Graphics.COLOR_LT_GRAY);
-			//viewSec.setColor(Graphics.COLOR_LT_GRAY);
+			viewHour.setColor(moonClockColor);
+			viewSeparation01.setColor(moonClockColor);
+			viewMin.setColor(moonClockColor);
+			viewSeparation02.setColor(moonClockColor);
+			viewSec.setColor(moonClockColor);
 			return;
 		}
 

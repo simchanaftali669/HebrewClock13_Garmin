@@ -78,20 +78,27 @@ class MenuTestMenuDelegate extends WatchUi.MenuInputDelegate {
                 Storage.setValue("longitude", longitude);
                 isJustOpened = true; 
             }
-            
-            var view = new WatchUi.ProgressBar("Waiting for GPS", null);
-            var delegate = new MyAcquirePositionDelegate(view, self.method(:onPosition));
-            WatchUi.pushView(view, delegate, WatchUi.SLIDE_IMMEDIATE);    
+        }
+         else if (item == :item_7) {    //current location
+            Storage.setValue("isLocal", true);
+            Storage.setValue("isMoonClock", false);
+            Storage.setValue("switchCombinedClockNow", true);
+            isJustOpened = true; 
+            WatchUi.requestUpdate();
         }
          else if (item == :item_3) {
             isMoonClock = false;
- 		    Storage.setValue("isMoonClock", false);
+ 		    Storage.setValue("isLocal", false);
+            Storage.setValue("isMoonClock", false);
             isJustOpened = true; 
+            WatchUi.requestUpdate();
         }
          else if (item == :item_4) {
             isMoonClock = true;
+            Storage.setValue("isLocal", false);
  		    Storage.setValue("isMoonClock", true);
             isJustOpened = true; 
+            WatchUi.requestUpdate();
         }
 
 
