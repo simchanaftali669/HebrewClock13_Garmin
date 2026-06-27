@@ -53,13 +53,17 @@ class MenuTestMenuDelegate extends WatchUi.MenuInputDelegate {
             //var view = new WatchUi.ProgressBar("Waiting for GPS", null);
             //var delegate = new MyAcquirePositionDelegate(view, self.method(:onPosition));
             //WatchUi.pushView(view, delegate, WatchUi.SLIDE_IMMEDIATE);    
-            if(Storage.getValue("showBirth") == false)
+            if(Storage.getValue("showBirth") != true)
             {
                 Storage.setValue("showBirth",true);
+                isBirthClockFrozen = false;
+                Storage.setValue("isBirthClockFrozen", false);
             }
             else
             {
                 Storage.setValue("showBirth",false);
+                isBirthClockFrozen = false;
+                Storage.setValue("isBirthClockFrozen", false);
             }
         }
          else if (item == :item_5) {    //jeruslaem location

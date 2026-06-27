@@ -35,6 +35,7 @@ public var longitude = 35.233166;
 
 public var isJustOpened = true;
 public var isMoonClock = false;
+public var isBirthClockFrozen = false;
 
 public function setPosition(info as Toybox.Position.Info) as Void
 {
@@ -70,6 +71,14 @@ class MenuTestView extends WatchUi.View
     public function showBirth() as Void
     {
 		isBirth = true;
+
+		var savedBirthHebrewHour = Storage.getValue("birthHebrewHour");
+		if(isBirthClockFrozen && savedBirthHebrewHour != null)
+		{
+			System.println("frozen birth measure: " + savedBirthHebrewHour);
+			return;
+		}
+
 		//var today = Gregorian.info(Time.now(), Time.FORMAT_SHORT);	
 		var today = getRealToday();
 
@@ -79,15 +88,31 @@ class MenuTestView extends WatchUi.View
 		viewHebrewDate.setText(hebrew_month_name[2] + hebrew_month_name[3]);	
 
 		//var birthHebrewHour = View.findDrawableById("HebrewClock") as Text;
-		var birthHebrewMazal = View.findDrawableById("MazalLabel") as Text;
+		var savedIsMoonClock = isMoonClock;
+		isMoonClock = false;
+		var birthHebrewSunMazal = setmazal();
+		isMoonClock = true;
+		var birthHebrewMoonMazal = setmazal();
+		isMoonClock = savedIsMoonClock;
+		var birthHebrewCurrentMazal = birthHebrewSunMazal;
+		if(savedIsMoonClock)
+		{
+			birthHebrewCurrentMazal = birthHebrewMoonMazal;
+		}
 		
+		var birthHebrewHour = display_time();
 		System.println("birth measure: " + hebrew_month_name[2] + hebrew_month_name[3]);
-		System.println("birth measure: " + display_time());
-		System.println("birth measure: " + setmazal());
+		System.println("birth measure: " + birthHebrewHour);
+		System.println("birth sun measure: " + birthHebrewSunMazal);
+		System.println("birth moon measure: " + birthHebrewMoonMazal);
 
 		Storage.setValue("birthHebrewDate", hebrew_month_name[2] + hebrew_month_name[3]);
-		Storage.setValue("birthHebrewHour", display_time());
-		Storage.setValue("birthHebrewMazal", setmazal());
+		Storage.setValue("birthHebrewHour", birthHebrewHour);
+		Storage.setValue("birthHebrewMazal", birthHebrewCurrentMazal);
+		Storage.setValue("birthHebrewSunMazal", birthHebrewSunMazal);
+		Storage.setValue("birthHebrewMoonMazal", birthHebrewMoonMazal);
+		isBirthClockFrozen = true;
+		Storage.setValue("isBirthClockFrozen", true);
     }
    
 	public function getRealToday()
@@ -280,16 +305,42 @@ class MenuTestView extends WatchUi.View
 
 		var Separation01 = View.findDrawableById("Separation01") as Text;
 		var viewSeparation02 = View.findDrawableById("Separation02") as Text;
-		if(Storage.getValue("showBirth") == true && !isJustOpened)
+		if(Storage.getValue("isBirthClockFrozen") != null)
+		{
+			isBirthClockFrozen = Storage.getValue("isBirthClockFrozen");
+		}
+		if(Storage.getValue("showBirth") == true)
 		{
 			showBirth();
 			var birthHebrewDate_val = Storage.getValue("birthHebrewDate");
 			var birthHebrewHour_val = Storage.getValue("birthHebrewHour");
+			if(birthHebrewHour_val == null)
+			{
+				return;
+			}
 			//var parts = splitStr(birthHebrewHour_val, ":");
 			var hours = birthHebrewHour_val.substring(0, 2);
 			var minutes =  birthHebrewHour_val.substring(3, 7);
 			var seconds =  birthHebrewHour_val.substring(8, 10);
 			var birthHebrewMazal_val = Storage.getValue("birthHebrewMazal");
+			var birthHebrewSunMazal_val = Storage.getValue("birthHebrewSunMazal");
+			var birthHebrewMoonMazal_val = Storage.getValue("birthHebrewMoonMazal");
+			if(birthHebrewSunMazal_val == null)
+			{
+				birthHebrewSunMazal_val = birthHebrewMazal_val;
+			}
+			if(birthHebrewMoonMazal_val == null)
+			{
+				birthHebrewMoonMazal_val = birthHebrewMazal_val;
+			}
+			if(Storage.getValue("isMoonClock") != null && Application.Storage.getValue("isMoonClock") == true)
+			{
+				birthHebrewMazal_val = birthHebrewMoonMazal_val;
+			}
+			else
+			{
+				birthHebrewMazal_val = birthHebrewSunMazal_val;
+			}
             
 
 			var viewHebrewDate = View.findDrawableById("ChristianClock") as Text;		
@@ -310,7 +361,7 @@ class MenuTestView extends WatchUi.View
 
 			if(Storage.getValue("isMoonClock") != null && Application.Storage.getValue("isMoonClock") == true)
 			{
-				switch(birthHebrewMazal)
+				switch(birthHebrewMazal_val)
 				{
 					case "Jupiter":
 					case "צדק":
